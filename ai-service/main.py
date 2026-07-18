@@ -13,6 +13,12 @@ FESTIVAL_CATEGORY_MAP = {
     ("punjab", "baisakhi"): ["Kurta", "Jewellery", "Sherwani"],
     ("punjab", "lohri"): ["Kurta", "Sherwani", "Jewellery"],
     ("west bengal", "durga puja"): ["Saree", "Kurta", "Jewellery"],
+    ("gujarat", "navratri"): ["Saree", "Jewellery", "Dress"],
+    ("gujarat", "uttarayan"): ["Kurta", "Shirt", "Jeans"],
+    ("maharashtra", "ganesh chaturthi"): ["Kurta", "Saree", "Jewellery"],
+    ("maharashtra", "navratri"): ["Saree", "Jewellery", "Dress"],
+    ("odisha", "raja parba"): ["Saree", "Jewellery", "Dress"],
+    ("odisha", "durga puja"): ["Saree", "Kurta", "Jewellery"],
 }
 
 class AIServiceHandler(BaseHTTPRequestHandler):

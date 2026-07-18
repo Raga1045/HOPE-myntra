@@ -1710,5 +1710,1717 @@
     ],
     "color": "Red",
     "style": "Minimal"
+  },
+  {
+    "_id": "1",
+    "id": "1",
+    "name": "W Traditional Pink Saree",
+    "price": 2728,
+    "brand": "W",
+    "rating": 3.8,
+    "category": "Saree",
+    "image": "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Onam"
+    ],
+    "regionTags": [
+      "Kerala"
+    ],
+    "color": "Pink",
+    "style": "Ethnic"
+  },
+  {
+    "_id": "2",
+    "id": "2",
+    "name": "Biba Traditional Yellow Jewellery",
+    "price": 4765,
+    "brand": "Biba",
+    "rating": 4.4,
+    "category": "Jewellery",
+    "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Pongal"
+    ],
+    "regionTags": [
+      "Tamil Nadu"
+    ],
+    "color": "Yellow",
+    "style": "Trendy"
+  },
+  {
+    "_id": "3",
+    "id": "3",
+    "name": "Libas Traditional Green Sherwani",
+    "price": 2596,
+    "brand": "Libas",
+    "rating": 4.2,
+    "category": "Sherwani",
+    "image": "https://images.unsplash.com/photo-1597983073492-bc24058b37be?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Durga Puja"
+    ],
+    "regionTags": [
+      "West Bengal"
+    ],
+    "color": "Green",
+    "style": "Traditional"
+  },
+  {
+    "_id": "4",
+    "id": "4",
+    "name": "Anouk Traditional Red Dhoti",
+    "price": 2895,
+    "brand": "Anouk",
+    "rating": 4.7,
+    "category": "Dhoti",
+    "image": "https://images.unsplash.com/photo-1560243563-062bfc001d68?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Baisakhi"
+    ],
+    "regionTags": [
+      "Punjab"
+    ],
+    "color": "Red",
+    "style": "Minimal"
+  },
+  {
+    "_id": "5",
+    "id": "5",
+    "name": "Manyavar Traditional White Dress",
+    "price": 1541,
+    "brand": "Manyavar",
+    "rating": 4.4,
+    "category": "Dress",
+    "image": "https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [],
+    "regionTags": [],
+    "color": "White",
+    "style": "Ethnic"
+  },
+  {
+    "_id": "6",
+    "id": "6",
+    "name": "HRX Traditional Blue Shirt",
+    "price": 1584,
+    "brand": "HRX",
+    "rating": 4.6,
+    "category": "Shirt",
+    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [],
+    "regionTags": [],
+    "color": "Blue",
+    "style": "Trendy"
+  },
+  {
+    "_id": "7",
+    "id": "7",
+    "name": "Mast & Harbour Traditional Gold Jeans",
+    "price": 2856,
+    "brand": "Mast & Harbour",
+    "rating": 3.6,
+    "category": "Jeans",
+    "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [],
+    "regionTags": [],
+    "color": "Gold",
+    "style": "Traditional"
+  },
+  {
+    "_id": "8",
+    "id": "8",
+    "name": "Roadster Traditional Black Kurta",
+    "price": 4172,
+    "brand": "Roadster",
+    "rating": 3.8,
+    "category": "Kurta",
+    "image": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Pongal"
+    ],
+    "regionTags": [
+      "Tamil Nadu"
+    ],
+    "color": "Black",
+    "style": "Minimal"
+  },
+  {
+    "_id": "9",
+    "id": "9",
+    "name": "W Traditional Pink Saree",
+    "price": 4943,
+    "brand": "W",
+    "rating": 3.7,
+    "category": "Saree",
+    "image": "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Durga Puja"
+    ],
+    "regionTags": [
+      "West Bengal"
+    ],
+    "color": "Pink",
+    "style": "Ethnic"
+  },
+  {
+    "_id": "10",
+    "id": "10",
+    "name": "Biba Traditional Yellow Jewellery",
+    "price": 2363,
+    "brand": "Biba",
+    "rating": 4.4,
+    "category": "Jewellery",
+    "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Ugadi"
+    ],
+    "regionTags": [
+      "Andhra"
+    ],
+    "color": "Yellow",
+    "style": "Trendy"
+  },
+  {
+    "_id": "11",
+    "id": "11",
+    "name": "Libas Traditional Green Sherwani",
+    "price": 2645,
+    "brand": "Libas",
+    "rating": 4.2,
+    "category": "Sherwani",
+    "image": "https://images.unsplash.com/photo-1597983073492-bc24058b37be?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Diwali",
+      "Sankranti"
+    ],
+    "regionTags": [
+      "Andhra",
+      "Karnataka",
+      "Tamil Nadu",
+      "Telangana"
+    ],
+    "color": "Green",
+    "style": "Traditional"
+  },
+  {
+    "_id": "12",
+    "id": "12",
+    "name": "Anouk Traditional Red Dhoti",
+    "price": 3100,
+    "brand": "Anouk",
+    "rating": 4.3,
+    "category": "Dhoti",
+    "image": "https://images.unsplash.com/photo-1560243563-062bfc001d68?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Ugadi"
+    ],
+    "regionTags": [
+      "Andhra",
+      "Karnataka",
+      "Telangana"
+    ],
+    "color": "Red",
+    "style": "Minimal"
+  },
+  {
+    "_id": "13",
+    "id": "13",
+    "name": "Manyavar Traditional White Dress",
+    "price": 3802,
+    "brand": "Manyavar",
+    "rating": 4.1,
+    "category": "Dress",
+    "image": "https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [],
+    "regionTags": [],
+    "color": "White",
+    "style": "Ethnic"
+  },
+  {
+    "_id": "14",
+    "id": "14",
+    "name": "HRX Traditional Blue Shirt",
+    "price": 1642,
+    "brand": "HRX",
+    "rating": 4.9,
+    "category": "Shirt",
+    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [],
+    "regionTags": [],
+    "color": "Blue",
+    "style": "Trendy"
+  },
+  {
+    "_id": "15",
+    "id": "15",
+    "name": "Mast & Harbour Traditional Gold Jeans",
+    "price": 3024,
+    "brand": "Mast & Harbour",
+    "rating": 3.6,
+    "category": "Jeans",
+    "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [],
+    "regionTags": [],
+    "color": "Gold",
+    "style": "Traditional"
+  },
+  {
+    "_id": "16",
+    "id": "16",
+    "name": "Roadster Traditional Black Kurta",
+    "price": 2343,
+    "brand": "Roadster",
+    "rating": 4.7,
+    "category": "Kurta",
+    "image": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Baisakhi"
+    ],
+    "regionTags": [
+      "Punjab"
+    ],
+    "color": "Black",
+    "style": "Minimal"
+  },
+  {
+    "_id": "17",
+    "id": "17",
+    "name": "W Traditional Pink Saree",
+    "price": 1782,
+    "brand": "W",
+    "rating": 3.9,
+    "category": "Saree",
+    "image": "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Diwali",
+      "Sankranti"
+    ],
+    "regionTags": [
+      "Andhra",
+      "Karnataka",
+      "Tamil Nadu",
+      "Telangana"
+    ],
+    "color": "Pink",
+    "style": "Ethnic"
+  },
+  {
+    "_id": "18",
+    "id": "18",
+    "name": "Biba Traditional Yellow Jewellery",
+    "price": 4273,
+    "brand": "Biba",
+    "rating": 4.4,
+    "category": "Jewellery",
+    "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Ugadi"
+    ],
+    "regionTags": [
+      "Andhra",
+      "Karnataka",
+      "Telangana"
+    ],
+    "color": "Yellow",
+    "style": "Trendy"
+  },
+  {
+    "_id": "19",
+    "id": "19",
+    "name": "Libas Traditional Green Sherwani",
+    "price": 1494,
+    "brand": "Libas",
+    "rating": 3.8,
+    "category": "Sherwani",
+    "image": "https://images.unsplash.com/photo-1597983073492-bc24058b37be?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Onam"
+    ],
+    "regionTags": [
+      "Kerala"
+    ],
+    "color": "Green",
+    "style": "Traditional"
+  },
+  {
+    "_id": "20",
+    "id": "20",
+    "name": "Anouk Traditional Red Dhoti",
+    "price": 4293,
+    "brand": "Anouk",
+    "rating": 4.1,
+    "category": "Dhoti",
+    "image": "https://images.unsplash.com/photo-1560243563-062bfc001d68?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Pongal"
+    ],
+    "regionTags": [
+      "Tamil Nadu"
+    ],
+    "color": "Red",
+    "style": "Minimal"
+  },
+  {
+    "_id": "21",
+    "id": "21",
+    "name": "Manyavar Traditional White Dress",
+    "price": 2565,
+    "brand": "Manyavar",
+    "rating": 5,
+    "category": "Dress",
+    "image": "https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [],
+    "regionTags": [],
+    "color": "White",
+    "style": "Ethnic"
+  },
+  {
+    "_id": "22",
+    "id": "22",
+    "name": "HRX Traditional Blue Shirt",
+    "price": 4581,
+    "brand": "HRX",
+    "rating": 4.5,
+    "category": "Shirt",
+    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [],
+    "regionTags": [],
+    "color": "Blue",
+    "style": "Trendy"
+  },
+  {
+    "_id": "23",
+    "id": "23",
+    "name": "Mast & Harbour Traditional Gold Jeans",
+    "price": 4857,
+    "brand": "Mast & Harbour",
+    "rating": 4.8,
+    "category": "Jeans",
+    "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [],
+    "regionTags": [],
+    "color": "Gold",
+    "style": "Traditional"
+  },
+  {
+    "_id": "24",
+    "id": "24",
+    "name": "Roadster Traditional Black Kurta",
+    "price": 2389,
+    "brand": "Roadster",
+    "rating": 4.2,
+    "category": "Kurta",
+    "image": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Ugadi"
+    ],
+    "regionTags": [
+      "Andhra",
+      "Karnataka",
+      "Telangana"
+    ],
+    "color": "Black",
+    "style": "Minimal"
+  },
+  {
+    "_id": "25",
+    "id": "25",
+    "name": "W Traditional Pink Saree",
+    "price": 3245,
+    "brand": "W",
+    "rating": 3.8,
+    "category": "Saree",
+    "image": "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Onam"
+    ],
+    "regionTags": [
+      "Kerala"
+    ],
+    "color": "Pink",
+    "style": "Ethnic"
+  },
+  {
+    "_id": "26",
+    "id": "26",
+    "name": "Biba Traditional Yellow Jewellery",
+    "price": 4238,
+    "brand": "Biba",
+    "rating": 3.6,
+    "category": "Jewellery",
+    "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Pongal"
+    ],
+    "regionTags": [
+      "Tamil Nadu"
+    ],
+    "color": "Yellow",
+    "style": "Trendy"
+  },
+  {
+    "_id": "27",
+    "id": "27",
+    "name": "Libas Traditional Green Sherwani",
+    "price": 1373,
+    "brand": "Libas",
+    "rating": 4.8,
+    "category": "Sherwani",
+    "image": "https://images.unsplash.com/photo-1597983073492-bc24058b37be?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Durga Puja"
+    ],
+    "regionTags": [
+      "West Bengal"
+    ],
+    "color": "Green",
+    "style": "Traditional"
+  },
+  {
+    "_id": "28",
+    "id": "28",
+    "name": "Anouk Traditional Red Dhoti",
+    "price": 3865,
+    "brand": "Anouk",
+    "rating": 4.7,
+    "category": "Dhoti",
+    "image": "https://images.unsplash.com/photo-1560243563-062bfc001d68?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Baisakhi"
+    ],
+    "regionTags": [
+      "Punjab"
+    ],
+    "color": "Red",
+    "style": "Minimal"
+  },
+  {
+    "_id": "29",
+    "id": "29",
+    "name": "Manyavar Traditional White Dress",
+    "price": 3041,
+    "brand": "Manyavar",
+    "rating": 5,
+    "category": "Dress",
+    "image": "https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [],
+    "regionTags": [],
+    "color": "White",
+    "style": "Ethnic"
+  },
+  {
+    "_id": "30",
+    "id": "30",
+    "name": "HRX Traditional Blue Shirt",
+    "price": 3251,
+    "brand": "HRX",
+    "rating": 4.7,
+    "category": "Shirt",
+    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [],
+    "regionTags": [],
+    "color": "Blue",
+    "style": "Trendy"
+  },
+  {
+    "_id": "31",
+    "id": "31",
+    "name": "Mast & Harbour Traditional Gold Jeans",
+    "price": 3881,
+    "brand": "Mast & Harbour",
+    "rating": 4.8,
+    "category": "Jeans",
+    "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [],
+    "regionTags": [],
+    "color": "Gold",
+    "style": "Traditional"
+  },
+  {
+    "_id": "32",
+    "id": "32",
+    "name": "Roadster Traditional Black Kurta",
+    "price": 4594,
+    "brand": "Roadster",
+    "rating": 4.2,
+    "category": "Kurta",
+    "image": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Pongal"
+    ],
+    "regionTags": [
+      "Tamil Nadu"
+    ],
+    "color": "Black",
+    "style": "Minimal"
+  },
+  {
+    "_id": "33",
+    "id": "33",
+    "name": "W Traditional Pink Saree",
+    "price": 3771,
+    "brand": "W",
+    "rating": 4.1,
+    "category": "Saree",
+    "image": "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Durga Puja"
+    ],
+    "regionTags": [
+      "West Bengal"
+    ],
+    "color": "Pink",
+    "style": "Ethnic"
+  },
+  {
+    "_id": "34",
+    "id": "34",
+    "name": "Biba Traditional Yellow Jewellery",
+    "price": 2570,
+    "brand": "Biba",
+    "rating": 4.3,
+    "category": "Jewellery",
+    "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Baisakhi"
+    ],
+    "regionTags": [
+      "Punjab"
+    ],
+    "color": "Yellow",
+    "style": "Trendy"
+  },
+  {
+    "_id": "35",
+    "id": "35",
+    "name": "Libas Traditional Green Sherwani",
+    "price": 3948,
+    "brand": "Libas",
+    "rating": 4.8,
+    "category": "Sherwani",
+    "image": "https://images.unsplash.com/photo-1597983073492-bc24058b37be?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Diwali",
+      "Sankranti"
+    ],
+    "regionTags": [
+      "Andhra",
+      "Karnataka",
+      "Tamil Nadu",
+      "Telangana"
+    ],
+    "color": "Green",
+    "style": "Traditional"
+  },
+  {
+    "_id": "36",
+    "id": "36",
+    "name": "Anouk Traditional Red Dhoti",
+    "price": 3399,
+    "brand": "Anouk",
+    "rating": 4.8,
+    "category": "Dhoti",
+    "image": "https://images.unsplash.com/photo-1560243563-062bfc001d68?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Ugadi"
+    ],
+    "regionTags": [
+      "Andhra",
+      "Karnataka",
+      "Telangana"
+    ],
+    "color": "Red",
+    "style": "Minimal"
+  },
+  {
+    "_id": "37",
+    "id": "37",
+    "name": "Manyavar Traditional White Dress",
+    "price": 3824,
+    "brand": "Manyavar",
+    "rating": 4,
+    "category": "Dress",
+    "image": "https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [],
+    "regionTags": [],
+    "color": "White",
+    "style": "Ethnic"
+  },
+  {
+    "_id": "38",
+    "id": "38",
+    "name": "HRX Traditional Blue Shirt",
+    "price": 4149,
+    "brand": "HRX",
+    "rating": 4.2,
+    "category": "Shirt",
+    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [],
+    "regionTags": [],
+    "color": "Blue",
+    "style": "Trendy"
+  },
+  {
+    "_id": "39",
+    "id": "39",
+    "name": "Mast & Harbour Traditional Gold Jeans",
+    "price": 3443,
+    "brand": "Mast & Harbour",
+    "rating": 4,
+    "category": "Jeans",
+    "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [],
+    "regionTags": [],
+    "color": "Gold",
+    "style": "Traditional"
+  },
+  {
+    "_id": "40",
+    "id": "40",
+    "name": "Roadster Traditional Black Kurta",
+    "price": 1949,
+    "brand": "Roadster",
+    "rating": 4.9,
+    "category": "Kurta",
+    "image": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Baisakhi"
+    ],
+    "regionTags": [
+      "Punjab"
+    ],
+    "color": "Black",
+    "style": "Minimal"
+  },
+  {
+    "_id": "41",
+    "id": "41",
+    "name": "W Traditional Pink Saree",
+    "price": 1351,
+    "brand": "W",
+    "rating": 3.8,
+    "category": "Saree",
+    "image": "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Diwali",
+      "Sankranti"
+    ],
+    "regionTags": [
+      "Andhra",
+      "Karnataka",
+      "Tamil Nadu",
+      "Telangana"
+    ],
+    "color": "Pink",
+    "style": "Ethnic"
+  },
+  {
+    "_id": "42",
+    "id": "42",
+    "name": "Biba Traditional Yellow Jewellery",
+    "price": 3248,
+    "brand": "Biba",
+    "rating": 4.7,
+    "category": "Jewellery",
+    "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Ugadi"
+    ],
+    "regionTags": [
+      "Andhra",
+      "Karnataka",
+      "Telangana"
+    ],
+    "color": "Yellow",
+    "style": "Trendy"
+  },
+  {
+    "_id": "43",
+    "id": "43",
+    "name": "Libas Traditional Green Sherwani",
+    "price": 3378,
+    "brand": "Libas",
+    "rating": 4.6,
+    "category": "Sherwani",
+    "image": "https://images.unsplash.com/photo-1597983073492-bc24058b37be?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Onam"
+    ],
+    "regionTags": [
+      "Kerala"
+    ],
+    "color": "Green",
+    "style": "Traditional"
+  },
+  {
+    "_id": "44",
+    "id": "44",
+    "name": "Anouk Traditional Red Dhoti",
+    "price": 2388,
+    "brand": "Anouk",
+    "rating": 4,
+    "category": "Dhoti",
+    "image": "https://images.unsplash.com/photo-1560243563-062bfc001d68?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Pongal"
+    ],
+    "regionTags": [
+      "Tamil Nadu"
+    ],
+    "color": "Red",
+    "style": "Minimal"
+  },
+  {
+    "_id": "45",
+    "id": "45",
+    "name": "Manyavar Traditional White Dress",
+    "price": 3311,
+    "brand": "Manyavar",
+    "rating": 4.3,
+    "category": "Dress",
+    "image": "https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [],
+    "regionTags": [],
+    "color": "White",
+    "style": "Ethnic"
+  },
+  {
+    "_id": "46",
+    "id": "46",
+    "name": "HRX Traditional Blue Shirt",
+    "price": 4355,
+    "brand": "HRX",
+    "rating": 4,
+    "category": "Shirt",
+    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [],
+    "regionTags": [],
+    "color": "Blue",
+    "style": "Trendy"
+  },
+  {
+    "_id": "47",
+    "id": "47",
+    "name": "Mast & Harbour Traditional Gold Jeans",
+    "price": 4940,
+    "brand": "Mast & Harbour",
+    "rating": 4.7,
+    "category": "Jeans",
+    "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [],
+    "regionTags": [],
+    "color": "Gold",
+    "style": "Traditional"
+  },
+  {
+    "_id": "48",
+    "id": "48",
+    "name": "Roadster Traditional Black Kurta",
+    "price": 1821,
+    "brand": "Roadster",
+    "rating": 4.2,
+    "category": "Kurta",
+    "image": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Ugadi"
+    ],
+    "regionTags": [
+      "Andhra",
+      "Karnataka",
+      "Telangana"
+    ],
+    "color": "Black",
+    "style": "Minimal"
+  },
+  {
+    "_id": "49",
+    "id": "49",
+    "name": "W Traditional Pink Saree",
+    "price": 4738,
+    "brand": "W",
+    "rating": 3.7,
+    "category": "Saree",
+    "image": "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Onam"
+    ],
+    "regionTags": [
+      "Kerala"
+    ],
+    "color": "Pink",
+    "style": "Ethnic"
+  },
+  {
+    "_id": "50",
+    "id": "50",
+    "name": "Biba Traditional Yellow Jewellery",
+    "price": 2132,
+    "brand": "Biba",
+    "rating": 3.6,
+    "category": "Jewellery",
+    "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Pongal"
+    ],
+    "regionTags": [
+      "Tamil Nadu"
+    ],
+    "color": "Yellow",
+    "style": "Trendy"
+  },
+  {
+    "_id": "51",
+    "id": "51",
+    "name": "Libas Traditional Green Sherwani",
+    "price": 2685,
+    "brand": "Libas",
+    "rating": 4.3,
+    "category": "Sherwani",
+    "image": "https://images.unsplash.com/photo-1597983073492-bc24058b37be?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Durga Puja"
+    ],
+    "regionTags": [
+      "West Bengal"
+    ],
+    "color": "Green",
+    "style": "Traditional"
+  },
+  {
+    "_id": "52",
+    "id": "52",
+    "name": "Anouk Traditional Red Dhoti",
+    "price": 2288,
+    "brand": "Anouk",
+    "rating": 3.7,
+    "category": "Dhoti",
+    "image": "https://images.unsplash.com/photo-1560243563-062bfc001d68?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Baisakhi"
+    ],
+    "regionTags": [
+      "Punjab"
+    ],
+    "color": "Red",
+    "style": "Minimal"
+  },
+  {
+    "_id": "53",
+    "id": "53",
+    "name": "Manyavar Traditional White Dress",
+    "price": 4590,
+    "brand": "Manyavar",
+    "rating": 3.8,
+    "category": "Dress",
+    "image": "https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [],
+    "regionTags": [],
+    "color": "White",
+    "style": "Ethnic"
+  },
+  {
+    "_id": "54",
+    "id": "54",
+    "name": "HRX Traditional Blue Shirt",
+    "price": 3054,
+    "brand": "HRX",
+    "rating": 3.6,
+    "category": "Shirt",
+    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [],
+    "regionTags": [],
+    "color": "Blue",
+    "style": "Trendy"
+  },
+  {
+    "_id": "55",
+    "id": "55",
+    "name": "Mast & Harbour Traditional Gold Jeans",
+    "price": 3207,
+    "brand": "Mast & Harbour",
+    "rating": 4,
+    "category": "Jeans",
+    "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [],
+    "regionTags": [],
+    "color": "Gold",
+    "style": "Traditional"
+  },
+  {
+    "_id": "56",
+    "id": "56",
+    "name": "Roadster Traditional Black Kurta",
+    "price": 2314,
+    "brand": "Roadster",
+    "rating": 4.1,
+    "category": "Kurta",
+    "image": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Pongal"
+    ],
+    "regionTags": [
+      "Tamil Nadu"
+    ],
+    "color": "Black",
+    "style": "Minimal"
+  },
+  {
+    "_id": "57",
+    "id": "57",
+    "name": "W Traditional Pink Saree",
+    "price": 4854,
+    "brand": "W",
+    "rating": 4,
+    "category": "Saree",
+    "image": "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Durga Puja"
+    ],
+    "regionTags": [
+      "West Bengal"
+    ],
+    "color": "Pink",
+    "style": "Ethnic"
+  },
+  {
+    "_id": "58",
+    "id": "58",
+    "name": "Biba Traditional Yellow Jewellery",
+    "price": 2113,
+    "brand": "Biba",
+    "rating": 5,
+    "category": "Jewellery",
+    "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Baisakhi"
+    ],
+    "regionTags": [
+      "Punjab"
+    ],
+    "color": "Yellow",
+    "style": "Trendy"
+  },
+  {
+    "_id": "59",
+    "id": "59",
+    "name": "Libas Traditional Green Sherwani",
+    "price": 2240,
+    "brand": "Libas",
+    "rating": 3.6,
+    "category": "Sherwani",
+    "image": "https://images.unsplash.com/photo-1597983073492-bc24058b37be?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Diwali",
+      "Sankranti"
+    ],
+    "regionTags": [
+      "Andhra",
+      "Karnataka",
+      "Tamil Nadu",
+      "Telangana"
+    ],
+    "color": "Green",
+    "style": "Traditional"
+  },
+  {
+    "_id": "60",
+    "id": "60",
+    "name": "Anouk Traditional Red Dhoti",
+    "price": 2003,
+    "brand": "Anouk",
+    "rating": 3.8,
+    "category": "Dhoti",
+    "image": "https://images.unsplash.com/photo-1560243563-062bfc001d68?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Ugadi"
+    ],
+    "regionTags": [
+      "Andhra",
+      "Karnataka",
+      "Telangana"
+    ],
+    "color": "Red",
+    "style": "Minimal"
+  },
+  {
+    "_id": "61",
+    "id": "61",
+    "name": "Manyavar Traditional White Dress",
+    "price": 4744,
+    "brand": "Manyavar",
+    "rating": 5,
+    "category": "Dress",
+    "image": "https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [],
+    "regionTags": [],
+    "color": "White",
+    "style": "Ethnic"
+  },
+  {
+    "_id": "62",
+    "id": "62",
+    "name": "HRX Traditional Blue Shirt",
+    "price": 4979,
+    "brand": "HRX",
+    "rating": 4.4,
+    "category": "Shirt",
+    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [],
+    "regionTags": [],
+    "color": "Blue",
+    "style": "Trendy"
+  },
+  {
+    "_id": "63",
+    "id": "63",
+    "name": "Mast & Harbour Traditional Gold Jeans",
+    "price": 3482,
+    "brand": "Mast & Harbour",
+    "rating": 4.5,
+    "category": "Jeans",
+    "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [],
+    "regionTags": [],
+    "color": "Gold",
+    "style": "Traditional"
+  },
+  {
+    "_id": "64",
+    "id": "64",
+    "name": "Roadster Traditional Black Kurta",
+    "price": 1370,
+    "brand": "Roadster",
+    "rating": 3.9,
+    "category": "Kurta",
+    "image": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Baisakhi"
+    ],
+    "regionTags": [
+      "Punjab"
+    ],
+    "color": "Black",
+    "style": "Minimal"
+  },
+  {
+    "_id": "65",
+    "id": "65",
+    "name": "W Traditional Pink Saree",
+    "price": 1036,
+    "brand": "W",
+    "rating": 4.2,
+    "category": "Saree",
+    "image": "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Diwali",
+      "Sankranti"
+    ],
+    "regionTags": [
+      "Andhra",
+      "Karnataka",
+      "Tamil Nadu",
+      "Telangana"
+    ],
+    "color": "Pink",
+    "style": "Ethnic"
+  },
+  {
+    "_id": "66",
+    "id": "66",
+    "name": "Biba Traditional Yellow Jewellery",
+    "price": 4574,
+    "brand": "Biba",
+    "rating": 4.7,
+    "category": "Jewellery",
+    "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Ugadi"
+    ],
+    "regionTags": [
+      "Andhra",
+      "Karnataka",
+      "Telangana"
+    ],
+    "color": "Yellow",
+    "style": "Trendy"
+  },
+  {
+    "_id": "67",
+    "id": "67",
+    "name": "Libas Traditional Green Sherwani",
+    "price": 3613,
+    "brand": "Libas",
+    "rating": 4.1,
+    "category": "Sherwani",
+    "image": "https://images.unsplash.com/photo-1597983073492-bc24058b37be?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Onam"
+    ],
+    "regionTags": [
+      "Kerala"
+    ],
+    "color": "Green",
+    "style": "Traditional"
+  },
+  {
+    "_id": "68",
+    "id": "68",
+    "name": "Anouk Traditional Red Dhoti",
+    "price": 1831,
+    "brand": "Anouk",
+    "rating": 4.9,
+    "category": "Dhoti",
+    "image": "https://images.unsplash.com/photo-1560243563-062bfc001d68?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Pongal"
+    ],
+    "regionTags": [
+      "Tamil Nadu"
+    ],
+    "color": "Red",
+    "style": "Minimal"
+  },
+  {
+    "_id": "69",
+    "id": "69",
+    "name": "Manyavar Traditional White Dress",
+    "price": 3869,
+    "brand": "Manyavar",
+    "rating": 4.1,
+    "category": "Dress",
+    "image": "https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [],
+    "regionTags": [],
+    "color": "White",
+    "style": "Ethnic"
+  },
+  {
+    "_id": "70",
+    "id": "70",
+    "name": "HRX Traditional Blue Shirt",
+    "price": 4905,
+    "brand": "HRX",
+    "rating": 4.3,
+    "category": "Shirt",
+    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [],
+    "regionTags": [],
+    "color": "Blue",
+    "style": "Trendy"
+  },
+  {
+    "_id": "71",
+    "id": "71",
+    "name": "Mast & Harbour Traditional Gold Jeans",
+    "price": 1495,
+    "brand": "Mast & Harbour",
+    "rating": 3.8,
+    "category": "Jeans",
+    "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [],
+    "regionTags": [],
+    "color": "Gold",
+    "style": "Traditional"
+  },
+  {
+    "_id": "72",
+    "id": "72",
+    "name": "Roadster Traditional Black Kurta",
+    "price": 2724,
+    "brand": "Roadster",
+    "rating": 4.2,
+    "category": "Kurta",
+    "image": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Ugadi"
+    ],
+    "regionTags": [
+      "Andhra",
+      "Karnataka",
+      "Telangana"
+    ],
+    "color": "Black",
+    "style": "Minimal"
+  },
+  {
+    "_id": "73",
+    "id": "73",
+    "name": "W Traditional Pink Saree",
+    "price": 2698,
+    "brand": "W",
+    "rating": 4.5,
+    "category": "Saree",
+    "image": "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Onam"
+    ],
+    "regionTags": [
+      "Kerala"
+    ],
+    "color": "Pink",
+    "style": "Ethnic"
+  },
+  {
+    "_id": "74",
+    "id": "74",
+    "name": "Biba Traditional Yellow Jewellery",
+    "price": 4936,
+    "brand": "Biba",
+    "rating": 4.1,
+    "category": "Jewellery",
+    "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Pongal"
+    ],
+    "regionTags": [
+      "Tamil Nadu"
+    ],
+    "color": "Yellow",
+    "style": "Trendy"
+  },
+  {
+    "_id": "75",
+    "id": "75",
+    "name": "Libas Traditional Green Sherwani",
+    "price": 2562,
+    "brand": "Libas",
+    "rating": 4.5,
+    "category": "Sherwani",
+    "image": "https://images.unsplash.com/photo-1597983073492-bc24058b37be?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Durga Puja"
+    ],
+    "regionTags": [
+      "West Bengal"
+    ],
+    "color": "Green",
+    "style": "Traditional"
+  },
+  {
+    "_id": "76",
+    "id": "76",
+    "name": "Anouk Traditional Red Dhoti",
+    "price": 4185,
+    "brand": "Anouk",
+    "rating": 4,
+    "category": "Dhoti",
+    "image": "https://images.unsplash.com/photo-1560243563-062bfc001d68?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Baisakhi"
+    ],
+    "regionTags": [
+      "Punjab"
+    ],
+    "color": "Red",
+    "style": "Minimal"
+  },
+  {
+    "_id": "77",
+    "id": "77",
+    "name": "Manyavar Traditional White Dress",
+    "price": 1105,
+    "brand": "Manyavar",
+    "rating": 4.7,
+    "category": "Dress",
+    "image": "https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [],
+    "regionTags": [],
+    "color": "White",
+    "style": "Ethnic"
+  },
+  {
+    "_id": "78",
+    "id": "78",
+    "name": "HRX Traditional Blue Shirt",
+    "price": 2004,
+    "brand": "HRX",
+    "rating": 3.8,
+    "category": "Shirt",
+    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [],
+    "regionTags": [],
+    "color": "Blue",
+    "style": "Trendy"
+  },
+  {
+    "_id": "79",
+    "id": "79",
+    "name": "Mast & Harbour Traditional Gold Jeans",
+    "price": 3615,
+    "brand": "Mast & Harbour",
+    "rating": 3.7,
+    "category": "Jeans",
+    "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [],
+    "regionTags": [],
+    "color": "Gold",
+    "style": "Traditional"
+  },
+  {
+    "_id": "80",
+    "id": "80",
+    "name": "Roadster Traditional Black Kurta",
+    "price": 2152,
+    "brand": "Roadster",
+    "rating": 3.7,
+    "category": "Kurta",
+    "image": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Pongal"
+    ],
+    "regionTags": [
+      "Tamil Nadu"
+    ],
+    "color": "Black",
+    "style": "Minimal"
+  },
+  {
+    "_id": "81",
+    "id": "81",
+    "name": "W Traditional Pink Saree",
+    "price": 2659,
+    "brand": "W",
+    "rating": 4.2,
+    "category": "Saree",
+    "image": "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Durga Puja"
+    ],
+    "regionTags": [
+      "West Bengal"
+    ],
+    "color": "Pink",
+    "style": "Ethnic"
+  },
+  {
+    "_id": "82",
+    "id": "82",
+    "name": "Biba Traditional Yellow Jewellery",
+    "price": 2303,
+    "brand": "Biba",
+    "rating": 3.8,
+    "category": "Jewellery",
+    "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Baisakhi"
+    ],
+    "regionTags": [
+      "Punjab"
+    ],
+    "color": "Yellow",
+    "style": "Trendy"
+  },
+  {
+    "_id": "83",
+    "id": "83",
+    "name": "Libas Traditional Green Sherwani",
+    "price": 1774,
+    "brand": "Libas",
+    "rating": 4.4,
+    "category": "Sherwani",
+    "image": "https://images.unsplash.com/photo-1597983073492-bc24058b37be?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Diwali",
+      "Sankranti"
+    ],
+    "regionTags": [
+      "Andhra",
+      "Karnataka",
+      "Tamil Nadu",
+      "Telangana"
+    ],
+    "color": "Green",
+    "style": "Traditional"
+  },
+  {
+    "_id": "84",
+    "id": "84",
+    "name": "Anouk Traditional Red Dhoti",
+    "price": 1286,
+    "brand": "Anouk",
+    "rating": 4.4,
+    "category": "Dhoti",
+    "image": "https://images.unsplash.com/photo-1560243563-062bfc001d68?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Ugadi"
+    ],
+    "regionTags": [
+      "Andhra",
+      "Karnataka",
+      "Telangana"
+    ],
+    "color": "Red",
+    "style": "Minimal"
+  },
+  {
+    "_id": "85",
+    "id": "85",
+    "name": "Manyavar Traditional White Dress",
+    "price": 3797,
+    "brand": "Manyavar",
+    "rating": 4.1,
+    "category": "Dress",
+    "image": "https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [],
+    "regionTags": [],
+    "color": "White",
+    "style": "Ethnic"
+  },
+  {
+    "_id": "86",
+    "id": "86",
+    "name": "HRX Traditional Blue Shirt",
+    "price": 1609,
+    "brand": "HRX",
+    "rating": 3.8,
+    "category": "Shirt",
+    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [],
+    "regionTags": [],
+    "color": "Blue",
+    "style": "Trendy"
+  },
+  {
+    "_id": "87",
+    "id": "87",
+    "name": "Mast & Harbour Traditional Gold Jeans",
+    "price": 2867,
+    "brand": "Mast & Harbour",
+    "rating": 3.7,
+    "category": "Jeans",
+    "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [],
+    "regionTags": [],
+    "color": "Gold",
+    "style": "Traditional"
+  },
+  {
+    "_id": "88",
+    "id": "88",
+    "name": "Roadster Traditional Black Kurta",
+    "price": 1108,
+    "brand": "Roadster",
+    "rating": 5,
+    "category": "Kurta",
+    "image": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Baisakhi"
+    ],
+    "regionTags": [
+      "Punjab"
+    ],
+    "color": "Black",
+    "style": "Minimal"
+  },
+  {
+    "_id": "89",
+    "id": "89",
+    "name": "W Traditional Pink Saree",
+    "price": 2815,
+    "brand": "W",
+    "rating": 4.7,
+    "category": "Saree",
+    "image": "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Diwali",
+      "Sankranti"
+    ],
+    "regionTags": [
+      "Andhra",
+      "Karnataka",
+      "Tamil Nadu",
+      "Telangana"
+    ],
+    "color": "Pink",
+    "style": "Ethnic"
+  },
+  {
+    "_id": "90",
+    "id": "90",
+    "name": "Biba Traditional Yellow Jewellery",
+    "price": 4295,
+    "brand": "Biba",
+    "rating": 4.8,
+    "category": "Jewellery",
+    "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Ugadi"
+    ],
+    "regionTags": [
+      "Andhra",
+      "Karnataka",
+      "Telangana"
+    ],
+    "color": "Yellow",
+    "style": "Trendy"
+  },
+  {
+    "_id": "91",
+    "id": "91",
+    "name": "Libas Traditional Green Sherwani",
+    "price": 1095,
+    "brand": "Libas",
+    "rating": 4.6,
+    "category": "Sherwani",
+    "image": "https://images.unsplash.com/photo-1597983073492-bc24058b37be?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Onam"
+    ],
+    "regionTags": [
+      "Kerala"
+    ],
+    "color": "Green",
+    "style": "Traditional"
+  },
+  {
+    "_id": "92",
+    "id": "92",
+    "name": "Anouk Traditional Red Dhoti",
+    "price": 2109,
+    "brand": "Anouk",
+    "rating": 4.9,
+    "category": "Dhoti",
+    "image": "https://images.unsplash.com/photo-1560243563-062bfc001d68?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Pongal"
+    ],
+    "regionTags": [
+      "Tamil Nadu"
+    ],
+    "color": "Red",
+    "style": "Minimal"
+  },
+  {
+    "_id": "93",
+    "id": "93",
+    "name": "Manyavar Traditional White Dress",
+    "price": 3983,
+    "brand": "Manyavar",
+    "rating": 4.7,
+    "category": "Dress",
+    "image": "https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [],
+    "regionTags": [],
+    "color": "White",
+    "style": "Ethnic"
+  },
+  {
+    "_id": "94",
+    "id": "94",
+    "name": "HRX Traditional Blue Shirt",
+    "price": 2875,
+    "brand": "HRX",
+    "rating": 4,
+    "category": "Shirt",
+    "image": "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [],
+    "regionTags": [],
+    "color": "Blue",
+    "style": "Trendy"
+  },
+  {
+    "_id": "95",
+    "id": "95",
+    "name": "Mast & Harbour Traditional Gold Jeans",
+    "price": 2065,
+    "brand": "Mast & Harbour",
+    "rating": 3.5,
+    "category": "Jeans",
+    "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [],
+    "regionTags": [],
+    "color": "Gold",
+    "style": "Traditional"
+  },
+  {
+    "_id": "96",
+    "id": "96",
+    "name": "Roadster Traditional Black Kurta",
+    "price": 1479,
+    "brand": "Roadster",
+    "rating": 3.5,
+    "category": "Kurta",
+    "image": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Ugadi"
+    ],
+    "regionTags": [
+      "Andhra",
+      "Karnataka",
+      "Telangana"
+    ],
+    "color": "Black",
+    "style": "Minimal"
+  },
+  {
+    "_id": "97",
+    "id": "97",
+    "name": "W Traditional Pink Saree",
+    "price": 1474,
+    "brand": "W",
+    "rating": 4.8,
+    "category": "Saree",
+    "image": "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Onam"
+    ],
+    "regionTags": [
+      "Kerala"
+    ],
+    "color": "Pink",
+    "style": "Ethnic"
+  },
+  {
+    "_id": "98",
+    "id": "98",
+    "name": "Biba Traditional Yellow Jewellery",
+    "price": 3799,
+    "brand": "Biba",
+    "rating": 3.9,
+    "category": "Jewellery",
+    "image": "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Pongal"
+    ],
+    "regionTags": [
+      "Tamil Nadu"
+    ],
+    "color": "Yellow",
+    "style": "Trendy"
+  },
+  {
+    "_id": "99",
+    "id": "99",
+    "name": "Libas Traditional Green Sherwani",
+    "price": 2614,
+    "brand": "Libas",
+    "rating": 4.5,
+    "category": "Sherwani",
+    "image": "https://images.unsplash.com/photo-1597983073492-bc24058b37be?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Durga Puja"
+    ],
+    "regionTags": [
+      "West Bengal"
+    ],
+    "color": "Green",
+    "style": "Traditional"
+  },
+  {
+    "_id": "100",
+    "id": "100",
+    "name": "Anouk Traditional Red Dhoti",
+    "price": 4753,
+    "brand": "Anouk",
+    "rating": 4.2,
+    "category": "Dhoti",
+    "image": "https://images.unsplash.com/photo-1560243563-062bfc001d68?q=80&w=600&auto=format&fit=crop",
+    "festivalTags": [
+      "Baisakhi"
+    ],
+    "regionTags": [
+      "Punjab"
+    ],
+    "color": "Red",
+    "style": "Minimal"
   }
 ]

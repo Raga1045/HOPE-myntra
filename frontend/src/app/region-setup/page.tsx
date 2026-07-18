@@ -6,7 +6,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MapPin, Calendar, Languages, Check, ArrowRight, UserCheck } from 'lucide-react';
 import { setProfile, RootState } from '@/store/store';
-
 const STATE_FESTIVALS: { [key: string]: string[] } = {
   "Andhra Pradesh": ["Ugadi", "Sankranti", "Dasara", "Diwali", "Christmas"],
   "Kerala": ["Vishu", "Onam", "Diwali", "Christmas"],
@@ -14,7 +13,10 @@ const STATE_FESTIVALS: { [key: string]: string[] } = {
   "Karnataka": ["Ugadi", "Dasara", "Diwali", "Christmas"],
   "Telangana": ["Ugadi", "Dasara", "Diwali", "Christmas"],
   "West Bengal": ["Durga Puja", "Poila Baisakh", "Diwali", "Christmas"],
-  "Punjab": ["Baisakhi", "Lohri", "Diwali", "Christmas"]
+  "Punjab": ["Baisakhi", "Lohri", "Diwali", "Christmas"],
+  "Gujarat": ["Navratri", "Uttarayan", "Diwali", "Christmas"],
+  "Maharashtra": ["Ganesh Chaturthi", "Navratri", "Diwali", "Christmas"],
+  "Odisha": ["Raja Parba", "Durga Puja", "Diwali", "Christmas"]
 };
 
 const LANGUAGES = ["English", "Telugu", "Hindi"];
@@ -189,7 +191,11 @@ export default function RegionalOnboarding() {
                            fest === 'Puthandu' ? '🍊' :
                            fest === 'Baisakhi' ? '🥁' :
                            fest === 'Lohri' ? '🔥' :
-                           fest === 'Durga Puja' ? '🔱' : '🎉'}
+                           fest === 'Durga Puja' ? '🔱' :
+                           fest === 'Navratri' ? '💃' :
+                           fest === 'Ganesh Chaturthi' ? '🐘' :
+                           fest === 'Raja Parba' ? '⛵' :
+                           fest === 'Uttarayan' ? '🪁' : '🎉'}
                         </span>
                         <span className={`text-xs font-bold font-sans ${isSelected ? 'text-[#FF3F6C]' : 'text-[#282C3F]'}`}>
                           {fest}
