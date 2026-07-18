@@ -8,7 +8,7 @@ import {
   Search, User, ShoppingBag, ToggleLeft, ToggleRight, Sparkles, 
   ChevronRight, Star, Heart, Flame, ShieldAlert, Award, Compass 
 } from 'lucide-react';
-import { toggleCultureMode, RootState } from '@/store/store';
+import { toggleCultureMode, clearSession, RootState } from '@/store/store';
 
 interface Product {
   _id: string;
@@ -297,10 +297,17 @@ export default function HomePage() {
               🎉 My Fashion Year
             </motion.button>
 
-            {/* Profile */}
-            <div className="flex flex-col items-center cursor-pointer select-none text-[#282C3F] hover:text-[#FF3F6C] transition-colors">
+            {/* Logout */}
+            <div 
+              onClick={() => {
+                dispatch(clearSession());
+                router.push('/');
+              }}
+              className="flex flex-col items-center cursor-pointer select-none text-[#282C3F] hover:text-[#FF3F6C] transition-colors"
+              title="Logout"
+            >
               <User className="w-5 h-5 stroke-[2]" />
-              <span className="text-[9px] font-extrabold uppercase mt-1 hidden sm:inline">Profile</span>
+              <span className="text-[9px] font-extrabold uppercase mt-1 hidden sm:inline">Logout</span>
             </div>
 
             {/* Cart */}

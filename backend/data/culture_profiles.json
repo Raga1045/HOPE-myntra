@@ -1,14 +1,24 @@
 [
   {
     "userId": "1",
-    "state": "Punjab",
+    "state": "Andhra Pradesh",
     "festivals": [
-      "Baisakhi",
-      "Lohri",
-      "Diwali"
+      "Ugadi",
+      "Sankranti"
     ],
     "language": "English",
     "_id": "1784309845753",
     "id": "1784309845753"
+  },
+  {
+    "userId": "1784384212716",
+    "state": "West Bengal",
+    "festivals": [
+      "Durga Puja",
+      "Poila Baisakh"
+    ],
+    "language": "English",
+    "_id": "1784384309721",
+    "id": "1784384309721"
   }
 ]
