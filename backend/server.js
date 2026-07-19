@@ -117,6 +117,26 @@ app.get('/api/homepage', async (req, res) => {
       if (matchingFest) activeFestival = matchingFest;
     }
 
+    // Calculate days remaining dynamically
+    const activeFestDoc = regionFestivals.find(rf => rf.festival === activeFestival);
+    let daysLeft = null;
+    let showCountdown = false;
+    
+    if (activeFestDoc && activeFestDoc.date) {
+      const today = new Date();
+      today.setHours(0, 0, 0, 0); // normalize time
+      const festDate = new Date(activeFestDoc.date);
+      festDate.setHours(0, 0, 0, 0);
+      const diffTime = festDate.getTime() - today.getTime();
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      
+      // Countdown starts 15 days before the festival
+      if (diffDays >= 0 && diffDays <= 15) {
+        daysLeft = diffDays;
+        showCountdown = true;
+      }
+    }
+
     // Call Python FastAPI service for AI Regional Recommendations
     let recommendedCategories = ["Kurta", "Saree", "Jewellery"]; // fallback
     try {
@@ -164,17 +184,22 @@ app.get('/api/homepage', async (req, res) => {
       recommendedCategories.includes(p.category)
     ).slice(0, 8);
 
+    let heroBanner = null;
+    if (showCountdown && daysLeft !== null) {
+      heroBanner = {
+        festival: activeFestival,
+        daysLeft: daysLeft,
+        title: `🌸 ${activeFestival}`,
+        subtitle: "Celebrate in Style",
+        cta: "Explore Collection"
+      };
+    }
+
     return res.json({
       cultureMode: true,
       activeFestival,
       state: stateName,
-      heroBanner: {
-        festival: activeFestival,
-        daysLeft: 8,
-        title: `🌸 ${activeFestival}`,
-        subtitle: "Celebrate in Style",
-        cta: "Explore Collection"
-      },
+      heroBanner,
       feed: {
         trendingFestival,
         popularState,

@@ -12,26 +12,32 @@ const states = [
   "Maharashtra",
   "Odisha"
 ];
+const getFutureDate = (days) => {
+  const d = new Date();
+  d.setDate(d.getDate() + days);
+  return d.toISOString().split('T')[0];
+};
 
 const festivals = [
-  { festival: "Ugadi", date: "2026-03-18", states: ["Andhra Pradesh", "Telangana", "Karnataka"] },
-  { festival: "Sankranti", date: "2026-01-14", states: ["Andhra Pradesh", "Telangana", "Karnataka", "Tamil Nadu"] },
-  { festival: "Dasara", date: "2026-10-20", states: ["Andhra Pradesh", "Telangana", "Karnataka", "West Bengal"] },
-  { festival: "Diwali", date: "2026-11-08", states: ["Andhra Pradesh", "Kerala", "Tamil Nadu", "Karnataka", "Telangana", "West Bengal", "Punjab", "Gujarat", "Maharashtra", "Odisha"] },
-  { festival: "Christmas", date: "2026-12-25", states: ["Andhra Pradesh", "Kerala", "Tamil Nadu", "Karnataka", "Telangana", "West Bengal", "Punjab", "Gujarat", "Maharashtra", "Odisha"] },
-  { festival: "Vishu", date: "2026-04-14", states: ["Kerala"] },
-  { festival: "Onam", date: "2026-08-28", states: ["Kerala"] },
-  { festival: "Pongal", date: "2026-01-14", states: ["Tamil Nadu"] },
-  { festival: "Puthandu", date: "2026-04-14", states: ["Tamil Nadu"] },
-  { festival: "Baisakhi", date: "2026-04-14", states: ["Punjab"] },
-  { festival: "Lohri", date: "2026-01-13", states: ["Punjab"] },
-  { festival: "Durga Puja", date: "2026-10-18", states: ["West Bengal", "Odisha"] },
-  { festival: "Poila Baisakh", date: "2026-04-15", states: ["West Bengal"] },
-  { festival: "Navratri", date: "2026-10-12", states: ["Gujarat", "Maharashtra", "Punjab"] },
-  { festival: "Uttarayan", date: "2026-01-14", states: ["Gujarat"] },
-  { festival: "Ganesh Chaturthi", date: "2026-09-04", states: ["Maharashtra"] },
-  { festival: "Raja Parba", date: "2026-06-14", states: ["Odisha"] }
+  { festival: "Ugadi", date: getFutureDate(8), states: ["Andhra Pradesh", "Telangana", "Karnataka"] },
+  { festival: "Sankranti", date: getFutureDate(8), states: ["Andhra Pradesh", "Telangana", "Karnataka", "Tamil Nadu"] },
+  { festival: "Dasara", date: getFutureDate(8), states: ["Andhra Pradesh", "Telangana", "Karnataka", "West Bengal"] },
+  { festival: "Diwali", date: getFutureDate(8), states: ["Andhra Pradesh", "Kerala", "Tamil Nadu", "Karnataka", "Telangana", "West Bengal", "Punjab", "Gujarat", "Maharashtra", "Odisha"] },
+  { festival: "Christmas", date: getFutureDate(8), states: ["Andhra Pradesh", "Kerala", "Tamil Nadu", "Karnataka", "Telangana", "West Bengal", "Punjab", "Gujarat", "Maharashtra", "Odisha"] },
+  { festival: "Vishu", date: getFutureDate(8), states: ["Kerala"] },
+  { festival: "Onam", date: getFutureDate(8), states: ["Kerala"] },
+  { festival: "Pongal", date: getFutureDate(8), states: ["Tamil Nadu"] },
+  { festival: "Puthandu", date: getFutureDate(8), states: ["Tamil Nadu"] },
+  { festival: "Baisakhi", date: getFutureDate(8), states: ["Punjab"] },
+  { festival: "Lohri", date: getFutureDate(8), states: ["Punjab"] },
+  { festival: "Durga Puja", date: getFutureDate(8), states: ["West Bengal", "Odisha"] },
+  { festival: "Poila Baisakh", date: getFutureDate(8), states: ["West Bengal"] },
+  { festival: "Navratri", date: getFutureDate(8), states: ["Gujarat", "Maharashtra", "Punjab"] },
+  { festival: "Uttarayan", date: getFutureDate(8), states: ["Gujarat"] },
+  { festival: "Ganesh Chaturthi", date: getFutureDate(8), states: ["Maharashtra"] },
+  { festival: "Raja Parba", date: getFutureDate(8), states: ["Odisha"] }
 ];
+
 
 const categories = ["Kurta", "Saree", "Jewellery", "Sherwani", "Dhoti", "Dress", "Shirt", "Jeans"];
 const brands = ["Roadster", "W", "Biba", "Libas", "Anouk", "Manyavar", "HRX", "Mast & Harbour"];

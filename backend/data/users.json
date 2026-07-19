@@ -8,601 +8,295 @@
   {
     "_id": "2",
     "id": "2",
-    "name": "Demo User 2",
-    "email": "user2@myntra.com"
+    "name": "Aarav Sharma",
+    "email": "aarav@myntra.com"
   },
   {
     "_id": "3",
     "id": "3",
-    "name": "Demo User 3",
-    "email": "user3@myntra.com"
+    "name": "Diya Patel",
+    "email": "diya@myntra.com"
   },
   {
     "_id": "4",
     "id": "4",
-    "name": "Demo User 4",
-    "email": "user4@myntra.com"
+    "name": "Ananya Iyer",
+    "email": "ananya@myntra.com"
   },
   {
     "_id": "5",
     "id": "5",
-    "name": "Demo User 5",
-    "email": "user5@myntra.com"
+    "name": "Kabir Mehta",
+    "email": "kabir@myntra.com"
   },
   {
     "_id": "6",
     "id": "6",
-    "name": "Demo User 6",
-    "email": "user6@myntra.com"
-  },
-  {
-    "_id": "7",
-    "id": "7",
-    "name": "Demo User 7",
-    "email": "user7@myntra.com"
-  },
-  {
-    "_id": "8",
-    "id": "8",
-    "name": "Demo User 8",
-    "email": "user8@myntra.com"
-  },
-  {
-    "_id": "9",
-    "id": "9",
-    "name": "Demo User 9",
-    "email": "user9@myntra.com"
-  },
-  {
-    "_id": "10",
-    "id": "10",
-    "name": "Demo User 10",
-    "email": "user10@myntra.com"
-  },
-  {
-    "_id": "11",
-    "id": "11",
-    "name": "Demo User 11",
-    "email": "user11@myntra.com"
-  },
-  {
-    "_id": "12",
-    "id": "12",
-    "name": "Demo User 12",
-    "email": "user12@myntra.com"
-  },
-  {
-    "_id": "13",
-    "id": "13",
-    "name": "Demo User 13",
-    "email": "user13@myntra.com"
-  },
-  {
-    "_id": "14",
-    "id": "14",
-    "name": "Demo User 14",
-    "email": "user14@myntra.com"
-  },
-  {
-    "_id": "15",
-    "id": "15",
-    "name": "Demo User 15",
-    "email": "user15@myntra.com"
-  },
-  {
-    "_id": "16",
-    "id": "16",
-    "name": "Demo User 16",
-    "email": "user16@myntra.com"
-  },
-  {
-    "_id": "17",
-    "id": "17",
-    "name": "Demo User 17",
-    "email": "user17@myntra.com"
-  },
-  {
-    "_id": "18",
-    "id": "18",
-    "name": "Demo User 18",
-    "email": "user18@myntra.com"
-  },
-  {
-    "_id": "19",
-    "id": "19",
-    "name": "Demo User 19",
-    "email": "user19@myntra.com"
-  },
-  {
-    "_id": "20",
-    "id": "20",
-    "name": "Demo User 20",
-    "email": "user20@myntra.com"
-  },
-  {
-    "_id": "21",
-    "id": "21",
-    "name": "Demo User 21",
-    "email": "user21@myntra.com"
-  },
-  {
-    "_id": "22",
-    "id": "22",
-    "name": "Demo User 22",
-    "email": "user22@myntra.com"
-  },
-  {
-    "_id": "23",
-    "id": "23",
-    "name": "Demo User 23",
-    "email": "user23@myntra.com"
-  },
-  {
-    "_id": "24",
-    "id": "24",
-    "name": "Demo User 24",
-    "email": "user24@myntra.com"
-  },
-  {
-    "_id": "25",
-    "id": "25",
-    "name": "Demo User 25",
-    "email": "user25@myntra.com"
-  },
-  {
-    "_id": "26",
-    "id": "26",
-    "name": "Demo User 26",
-    "email": "user26@myntra.com"
-  },
-  {
-    "_id": "27",
-    "id": "27",
-    "name": "Demo User 27",
-    "email": "user27@myntra.com"
-  },
-  {
-    "_id": "28",
-    "id": "28",
-    "name": "Demo User 28",
-    "email": "user28@myntra.com"
-  },
-  {
-    "_id": "29",
-    "id": "29",
-    "name": "Demo User 29",
-    "email": "user29@myntra.com"
-  },
-  {
-    "_id": "30",
-    "id": "30",
-    "name": "Demo User 30",
-    "email": "user30@myntra.com"
-  },
-  {
-    "_id": "31",
-    "id": "31",
-    "name": "Demo User 31",
-    "email": "user31@myntra.com"
-  },
-  {
-    "_id": "32",
-    "id": "32",
-    "name": "Demo User 32",
-    "email": "user32@myntra.com"
-  },
-  {
-    "_id": "33",
-    "id": "33",
-    "name": "Demo User 33",
-    "email": "user33@myntra.com"
-  },
-  {
-    "_id": "34",
-    "id": "34",
-    "name": "Demo User 34",
-    "email": "user34@myntra.com"
-  },
-  {
-    "_id": "35",
-    "id": "35",
-    "name": "Demo User 35",
-    "email": "user35@myntra.com"
-  },
-  {
-    "_id": "36",
-    "id": "36",
-    "name": "Demo User 36",
-    "email": "user36@myntra.com"
-  },
-  {
-    "_id": "37",
-    "id": "37",
-    "name": "Demo User 37",
-    "email": "user37@myntra.com"
-  },
-  {
-    "_id": "38",
-    "id": "38",
-    "name": "Demo User 38",
-    "email": "user38@myntra.com"
-  },
-  {
-    "_id": "39",
-    "id": "39",
-    "name": "Demo User 39",
-    "email": "user39@myntra.com"
-  },
-  {
-    "_id": "40",
-    "id": "40",
-    "name": "Demo User 40",
-    "email": "user40@myntra.com"
-  },
-  {
-    "_id": "41",
-    "id": "41",
-    "name": "Demo User 41",
-    "email": "user41@myntra.com"
-  },
-  {
-    "_id": "42",
-    "id": "42",
-    "name": "Demo User 42",
-    "email": "user42@myntra.com"
-  },
-  {
-    "_id": "43",
-    "id": "43",
-    "name": "Demo User 43",
-    "email": "user43@myntra.com"
-  },
-  {
-    "_id": "44",
-    "id": "44",
-    "name": "Demo User 44",
-    "email": "user44@myntra.com"
-  },
-  {
-    "_id": "45",
-    "id": "45",
-    "name": "Demo User 45",
-    "email": "user45@myntra.com"
-  },
-  {
-    "_id": "46",
-    "id": "46",
-    "name": "Demo User 46",
-    "email": "user46@myntra.com"
-  },
-  {
-    "_id": "47",
-    "id": "47",
-    "name": "Demo User 47",
-    "email": "user47@myntra.com"
-  },
-  {
-    "_id": "48",
-    "id": "48",
-    "name": "Demo User 48",
-    "email": "user48@myntra.com"
-  },
-  {
-    "_id": "49",
-    "id": "49",
-    "name": "Demo User 49",
-    "email": "user49@myntra.com"
-  },
-  {
-    "_id": "50",
-    "id": "50",
-    "name": "Demo User 50",
-    "email": "user50@myntra.com"
-  },
-  {
-    "_id": "1",
-    "id": "1",
-    "name": "Judge User",
-    "email": "judge@myntra.com"
-  },
-  {
-    "_id": "2",
-    "id": "2",
-    "name": "Demo User 2",
-    "email": "user2@myntra.com"
-  },
-  {
-    "_id": "3",
-    "id": "3",
-    "name": "Demo User 3",
-    "email": "user3@myntra.com"
-  },
-  {
-    "_id": "4",
-    "id": "4",
-    "name": "Demo User 4",
-    "email": "user4@myntra.com"
-  },
-  {
-    "_id": "5",
-    "id": "5",
-    "name": "Demo User 5",
-    "email": "user5@myntra.com"
-  },
-  {
-    "_id": "6",
-    "id": "6",
-    "name": "Demo User 6",
-    "email": "user6@myntra.com"
-  },
-  {
-    "_id": "7",
-    "id": "7",
-    "name": "Demo User 7",
-    "email": "user7@myntra.com"
-  },
-  {
-    "_id": "8",
-    "id": "8",
-    "name": "Demo User 8",
-    "email": "user8@myntra.com"
-  },
-  {
-    "_id": "9",
-    "id": "9",
-    "name": "Demo User 9",
-    "email": "user9@myntra.com"
-  },
-  {
-    "_id": "10",
-    "id": "10",
-    "name": "Demo User 10",
-    "email": "user10@myntra.com"
-  },
-  {
-    "_id": "11",
-    "id": "11",
-    "name": "Demo User 11",
-    "email": "user11@myntra.com"
-  },
-  {
-    "_id": "12",
-    "id": "12",
-    "name": "Demo User 12",
-    "email": "user12@myntra.com"
-  },
-  {
-    "_id": "13",
-    "id": "13",
-    "name": "Demo User 13",
-    "email": "user13@myntra.com"
-  },
-  {
-    "_id": "14",
-    "id": "14",
-    "name": "Demo User 14",
-    "email": "user14@myntra.com"
-  },
-  {
-    "_id": "15",
-    "id": "15",
-    "name": "Demo User 15",
-    "email": "user15@myntra.com"
-  },
-  {
-    "_id": "16",
-    "id": "16",
-    "name": "Demo User 16",
-    "email": "user16@myntra.com"
-  },
-  {
-    "_id": "17",
-    "id": "17",
-    "name": "Demo User 17",
-    "email": "user17@myntra.com"
-  },
-  {
-    "_id": "18",
-    "id": "18",
-    "name": "Demo User 18",
-    "email": "user18@myntra.com"
-  },
-  {
-    "_id": "19",
-    "id": "19",
-    "name": "Demo User 19",
-    "email": "user19@myntra.com"
-  },
-  {
-    "_id": "20",
-    "id": "20",
-    "name": "Demo User 20",
-    "email": "user20@myntra.com"
-  },
-  {
-    "_id": "21",
-    "id": "21",
-    "name": "Demo User 21",
-    "email": "user21@myntra.com"
-  },
-  {
-    "_id": "22",
-    "id": "22",
-    "name": "Demo User 22",
-    "email": "user22@myntra.com"
-  },
-  {
-    "_id": "23",
-    "id": "23",
-    "name": "Demo User 23",
-    "email": "user23@myntra.com"
-  },
-  {
-    "_id": "24",
-    "id": "24",
-    "name": "Demo User 24",
-    "email": "user24@myntra.com"
-  },
-  {
-    "_id": "25",
-    "id": "25",
-    "name": "Demo User 25",
-    "email": "user25@myntra.com"
-  },
-  {
-    "_id": "26",
-    "id": "26",
-    "name": "Demo User 26",
-    "email": "user26@myntra.com"
-  },
-  {
-    "_id": "27",
-    "id": "27",
-    "name": "Demo User 27",
-    "email": "user27@myntra.com"
-  },
-  {
-    "_id": "28",
-    "id": "28",
-    "name": "Demo User 28",
-    "email": "user28@myntra.com"
-  },
-  {
-    "_id": "29",
-    "id": "29",
-    "name": "Demo User 29",
-    "email": "user29@myntra.com"
-  },
-  {
-    "_id": "30",
-    "id": "30",
-    "name": "Demo User 30",
-    "email": "user30@myntra.com"
-  },
-  {
-    "_id": "31",
-    "id": "31",
-    "name": "Demo User 31",
-    "email": "user31@myntra.com"
-  },
-  {
-    "_id": "32",
-    "id": "32",
-    "name": "Demo User 32",
-    "email": "user32@myntra.com"
-  },
-  {
-    "_id": "33",
-    "id": "33",
-    "name": "Demo User 33",
-    "email": "user33@myntra.com"
-  },
-  {
-    "_id": "34",
-    "id": "34",
-    "name": "Demo User 34",
-    "email": "user34@myntra.com"
-  },
-  {
-    "_id": "35",
-    "id": "35",
-    "name": "Demo User 35",
-    "email": "user35@myntra.com"
-  },
-  {
-    "_id": "36",
-    "id": "36",
-    "name": "Demo User 36",
-    "email": "user36@myntra.com"
-  },
-  {
-    "_id": "37",
-    "id": "37",
-    "name": "Demo User 37",
-    "email": "user37@myntra.com"
-  },
-  {
-    "_id": "38",
-    "id": "38",
-    "name": "Demo User 38",
-    "email": "user38@myntra.com"
-  },
-  {
-    "_id": "39",
-    "id": "39",
-    "name": "Demo User 39",
-    "email": "user39@myntra.com"
-  },
-  {
-    "_id": "40",
-    "id": "40",
-    "name": "Demo User 40",
-    "email": "user40@myntra.com"
-  },
-  {
-    "_id": "41",
-    "id": "41",
-    "name": "Demo User 41",
-    "email": "user41@myntra.com"
-  },
-  {
-    "_id": "42",
-    "id": "42",
-    "name": "Demo User 42",
-    "email": "user42@myntra.com"
-  },
-  {
-    "_id": "43",
-    "id": "43",
-    "name": "Demo User 43",
-    "email": "user43@myntra.com"
-  },
-  {
-    "_id": "44",
-    "id": "44",
-    "name": "Demo User 44",
-    "email": "user44@myntra.com"
-  },
-  {
-    "_id": "45",
-    "id": "45",
-    "name": "Demo User 45",
-    "email": "user45@myntra.com"
-  },
-  {
-    "_id": "46",
-    "id": "46",
-    "name": "Demo User 46",
-    "email": "user46@myntra.com"
-  },
-  {
-    "_id": "47",
-    "id": "47",
-    "name": "Demo User 47",
-    "email": "user47@myntra.com"
-  },
-  {
-    "_id": "48",
-    "id": "48",
-    "name": "Demo User 48",
-    "email": "user48@myntra.com"
-  },
-  {
-    "_id": "49",
-    "id": "49",
-    "name": "Demo User 49",
-    "email": "user49@myntra.com"
-  },
-  {
-    "_id": "50",
-    "id": "50",
-    "name": "Demo User 50",
-    "email": "user50@myntra.com"
-  },
-  {
-    "_id": "1784384212716",
-    "id": "1784384212716",
-    "name": "riya",
+    "name": "Riya Sen",
     "email": "riya@myntra.com"
+  },
+  {
+    "_id": "7",
+    "id": "7",
+    "name": "Arjun Nair",
+    "email": "arjun@myntra.com"
+  },
+  {
+    "_id": "8",
+    "id": "8",
+    "name": "Demo User 8",
+    "email": "user8@myntra.com"
+  },
+  {
+    "_id": "9",
+    "id": "9",
+    "name": "Demo User 9",
+    "email": "user9@myntra.com"
+  },
+  {
+    "_id": "10",
+    "id": "10",
+    "name": "Demo User 10",
+    "email": "user10@myntra.com"
+  },
+  {
+    "_id": "11",
+    "id": "11",
+    "name": "Demo User 11",
+    "email": "user11@myntra.com"
+  },
+  {
+    "_id": "12",
+    "id": "12",
+    "name": "Demo User 12",
+    "email": "user12@myntra.com"
+  },
+  {
+    "_id": "13",
+    "id": "13",
+    "name": "Demo User 13",
+    "email": "user13@myntra.com"
+  },
+  {
+    "_id": "14",
+    "id": "14",
+    "name": "Demo User 14",
+    "email": "user14@myntra.com"
+  },
+  {
+    "_id": "15",
+    "id": "15",
+    "name": "Demo User 15",
+    "email": "user15@myntra.com"
+  },
+  {
+    "_id": "16",
+    "id": "16",
+    "name": "Demo User 16",
+    "email": "user16@myntra.com"
+  },
+  {
+    "_id": "17",
+    "id": "17",
+    "name": "Demo User 17",
+    "email": "user17@myntra.com"
+  },
+  {
+    "_id": "18",
+    "id": "18",
+    "name": "Demo User 18",
+    "email": "user18@myntra.com"
+  },
+  {
+    "_id": "19",
+    "id": "19",
+    "name": "Demo User 19",
+    "email": "user19@myntra.com"
+  },
+  {
+    "_id": "20",
+    "id": "20",
+    "name": "Demo User 20",
+    "email": "user20@myntra.com"
+  },
+  {
+    "_id": "21",
+    "id": "21",
+    "name": "Demo User 21",
+    "email": "user21@myntra.com"
+  },
+  {
+    "_id": "22",
+    "id": "22",
+    "name": "Demo User 22",
+    "email": "user22@myntra.com"
+  },
+  {
+    "_id": "23",
+    "id": "23",
+    "name": "Demo User 23",
+    "email": "user23@myntra.com"
+  },
+  {
+    "_id": "24",
+    "id": "24",
+    "name": "Demo User 24",
+    "email": "user24@myntra.com"
+  },
+  {
+    "_id": "25",
+    "id": "25",
+    "name": "Demo User 25",
+    "email": "user25@myntra.com"
+  },
+  {
+    "_id": "26",
+    "id": "26",
+    "name": "Demo User 26",
+    "email": "user26@myntra.com"
+  },
+  {
+    "_id": "27",
+    "id": "27",
+    "name": "Demo User 27",
+    "email": "user27@myntra.com"
+  },
+  {
+    "_id": "28",
+    "id": "28",
+    "name": "Demo User 28",
+    "email": "user28@myntra.com"
+  },
+  {
+    "_id": "29",
+    "id": "29",
+    "name": "Demo User 29",
+    "email": "user29@myntra.com"
+  },
+  {
+    "_id": "30",
+    "id": "30",
+    "name": "Demo User 30",
+    "email": "user30@myntra.com"
+  },
+  {
+    "_id": "31",
+    "id": "31",
+    "name": "Demo User 31",
+    "email": "user31@myntra.com"
+  },
+  {
+    "_id": "32",
+    "id": "32",
+    "name": "Demo User 32",
+    "email": "user32@myntra.com"
+  },
+  {
+    "_id": "33",
+    "id": "33",
+    "name": "Demo User 33",
+    "email": "user33@myntra.com"
+  },
+  {
+    "_id": "34",
+    "id": "34",
+    "name": "Demo User 34",
+    "email": "user34@myntra.com"
+  },
+  {
+    "_id": "35",
+    "id": "35",
+    "name": "Demo User 35",
+    "email": "user35@myntra.com"
+  },
+  {
+    "_id": "36",
+    "id": "36",
+    "name": "Demo User 36",
+    "email": "user36@myntra.com"
+  },
+  {
+    "_id": "37",
+    "id": "37",
+    "name": "Demo User 37",
+    "email": "user37@myntra.com"
+  },
+  {
+    "_id": "38",
+    "id": "38",
+    "name": "Demo User 38",
+    "email": "user38@myntra.com"
+  },
+  {
+    "_id": "39",
+    "id": "39",
+    "name": "Demo User 39",
+    "email": "user39@myntra.com"
+  },
+  {
+    "_id": "40",
+    "id": "40",
+    "name": "Demo User 40",
+    "email": "user40@myntra.com"
+  },
+  {
+    "_id": "41",
+    "id": "41",
+    "name": "Demo User 41",
+    "email": "user41@myntra.com"
+  },
+  {
+    "_id": "42",
+    "id": "42",
+    "name": "Demo User 42",
+    "email": "user42@myntra.com"
+  },
+  {
+    "_id": "43",
+    "id": "43",
+    "name": "Demo User 43",
+    "email": "user43@myntra.com"
+  },
+  {
+    "_id": "44",
+    "id": "44",
+    "name": "Demo User 44",
+    "email": "user44@myntra.com"
+  },
+  {
+    "_id": "45",
+    "id": "45",
+    "name": "Demo User 45",
+    "email": "user45@myntra.com"
+  },
+  {
+    "_id": "46",
+    "id": "46",
+    "name": "Demo User 46",
+    "email": "user46@myntra.com"
+  },
+  {
+    "_id": "47",
+    "id": "47",
+    "name": "Demo User 47",
+    "email": "user47@myntra.com"
+  },
+  {
+    "_id": "48",
+    "id": "48",
+    "name": "Demo User 48",
+    "email": "user48@myntra.com"
+  },
+  {
+    "_id": "49",
+    "id": "49",
+    "name": "Demo User 49",
+    "email": "user49@myntra.com"
+  },
+  {
+    "_id": "50",
+    "id": "50",
+    "name": "Demo User 50",
+    "email": "user50@myntra.com"
   }
 ]

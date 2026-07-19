@@ -1,42 +1,42 @@
 [
   {
     "festival": "Ugadi",
-    "date": "2026-03-18",
+    "date": "2026-07-26",
     "states": [
       "Andhra Pradesh",
       "Telangana",
       "Karnataka"
     ],
-    "_id": "1784307687125",
-    "id": "1784307687125"
+    "_id": "1784386688676",
+    "id": "1784386688676"
   },
   {
     "festival": "Sankranti",
-    "date": "2026-01-14",
+    "date": "2026-07-26",
     "states": [
       "Andhra Pradesh",
       "Telangana",
       "Karnataka",
       "Tamil Nadu"
     ],
-    "_id": "1784307708749",
-    "id": "1784307708749"
+    "_id": "1784386719586",
+    "id": "1784386719586"
   },
   {
     "festival": "Dasara",
-    "date": "2026-10-20",
+    "date": "2026-07-26",
     "states": [
       "Andhra Pradesh",
       "Telangana",
       "Karnataka",
       "West Bengal"
     ],
-    "_id": "1784307721857",
-    "id": "1784307721857"
+    "_id": "1784386649745",
+    "id": "1784386649745"
   },
   {
     "festival": "Diwali",
-    "date": "2026-11-08",
+    "date": "2026-07-26",
     "states": [
       "Andhra Pradesh",
       "Kerala",
@@ -44,14 +44,17 @@
       "Karnataka",
       "Telangana",
       "West Bengal",
-      "Punjab"
+      "Punjab",
+      "Gujarat",
+      "Maharashtra",
+      "Odisha"
     ],
-    "_id": "1784307762741",
-    "id": "1784307762741"
+    "_id": "1784386714085",
+    "id": "1784386714085"
   },
   {
     "festival": "Christmas",
-    "date": "2026-12-25",
+    "date": "2026-07-26",
     "states": [
       "Andhra Pradesh",
       "Kerala",
@@ -59,218 +62,123 @@
       "Karnataka",
       "Telangana",
       "West Bengal",
-      "Punjab"
+      "Punjab",
+      "Gujarat",
+      "Maharashtra",
+      "Odisha"
     ],
-    "_id": "1784307734928",
-    "id": "1784307734928"
+    "_id": "1784386667221",
+    "id": "1784386667221"
   },
   {
     "festival": "Vishu",
-    "date": "2026-04-14",
+    "date": "2026-07-26",
     "states": [
       "Kerala"
     ],
-    "_id": "1784307688767",
-    "id": "1784307688767"
+    "_id": "1784386637245",
+    "id": "1784386637245"
   },
   {
     "festival": "Onam",
-    "date": "2026-08-28",
+    "date": "2026-07-26",
     "states": [
       "Kerala"
     ],
-    "_id": "1784307785169",
-    "id": "1784307785169"
+    "_id": "1784386716449",
+    "id": "1784386716449"
   },
   {
     "festival": "Pongal",
-    "date": "2026-01-14",
+    "date": "2026-07-26",
     "states": [
       "Tamil Nadu"
     ],
-    "_id": "1784307767273",
-    "id": "1784307767273"
+    "_id": "1784386657069",
+    "id": "1784386657069"
   },
   {
     "festival": "Puthandu",
-    "date": "2026-04-14",
+    "date": "2026-07-26",
     "states": [
       "Tamil Nadu"
     ],
-    "_id": "1784307717235",
-    "id": "1784307717235"
+    "_id": "1784386662165",
+    "id": "1784386662165"
   },
   {
     "festival": "Baisakhi",
-    "date": "2026-04-14",
+    "date": "2026-07-26",
     "states": [
       "Punjab"
     ],
-    "_id": "1784307747322",
-    "id": "1784307747322"
+    "_id": "1784386699249",
+    "id": "1784386699249"
   },
   {
     "festival": "Lohri",
-    "date": "2026-01-13",
+    "date": "2026-07-26",
     "states": [
       "Punjab"
     ],
-    "_id": "1784307769141",
-    "id": "1784307769141"
+    "_id": "1784386676265",
+    "id": "1784386676265"
   },
   {
     "festival": "Durga Puja",
-    "date": "2026-10-18",
+    "date": "2026-07-26",
     "states": [
-      "West Bengal"
+      "West Bengal",
+      "Odisha"
     ],
-    "_id": "1784307774734",
-    "id": "1784307774734"
+    "_id": "1784386717470",
+    "id": "1784386717470"
   },
   {
     "festival": "Poila Baisakh",
-    "date": "2026-04-15",
+    "date": "2026-07-26",
     "states": [
       "West Bengal"
     ],
-    "_id": "1784307746532",
-    "id": "1784307746532"
+    "_id": "1784386633379",
+    "id": "1784386633379"
   },
   {
-    "festival": "Ugadi",
-    "date": "2026-03-18",
+    "festival": "Navratri",
+    "date": "2026-07-26",
     "states": [
-      "Andhra Pradesh",
-      "Telangana",
-      "Karnataka"
-    ],
-    "_id": "1784361263974",
-    "id": "1784361263974"
-  },
-  {
-    "festival": "Sankranti",
-    "date": "2026-01-14",
-    "states": [
-      "Andhra Pradesh",
-      "Telangana",
-      "Karnataka",
-      "Tamil Nadu"
-    ],
-    "_id": "1784361291524",
-    "id": "1784361291524"
-  },
-  {
-    "festival": "Dasara",
-    "date": "2026-10-20",
-    "states": [
-      "Andhra Pradesh",
-      "Telangana",
-      "Karnataka",
-      "West Bengal"
-    ],
-    "_id": "1784361304376",
-    "id": "1784361304376"
-  },
-  {
-    "festival": "Diwali",
-    "date": "2026-11-08",
-    "states": [
-      "Andhra Pradesh",
-      "Kerala",
-      "Tamil Nadu",
-      "Karnataka",
-      "Telangana",
-      "West Bengal",
+      "Gujarat",
+      "Maharashtra",
       "Punjab"
     ],
-    "_id": "1784361310308",
-    "id": "1784361310308"
+    "_id": "1784386639353",
+    "id": "1784386639353"
   },
   {
-    "festival": "Christmas",
-    "date": "2026-12-25",
+    "festival": "Uttarayan",
+    "date": "2026-07-26",
     "states": [
-      "Andhra Pradesh",
-      "Kerala",
-      "Tamil Nadu",
-      "Karnataka",
-      "Telangana",
-      "West Bengal",
-      "Punjab"
+      "Gujarat"
     ],
-    "_id": "1784361307289",
-    "id": "1784361307289"
+    "_id": "1784386633887",
+    "id": "1784386633887"
   },
   {
-    "festival": "Vishu",
-    "date": "2026-04-14",
+    "festival": "Ganesh Chaturthi",
+    "date": "2026-07-26",
     "states": [
-      "Kerala"
+      "Maharashtra"
     ],
-    "_id": "1784361274429",
-    "id": "1784361274429"
+    "_id": "1784386670150",
+    "id": "1784386670150"
   },
   {
-    "festival": "Onam",
-    "date": "2026-08-28",
+    "festival": "Raja Parba",
+    "date": "2026-07-26",
     "states": [
-      "Kerala"
+      "Odisha"
     ],
-    "_id": "1784361335167",
-    "id": "1784361335167"
-  },
-  {
-    "festival": "Pongal",
-    "date": "2026-01-14",
-    "states": [
-      "Tamil Nadu"
-    ],
-    "_id": "1784361305558",
-    "id": "1784361305558"
-  },
-  {
-    "festival": "Puthandu",
-    "date": "2026-04-14",
-    "states": [
-      "Tamil Nadu"
-    ],
-    "_id": "1784361247621",
-    "id": "1784361247621"
-  },
-  {
-    "festival": "Baisakhi",
-    "date": "2026-04-14",
-    "states": [
-      "Punjab"
-    ],
-    "_id": "1784361295273",
-    "id": "1784361295273"
-  },
-  {
-    "festival": "Lohri",
-    "date": "2026-01-13",
-    "states": [
-      "Punjab"
-    ],
-    "_id": "1784361271563",
-    "id": "1784361271563"
-  },
-  {
-    "festival": "Durga Puja",
-    "date": "2026-10-18",
-    "states": [
-      "West Bengal"
-    ],
-    "_id": "1784361339529",
-    "id": "1784361339529"
-  },
-  {
-    "festival": "Poila Baisakh",
-    "date": "2026-04-15",
-    "states": [
-      "West Bengal"
-    ],
-    "_id": "1784361283554",
-    "id": "1784361283554"
+    "_id": "1784386631998",
+    "id": "1784386631998"
   }
 ]

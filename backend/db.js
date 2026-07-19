@@ -140,6 +140,10 @@ class MockModel {
 
   async deleteMany(filter = {}) {
     const data = this.read();
+    if (Object.keys(filter).length === 0) {
+      this.write([]);
+      return { deletedCount: data.length };
+    }
     const remaining = data.filter(item => {
       for (let key in filter) {
         if (String(item[key]) === String(filter[key])) return false;
