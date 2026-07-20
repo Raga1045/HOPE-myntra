@@ -142,6 +142,75 @@ function generateConfidenceData(product, profile, user) {
   
   const confidenceScore = Math.max(80, Math.min(100, Math.round(score)));
   
+  // Match Label
+  const matchLabel = confidenceScore >= 92 ? "Perfect Match" : "Highly Recommended";
+
+  // City Map
+  const stateCityMap = {
+    "Andhra Pradesh": "Hyderabad",
+    "Telangana": "Hyderabad",
+    "Kerala": "Kochi",
+    "Tamil Nadu": "Chennai",
+    "Karnataka": "Bengaluru",
+    "West Bengal": "Kolkata",
+    "Punjab": "Chandigarh",
+    "Gujarat": "Ahmedabad",
+    "Maharashtra": "Mumbai",
+    "Assam": "Guwahati",
+    "Bihar": "Patna",
+    "Goa": "Panaji",
+    "Haryana": "Gurugram",
+    "Himachal Pradesh": "Shimla",
+    "Jharkhand": "Ranchi",
+    "Madhya Pradesh": "Bhopal",
+    "Odisha": "Bhubaneswar",
+    "Rajasthan": "Jaipur",
+    "Sikkim": "Gangtok",
+    "Uttar Pradesh": "Lucknow",
+    "Uttarakhand": "Dehradun",
+    "Delhi (NCT)": "New Delhi"
+  };
+  const cityName = stateCityMap[stateName] || "Hyderabad";
+
+  // Demographics
+  let demographics = "Shoppers with your profile";
+  if (product.category === "Saree" || product.category === "Jewellery" || product.category === "Dress") {
+    demographics = "Women (20–25)";
+  } else if (product.category === "Sherwani" || product.category === "Dhoti" || product.category === "Shirt") {
+    demographics = "Men (25–30)";
+  }
+
+  // checklist
+  const whyPickedChecklist = [
+    { label: `Perfect for ${activeFestival}`, iconType: 'Sparkles' },
+    { label: `Trending in ${stateName}`, iconType: 'MapPin' },
+    { label: `Matches your preferred ${product.style || 'ethnic'} style`, iconType: 'Palette' },
+    { label: `Ideal for current weather`, iconType: 'Sun' },
+    { label: `Great for family celebrations`, iconType: 'Heart' }
+  ];
+
+  // sales estimates
+  const salesCount = 80 + Math.floor((12000 / product.price) * (product.rating || 4.2)) + Math.floor(Math.random() * 20);
+  const wishlistsCount = 220 + Math.floor(salesCount * 3.5) + Math.floor(Math.random() * 50);
+
+  const peopleLikeYou = [
+    { label: `${demographics} loved this`, iconType: 'User' },
+    { label: `Trending in ${cityName}`, iconType: 'MapPin' },
+    { label: `Bought ${salesCount} times this month`, iconType: 'ShoppingBag' },
+    { label: `Rated ${product.rating || 4.5} by similar shoppers`, iconType: 'Star' },
+    { label: `Added to ${wishlistsCount} wishlists`, iconType: 'Heart' },
+    { label: `Frequently purchased this week`, iconType: 'Flame' }
+  ];
+
+  const matchBreakdown = [
+    { name: 'Festival Match', value: festivalMatch, color: 'saffron' },
+    { name: 'Regional Match', value: regionalMatch, color: 'purple' },
+    { name: 'Weather', value: weatherScore, color: 'blue' },
+    { name: 'Style Match', value: styleScore, color: 'pink' },
+    { name: 'Comfort', value: comfortScore, color: 'green' },
+    { name: 'Popularity', value: popularityScore, color: 'purple' }
+  ];
+
   // Cultural Authenticity
   let culturalTag = "Traditional Ethnic Style";
   const rLower = regionTag.toLowerCase();
@@ -158,17 +227,31 @@ function generateConfidenceData(product, profile, user) {
   } else if (rLower.includes("maharashtra")) {
     culturalTag = "Maharashtrian Paithani Style";
   }
-  
-  // Badges
-  const badges = ["Handloom Certified", "Made by Local Artisans"];
-  if (product.price > 2000) {
-    badges.push("Premium Heritage");
-  } else {
-    badges.push("Eco Friendly Dye");
+
+  const styleInsights = [
+    culturalTag,
+    "Handloom Certified",
+    product.category === "Jewellery" ? "Handcrafted Detailing" : "Breathable Cotton"
+  ];
+
+  let stylingTips = ["Oxidized Jhumkas", "White Kolhapuris", "Silver Bangles", "Potli Bag"];
+  if (product.category === "Sherwani" || product.category === "Dhoti") {
+    stylingTips = ["Leather Mojaris", "Metallic Watch", "Silk Safa", "Designer Stole"];
+  } else if (product.category === "Shirt" || product.category === "Jeans") {
+    stylingTips = ["Casual Sneakers", "Smart Watch", "Brown Leather Belt", "Sunglasses"];
+  } else if (product.category === "Jewellery") {
+    stylingTips = ["Matching Silk Saree", "Pastel Kurtas", "Embroidered Potli", "Gilded Heels"];
   }
+
+  const trustSignals = [
+    "AI Verified",
+    "Community Favourite",
+    "Regionally Relevant",
+    "Festival Approved"
+  ];
   
   // Explanation text
-  const explanation = `This ${product.color || "festive"} ${product.category} aligns with your selected festival (${activeFestival}), matches your preferred ${product.style || "Traditional"} style, is widely purchased in ${stateName} during the festive season, and offers excellent comfort for long celebrations.`;
+  const explanation = `Our AI selected this outfit because it closely matches your preferred ${product.style || "Traditional"} style, your selected festival (${activeFestival}), and is one of the most popular choices among ${demographics.toLowerCase()} in ${stateName}. The breathable fabric also makes it ideal for today's weather.`;
 
   return {
     festivalMatch,
@@ -178,10 +261,16 @@ function generateConfidenceData(product, profile, user) {
     styleScore,
     confidenceScore,
     culturalTag,
-    badges,
     explanation,
     festivalName: activeFestival,
-    stateName
+    stateName,
+    matchLabel,
+    whyPickedChecklist,
+    peopleLikeYou,
+    matchBreakdown,
+    styleInsights,
+    stylingTips,
+    trustSignals
   };
 }
 

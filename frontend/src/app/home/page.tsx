@@ -151,6 +151,56 @@ export default function HomePage() {
         popularityScore * 0.1
       );
 
+      const matchLabel = confidenceScore >= 92 ? "Perfect Match" : "Highly Recommended";
+      const cityName = mockState.includes("Andhra") || mockState.includes("Telangana") ? "Hyderabad" : "Mumbai";
+      const demographics = cat === "Saree" || cat === "Jewellery" ? "Women (20–25)" : "Men (25–30)";
+      
+      const whyPickedChecklist = [
+        { label: `Perfect for ${mockFestival}`, iconType: 'Sparkles' },
+        { label: `Trending in ${mockState}`, iconType: 'MapPin' },
+        { label: `Matches your preferred style`, iconType: 'Palette' },
+        { label: `Ideal for current weather`, iconType: 'Sun' },
+        { label: `Great for family celebrations`, iconType: 'Heart' }
+      ];
+
+      const peopleLikeYou = [
+        { label: `${demographics} loved this`, iconType: 'User' },
+        { label: `Trending in ${cityName}`, iconType: 'MapPin' },
+        { label: `Bought 148 times this month`, iconType: 'ShoppingBag' },
+        { label: `Rated 4.8 by similar shoppers`, iconType: 'Star' },
+        { label: `Added to 540 wishlists`, iconType: 'Heart' },
+        { label: `Frequently purchased this week`, iconType: 'Flame' }
+      ];
+
+      const matchBreakdown = [
+        { name: 'Festival Match', value: festivalMatch, color: 'saffron' as const },
+        { name: 'Regional Match', value: regionalMatch, color: 'purple' as const },
+        { name: 'Weather', value: weatherScore, color: 'blue' as const },
+        { name: 'Style Match', value: styleScore, color: 'pink' as const },
+        { name: 'Comfort', value: comfortScore, color: 'green' as const },
+        { name: 'Popularity', value: popularityScore, color: 'purple' as const }
+      ];
+
+      const styleInsights = [
+        `Traditional ${mockState.split(" ")[0]} Style`,
+        "Handloom Certified",
+        "Breathable Cotton"
+      ];
+
+      const stylingTips = [
+        "Oxidized Jhumkas",
+        "White Kolhapuris",
+        "Silver Bangles",
+        "Potli Bag"
+      ];
+
+      const trustSignals = [
+        "AI Verified",
+        "Community Favourite",
+        "Regionally Relevant",
+        "Festival Approved"
+      ];
+
       const confidence: ConfidenceData = {
         festivalMatch,
         regionalMatch,
@@ -160,9 +210,16 @@ export default function HomePage() {
         confidenceScore,
         culturalTag: `Traditional ${mockState.split(" ")[0]} Handloom`,
         badges: ["Eco Friendly Dye", "Handloom Certified"],
-        explanation: `This ${color} ${cat} aligns with your selected festival (${mockFestival}), matches your style aesthetic, is widely purchased in ${mockState}, and offers excellent comfort for long outdoor celebrations.`,
+        explanation: `Our AI selected this outfit because it closely matches your preferred style, your selected festival (${mockFestival}), and is one of the most popular choices among ${demographics.toLowerCase()} in ${mockState}. The breathable fabric also makes it ideal for today's weather.`,
         festivalName: mockFestival,
-        stateName: mockState
+        stateName: mockState,
+        matchLabel,
+        whyPickedChecklist,
+        peopleLikeYou,
+        matchBreakdown,
+        styleInsights,
+        stylingTips,
+        trustSignals
       };
 
       return {
