@@ -1,42 +1,44 @@
+import festivals from "./data/festivals.json" assert { type: "json" };
+
 import { connectDB, User, CultureProfile, Festival, Product, Purchase } from './db.js';
 
-const states = [
-  "Andhra Pradesh",
-  "Kerala",
-  "Tamil Nadu",
-  "Karnataka",
-  "Telangana",
-  "West Bengal",
-  "Punjab",
-  "Gujarat",
-  "Maharashtra",
-  "Odisha"
-];
-const getFutureDate = (days) => {
-  const d = new Date();
-  d.setDate(d.getDate() + days);
-  return d.toISOString().split('T')[0];
-};
+// const states = [
+//   "Andhra Pradesh",
+//   "Kerala",
+//   "Tamil Nadu",
+//   "Karnataka",
+//   "Telangana",
+//   "West Bengal",
+//   "Punjab",
+//   "Gujarat",
+//   "Maharashtra",
+//   "Odisha"
+// ];
+// const getFutureDate = (days) => {
+//   const d = new Date();
+//   d.setDate(d.getDate() + days);
+//   return d.toISOString().split('T')[0];
+// };
 
-const festivals = [
-  { festival: "Ugadi", date: getFutureDate(8), states: ["Andhra Pradesh", "Telangana", "Karnataka"] },
-  { festival: "Sankranti", date: getFutureDate(8), states: ["Andhra Pradesh", "Telangana", "Karnataka", "Tamil Nadu"] },
-  { festival: "Dasara", date: getFutureDate(8), states: ["Andhra Pradesh", "Telangana", "Karnataka", "West Bengal"] },
-  { festival: "Diwali", date: getFutureDate(8), states: ["Andhra Pradesh", "Kerala", "Tamil Nadu", "Karnataka", "Telangana", "West Bengal", "Punjab", "Gujarat", "Maharashtra", "Odisha"] },
-  { festival: "Christmas", date: getFutureDate(8), states: ["Andhra Pradesh", "Kerala", "Tamil Nadu", "Karnataka", "Telangana", "West Bengal", "Punjab", "Gujarat", "Maharashtra", "Odisha"] },
-  { festival: "Vishu", date: getFutureDate(8), states: ["Kerala"] },
-  { festival: "Onam", date: getFutureDate(8), states: ["Kerala"] },
-  { festival: "Pongal", date: getFutureDate(8), states: ["Tamil Nadu"] },
-  { festival: "Puthandu", date: getFutureDate(8), states: ["Tamil Nadu"] },
-  { festival: "Baisakhi", date: getFutureDate(8), states: ["Punjab"] },
-  { festival: "Lohri", date: getFutureDate(8), states: ["Punjab"] },
-  { festival: "Durga Puja", date: getFutureDate(8), states: ["West Bengal", "Odisha"] },
-  { festival: "Poila Baisakh", date: getFutureDate(8), states: ["West Bengal"] },
-  { festival: "Navratri", date: getFutureDate(8), states: ["Gujarat", "Maharashtra", "Punjab"] },
-  { festival: "Uttarayan", date: getFutureDate(8), states: ["Gujarat"] },
-  { festival: "Ganesh Chaturthi", date: getFutureDate(8), states: ["Maharashtra"] },
-  { festival: "Raja Parba", date: getFutureDate(8), states: ["Odisha"] }
-];
+// const festivals = [
+//   { festival: "Ugadi", date: getFutureDate(8), states: ["Andhra Pradesh", "Telangana", "Karnataka"] },
+//   { festival: "Sankranti", date: getFutureDate(8), states: ["Andhra Pradesh", "Telangana", "Karnataka", "Tamil Nadu"] },
+//   { festival: "Dasara", date: getFutureDate(8), states: ["Andhra Pradesh", "Telangana", "Karnataka", "West Bengal"] },
+//   { festival: "Diwali", date: getFutureDate(8), states: ["Andhra Pradesh", "Kerala", "Tamil Nadu", "Karnataka", "Telangana", "West Bengal", "Punjab", "Gujarat", "Maharashtra", "Odisha"] },
+//   { festival: "Christmas", date: getFutureDate(8), states: ["Andhra Pradesh", "Kerala", "Tamil Nadu", "Karnataka", "Telangana", "West Bengal", "Punjab", "Gujarat", "Maharashtra", "Odisha"] },
+//   { festival: "Vishu", date: getFutureDate(8), states: ["Kerala"] },
+//   { festival: "Onam", date: getFutureDate(8), states: ["Kerala"] },
+//   { festival: "Pongal", date: getFutureDate(8), states: ["Tamil Nadu"] },
+//   { festival: "Puthandu", date: getFutureDate(8), states: ["Tamil Nadu"] },
+//   { festival: "Baisakhi", date: getFutureDate(8), states: ["Punjab"] },
+//   { festival: "Lohri", date: getFutureDate(8), states: ["Punjab"] },
+//   { festival: "Durga Puja", date: getFutureDate(8), states: ["West Bengal", "Odisha"] },
+//   { festival: "Poila Baisakh", date: getFutureDate(8), states: ["West Bengal"] },
+//   { festival: "Navratri", date: getFutureDate(8), states: ["Gujarat", "Maharashtra", "Punjab"] },
+//   { festival: "Uttarayan", date: getFutureDate(8), states: ["Gujarat"] },
+//   { festival: "Ganesh Chaturthi", date: getFutureDate(8), states: ["Maharashtra"] },
+//   { festival: "Raja Parba", date: getFutureDate(8), states: ["Odisha"] }
+// ];
 
 
 const categories = ["Kurta", "Saree", "Jewellery", "Sherwani", "Dhoti", "Dress", "Shirt", "Jeans"];
@@ -84,12 +86,12 @@ async function seed() {
   console.log('Clearing existing database entries...');
   await User.deleteMany({});
   await CultureProfile.deleteMany({});
-  await Festival.deleteMany({});
+  await Festival.deleteMany({}); //
   await Product.deleteMany({});
   await Purchase.deleteMany({});
 
   console.log('Seeding Festivals...');
-  await Festival.insertMany(festivals);
+  await Festival.insertMany(festivals); //
 
   console.log('Seeding 50 Users...');
   const userDocs = [

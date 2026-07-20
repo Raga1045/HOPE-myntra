@@ -1,184 +1,5046 @@
 [
   {
-    "festival": "Ugadi",
-    "date": "2026-07-26",
-    "states": [
-      "Andhra Pradesh",
-      "Telangana",
-      "Karnataka"
+    "id": 1,
+    "state": "Telangana",
+    "isUnionTerritory": false,
+    "festival": "Bathukamma",
+    "startDate": "2026-10-11",
+    "endDate": "2026-10-19",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 10,
+    "primaryLanguage": "Telugu",
+    "category": "State Festival",
+    "womenClothing": [
+      "Pochampally Saree",
+      "Gadwal Saree",
+      "Traditional Half Saree"
     ],
-    "_id": "1784386688676",
-    "id": "1784386688676"
+    "menClothing": [
+      "White Kurta",
+      "Dhoti"
+    ],
+    "accessories": [
+      "Temple Jewellery",
+      "Glass Bangles",
+      "Jhumkas"
+    ],
+    "footwear": [
+      "Kolhapuri Sandals"
+    ]
   },
   {
+    "id": 2,
+    "state": "Telangana",
+    "isUnionTerritory": false,
+    "festival": "Bonalu",
+    "startDate": "2026-07-12",
+    "endDate": "2026-08-09",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 9,
+    "primaryLanguage": "Telugu",
+    "category": "State Festival",
+    "womenClothing": [
+      "Pattu Saree"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Traditional Gold Jewellery"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 3,
+    "state": "Telangana",
+    "isUnionTerritory": false,
+    "festival": "Sammakka Saralamma Jatara",
+    "startDate": "2026-02-18",
+    "endDate": "2026-02-21",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 9,
+    "primaryLanguage": "Telugu",
+    "category": "Tribal",
+    "womenClothing": [
+      "Traditional Cotton Saree"
+    ],
+    "menClothing": [
+      "Dhoti and Shirt"
+    ],
+    "accessories": [
+      "Tribal Beads",
+      "Glass Bangles"
+    ],
+    "footwear": [
+      "Barefoot/Sandals"
+    ]
+  },
+  {
+    "id": 4,
+    "state": "Telangana",
+    "isUnionTerritory": false,
     "festival": "Sankranti",
-    "date": "2026-07-26",
-    "states": [
-      "Andhra Pradesh",
-      "Telangana",
-      "Karnataka",
-      "Tamil Nadu"
+    "startDate": "2026-01-14",
+    "endDate": "2026-01-16",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 8,
+    "primaryLanguage": "Telugu",
+    "category": "Harvest",
+    "womenClothing": [
+      "Dharmavaram Saree"
     ],
-    "_id": "1784386719586",
-    "id": "1784386719586"
+    "menClothing": [
+      "Pancha (Dhoti)"
+    ],
+    "accessories": [
+      "Gold Chains",
+      "Bangles"
+    ],
+    "footwear": [
+      "Leather Chappals"
+    ]
   },
   {
-    "festival": "Dasara",
-    "date": "2026-07-26",
-    "states": [
-      "Andhra Pradesh",
-      "Telangana",
-      "Karnataka",
-      "West Bengal"
+    "id": 5,
+    "state": "Telangana",
+    "isUnionTerritory": false,
+    "festival": "Ramzan (Eid-ul-Fitr)",
+    "startDate": "2026-03-20",
+    "endDate": "2026-03-21",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 8,
+    "primaryLanguage": "Urdu",
+    "category": "Religious",
+    "womenClothing": [
+      "Salwar Suit",
+      "Gharara"
     ],
-    "_id": "1784386649745",
-    "id": "1784386649745"
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Chandbalis",
+      "Passa"
+    ],
+    "footwear": [
+      "Mojaris"
+    ]
   },
   {
-    "festival": "Diwali",
-    "date": "2026-07-26",
-    "states": [
-      "Andhra Pradesh",
-      "Kerala",
-      "Tamil Nadu",
-      "Karnataka",
-      "Telangana",
-      "West Bengal",
-      "Punjab",
-      "Gujarat",
-      "Maharashtra",
-      "Odisha"
-    ],
-    "_id": "1784386714085",
-    "id": "1784386714085"
-  },
-  {
+    "id": 6,
+    "state": "Telangana",
+    "isUnionTerritory": false,
     "festival": "Christmas",
-    "date": "2026-07-26",
-    "states": [
-      "Andhra Pradesh",
-      "Kerala",
-      "Tamil Nadu",
-      "Karnataka",
-      "Telangana",
-      "West Bengal",
-      "Punjab",
-      "Gujarat",
-      "Maharashtra",
-      "Odisha"
+    "startDate": "2026-12-25",
+    "endDate": "2026-12-25",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 6,
+    "primaryLanguage": "English, Telugu",
+    "category": "Religious",
+    "womenClothing": [
+      "Silk Saree",
+      "Long Dress"
     ],
-    "_id": "1784386667221",
-    "id": "1784386667221"
+    "menClothing": [
+      "Shirt and Trousers"
+    ],
+    "accessories": [
+      "Elegant Pendants"
+    ],
+    "footwear": [
+      "Formal Shoes"
+    ]
   },
   {
-    "festival": "Vishu",
-    "date": "2026-07-26",
-    "states": [
-      "Kerala"
-    ],
-    "_id": "1784386637245",
-    "id": "1784386637245"
-  },
-  {
-    "festival": "Onam",
-    "date": "2026-07-26",
-    "states": [
-      "Kerala"
-    ],
-    "_id": "1784386716449",
-    "id": "1784386716449"
-  },
-  {
-    "festival": "Pongal",
-    "date": "2026-07-26",
-    "states": [
-      "Tamil Nadu"
-    ],
-    "_id": "1784386657069",
-    "id": "1784386657069"
-  },
-  {
-    "festival": "Puthandu",
-    "date": "2026-07-26",
-    "states": [
-      "Tamil Nadu"
-    ],
-    "_id": "1784386662165",
-    "id": "1784386662165"
-  },
-  {
-    "festival": "Baisakhi",
-    "date": "2026-07-26",
-    "states": [
-      "Punjab"
-    ],
-    "_id": "1784386699249",
-    "id": "1784386699249"
-  },
-  {
+    "id": 7,
+    "state": "Punjab",
+    "isUnionTerritory": false,
     "festival": "Lohri",
-    "date": "2026-07-26",
-    "states": [
-      "Punjab"
+    "startDate": "2026-01-13",
+    "endDate": "2026-01-13",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 10,
+    "primaryLanguage": "Punjabi",
+    "category": "Harvest",
+    "womenClothing": [
+      "Patiala Salwar Suit"
     ],
-    "_id": "1784386676265",
-    "id": "1784386676265"
+    "menClothing": [
+      "Kurta Pajama with Jacket"
+    ],
+    "accessories": [
+      "Paranda",
+      "Chooda"
+    ],
+    "footwear": [
+      "Punjabi Jutti"
+    ]
   },
   {
+    "id": 8,
+    "state": "Punjab",
+    "isUnionTerritory": false,
+    "festival": "Baisakhi",
+    "startDate": "2026-04-14",
+    "endDate": "2026-04-14",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 10,
+    "primaryLanguage": "Punjabi",
+    "category": "Harvest",
+    "womenClothing": [
+      "Phulkari Suit",
+      "Patiala Suit"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Phulkari Dupatta"
+    ],
+    "footwear": [
+      "Punjabi Jutti"
+    ]
+  },
+  {
+    "id": 9,
+    "state": "Punjab",
+    "isUnionTerritory": false,
+    "festival": "Gurpurab",
+    "startDate": "2026-11-24",
+    "endDate": "2026-11-24",
+    "isRegional": true,
+    "isNational": true,
+    "priority": 9,
+    "primaryLanguage": "Punjabi",
+    "category": "Religious",
+    "womenClothing": [
+      "Salwar Kameez"
+    ],
+    "menClothing": [
+      "Kurta Pajama with Turban"
+    ],
+    "accessories": [
+      "Simple Gold Chain"
+    ],
+    "footwear": [
+      "Jutti"
+    ]
+  },
+  {
+    "id": 10,
+    "state": "Punjab",
+    "isUnionTerritory": false,
+    "festival": "Diwali",
+    "startDate": "2026-11-08",
+    "endDate": "2026-11-09",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 9,
+    "primaryLanguage": "Punjabi",
+    "category": "Religious",
+    "womenClothing": [
+      "Heavy Salwar Suit"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Gold Earrings"
+    ],
+    "footwear": [
+      "Mojaris"
+    ]
+  },
+  {
+    "id": 11,
+    "state": "Punjab",
+    "isUnionTerritory": false,
+    "festival": "Eid-ul-Fitr",
+    "startDate": "2026-03-20",
+    "endDate": "2026-03-21",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 6,
+    "primaryLanguage": "Punjabi",
+    "category": "Religious",
+    "womenClothing": [
+      "Anarkali Suit"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Chandbalis"
+    ],
+    "footwear": [
+      "Jutti"
+    ]
+  },
+  {
+    "id": 12,
+    "state": "Punjab",
+    "isUnionTerritory": false,
+    "festival": "Christmas",
+    "startDate": "2026-12-25",
+    "endDate": "2026-12-25",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 6,
+    "primaryLanguage": "Punjabi",
+    "category": "Religious",
+    "womenClothing": [
+      "Western Wear",
+      "Suits"
+    ],
+    "menClothing": [
+      "Suits",
+      "Jackets"
+    ],
+    "accessories": [
+      "Minimalist Jewellery"
+    ],
+    "footwear": [
+      "Formal Shoes"
+    ]
+  },
+  {
+    "id": 13,
+    "state": "Kerala",
+    "isUnionTerritory": false,
+    "festival": "Onam",
+    "startDate": "2026-08-26",
+    "endDate": "2026-09-06",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 10,
+    "primaryLanguage": "Malayalam",
+    "category": "Harvest",
+    "womenClothing": [
+      "Kasavu Saree"
+    ],
+    "menClothing": [
+      "Mundu",
+      "White Kurta"
+    ],
+    "accessories": [
+      "Temple Jewellery"
+    ],
+    "footwear": [
+      "Leather Sandals"
+    ]
+  },
+  {
+    "id": 14,
+    "state": "Kerala",
+    "isUnionTerritory": false,
+    "festival": "Vishu",
+    "startDate": "2026-04-14",
+    "endDate": "2026-04-14",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 9,
+    "primaryLanguage": "Malayalam",
+    "category": "New Year",
+    "womenClothing": [
+      "Kasavu Set Mundu"
+    ],
+    "menClothing": [
+      "Mundu and Shirt"
+    ],
+    "accessories": [
+      "Gold Coin Necklace"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 15,
+    "state": "Kerala",
+    "isUnionTerritory": false,
+    "festival": "Thrissur Pooram",
+    "startDate": "2026-05-01",
+    "endDate": "2026-05-01",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 8,
+    "primaryLanguage": "Malayalam",
+    "category": "Cultural",
+    "womenClothing": [
+      "Kerala Saree"
+    ],
+    "menClothing": [
+      "Mundu"
+    ],
+    "accessories": [
+      "Jasmine Flowers in Hair"
+    ],
+    "footwear": [
+      "Barefoot/Sandals"
+    ]
+  },
+  {
+    "id": 16,
+    "state": "Kerala",
+    "isUnionTerritory": false,
+    "festival": "Christmas",
+    "startDate": "2026-12-25",
+    "endDate": "2026-12-25",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 9,
+    "primaryLanguage": "Malayalam",
+    "category": "Religious",
+    "womenClothing": [
+      "Saree",
+      "Western Dress"
+    ],
+    "menClothing": [
+      "Shirt and Trousers"
+    ],
+    "accessories": [
+      "Gold Chains"
+    ],
+    "footwear": [
+      "Formal Footwear"
+    ]
+  },
+  {
+    "id": 17,
+    "state": "Kerala",
+    "isUnionTerritory": false,
+    "festival": "Eid-ul-Fitr",
+    "startDate": "2026-03-20",
+    "endDate": "2026-03-21",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 8,
+    "primaryLanguage": "Malayalam",
+    "category": "Religious",
+    "womenClothing": [
+      "Salwar Kameez"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Gold Earrings"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 18,
+    "state": "Kerala",
+    "isUnionTerritory": false,
+    "festival": "Easter",
+    "startDate": "2026-04-05",
+    "endDate": "2026-04-05",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 7,
+    "primaryLanguage": "Malayalam",
+    "category": "Religious",
+    "womenClothing": [
+      "Light Colored Saree"
+    ],
+    "menClothing": [
+      "Shirt and Trousers"
+    ],
+    "accessories": [
+      "Cross Pendants"
+    ],
+    "footwear": [
+      "Formal Shoes"
+    ]
+  },
+  {
+    "id": 19,
+    "state": "Tamil Nadu",
+    "isUnionTerritory": false,
+    "festival": "Pongal",
+    "startDate": "2026-01-14",
+    "endDate": "2026-01-17",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 10,
+    "primaryLanguage": "Tamil",
+    "category": "Harvest",
+    "womenClothing": [
+      "Kanjeevaram Silk Saree"
+    ],
+    "menClothing": [
+      "Veshti and Angavastram"
+    ],
+    "accessories": [
+      "Temple Jewellery",
+      "Flowers"
+    ],
+    "footwear": [
+      "Leather Sandals"
+    ]
+  },
+  {
+    "id": 20,
+    "state": "Tamil Nadu",
+    "isUnionTerritory": false,
+    "festival": "Puthandu",
+    "startDate": "2026-04-14",
+    "endDate": "2026-04-14",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 9,
+    "primaryLanguage": "Tamil",
+    "category": "New Year",
+    "womenClothing": [
+      "Silk Saree"
+    ],
+    "menClothing": [
+      "Veshti and Shirt"
+    ],
+    "accessories": [
+      "Gold Necklace"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 21,
+    "state": "Tamil Nadu",
+    "isUnionTerritory": false,
+    "festival": "Thaipusam",
+    "startDate": "2026-01-31",
+    "endDate": "2026-01-31",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 8,
+    "primaryLanguage": "Tamil",
+    "category": "Religious",
+    "womenClothing": [
+      "Yellow Cotton Saree"
+    ],
+    "menClothing": [
+      "Yellow Veshti"
+    ],
+    "accessories": [
+      "Rudraksha Beads"
+    ],
+    "footwear": [
+      "Barefoot"
+    ]
+  },
+  {
+    "id": 22,
+    "state": "Tamil Nadu",
+    "isUnionTerritory": false,
+    "festival": "Deepavali",
+    "startDate": "2026-11-08",
+    "endDate": "2026-11-09",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 9,
+    "primaryLanguage": "Tamil",
+    "category": "Religious",
+    "womenClothing": [
+      "Kanjeevaram Saree"
+    ],
+    "menClothing": [
+      "Silk Veshti and Shirt"
+    ],
+    "accessories": [
+      "Gold Jewellery"
+    ],
+    "footwear": [
+      "Chappals"
+    ]
+  },
+  {
+    "id": 23,
+    "state": "Tamil Nadu",
+    "isUnionTerritory": false,
+    "festival": "Eid-ul-Fitr",
+    "startDate": "2026-03-20",
+    "endDate": "2026-03-21",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 7,
+    "primaryLanguage": "Tamil",
+    "category": "Religious",
+    "womenClothing": [
+      "Salwar Suit",
+      "Modest Dress"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Gold Bangles"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 24,
+    "state": "Tamil Nadu",
+    "isUnionTerritory": false,
+    "festival": "Christmas",
+    "startDate": "2026-12-25",
+    "endDate": "2026-12-25",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 7,
+    "primaryLanguage": "Tamil",
+    "category": "Religious",
+    "womenClothing": [
+      "Saree",
+      "Dress"
+    ],
+    "menClothing": [
+      "Trousers and Shirt"
+    ],
+    "accessories": [
+      "Simple Gold Chain"
+    ],
+    "footwear": [
+      "Formal Shoes"
+    ]
+  },
+  {
+    "id": 25,
+    "state": "Andhra Pradesh",
+    "isUnionTerritory": false,
+    "festival": "Sankranti",
+    "startDate": "2026-01-14",
+    "endDate": "2026-01-16",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 10,
+    "primaryLanguage": "Telugu",
+    "category": "Harvest",
+    "womenClothing": [
+      "Dharmavaram Silk Saree"
+    ],
+    "menClothing": [
+      "Pancha (Dhoti)"
+    ],
+    "accessories": [
+      "Temple Jewellery"
+    ],
+    "footwear": [
+      "Leather Sandals"
+    ]
+  },
+  {
+    "id": 26,
+    "state": "Andhra Pradesh",
+    "isUnionTerritory": false,
+    "festival": "Ugadi",
+    "startDate": "2026-03-19",
+    "endDate": "2026-03-19",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 9,
+    "primaryLanguage": "Telugu",
+    "category": "New Year",
+    "womenClothing": [
+      "Gadwal Saree"
+    ],
+    "menClothing": [
+      "Kurta and Pancha"
+    ],
+    "accessories": [
+      "Mango Motif Chains"
+    ],
+    "footwear": [
+      "Traditional Chappals"
+    ]
+  },
+  {
+    "id": 27,
+    "state": "Andhra Pradesh",
+    "isUnionTerritory": false,
+    "festival": "Dasara",
+    "startDate": "2026-10-11",
+    "endDate": "2026-10-20",
+    "isRegional": true,
+    "isNational": true,
+    "priority": 8,
+    "primaryLanguage": "Telugu",
+    "category": "Religious",
+    "womenClothing": [
+      "Silk Saree"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Gold Bangles"
+    ],
+    "footwear": [
+      "Leather Chappals"
+    ]
+  },
+  {
+    "id": 28,
+    "state": "Andhra Pradesh",
+    "isUnionTerritory": false,
+    "festival": "Diwali",
+    "startDate": "2026-11-08",
+    "endDate": "2026-11-09",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 8,
+    "primaryLanguage": "Telugu",
+    "category": "Religious",
+    "womenClothing": [
+      "Pochampally Saree"
+    ],
+    "menClothing": [
+      "Kurta"
+    ],
+    "accessories": [
+      "Gold Jewellery"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 29,
+    "state": "Andhra Pradesh",
+    "isUnionTerritory": false,
+    "festival": "Ramzan (Eid-ul-Fitr)",
+    "startDate": "2026-03-20",
+    "endDate": "2026-03-21",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 7,
+    "primaryLanguage": "Telugu",
+    "category": "Religious",
+    "womenClothing": [
+      "Salwar Suit"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Chandbalis"
+    ],
+    "footwear": [
+      "Mojaris"
+    ]
+  },
+  {
+    "id": 30,
+    "state": "Andhra Pradesh",
+    "isUnionTerritory": false,
+    "festival": "Christmas",
+    "startDate": "2026-12-25",
+    "endDate": "2026-12-25",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 6,
+    "primaryLanguage": "Telugu",
+    "category": "Religious",
+    "womenClothing": [
+      "Long Dress or Saree"
+    ],
+    "menClothing": [
+      "Shirt and Trousers"
+    ],
+    "accessories": [
+      "Simple Pendant"
+    ],
+    "footwear": [
+      "Formal Shoes"
+    ]
+  },
+  {
+    "id": 31,
+    "state": "Arunachal Pradesh",
+    "isUnionTerritory": false,
+    "festival": "Losar",
+    "startDate": "2026-02-18",
+    "endDate": "2026-02-20",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 9,
+    "primaryLanguage": "Monpa",
+    "category": "New Year",
+    "womenClothing": [
+      "Chuba with Apron"
+    ],
+    "menClothing": [
+      "Chuba"
+    ],
+    "accessories": [
+      "Bead Necklaces",
+      "Turquoise"
+    ],
+    "footwear": [
+      "Traditional Boots"
+    ]
+  },
+  {
+    "id": 32,
+    "state": "Arunachal Pradesh",
+    "isUnionTerritory": false,
+    "festival": "Nyokum Yullo",
+    "startDate": "2026-02-26",
+    "endDate": "2026-02-26",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 9,
+    "primaryLanguage": "Nyishi",
+    "category": "Tribal",
+    "womenClothing": [
+      "Gale and Wrap"
+    ],
+    "menClothing": [
+      "Bopa (Hat) and Wrap"
+    ],
+    "accessories": [
+      "Bamboo Ornaments"
+    ],
+    "footwear": [
+      "Barefoot/Sandals"
+    ]
+  },
+  {
+    "id": 33,
+    "state": "Arunachal Pradesh",
+    "isUnionTerritory": false,
+    "festival": "Dree Festival",
+    "startDate": "2026-07-05",
+    "endDate": "2026-07-05",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 8,
+    "primaryLanguage": "Apatani",
+    "category": "Harvest",
+    "womenClothing": [
+      "Apatani Wrap"
+    ],
+    "menClothing": [
+      "Traditional Shawl"
+    ],
+    "accessories": [
+      "Nose Plugs",
+      "Beads"
+    ],
+    "footwear": [
+      "Traditional Footwear"
+    ]
+  },
+  {
+    "id": 34,
+    "state": "Arunachal Pradesh",
+    "isUnionTerritory": false,
+    "festival": "Solung",
+    "startDate": "2026-09-01",
+    "endDate": "2026-09-05",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 8,
+    "primaryLanguage": "Adi",
+    "category": "Harvest",
+    "womenClothing": [
+      "Gale"
+    ],
+    "menClothing": [
+      "Traditional Adi Jacket"
+    ],
+    "accessories": [
+      "Heavy Bead Necklaces"
+    ],
+    "footwear": [
+      "Leather Sandals"
+    ]
+  },
+  {
+    "id": 35,
+    "state": "Arunachal Pradesh",
+    "isUnionTerritory": false,
+    "festival": "Mopin",
+    "startDate": "2026-04-05",
+    "endDate": "2026-04-05",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 7,
+    "primaryLanguage": "Galo",
+    "category": "Harvest",
+    "womenClothing": [
+      "Galo White Dress"
+    ],
+    "menClothing": [
+      "White Wrap with Shawl"
+    ],
+    "accessories": [
+      "Beaded Accessories"
+    ],
+    "footwear": [
+      "Barefoot"
+    ]
+  },
+  {
+    "id": 36,
+    "state": "Arunachal Pradesh",
+    "isUnionTerritory": false,
+    "festival": "Christmas",
+    "startDate": "2026-12-25",
+    "endDate": "2026-12-25",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 8,
+    "primaryLanguage": "English",
+    "category": "Religious",
+    "womenClothing": [
+      "Modern Dresses",
+      "Jackets"
+    ],
+    "menClothing": [
+      "Suits",
+      "Sweaters"
+    ],
+    "accessories": [
+      "Cross Necklaces"
+    ],
+    "footwear": [
+      "Boots"
+    ]
+  },
+  {
+    "id": 37,
+    "state": "Assam",
+    "isUnionTerritory": false,
+    "festival": "Rongali Bihu",
+    "startDate": "2026-04-14",
+    "endDate": "2026-04-20",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 10,
+    "primaryLanguage": "Assamese",
+    "category": "New Year",
+    "womenClothing": [
+      "Muga Silk Mekhela Chador"
+    ],
+    "menClothing": [
+      "Dhoti and Gamosa"
+    ],
+    "accessories": [
+      "Junbiri",
+      "Kopou Phool"
+    ],
+    "footwear": [
+      "Barefoot/Sandals"
+    ]
+  },
+  {
+    "id": 38,
+    "state": "Assam",
+    "isUnionTerritory": false,
     "festival": "Durga Puja",
-    "date": "2026-07-26",
-    "states": [
-      "West Bengal",
-      "Odisha"
+    "startDate": "2026-10-17",
+    "endDate": "2026-10-21",
+    "isRegional": true,
+    "isNational": true,
+    "priority": 9,
+    "primaryLanguage": "Assamese",
+    "category": "Religious",
+    "womenClothing": [
+      "Silk Saree"
     ],
-    "_id": "1784386717470",
-    "id": "1784386717470"
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Gold Jewellery"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
   },
   {
-    "festival": "Poila Baisakh",
-    "date": "2026-07-26",
-    "states": [
-      "West Bengal"
+    "id": 39,
+    "state": "Assam",
+    "isUnionTerritory": false,
+    "festival": "Magh Bihu",
+    "startDate": "2026-01-14",
+    "endDate": "2026-01-15",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 8,
+    "primaryLanguage": "Assamese",
+    "category": "Harvest",
+    "womenClothing": [
+      "Paat Silk Mekhela"
     ],
-    "_id": "1784386633379",
-    "id": "1784386633379"
+    "menClothing": [
+      "Kurta with Gamosa"
+    ],
+    "accessories": [
+      "Traditional Assamese Jewellery"
+    ],
+    "footwear": [
+      "Chappals"
+    ]
   },
   {
-    "festival": "Navratri",
-    "date": "2026-07-26",
-    "states": [
-      "Gujarat",
-      "Maharashtra",
-      "Punjab"
+    "id": 40,
+    "state": "Assam",
+    "isUnionTerritory": false,
+    "festival": "Kati Bihu",
+    "startDate": "2026-10-18",
+    "endDate": "2026-10-18",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 7,
+    "primaryLanguage": "Assamese",
+    "category": "Cultural",
+    "womenClothing": [
+      "Simple Mekhela Chador"
     ],
-    "_id": "1784386639353",
-    "id": "1784386639353"
+    "menClothing": [
+      "Simple Kurta"
+    ],
+    "accessories": [
+      "Minimal Jewellery"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
   },
   {
-    "festival": "Uttarayan",
-    "date": "2026-07-26",
-    "states": [
-      "Gujarat"
+    "id": 41,
+    "state": "Assam",
+    "isUnionTerritory": false,
+    "festival": "Eid-ul-Fitr",
+    "startDate": "2026-03-20",
+    "endDate": "2026-03-21",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 7,
+    "primaryLanguage": "Assamese",
+    "category": "Religious",
+    "womenClothing": [
+      "Salwar Suit"
     ],
-    "_id": "1784386633887",
-    "id": "1784386633887"
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Earrings",
+      "Bangles"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
   },
   {
+    "id": 42,
+    "state": "Assam",
+    "isUnionTerritory": false,
+    "festival": "Christmas",
+    "startDate": "2026-12-25",
+    "endDate": "2026-12-25",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 6,
+    "primaryLanguage": "Assamese",
+    "category": "Religious",
+    "womenClothing": [
+      "Western Wear"
+    ],
+    "menClothing": [
+      "Jackets and Trousers"
+    ],
+    "accessories": [
+      "Minimalist Accessories"
+    ],
+    "footwear": [
+      "Boots/Shoes"
+    ]
+  },
+  {
+    "id": 43,
+    "state": "Bihar",
+    "isUnionTerritory": false,
+    "festival": "Chhath Puja",
+    "startDate": "2026-11-13",
+    "endDate": "2026-11-16",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 10,
+    "primaryLanguage": "Bhojpuri, Hindi",
+    "category": "State Festival",
+    "womenClothing": [
+      "Yellow/Orange Cotton Saree"
+    ],
+    "menClothing": [
+      "Dhoti Kurta"
+    ],
+    "accessories": [
+      "Gold Bangles",
+      "Sindoor"
+    ],
+    "footwear": [
+      "Barefoot"
+    ]
+  },
+  {
+    "id": 44,
+    "state": "Bihar",
+    "isUnionTerritory": false,
+    "festival": "Holi",
+    "startDate": "2026-03-03",
+    "endDate": "2026-03-04",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 9,
+    "primaryLanguage": "Hindi",
+    "category": "Cultural",
+    "womenClothing": [
+      "White Salwar Suit"
+    ],
+    "menClothing": [
+      "White Kurta Pajama"
+    ],
+    "accessories": [
+      "Minimal Jewellery"
+    ],
+    "footwear": [
+      "Chappals"
+    ]
+  },
+  {
+    "id": 45,
+    "state": "Bihar",
+    "isUnionTerritory": false,
+    "festival": "Diwali",
+    "startDate": "2026-11-08",
+    "endDate": "2026-11-09",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 9,
+    "primaryLanguage": "Hindi",
+    "category": "Religious",
+    "womenClothing": [
+      "Silk Saree",
+      "Lehenga"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Gold Jewellery"
+    ],
+    "footwear": [
+      "Mojaris"
+    ]
+  },
+  {
+    "id": 46,
+    "state": "Bihar",
+    "isUnionTerritory": false,
+    "festival": "Makar Sankranti",
+    "startDate": "2026-01-14",
+    "endDate": "2026-01-14",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 8,
+    "primaryLanguage": "Hindi",
+    "category": "Harvest",
+    "womenClothing": [
+      "Cotton Saree"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Glass Bangles"
+    ],
+    "footwear": [
+      "Leather Sandals"
+    ]
+  },
+  {
+    "id": 47,
+    "state": "Bihar",
+    "isUnionTerritory": false,
+    "festival": "Durga Puja",
+    "startDate": "2026-10-17",
+    "endDate": "2026-10-21",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 8,
+    "primaryLanguage": "Hindi",
+    "category": "Religious",
+    "womenClothing": [
+      "Red and White Saree"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Gold Chains"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 48,
+    "state": "Bihar",
+    "isUnionTerritory": false,
+    "festival": "Eid-ul-Fitr",
+    "startDate": "2026-03-20",
+    "endDate": "2026-03-21",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 7,
+    "primaryLanguage": "Urdu, Hindi",
+    "category": "Religious",
+    "womenClothing": [
+      "Salwar Kameez"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Chandbalis"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 49,
+    "state": "Chhattisgarh",
+    "isUnionTerritory": false,
+    "festival": "Bastar Dussehra",
+    "startDate": "2026-08-15",
+    "endDate": "2026-10-20",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 10,
+    "primaryLanguage": "Chhattisgarhi",
+    "category": "State Festival",
+    "womenClothing": [
+      "Lugda (Traditional Saree)"
+    ],
+    "menClothing": [
+      "Dhoti and Kurta"
+    ],
+    "accessories": [
+      "Silver Tribal Jewellery"
+    ],
+    "footwear": [
+      "Barefoot/Sandals"
+    ]
+  },
+  {
+    "id": 50,
+    "state": "Chhattisgarh",
+    "isUnionTerritory": false,
+    "festival": "Hareli",
+    "startDate": "2026-08-13",
+    "endDate": "2026-08-13",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 9,
+    "primaryLanguage": "Chhattisgarhi",
+    "category": "Harvest",
+    "womenClothing": [
+      "Green Cotton Saree"
+    ],
+    "menClothing": [
+      "Simple Kurta Dhoti"
+    ],
+    "accessories": [
+      "Glass Bangles"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 51,
+    "state": "Chhattisgarh",
+    "isUnionTerritory": false,
+    "festival": "Madai Festival",
+    "startDate": "2026-02-01",
+    "endDate": "2026-02-28",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 8,
+    "primaryLanguage": "Chhattisgarhi",
+    "category": "Tribal",
+    "womenClothing": [
+      "Tribal Print Saree"
+    ],
+    "menClothing": [
+      "Dhoti"
+    ],
+    "accessories": [
+      "Heavy Silver Necklaces"
+    ],
+    "footwear": [
+      "Barefoot"
+    ]
+  },
+  {
+    "id": 52,
+    "state": "Chhattisgarh",
+    "isUnionTerritory": false,
+    "festival": "Pola",
+    "startDate": "2026-09-10",
+    "endDate": "2026-09-10",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 8,
+    "primaryLanguage": "Chhattisgarhi",
+    "category": "Cultural",
+    "womenClothing": [
+      "Cotton Lugda"
+    ],
+    "menClothing": [
+      "Kurta Dhoti"
+    ],
+    "accessories": [
+      "Traditional Bangles"
+    ],
+    "footwear": [
+      "Chappals"
+    ]
+  },
+  {
+    "id": 53,
+    "state": "Chhattisgarh",
+    "isUnionTerritory": false,
+    "festival": "Diwali",
+    "startDate": "2026-11-08",
+    "endDate": "2026-11-09",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 8,
+    "primaryLanguage": "Chhattisgarhi",
+    "category": "Religious",
+    "womenClothing": [
+      "Silk Saree"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Gold Ornaments"
+    ],
+    "footwear": [
+      "Mojaris"
+    ]
+  },
+  {
+    "id": 54,
+    "state": "Chhattisgarh",
+    "isUnionTerritory": false,
+    "festival": "Chhath Puja",
+    "startDate": "2026-11-13",
+    "endDate": "2026-11-16",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 7,
+    "primaryLanguage": "Hindi",
+    "category": "Religious",
+    "womenClothing": [
+      "Cotton Saree"
+    ],
+    "menClothing": [
+      "Dhoti Kurta"
+    ],
+    "accessories": [
+      "Sindoor",
+      "Bangles"
+    ],
+    "footwear": [
+      "Barefoot"
+    ]
+  },
+  {
+    "id": 55,
+    "state": "Goa",
+    "isUnionTerritory": false,
     "festival": "Ganesh Chaturthi",
-    "date": "2026-07-26",
-    "states": [
-      "Maharashtra"
+    "startDate": "2026-09-14",
+    "endDate": "2026-09-24",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 10,
+    "primaryLanguage": "Konkani",
+    "category": "State Festival",
+    "womenClothing": [
+      "Navari Saree"
     ],
-    "_id": "1784386670150",
-    "id": "1784386670150"
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Gold Jewellery",
+      "Flowers"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
   },
   {
-    "festival": "Raja Parba",
-    "date": "2026-07-26",
-    "states": [
-      "Odisha"
+    "id": 56,
+    "state": "Goa",
+    "isUnionTerritory": false,
+    "festival": "Christmas",
+    "startDate": "2026-12-25",
+    "endDate": "2026-12-25",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 10,
+    "primaryLanguage": "Konkani, English",
+    "category": "Religious",
+    "womenClothing": [
+      "Evening Gowns",
+      "Dresses"
     ],
-    "_id": "1784386631998",
-    "id": "1784386631998"
+    "menClothing": [
+      "Suits",
+      "Formal Wear"
+    ],
+    "accessories": [
+      "Elegant Pendants"
+    ],
+    "footwear": [
+      "Heels",
+      "Formal Shoes"
+    ]
+  },
+  {
+    "id": 57,
+    "state": "Goa",
+    "isUnionTerritory": false,
+    "festival": "Shigmo",
+    "startDate": "2026-03-04",
+    "endDate": "2026-03-17",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 9,
+    "primaryLanguage": "Konkani",
+    "category": "Cultural",
+    "womenClothing": [
+      "Colorful Sarees"
+    ],
+    "menClothing": [
+      "Kurta with Turbans"
+    ],
+    "accessories": [
+      "Floral Jewellery"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 58,
+    "state": "Goa",
+    "isUnionTerritory": false,
+    "festival": "Goa Carnival",
+    "startDate": "2026-02-14",
+    "endDate": "2026-02-17",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 9,
+    "primaryLanguage": "Konkani, English",
+    "category": "Cultural",
+    "womenClothing": [
+      "Vibrant Costumes"
+    ],
+    "menClothing": [
+      "Colorful Shirts",
+      "Trousers"
+    ],
+    "accessories": [
+      "Feather Accessories",
+      "Masks"
+    ],
+    "footwear": [
+      "Comfortable Shoes"
+    ]
+  },
+  {
+    "id": 59,
+    "state": "Goa",
+    "isUnionTerritory": false,
+    "festival": "Easter",
+    "startDate": "2026-04-05",
+    "endDate": "2026-04-05",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 8,
+    "primaryLanguage": "Konkani, English",
+    "category": "Religious",
+    "womenClothing": [
+      "Pastel Dresses"
+    ],
+    "menClothing": [
+      "Shirts",
+      "Trousers"
+    ],
+    "accessories": [
+      "Minimalist Jewellery"
+    ],
+    "footwear": [
+      "Formal Shoes"
+    ]
+  },
+  {
+    "id": 60,
+    "state": "Goa",
+    "isUnionTerritory": false,
+    "festival": "Diwali",
+    "startDate": "2026-11-08",
+    "endDate": "2026-11-09",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 7,
+    "primaryLanguage": "Konkani",
+    "category": "Religious",
+    "womenClothing": [
+      "Silk Saree"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Gold Bangles"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 61,
+    "state": "Gujarat",
+    "isUnionTerritory": false,
+    "festival": "Navratri",
+    "startDate": "2026-10-11",
+    "endDate": "2026-10-20",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 10,
+    "primaryLanguage": "Gujarati",
+    "category": "State Festival",
+    "womenClothing": [
+      "Chaniya Choli"
+    ],
+    "menClothing": [
+      "Kedia and Dhoti"
+    ],
+    "accessories": [
+      "Oxidised Silver Jewellery"
+    ],
+    "footwear": [
+      "Mojaris"
+    ]
+  },
+  {
+    "id": 62,
+    "state": "Gujarat",
+    "isUnionTerritory": false,
+    "festival": "Diwali",
+    "startDate": "2026-11-08",
+    "endDate": "2026-11-09",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 10,
+    "primaryLanguage": "Gujarati",
+    "category": "Religious",
+    "womenClothing": [
+      "Bandhani Saree",
+      "Silk Lehenga"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Gold Jewellery"
+    ],
+    "footwear": [
+      "Traditional Mojaris"
+    ]
+  },
+  {
+    "id": 63,
+    "state": "Gujarat",
+    "isUnionTerritory": false,
+    "festival": "Uttarayan (Makar Sankranti)",
+    "startDate": "2026-01-14",
+    "endDate": "2026-01-14",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 9,
+    "primaryLanguage": "Gujarati",
+    "category": "Harvest",
+    "womenClothing": [
+      "Cotton Salwar Kameez"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Sunglasses",
+      "Caps"
+    ],
+    "footwear": [
+      "Comfortable Sneakers/Sandals"
+    ]
+  },
+  {
+    "id": 64,
+    "state": "Gujarat",
+    "isUnionTerritory": false,
+    "festival": "Janmashtami",
+    "startDate": "2026-09-03",
+    "endDate": "2026-09-03",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 8,
+    "primaryLanguage": "Gujarati",
+    "category": "Religious",
+    "womenClothing": [
+      "Traditional Gujarati Saree"
+    ],
+    "menClothing": [
+      "Kurta with Jacket"
+    ],
+    "accessories": [
+      "Silver Ornaments"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 65,
+    "state": "Gujarat",
+    "isUnionTerritory": false,
+    "festival": "Holi",
+    "startDate": "2026-03-03",
+    "endDate": "2026-03-04",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 7,
+    "primaryLanguage": "Gujarati",
+    "category": "Cultural",
+    "womenClothing": [
+      "White Cotton Suit"
+    ],
+    "menClothing": [
+      "White Kurta"
+    ],
+    "accessories": [
+      "Minimal Jewellery"
+    ],
+    "footwear": [
+      "Chappals"
+    ]
+  },
+  {
+    "id": 66,
+    "state": "Gujarat",
+    "isUnionTerritory": false,
+    "festival": "Eid-ul-Fitr",
+    "startDate": "2026-03-20",
+    "endDate": "2026-03-21",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 6,
+    "primaryLanguage": "Gujarati",
+    "category": "Religious",
+    "womenClothing": [
+      "Salwar Suit"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Earrings"
+    ],
+    "footwear": [
+      "Mojaris"
+    ]
+  },
+  {
+    "id": 67,
+    "state": "Haryana",
+    "isUnionTerritory": false,
+    "festival": "Lohri",
+    "startDate": "2026-01-13",
+    "endDate": "2026-01-13",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 9,
+    "primaryLanguage": "Haryanvi, Hindi",
+    "category": "Harvest",
+    "womenClothing": [
+      "Salwar Suit"
+    ],
+    "menClothing": [
+      "Kurta Pajama",
+      "Jacket"
+    ],
+    "accessories": [
+      "Colorful Dupattas"
+    ],
+    "footwear": [
+      "Juttis"
+    ]
+  },
+  {
+    "id": 68,
+    "state": "Haryana",
+    "isUnionTerritory": false,
+    "festival": "Baisakhi",
+    "startDate": "2026-04-14",
+    "endDate": "2026-04-14",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 8,
+    "primaryLanguage": "Haryanvi, Hindi",
+    "category": "Harvest",
+    "womenClothing": [
+      "Patiala Suit"
+    ],
+    "menClothing": [
+      "Kurta with Waistcoat"
+    ],
+    "accessories": [
+      "Bangles"
+    ],
+    "footwear": [
+      "Juttis"
+    ]
+  },
+  {
+    "id": 69,
+    "state": "Haryana",
+    "isUnionTerritory": false,
+    "festival": "Diwali",
+    "startDate": "2026-11-08",
+    "endDate": "2026-11-09",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 9,
+    "primaryLanguage": "Hindi",
+    "category": "Religious",
+    "womenClothing": [
+      "Heavy Salwar Suit",
+      "Saree"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Gold Jewellery"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 70,
+    "state": "Haryana",
+    "isUnionTerritory": false,
+    "festival": "Holi",
+    "startDate": "2026-03-03",
+    "endDate": "2026-03-04",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 8,
+    "primaryLanguage": "Hindi",
+    "category": "Cultural",
+    "womenClothing": [
+      "White Cotton Suit"
+    ],
+    "menClothing": [
+      "White Kurta"
+    ],
+    "accessories": [
+      "Minimal"
+    ],
+    "footwear": [
+      "Chappals"
+    ]
+  },
+  {
+    "id": 71,
+    "state": "Haryana",
+    "isUnionTerritory": false,
+    "festival": "Teej",
+    "startDate": "2026-08-15",
+    "endDate": "2026-08-15",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 8,
+    "primaryLanguage": "Haryanvi",
+    "category": "Seasonal",
+    "womenClothing": [
+      "Green Salwar Suit/Lehenga"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Glass Bangles",
+      "Mehndi"
+    ],
+    "footwear": [
+      "Juttis"
+    ]
+  },
+  {
+    "id": 72,
+    "state": "Haryana",
+    "isUnionTerritory": false,
+    "festival": "Makar Sankranti",
+    "startDate": "2026-01-14",
+    "endDate": "2026-01-14",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 7,
+    "primaryLanguage": "Hindi",
+    "category": "Harvest",
+    "womenClothing": [
+      "Cotton Saree/Suit"
+    ],
+    "menClothing": [
+      "Kurta"
+    ],
+    "accessories": [
+      "Simple Bangles"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 73,
+    "state": "Himachal Pradesh",
+    "isUnionTerritory": false,
+    "festival": "Kullu Dussehra",
+    "startDate": "2026-10-20",
+    "endDate": "2026-10-26",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 10,
+    "primaryLanguage": "Pahari, Hindi",
+    "category": "State Festival",
+    "womenClothing": [
+      "Pattu (Traditional Woolen Saree)"
+    ],
+    "menClothing": [
+      "Kurta",
+      "Pyjama",
+      "Kullu Topi"
+    ],
+    "accessories": [
+      "Silver Chokers",
+      "Dhaatu"
+    ],
+    "footwear": [
+      "Leather Shoes"
+    ]
+  },
+  {
+    "id": 74,
+    "state": "Himachal Pradesh",
+    "isUnionTerritory": false,
+    "festival": "Maha Shivaratri (Mandi)",
+    "startDate": "2026-02-15",
+    "endDate": "2026-02-15",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 9,
+    "primaryLanguage": "Pahari, Hindi",
+    "category": "Religious",
+    "womenClothing": [
+      "Warm Salwar Suit"
+    ],
+    "menClothing": [
+      "Kurta",
+      "Woolen Jacket"
+    ],
+    "accessories": [
+      "Silver Jewellery"
+    ],
+    "footwear": [
+      "Closed Shoes"
+    ]
+  },
+  {
+    "id": 75,
+    "state": "Himachal Pradesh",
+    "isUnionTerritory": false,
+    "festival": "Minjar Fair",
+    "startDate": "2026-07-26",
+    "endDate": "2026-08-02",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 8,
+    "primaryLanguage": "Pahari",
+    "category": "Cultural",
+    "womenClothing": [
+      "Traditional Suit with Shawl"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Silver Ornaments"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 76,
+    "state": "Himachal Pradesh",
+    "isUnionTerritory": false,
+    "festival": "Diwali",
+    "startDate": "2026-11-08",
+    "endDate": "2026-11-09",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 8,
+    "primaryLanguage": "Hindi",
+    "category": "Religious",
+    "womenClothing": [
+      "Silk Suit or Saree"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Gold Jewellery"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 77,
+    "state": "Himachal Pradesh",
+    "isUnionTerritory": false,
+    "festival": "Lohri",
+    "startDate": "2026-01-13",
+    "endDate": "2026-01-13",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 7,
+    "primaryLanguage": "Pahari, Hindi",
+    "category": "Harvest",
+    "womenClothing": [
+      "Woolen Suit",
+      "Shawl"
+    ],
+    "menClothing": [
+      "Kurta Pajama",
+      "Shawl"
+    ],
+    "accessories": [
+      "Traditional Caps"
+    ],
+    "footwear": [
+      "Warm Boots"
+    ]
+  },
+  {
+    "id": 78,
+    "state": "Himachal Pradesh",
+    "isUnionTerritory": false,
+    "festival": "Holi",
+    "startDate": "2026-03-03",
+    "endDate": "2026-03-04",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 6,
+    "primaryLanguage": "Hindi",
+    "category": "Cultural",
+    "womenClothing": [
+      "White Suit"
+    ],
+    "menClothing": [
+      "White Kurta"
+    ],
+    "accessories": [
+      "None"
+    ],
+    "footwear": [
+      "Chappals"
+    ]
+  },
+  {
+    "id": 79,
+    "state": "Jharkhand",
+    "isUnionTerritory": false,
+    "festival": "Sarhul",
+    "startDate": "2026-03-22",
+    "endDate": "2026-03-22",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 10,
+    "primaryLanguage": "Santali, Mundari",
+    "category": "Tribal",
+    "womenClothing": [
+      "White Saree with Red Border"
+    ],
+    "menClothing": [
+      "Dhoti"
+    ],
+    "accessories": [
+      "Flowers",
+      "Bead Necklaces"
+    ],
+    "footwear": [
+      "Barefoot"
+    ]
+  },
+  {
+    "id": 80,
+    "state": "Jharkhand",
+    "isUnionTerritory": false,
+    "festival": "Karam",
+    "startDate": "2026-09-21",
+    "endDate": "2026-09-21",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 9,
+    "primaryLanguage": "Kurmali, Sadri",
+    "category": "Harvest",
+    "womenClothing": [
+      "Traditional Tribal Saree"
+    ],
+    "menClothing": [
+      "Dhoti",
+      "Kurta"
+    ],
+    "accessories": [
+      "Tribal Silver Jewellery"
+    ],
+    "footwear": [
+      "Barefoot/Sandals"
+    ]
+  },
+  {
+    "id": 81,
+    "state": "Jharkhand",
+    "isUnionTerritory": false,
+    "festival": "Chhath Puja",
+    "startDate": "2026-11-13",
+    "endDate": "2026-11-16",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 9,
+    "primaryLanguage": "Hindi",
+    "category": "Religious",
+    "womenClothing": [
+      "Cotton Saree"
+    ],
+    "menClothing": [
+      "Dhoti Kurta"
+    ],
+    "accessories": [
+      "Gold Bangles"
+    ],
+    "footwear": [
+      "Barefoot"
+    ]
+  },
+  {
+    "id": 82,
+    "state": "Jharkhand",
+    "isUnionTerritory": false,
+    "festival": "Diwali",
+    "startDate": "2026-11-08",
+    "endDate": "2026-11-09",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 8,
+    "primaryLanguage": "Hindi",
+    "category": "Religious",
+    "womenClothing": [
+      "Saree/Lehenga"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Gold Ornaments"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 83,
+    "state": "Jharkhand",
+    "isUnionTerritory": false,
+    "festival": "Holi",
+    "startDate": "2026-03-03",
+    "endDate": "2026-03-04",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 7,
+    "primaryLanguage": "Hindi",
+    "category": "Cultural",
+    "womenClothing": [
+      "White Suit"
+    ],
+    "menClothing": [
+      "White Kurta"
+    ],
+    "accessories": [
+      "None"
+    ],
+    "footwear": [
+      "Chappals"
+    ]
+  },
+  {
+    "id": 84,
+    "state": "Jharkhand",
+    "isUnionTerritory": false,
+    "festival": "Eid-ul-Fitr",
+    "startDate": "2026-03-20",
+    "endDate": "2026-03-21",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 6,
+    "primaryLanguage": "Urdu",
+    "category": "Religious",
+    "womenClothing": [
+      "Salwar Kameez"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Earrings"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 85,
+    "state": "Karnataka",
+    "isUnionTerritory": false,
+    "festival": "Mysuru Dasara",
+    "startDate": "2026-10-11",
+    "endDate": "2026-10-20",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 10,
+    "primaryLanguage": "Kannada",
+    "category": "State Festival",
+    "womenClothing": [
+      "Mysore Silk Saree"
+    ],
+    "menClothing": [
+      "Panche and Silk Shirt"
+    ],
+    "accessories": [
+      "Traditional Gold Jewellery"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 86,
+    "state": "Karnataka",
+    "isUnionTerritory": false,
+    "festival": "Ugadi",
+    "startDate": "2026-03-19",
+    "endDate": "2026-03-19",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 9,
+    "primaryLanguage": "Kannada",
+    "category": "New Year",
+    "womenClothing": [
+      "Ilkal Saree"
+    ],
+    "menClothing": [
+      "Kurta and Panche"
+    ],
+    "accessories": [
+      "Jasmine Flowers",
+      "Gold"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 87,
+    "state": "Karnataka",
+    "isUnionTerritory": false,
+    "festival": "Ganesh Chaturthi",
+    "startDate": "2026-09-14",
+    "endDate": "2026-09-24",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 8,
+    "primaryLanguage": "Kannada",
+    "category": "Religious",
+    "womenClothing": [
+      "Silk Saree"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Gold Bangles"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 88,
+    "state": "Karnataka",
+    "isUnionTerritory": false,
+    "festival": "Diwali",
+    "startDate": "2026-11-08",
+    "endDate": "2026-11-09",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 8,
+    "primaryLanguage": "Kannada",
+    "category": "Religious",
+    "womenClothing": [
+      "Saree / Half Saree"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Gold Jewellery"
+    ],
+    "footwear": [
+      "Chappals"
+    ]
+  },
+  {
+    "id": 89,
+    "state": "Karnataka",
+    "isUnionTerritory": false,
+    "festival": "Makara Sankranti",
+    "startDate": "2026-01-14",
+    "endDate": "2026-01-14",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 7,
+    "primaryLanguage": "Kannada",
+    "category": "Harvest",
+    "womenClothing": [
+      "Cotton Saree"
+    ],
+    "menClothing": [
+      "Kurta and Panche"
+    ],
+    "accessories": [
+      "Simple Bangles"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 90,
+    "state": "Karnataka",
+    "isUnionTerritory": false,
+    "festival": "Eid-ul-Fitr",
+    "startDate": "2026-03-20",
+    "endDate": "2026-03-21",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 7,
+    "primaryLanguage": "Kannada, Urdu",
+    "category": "Religious",
+    "womenClothing": [
+      "Salwar Suit"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Chandbalis"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 91,
+    "state": "Madhya Pradesh",
+    "isUnionTerritory": false,
+    "festival": "Diwali",
+    "startDate": "2026-11-08",
+    "endDate": "2026-11-09",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 10,
+    "primaryLanguage": "Hindi",
+    "category": "Religious",
+    "womenClothing": [
+      "Chanderi Saree"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Gold Jewellery"
+    ],
+    "footwear": [
+      "Mojaris"
+    ]
+  },
+  {
+    "id": 92,
+    "state": "Madhya Pradesh",
+    "isUnionTerritory": false,
+    "festival": "Holi",
+    "startDate": "2026-03-03",
+    "endDate": "2026-03-04",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 9,
+    "primaryLanguage": "Hindi",
+    "category": "Cultural",
+    "womenClothing": [
+      "White Salwar Suit"
+    ],
+    "menClothing": [
+      "White Kurta"
+    ],
+    "accessories": [
+      "Minimal"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 93,
+    "state": "Madhya Pradesh",
+    "isUnionTerritory": false,
+    "festival": "Bhagoria Haat",
+    "startDate": "2026-02-25",
+    "endDate": "2026-03-03",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 8,
+    "primaryLanguage": "Bhil, Hindi",
+    "category": "Tribal",
+    "womenClothing": [
+      "Colorful Ghagra Choli"
+    ],
+    "menClothing": [
+      "Dhoti Kurta",
+      "Turban"
+    ],
+    "accessories": [
+      "Heavy Silver Tribal Jewellery"
+    ],
+    "footwear": [
+      "Barefoot/Sandals"
+    ]
+  },
+  {
+    "id": 94,
+    "state": "Madhya Pradesh",
+    "isUnionTerritory": false,
+    "festival": "Dussehra",
+    "startDate": "2026-10-20",
+    "endDate": "2026-10-20",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 8,
+    "primaryLanguage": "Hindi",
+    "category": "Religious",
+    "womenClothing": [
+      "Maheshwari Saree"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Gold Ornaments"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 95,
+    "state": "Madhya Pradesh",
+    "isUnionTerritory": false,
+    "festival": "Ganesh Chaturthi",
+    "startDate": "2026-09-14",
+    "endDate": "2026-09-24",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 7,
+    "primaryLanguage": "Hindi",
+    "category": "Religious",
+    "womenClothing": [
+      "Silk Saree"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Bangles"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 96,
+    "state": "Madhya Pradesh",
+    "isUnionTerritory": false,
+    "festival": "Eid-ul-Fitr",
+    "startDate": "2026-03-20",
+    "endDate": "2026-03-21",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 6,
+    "primaryLanguage": "Hindi, Urdu",
+    "category": "Religious",
+    "womenClothing": [
+      "Salwar Kameez"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Earrings"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 97,
+    "state": "Maharashtra",
+    "isUnionTerritory": false,
+    "festival": "Ganesh Chaturthi",
+    "startDate": "2026-09-14",
+    "endDate": "2026-09-24",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 10,
+    "primaryLanguage": "Marathi",
+    "category": "State Festival",
+    "womenClothing": [
+      "Nauvari Saree"
+    ],
+    "menClothing": [
+      "Kurta",
+      "Pajama",
+      "Gandhi Topi"
+    ],
+    "accessories": [
+      "Nath (Nose Ring)",
+      "Green Bangles"
+    ],
+    "footwear": [
+      "Kolhapuri Chappals"
+    ]
+  },
+  {
+    "id": 98,
+    "state": "Maharashtra",
+    "isUnionTerritory": false,
+    "festival": "Gudi Padwa",
+    "startDate": "2026-03-19",
+    "endDate": "2026-03-19",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 9,
+    "primaryLanguage": "Marathi",
+    "category": "New Year",
+    "womenClothing": [
+      "Paithani Saree"
+    ],
+    "menClothing": [
+      "Kurta and Dhoti"
+    ],
+    "accessories": [
+      "Gold Jewellery"
+    ],
+    "footwear": [
+      "Kolhapuri Chappals"
+    ]
+  },
+  {
+    "id": 99,
+    "state": "Maharashtra",
+    "isUnionTerritory": false,
+    "festival": "Diwali",
+    "startDate": "2026-11-08",
+    "endDate": "2026-11-09",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 9,
+    "primaryLanguage": "Marathi",
+    "category": "Religious",
+    "womenClothing": [
+      "Silk Saree"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Gold Ornaments"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 100,
+    "state": "Maharashtra",
+    "isUnionTerritory": false,
+    "festival": "Makar Sankranti",
+    "startDate": "2026-01-14",
+    "endDate": "2026-01-14",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 8,
+    "primaryLanguage": "Marathi",
+    "category": "Harvest",
+    "womenClothing": [
+      "Black Saree"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Halhal (Sugar Jewellery)"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 101,
+    "state": "Maharashtra",
+    "isUnionTerritory": false,
+    "festival": "Holi",
+    "startDate": "2026-03-03",
+    "endDate": "2026-03-04",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 7,
+    "primaryLanguage": "Marathi",
+    "category": "Cultural",
+    "womenClothing": [
+      "White Cotton Wear"
+    ],
+    "menClothing": [
+      "White Kurta"
+    ],
+    "accessories": [
+      "Minimal"
+    ],
+    "footwear": [
+      "Chappals"
+    ]
+  },
+  {
+    "id": 102,
+    "state": "Maharashtra",
+    "isUnionTerritory": false,
+    "festival": "Eid-ul-Fitr",
+    "startDate": "2026-03-20",
+    "endDate": "2026-03-21",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 7,
+    "primaryLanguage": "Marathi, Urdu",
+    "category": "Religious",
+    "womenClothing": [
+      "Salwar Suit"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Earrings"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 103,
+    "state": "Manipur",
+    "isUnionTerritory": false,
+    "festival": "Yaoshang",
+    "startDate": "2026-03-03",
+    "endDate": "2026-03-08",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 10,
+    "primaryLanguage": "Manipuri",
+    "category": "Cultural",
+    "womenClothing": [
+      "Phanek and Innaphi"
+    ],
+    "menClothing": [
+      "White Dhoti and Kurta"
+    ],
+    "accessories": [
+      "Traditional Gold Necklaces"
+    ],
+    "footwear": [
+      "Barefoot/Sandals"
+    ]
+  },
+  {
+    "id": 104,
+    "state": "Manipur",
+    "isUnionTerritory": false,
+    "festival": "Ningol Chakouba",
+    "startDate": "2026-11-10",
+    "endDate": "2026-11-10",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 9,
+    "primaryLanguage": "Manipuri",
+    "category": "Cultural",
+    "womenClothing": [
+      "Silk Phanek"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Gold Jewellery"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 105,
+    "state": "Manipur",
+    "isUnionTerritory": false,
+    "festival": "Cheiraoba",
+    "startDate": "2026-04-14",
+    "endDate": "2026-04-14",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 9,
+    "primaryLanguage": "Manipuri",
+    "category": "New Year",
+    "womenClothing": [
+      "Phanek and Innaphi"
+    ],
+    "menClothing": [
+      "White Dhoti",
+      "Turban"
+    ],
+    "accessories": [
+      "Simple Beads"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 106,
+    "state": "Manipur",
+    "isUnionTerritory": false,
+    "festival": "Kang Festival (Rath Yatra)",
+    "startDate": "2026-07-15",
+    "endDate": "2026-07-15",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 8,
+    "primaryLanguage": "Manipuri",
+    "category": "Religious",
+    "womenClothing": [
+      "Traditional Manipuri Saree"
+    ],
+    "menClothing": [
+      "White Dhoti"
+    ],
+    "accessories": [
+      "Sandalwood Paste",
+      "Beads"
+    ],
+    "footwear": [
+      "Barefoot"
+    ]
+  },
+  {
+    "id": 107,
+    "state": "Manipur",
+    "isUnionTerritory": false,
+    "festival": "Kut",
+    "startDate": "2026-11-01",
+    "endDate": "2026-11-01",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 8,
+    "primaryLanguage": "Kuki",
+    "category": "Harvest",
+    "womenClothing": [
+      "Kuki Traditional Wrap"
+    ],
+    "menClothing": [
+      "Kuki Jacket and Wrap"
+    ],
+    "accessories": [
+      "Bead Jewellery"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 108,
+    "state": "Manipur",
+    "isUnionTerritory": false,
+    "festival": "Christmas",
+    "startDate": "2026-12-25",
+    "endDate": "2026-12-25",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 8,
+    "primaryLanguage": "Manipuri, English",
+    "category": "Religious",
+    "womenClothing": [
+      "Modern Dresses",
+      "Phanek"
+    ],
+    "menClothing": [
+      "Suits"
+    ],
+    "accessories": [
+      "Cross Pendants"
+    ],
+    "footwear": [
+      "Shoes"
+    ]
+  },
+  {
+    "id": 109,
+    "state": "Meghalaya",
+    "isUnionTerritory": false,
+    "festival": "Nongkrem Dance",
+    "startDate": "2026-11-10",
+    "endDate": "2026-11-14",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 10,
+    "primaryLanguage": "Khasi",
+    "category": "Cultural",
+    "womenClothing": [
+      "Jainsem and Dhara"
+    ],
+    "menClothing": [
+      "Jymphong (Sleeveless Coat)"
+    ],
+    "accessories": [
+      "Coral and Gold Beads"
+    ],
+    "footwear": [
+      "Barefoot/Sandals"
+    ]
+  },
+  {
+    "id": 110,
+    "state": "Meghalaya",
+    "isUnionTerritory": false,
+    "festival": "Wangala",
+    "startDate": "2026-11-13",
+    "endDate": "2026-11-15",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 9,
+    "primaryLanguage": "Garo",
+    "category": "Harvest",
+    "womenClothing": [
+      "Dakmanda (Wrap skirt)"
+    ],
+    "menClothing": [
+      "Traditional Loincloth/Shirt"
+    ],
+    "accessories": [
+      "Feathered Headdress"
+    ],
+    "footwear": [
+      "Barefoot"
+    ]
+  },
+  {
+    "id": 111,
+    "state": "Meghalaya",
+    "isUnionTerritory": false,
+    "festival": "Shad Suk Mynsiem",
+    "startDate": "2026-04-10",
+    "endDate": "2026-04-12",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 9,
+    "primaryLanguage": "Khasi",
+    "category": "Cultural",
+    "womenClothing": [
+      "Silk Jainsem"
+    ],
+    "menClothing": [
+      "Jymphong",
+      "Silk Turban"
+    ],
+    "accessories": [
+      "Silver Crown",
+      "Beads"
+    ],
+    "footwear": [
+      "Barefoot/Sandals"
+    ]
+  },
+  {
+    "id": 112,
+    "state": "Meghalaya",
+    "isUnionTerritory": false,
+    "festival": "Christmas",
+    "startDate": "2026-12-25",
+    "endDate": "2026-12-25",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 10,
+    "primaryLanguage": "English, Khasi",
+    "category": "Religious",
+    "womenClothing": [
+      "Western Dresses",
+      "Sweaters"
+    ],
+    "menClothing": [
+      "Suits",
+      "Jackets"
+    ],
+    "accessories": [
+      "Minimalist Jewellery"
+    ],
+    "footwear": [
+      "Boots"
+    ]
+  },
+  {
+    "id": 113,
+    "state": "Meghalaya",
+    "isUnionTerritory": false,
+    "festival": "Behdienkhlam",
+    "startDate": "2026-07-14",
+    "endDate": "2026-07-17",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 8,
+    "primaryLanguage": "Pnar",
+    "category": "Cultural",
+    "womenClothing": [
+      "Traditional Pnar Dress"
+    ],
+    "menClothing": [
+      "Traditional Kurta"
+    ],
+    "accessories": [
+      "Gold Chains"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 114,
+    "state": "Meghalaya",
+    "isUnionTerritory": false,
+    "festival": "Easter",
+    "startDate": "2026-04-05",
+    "endDate": "2026-04-05",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 7,
+    "primaryLanguage": "English",
+    "category": "Religious",
+    "womenClothing": [
+      "Pastel Western Wear"
+    ],
+    "menClothing": [
+      "Shirts",
+      "Trousers"
+    ],
+    "accessories": [
+      "Cross Necklaces"
+    ],
+    "footwear": [
+      "Formal Shoes"
+    ]
+  },
+  {
+    "id": 115,
+    "state": "Mizoram",
+    "isUnionTerritory": false,
+    "festival": "Chapchar Kut",
+    "startDate": "2026-03-06",
+    "endDate": "2026-03-06",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 10,
+    "primaryLanguage": "Mizo",
+    "category": "Harvest",
+    "womenClothing": [
+      "Puan (Wrap around skirt)"
+    ],
+    "menClothing": [
+      "Mizo Traditional Shirt"
+    ],
+    "accessories": [
+      "Bamboo Ornaments",
+      "Beads"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 116,
+    "state": "Mizoram",
+    "isUnionTerritory": false,
+    "festival": "Mim Kut",
+    "startDate": "2026-09-15",
+    "endDate": "2026-09-15",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 9,
+    "primaryLanguage": "Mizo",
+    "category": "Harvest",
+    "womenClothing": [
+      "Traditional Puanchei"
+    ],
+    "menClothing": [
+      "Mizo Shirt"
+    ],
+    "accessories": [
+      "Beaded Necklaces"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 117,
+    "state": "Mizoram",
+    "isUnionTerritory": false,
+    "festival": "Pawl Kut",
+    "startDate": "2026-12-01",
+    "endDate": "2026-12-01",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 8,
+    "primaryLanguage": "Mizo",
+    "category": "Harvest",
+    "womenClothing": [
+      "Puan"
+    ],
+    "menClothing": [
+      "Traditional Jacket"
+    ],
+    "accessories": [
+      "Headgears"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 118,
+    "state": "Mizoram",
+    "isUnionTerritory": false,
+    "festival": "Christmas",
+    "startDate": "2026-12-25",
+    "endDate": "2026-12-25",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 10,
+    "primaryLanguage": "Mizo, English",
+    "category": "Religious",
+    "womenClothing": [
+      "Elegant Gowns"
+    ],
+    "menClothing": [
+      "Formal Suits"
+    ],
+    "accessories": [
+      "Silver/Gold Jewellery"
+    ],
+    "footwear": [
+      "Shoes/Boots"
+    ]
+  },
+  {
+    "id": 119,
+    "state": "Mizoram",
+    "isUnionTerritory": false,
+    "festival": "Easter",
+    "startDate": "2026-04-05",
+    "endDate": "2026-04-05",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 8,
+    "primaryLanguage": "Mizo, English",
+    "category": "Religious",
+    "womenClothing": [
+      "Western Dresses"
+    ],
+    "menClothing": [
+      "Shirts",
+      "Trousers"
+    ],
+    "accessories": [
+      "Pendants"
+    ],
+    "footwear": [
+      "Formal Shoes"
+    ]
+  },
+  {
+    "id": 120,
+    "state": "Mizoram",
+    "isUnionTerritory": false,
+    "festival": "New Year",
+    "startDate": "2026-01-01",
+    "endDate": "2026-01-01",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 8,
+    "primaryLanguage": "Mizo",
+    "category": "New Year",
+    "womenClothing": [
+      "Party Dresses"
+    ],
+    "menClothing": [
+      "Suits"
+    ],
+    "accessories": [
+      "Fashion Jewellery"
+    ],
+    "footwear": [
+      "Heels/Formal Shoes"
+    ]
+  },
+  {
+    "id": 121,
+    "state": "Nagaland",
+    "isUnionTerritory": false,
+    "festival": "Hornbill Festival",
+    "startDate": "2026-12-01",
+    "endDate": "2026-12-10",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 10,
+    "primaryLanguage": "English, Nagamese",
+    "category": "State Festival",
+    "womenClothing": [
+      "Tribal Mekhela",
+      "Shawl"
+    ],
+    "menClothing": [
+      "Traditional Kilt",
+      "Shawl"
+    ],
+    "accessories": [
+      "Boar Tusk",
+      "Beads",
+      "Feathers"
+    ],
+    "footwear": [
+      "Barefoot/Sandals"
+    ]
+  },
+  {
+    "id": 122,
+    "state": "Nagaland",
+    "isUnionTerritory": false,
+    "festival": "Moatsu Mong",
+    "startDate": "2026-05-01",
+    "endDate": "2026-05-03",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 9,
+    "primaryLanguage": "Ao Naga",
+    "category": "Harvest",
+    "womenClothing": [
+      "Ao Traditional Skirt"
+    ],
+    "menClothing": [
+      "Ao Shawl"
+    ],
+    "accessories": [
+      "Brass Rings",
+      "Beads"
+    ],
+    "footwear": [
+      "Barefoot"
+    ]
+  },
+  {
+    "id": 123,
+    "state": "Nagaland",
+    "isUnionTerritory": false,
+    "festival": "Sekrenyi",
+    "startDate": "2026-02-25",
+    "endDate": "2026-02-27",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 8,
+    "primaryLanguage": "Angami",
+    "category": "Cultural",
+    "womenClothing": [
+      "Angami Wrap"
+    ],
+    "menClothing": [
+      "Angami Shawl and Kilt"
+    ],
+    "accessories": [
+      "Shell Necklaces"
+    ],
+    "footwear": [
+      "Barefoot/Sandals"
+    ]
+  },
+  {
+    "id": 124,
+    "state": "Nagaland",
+    "isUnionTerritory": false,
+    "festival": "Aoling",
+    "startDate": "2026-04-01",
+    "endDate": "2026-04-06",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 8,
+    "primaryLanguage": "Konyak",
+    "category": "Harvest",
+    "womenClothing": [
+      "Konyak Wrap"
+    ],
+    "menClothing": [
+      "Loincloth",
+      "Body Tattoos"
+    ],
+    "accessories": [
+      "Brass Ornaments",
+      "Beads"
+    ],
+    "footwear": [
+      "Barefoot"
+    ]
+  },
+  {
+    "id": 125,
+    "state": "Nagaland",
+    "isUnionTerritory": false,
+    "festival": "Christmas",
+    "startDate": "2026-12-25",
+    "endDate": "2026-12-25",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 10,
+    "primaryLanguage": "English",
+    "category": "Religious",
+    "womenClothing": [
+      "Dresses",
+      "Sweaters"
+    ],
+    "menClothing": [
+      "Suits",
+      "Jackets"
+    ],
+    "accessories": [
+      "Cross Pendants"
+    ],
+    "footwear": [
+      "Boots"
+    ]
+  },
+  {
+    "id": 126,
+    "state": "Nagaland",
+    "isUnionTerritory": false,
+    "festival": "Tokhu Emong",
+    "startDate": "2026-11-07",
+    "endDate": "2026-11-07",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 7,
+    "primaryLanguage": "Lotha",
+    "category": "Harvest",
+    "womenClothing": [
+      "Lotha Traditional Wrap"
+    ],
+    "menClothing": [
+      "Lotha Shawl"
+    ],
+    "accessories": [
+      "Beaded Accessories"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 127,
+    "state": "Odisha",
+    "isUnionTerritory": false,
+    "festival": "Rath Yatra",
+    "startDate": "2026-07-15",
+    "endDate": "2026-07-15",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 10,
+    "primaryLanguage": "Odia",
+    "category": "State Festival",
+    "womenClothing": [
+      "Sambalpuri Saree"
+    ],
+    "menClothing": [
+      "Kurta Pajama / Dhoti"
+    ],
+    "accessories": [
+      "Traditional Gold Jewellery"
+    ],
+    "footwear": [
+      "Barefoot/Sandals"
+    ]
+  },
+  {
+    "id": 128,
+    "state": "Odisha",
+    "isUnionTerritory": false,
+    "festival": "Durga Puja",
+    "startDate": "2026-10-17",
+    "endDate": "2026-10-21",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 9,
+    "primaryLanguage": "Odia",
+    "category": "Religious",
+    "womenClothing": [
+      "Silk Saree"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Gold Ornaments"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 129,
+    "state": "Odisha",
+    "isUnionTerritory": false,
+    "festival": "Raja Parba",
+    "startDate": "2026-06-14",
+    "endDate": "2026-06-16",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 9,
+    "primaryLanguage": "Odia",
+    "category": "Cultural",
+    "womenClothing": [
+      "New Cotton Saree/Dress"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Flowers",
+      "Alta"
+    ],
+    "footwear": [
+      "Barefoot/Sandals"
+    ]
+  },
+  {
+    "id": 130,
+    "state": "Odisha",
+    "isUnionTerritory": false,
+    "festival": "Nuakhai",
+    "startDate": "2026-09-15",
+    "endDate": "2026-09-15",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 8,
+    "primaryLanguage": "Odia",
+    "category": "Harvest",
+    "womenClothing": [
+      "Ikat Saree"
+    ],
+    "menClothing": [
+      "Kurta and Dhoti"
+    ],
+    "accessories": [
+      "Simple Jewellery"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 131,
+    "state": "Odisha",
+    "isUnionTerritory": false,
+    "festival": "Diwali",
+    "startDate": "2026-11-08",
+    "endDate": "2026-11-09",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 8,
+    "primaryLanguage": "Odia",
+    "category": "Religious",
+    "womenClothing": [
+      "Bomkai Saree"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Gold Chains"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 132,
+    "state": "Odisha",
+    "isUnionTerritory": false,
+    "festival": "Makar Sankranti",
+    "startDate": "2026-01-14",
+    "endDate": "2026-01-14",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 7,
+    "primaryLanguage": "Odia",
+    "category": "Harvest",
+    "womenClothing": [
+      "Cotton Saree"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Bangles"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 133,
+    "state": "Rajasthan",
+    "isUnionTerritory": false,
+    "festival": "Teej",
+    "startDate": "2026-08-15",
+    "endDate": "2026-08-15",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 9,
+    "primaryLanguage": "Rajasthani, Hindi",
+    "category": "Seasonal",
+    "womenClothing": [
+      "Leheriya Saree",
+      "Ghagra"
+    ],
+    "menClothing": [
+      "Kurta Pajama",
+      "Turban"
+    ],
+    "accessories": [
+      "Meenakari Jewellery",
+      "Bangles"
+    ],
+    "footwear": [
+      "Mojaris"
+    ]
+  },
+  {
+    "id": 134,
+    "state": "Rajasthan",
+    "isUnionTerritory": false,
+    "festival": "Gangaur",
+    "startDate": "2026-03-22",
+    "endDate": "2026-04-07",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 10,
+    "primaryLanguage": "Rajasthani, Hindi",
+    "category": "Cultural",
+    "womenClothing": [
+      "Bandhani Saree/Lehenga"
+    ],
+    "menClothing": [
+      "Kurta Dhoti"
+    ],
+    "accessories": [
+      "Kundan Jewellery"
+    ],
+    "footwear": [
+      "Mojaris"
+    ]
+  },
+  {
+    "id": 135,
+    "state": "Rajasthan",
+    "isUnionTerritory": false,
+    "festival": "Diwali",
+    "startDate": "2026-11-08",
+    "endDate": "2026-11-09",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 9,
+    "primaryLanguage": "Hindi",
+    "category": "Religious",
+    "womenClothing": [
+      "Heavy Rajputana Poshak"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Gold Ornaments"
+    ],
+    "footwear": [
+      "Juttis"
+    ]
+  },
+  {
+    "id": 136,
+    "state": "Rajasthan",
+    "isUnionTerritory": false,
+    "festival": "Holi",
+    "startDate": "2026-03-03",
+    "endDate": "2026-03-04",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 9,
+    "primaryLanguage": "Hindi",
+    "category": "Cultural",
+    "womenClothing": [
+      "White Cotton Dress"
+    ],
+    "menClothing": [
+      "White Kurta Pajama"
+    ],
+    "accessories": [
+      "Minimal Jewellery"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 137,
+    "state": "Rajasthan",
+    "isUnionTerritory": false,
+    "festival": "Makar Sankranti",
+    "startDate": "2026-01-14",
+    "endDate": "2026-01-14",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 8,
+    "primaryLanguage": "Hindi",
+    "category": "Harvest",
+    "womenClothing": [
+      "Cotton Suit/Saree"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Caps",
+      "Sunglasses"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 138,
+    "state": "Rajasthan",
+    "isUnionTerritory": false,
+    "festival": "Pushkar Fair",
+    "startDate": "2026-11-18",
+    "endDate": "2026-11-24",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 8,
+    "primaryLanguage": "Rajasthani",
+    "category": "Cultural",
+    "womenClothing": [
+      "Ghagra Choli"
+    ],
+    "menClothing": [
+      "Dhoti Kurta",
+      "Colorful Turban"
+    ],
+    "accessories": [
+      "Silver Antique Jewellery"
+    ],
+    "footwear": [
+      "Leather Mojaris"
+    ]
+  },
+  {
+    "id": 139,
+    "state": "Sikkim",
+    "isUnionTerritory": false,
+    "festival": "Losar",
+    "startDate": "2026-02-18",
+    "endDate": "2026-02-20",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 10,
+    "primaryLanguage": "Sikkimese, Nepali",
+    "category": "New Year",
+    "womenClothing": [
+      "Bakhu (Hanju)"
+    ],
+    "menClothing": [
+      "Bakhu with Trousers"
+    ],
+    "accessories": [
+      "Gold/Turquoise Necklaces"
+    ],
+    "footwear": [
+      "Traditional Boots"
+    ]
+  },
+  {
+    "id": 140,
+    "state": "Sikkim",
+    "isUnionTerritory": false,
+    "festival": "Saga Dawa",
+    "startDate": "2026-05-31",
+    "endDate": "2026-05-31",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 9,
+    "primaryLanguage": "Sikkimese",
+    "category": "Religious",
+    "womenClothing": [
+      "Traditional Silk Bakhu"
+    ],
+    "menClothing": [
+      "Bakhu"
+    ],
+    "accessories": [
+      "Prayer Beads"
+    ],
+    "footwear": [
+      "Boots/Shoes"
+    ]
+  },
+  {
+    "id": 141,
+    "state": "Sikkim",
+    "isUnionTerritory": false,
+    "festival": "Dashain",
+    "startDate": "2026-10-11",
+    "endDate": "2026-10-20",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 9,
+    "primaryLanguage": "Nepali",
+    "category": "Religious",
+    "womenClothing": [
+      "Saree / Kurta"
+    ],
+    "menClothing": [
+      "Kurta Pajama / Daura Suruwal"
+    ],
+    "accessories": [
+      "Gold Jewellery"
+    ],
+    "footwear": [
+      "Sandals/Shoes"
+    ]
+  },
+  {
+    "id": 142,
+    "state": "Sikkim",
+    "isUnionTerritory": false,
+    "festival": "Tihar",
+    "startDate": "2026-11-08",
+    "endDate": "2026-11-12",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 8,
+    "primaryLanguage": "Nepali",
+    "category": "Religious",
+    "womenClothing": [
+      "Cotton Saree / Kurta"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Marigold Garlands"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 143,
+    "state": "Sikkim",
+    "isUnionTerritory": false,
+    "festival": "Losoong",
+    "startDate": "2026-12-18",
+    "endDate": "2026-12-22",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 8,
+    "primaryLanguage": "Sikkimese",
+    "category": "Harvest",
+    "womenClothing": [
+      "Colorful Bakhu"
+    ],
+    "menClothing": [
+      "Bakhu"
+    ],
+    "accessories": [
+      "Silver Ornaments"
+    ],
+    "footwear": [
+      "Boots"
+    ]
+  },
+  {
+    "id": 144,
+    "state": "Sikkim",
+    "isUnionTerritory": false,
+    "festival": "Bumchu",
+    "startDate": "2026-02-28",
+    "endDate": "2026-02-28",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 7,
+    "primaryLanguage": "Sikkimese",
+    "category": "Religious",
+    "womenClothing": [
+      "Traditional Attire"
+    ],
+    "menClothing": [
+      "Traditional Attire"
+    ],
+    "accessories": [
+      "Prayer Beads"
+    ],
+    "footwear": [
+      "Comfortable Footwear"
+    ]
+  },
+  {
+    "id": 145,
+    "state": "Tripura",
+    "isUnionTerritory": false,
+    "festival": "Kharchi Puja",
+    "startDate": "2026-07-21",
+    "endDate": "2026-07-27",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 10,
+    "primaryLanguage": "Kokborok, Bengali",
+    "category": "State Festival",
+    "womenClothing": [
+      "Rignai and Risa"
+    ],
+    "menClothing": [
+      "Traditional Kurta/Shirt"
+    ],
+    "accessories": [
+      "Coin Necklaces"
+    ],
+    "footwear": [
+      "Sandals/Barefoot"
+    ]
+  },
+  {
+    "id": 146,
+    "state": "Tripura",
+    "isUnionTerritory": false,
+    "festival": "Garia Puja",
+    "startDate": "2026-04-21",
+    "endDate": "2026-04-21",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 9,
+    "primaryLanguage": "Kokborok",
+    "category": "Harvest",
+    "womenClothing": [
+      "Traditional Rignai"
+    ],
+    "menClothing": [
+      "Loincloth / Kurta"
+    ],
+    "accessories": [
+      "Bead Jewellery"
+    ],
+    "footwear": [
+      "Barefoot"
+    ]
+  },
+  {
+    "id": 147,
+    "state": "Tripura",
+    "isUnionTerritory": false,
+    "festival": "Durga Puja",
+    "startDate": "2026-10-17",
+    "endDate": "2026-10-21",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 9,
+    "primaryLanguage": "Bengali",
+    "category": "Religious",
+    "womenClothing": [
+      "Red and White Saree"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Gold Jewellery"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 148,
+    "state": "Tripura",
+    "isUnionTerritory": false,
+    "festival": "Diwali",
+    "startDate": "2026-11-08",
+    "endDate": "2026-11-09",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 8,
+    "primaryLanguage": "Bengali",
+    "category": "Religious",
+    "womenClothing": [
+      "Silk Saree"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Gold Chains"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 149,
+    "state": "Tripura",
+    "isUnionTerritory": false,
+    "festival": "Pous Sankranti",
+    "startDate": "2026-01-14",
+    "endDate": "2026-01-14",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 8,
+    "primaryLanguage": "Bengali",
+    "category": "Harvest",
+    "womenClothing": [
+      "Cotton Saree"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Simple Bangles"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 150,
+    "state": "Tripura",
+    "isUnionTerritory": false,
+    "festival": "Eid-ul-Fitr",
+    "startDate": "2026-03-20",
+    "endDate": "2026-03-21",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 7,
+    "primaryLanguage": "Bengali",
+    "category": "Religious",
+    "womenClothing": [
+      "Salwar Suit"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Earrings"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 151,
+    "state": "Uttar Pradesh",
+    "isUnionTerritory": false,
+    "festival": "Diwali",
+    "startDate": "2026-11-08",
+    "endDate": "2026-11-09",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 10,
+    "primaryLanguage": "Hindi",
+    "category": "Religious",
+    "womenClothing": [
+      "Banarasi Silk Saree"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Gold Ornaments"
+    ],
+    "footwear": [
+      "Mojaris"
+    ]
+  },
+  {
+    "id": 152,
+    "state": "Uttar Pradesh",
+    "isUnionTerritory": false,
+    "festival": "Holi",
+    "startDate": "2026-03-03",
+    "endDate": "2026-03-04",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 10,
+    "primaryLanguage": "Hindi",
+    "category": "Cultural",
+    "womenClothing": [
+      "White Salwar Suit"
+    ],
+    "menClothing": [
+      "White Kurta Pajama"
+    ],
+    "accessories": [
+      "None"
+    ],
+    "footwear": [
+      "Chappals"
+    ]
+  },
+  {
+    "id": 153,
+    "state": "Uttar Pradesh",
+    "isUnionTerritory": false,
+    "festival": "Dussehra",
+    "startDate": "2026-10-20",
+    "endDate": "2026-10-20",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 9,
+    "primaryLanguage": "Hindi",
+    "category": "Religious",
+    "womenClothing": [
+      "Silk Saree"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Gold Jewellery"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 154,
+    "state": "Uttar Pradesh",
+    "isUnionTerritory": false,
+    "festival": "Janmashtami",
+    "startDate": "2026-09-03",
+    "endDate": "2026-09-03",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 9,
+    "primaryLanguage": "Hindi",
+    "category": "Religious",
+    "womenClothing": [
+      "Lehenga Choli"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Silver/Gold Jewellery"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 155,
+    "state": "Uttar Pradesh",
+    "isUnionTerritory": false,
+    "festival": "Eid-ul-Fitr",
+    "startDate": "2026-03-20",
+    "endDate": "2026-03-21",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 8,
+    "primaryLanguage": "Urdu, Hindi",
+    "category": "Religious",
+    "womenClothing": [
+      "Sharara",
+      "Anarkali"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Chandbalis",
+      "Passa"
+    ],
+    "footwear": [
+      "Mojaris"
+    ]
+  },
+  {
+    "id": 156,
+    "state": "Uttar Pradesh",
+    "isUnionTerritory": false,
+    "festival": "Maha Shivaratri",
+    "startDate": "2026-02-15",
+    "endDate": "2026-02-15",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 8,
+    "primaryLanguage": "Hindi",
+    "category": "Religious",
+    "womenClothing": [
+      "Cotton Suit"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Rudraksha"
+    ],
+    "footwear": [
+      "Barefoot/Sandals"
+    ]
+  },
+  {
+    "id": 157,
+    "state": "Uttarakhand",
+    "isUnionTerritory": false,
+    "festival": "Makar Sankranti (Uttarayan)",
+    "startDate": "2026-01-14",
+    "endDate": "2026-01-14",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 9,
+    "primaryLanguage": "Kumaoni, Garhwali",
+    "category": "Harvest",
+    "womenClothing": [
+      "Traditional Pichhora"
+    ],
+    "menClothing": [
+      "Kurta Pajama",
+      "Cap"
+    ],
+    "accessories": [
+      "Gold Nath (Nose Ring)"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 158,
+    "state": "Uttarakhand",
+    "isUnionTerritory": false,
+    "festival": "Harela",
+    "startDate": "2026-07-16",
+    "endDate": "2026-07-16",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 9,
+    "primaryLanguage": "Kumaoni, Garhwali",
+    "category": "Harvest",
+    "womenClothing": [
+      "Green Saree/Suit"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Glass Bangles"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 159,
+    "state": "Uttarakhand",
+    "isUnionTerritory": false,
+    "festival": "Phool Dei",
+    "startDate": "2026-03-14",
+    "endDate": "2026-03-14",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 8,
+    "primaryLanguage": "Garhwali",
+    "category": "Seasonal",
+    "womenClothing": [
+      "Cotton Suit"
+    ],
+    "menClothing": [
+      "Kurta"
+    ],
+    "accessories": [
+      "Floral Ornaments"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 160,
+    "state": "Uttarakhand",
+    "isUnionTerritory": false,
+    "festival": "Diwali",
+    "startDate": "2026-11-08",
+    "endDate": "2026-11-09",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 8,
+    "primaryLanguage": "Hindi",
+    "category": "Religious",
+    "womenClothing": [
+      "Silk Saree"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Gold Jewellery"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 161,
+    "state": "Uttarakhand",
+    "isUnionTerritory": false,
+    "festival": "Holi",
+    "startDate": "2026-03-03",
+    "endDate": "2026-03-04",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 7,
+    "primaryLanguage": "Hindi",
+    "category": "Cultural",
+    "womenClothing": [
+      "White Suit"
+    ],
+    "menClothing": [
+      "White Kurta"
+    ],
+    "accessories": [
+      "Minimal"
+    ],
+    "footwear": [
+      "Chappals"
+    ]
+  },
+  {
+    "id": 162,
+    "state": "Uttarakhand",
+    "isUnionTerritory": false,
+    "festival": "Basant Panchami",
+    "startDate": "2026-01-24",
+    "endDate": "2026-01-24",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 7,
+    "primaryLanguage": "Hindi",
+    "category": "Seasonal",
+    "womenClothing": [
+      "Yellow Saree/Suit"
+    ],
+    "menClothing": [
+      "Yellow Kurta"
+    ],
+    "accessories": [
+      "Yellow Bangles"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 163,
+    "state": "West Bengal",
+    "isUnionTerritory": false,
+    "festival": "Durga Puja",
+    "startDate": "2026-10-17",
+    "endDate": "2026-10-21",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 10,
+    "primaryLanguage": "Bengali",
+    "category": "State Festival",
+    "womenClothing": [
+      "Garad Saree (Red & White)"
+    ],
+    "menClothing": [
+      "Panjabi (Kurta) and Dhoti"
+    ],
+    "accessories": [
+      "Gold Jewellery",
+      "Shakha Pola"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 164,
+    "state": "West Bengal",
+    "isUnionTerritory": false,
+    "festival": "Kali Puja (Diwali)",
+    "startDate": "2026-11-08",
+    "endDate": "2026-11-09",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 9,
+    "primaryLanguage": "Bengali",
+    "category": "Religious",
+    "womenClothing": [
+      "Tant Saree"
+    ],
+    "menClothing": [
+      "Panjabi and Pajama"
+    ],
+    "accessories": [
+      "Gold Chains"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 165,
+    "state": "West Bengal",
+    "isUnionTerritory": false,
+    "festival": "Saraswati Puja",
+    "startDate": "2026-01-24",
+    "endDate": "2026-01-24",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 8,
+    "primaryLanguage": "Bengali",
+    "category": "Religious",
+    "womenClothing": [
+      "Yellow Jamdani Saree"
+    ],
+    "menClothing": [
+      "Yellow Panjabi"
+    ],
+    "accessories": [
+      "Floral Jewellery"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 166,
+    "state": "West Bengal",
+    "isUnionTerritory": false,
+    "festival": "Poila Baisakh",
+    "startDate": "2026-04-15",
+    "endDate": "2026-04-15",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 9,
+    "primaryLanguage": "Bengali",
+    "category": "New Year",
+    "womenClothing": [
+      "Cotton Tant Saree"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Gold Earrings"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 167,
+    "state": "West Bengal",
+    "isUnionTerritory": false,
+    "festival": "Eid-ul-Fitr",
+    "startDate": "2026-03-20",
+    "endDate": "2026-03-21",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 7,
+    "primaryLanguage": "Bengali",
+    "category": "Religious",
+    "womenClothing": [
+      "Salwar Suit"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Bangles"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 168,
+    "state": "West Bengal",
+    "isUnionTerritory": false,
+    "festival": "Christmas",
+    "startDate": "2026-12-25",
+    "endDate": "2026-12-25",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 8,
+    "primaryLanguage": "Bengali, English",
+    "category": "Religious",
+    "womenClothing": [
+      "Winter Western Wear"
+    ],
+    "menClothing": [
+      "Jackets",
+      "Suits"
+    ],
+    "accessories": [
+      "Scarves"
+    ],
+    "footwear": [
+      "Boots/Shoes"
+    ]
+  },
+  {
+    "id": 169,
+    "state": "Delhi (NCT)",
+    "isUnionTerritory": true,
+    "festival": "Diwali",
+    "startDate": "2026-11-08",
+    "endDate": "2026-11-09",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 10,
+    "primaryLanguage": "Hindi",
+    "category": "Religious",
+    "womenClothing": [
+      "Designer Saree / Lehenga"
+    ],
+    "menClothing": [
+      "Designer Kurta Pajama"
+    ],
+    "accessories": [
+      "Gold and Diamond Jewellery"
+    ],
+    "footwear": [
+      "Mojaris/Heels"
+    ]
+  },
+  {
+    "id": 170,
+    "state": "Delhi (NCT)",
+    "isUnionTerritory": true,
+    "festival": "Holi",
+    "startDate": "2026-03-03",
+    "endDate": "2026-03-04",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 9,
+    "primaryLanguage": "Hindi",
+    "category": "Cultural",
+    "womenClothing": [
+      "White Cotton Wear"
+    ],
+    "menClothing": [
+      "White Kurta"
+    ],
+    "accessories": [
+      "Sunglasses"
+    ],
+    "footwear": [
+      "Chappals/Sneakers"
+    ]
+  },
+  {
+    "id": 171,
+    "state": "Delhi (NCT)",
+    "isUnionTerritory": true,
+    "festival": "Eid-ul-Fitr",
+    "startDate": "2026-03-20",
+    "endDate": "2026-03-21",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 8,
+    "primaryLanguage": "Urdu, Hindi",
+    "category": "Religious",
+    "womenClothing": [
+      "Sharara",
+      "Anarkali"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Chandbalis"
+    ],
+    "footwear": [
+      "Juttis"
+    ]
+  },
+  {
+    "id": 172,
+    "state": "Delhi (NCT)",
+    "isUnionTerritory": true,
+    "festival": "Gurpurab",
+    "startDate": "2026-11-24",
+    "endDate": "2026-11-24",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 8,
+    "primaryLanguage": "Punjabi, Hindi",
+    "category": "Religious",
+    "womenClothing": [
+      "Salwar Suit"
+    ],
+    "menClothing": [
+      "Kurta Pajama with Turban"
+    ],
+    "accessories": [
+      "Simple Jewellery"
+    ],
+    "footwear": [
+      "Juttis"
+    ]
+  },
+  {
+    "id": 173,
+    "state": "Delhi (NCT)",
+    "isUnionTerritory": true,
+    "festival": "Christmas",
+    "startDate": "2026-12-25",
+    "endDate": "2026-12-25",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 7,
+    "primaryLanguage": "English, Hindi",
+    "category": "Religious",
+    "womenClothing": [
+      "Western Dresses"
+    ],
+    "menClothing": [
+      "Suits",
+      "Winter Wear"
+    ],
+    "accessories": [
+      "Elegant Accessories"
+    ],
+    "footwear": [
+      "Boots/Formal Shoes"
+    ]
+  },
+  {
+    "id": 174,
+    "state": "Delhi (NCT)",
+    "isUnionTerritory": true,
+    "festival": "Chhath Puja",
+    "startDate": "2026-11-13",
+    "endDate": "2026-11-16",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 8,
+    "primaryLanguage": "Bhojpuri, Hindi",
+    "category": "Religious",
+    "womenClothing": [
+      "Cotton Saree"
+    ],
+    "menClothing": [
+      "Dhoti Kurta"
+    ],
+    "accessories": [
+      "Gold Bangles",
+      "Sindoor"
+    ],
+    "footwear": [
+      "Barefoot"
+    ]
+  },
+  {
+    "id": 175,
+    "state": "Jammu & Kashmir",
+    "isUnionTerritory": true,
+    "festival": "Eid-ul-Fitr",
+    "startDate": "2026-03-20",
+    "endDate": "2026-03-21",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 10,
+    "primaryLanguage": "Kashmiri, Urdu",
+    "category": "Religious",
+    "womenClothing": [
+      "Pheran",
+      "Taranga/Kasaba"
+    ],
+    "menClothing": [
+      "Pheran",
+      "Shalwar"
+    ],
+    "accessories": [
+      "Silver Earrings"
+    ],
+    "footwear": [
+      "Khrawe (Sandals)"
+    ]
+  },
+  {
+    "id": 176,
+    "state": "Jammu & Kashmir",
+    "isUnionTerritory": true,
+    "festival": "Eid-ul-Adha",
+    "startDate": "2026-05-27",
+    "endDate": "2026-05-28",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 9,
+    "primaryLanguage": "Kashmiri, Urdu",
+    "category": "Religious",
+    "womenClothing": [
+      "Embroidered Salwar Suit"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Silver Jewellery"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 177,
+    "state": "Jammu & Kashmir",
+    "isUnionTerritory": true,
+    "festival": "Navroz",
+    "startDate": "2026-03-21",
+    "endDate": "2026-03-21",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 8,
+    "primaryLanguage": "Kashmiri",
+    "category": "New Year",
+    "womenClothing": [
+      "Traditional Pheran"
+    ],
+    "menClothing": [
+      "Pheran"
+    ],
+    "accessories": [
+      "Silver Ornaments"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 178,
+    "state": "Jammu & Kashmir",
+    "isUnionTerritory": true,
+    "festival": "Maha Shivaratri (Herath)",
+    "startDate": "2026-02-14",
+    "endDate": "2026-02-15",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 8,
+    "primaryLanguage": "Kashmiri",
+    "category": "Religious",
+    "womenClothing": [
+      "Traditional Suit/Saree"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Gold Ornaments"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 179,
+    "state": "Jammu & Kashmir",
+    "isUnionTerritory": true,
+    "festival": "Baisakhi",
+    "startDate": "2026-04-14",
+    "endDate": "2026-04-14",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 7,
+    "primaryLanguage": "Dogri, Punjabi",
+    "category": "Harvest",
+    "womenClothing": [
+      "Salwar Suit"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Bangles"
+    ],
+    "footwear": [
+      "Juttis"
+    ]
+  },
+  {
+    "id": 180,
+    "state": "Jammu & Kashmir",
+    "isUnionTerritory": true,
+    "festival": "Lohri",
+    "startDate": "2026-01-13",
+    "endDate": "2026-01-13",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 7,
+    "primaryLanguage": "Dogri",
+    "category": "Harvest",
+    "womenClothing": [
+      "Woolen Suit"
+    ],
+    "menClothing": [
+      "Kurta Pajama",
+      "Jacket"
+    ],
+    "accessories": [
+      "Warm Shawls"
+    ],
+    "footwear": [
+      "Juttis"
+    ]
+  },
+  {
+    "id": 181,
+    "state": "Ladakh",
+    "isUnionTerritory": true,
+    "festival": "Losar",
+    "startDate": "2026-02-18",
+    "endDate": "2026-02-20",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 10,
+    "primaryLanguage": "Ladakhi",
+    "category": "New Year",
+    "womenClothing": [
+      "Goncha with Sulma"
+    ],
+    "menClothing": [
+      "Goncha with Skerag"
+    ],
+    "accessories": [
+      "Perak (Headdress)"
+    ],
+    "footwear": [
+      "Pabu (Traditional Shoes)"
+    ]
+  },
+  {
+    "id": 182,
+    "state": "Ladakh",
+    "isUnionTerritory": true,
+    "festival": "Hemis Tsechu",
+    "startDate": "2026-06-25",
+    "endDate": "2026-06-26",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 9,
+    "primaryLanguage": "Ladakhi",
+    "category": "Religious",
+    "womenClothing": [
+      "Traditional Goncha"
+    ],
+    "menClothing": [
+      "Goncha"
+    ],
+    "accessories": [
+      "Silver and Turquoise Jewellery"
+    ],
+    "footwear": [
+      "Pabu"
+    ]
+  },
+  {
+    "id": 183,
+    "state": "Ladakh",
+    "isUnionTerritory": true,
+    "festival": "Sindhu Darshan",
+    "startDate": "2026-06-12",
+    "endDate": "2026-06-14",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 8,
+    "primaryLanguage": "Ladakhi, Hindi",
+    "category": "Cultural",
+    "womenClothing": [
+      "Colorful Goncha"
+    ],
+    "menClothing": [
+      "Goncha"
+    ],
+    "accessories": [
+      "Beads"
+    ],
+    "footwear": [
+      "Comfortable Shoes"
+    ]
+  },
+  {
+    "id": 184,
+    "state": "Ladakh",
+    "isUnionTerritory": true,
+    "festival": "Dosmoche",
+    "startDate": "2026-02-12",
+    "endDate": "2026-02-13",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 8,
+    "primaryLanguage": "Ladakhi",
+    "category": "Religious",
+    "womenClothing": [
+      "Warm Goncha"
+    ],
+    "menClothing": [
+      "Warm Goncha"
+    ],
+    "accessories": [
+      "Turquoise Necklaces"
+    ],
+    "footwear": [
+      "Boots"
+    ]
+  },
+  {
+    "id": 185,
+    "state": "Ladakh",
+    "isUnionTerritory": true,
+    "festival": "Saka Dawa",
+    "startDate": "2026-05-31",
+    "endDate": "2026-05-31",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 8,
+    "primaryLanguage": "Ladakhi",
+    "category": "Religious",
+    "womenClothing": [
+      "Simple Goncha"
+    ],
+    "menClothing": [
+      "Simple Goncha"
+    ],
+    "accessories": [
+      "Prayer Beads"
+    ],
+    "footwear": [
+      "Pabu"
+    ]
+  },
+  {
+    "id": 186,
+    "state": "Ladakh",
+    "isUnionTerritory": true,
+    "festival": "Ladakh Festival",
+    "startDate": "2026-09-01",
+    "endDate": "2026-09-15",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 9,
+    "primaryLanguage": "Ladakhi",
+    "category": "State Festival",
+    "womenClothing": [
+      "Festive Goncha"
+    ],
+    "menClothing": [
+      "Festive Goncha"
+    ],
+    "accessories": [
+      "Perak",
+      "Heavy Silver"
+    ],
+    "footwear": [
+      "Traditional Boots"
+    ]
+  },
+  {
+    "id": 187,
+    "state": "Puducherry",
+    "isUnionTerritory": true,
+    "festival": "Pongal",
+    "startDate": "2026-01-14",
+    "endDate": "2026-01-17",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 10,
+    "primaryLanguage": "Tamil",
+    "category": "Harvest",
+    "womenClothing": [
+      "Silk Saree"
+    ],
+    "menClothing": [
+      "Veshti and Shirt"
+    ],
+    "accessories": [
+      "Gold Jewellery"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 188,
+    "state": "Puducherry",
+    "isUnionTerritory": true,
+    "festival": "Puthandu",
+    "startDate": "2026-04-14",
+    "endDate": "2026-04-14",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 9,
+    "primaryLanguage": "Tamil",
+    "category": "New Year",
+    "womenClothing": [
+      "Traditional Saree"
+    ],
+    "menClothing": [
+      "Veshti"
+    ],
+    "accessories": [
+      "Gold Necklaces"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 189,
+    "state": "Puducherry",
+    "isUnionTerritory": true,
+    "festival": "Diwali",
+    "startDate": "2026-11-08",
+    "endDate": "2026-11-09",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 8,
+    "primaryLanguage": "Tamil",
+    "category": "Religious",
+    "womenClothing": [
+      "Silk Saree"
+    ],
+    "menClothing": [
+      "Shirt and Veshti"
+    ],
+    "accessories": [
+      "Gold Bangles"
+    ],
+    "footwear": [
+      "Chappals"
+    ]
+  },
+  {
+    "id": 190,
+    "state": "Puducherry",
+    "isUnionTerritory": true,
+    "festival": "Christmas",
+    "startDate": "2026-12-25",
+    "endDate": "2026-12-25",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 9,
+    "primaryLanguage": "French, Tamil",
+    "category": "Religious",
+    "womenClothing": [
+      "Dresses",
+      "Saree"
+    ],
+    "menClothing": [
+      "Suits",
+      "Trousers"
+    ],
+    "accessories": [
+      "Elegant Pendants"
+    ],
+    "footwear": [
+      "Formal Shoes"
+    ]
+  },
+  {
+    "id": 191,
+    "state": "Puducherry",
+    "isUnionTerritory": true,
+    "festival": "Eid-ul-Fitr",
+    "startDate": "2026-03-20",
+    "endDate": "2026-03-21",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 7,
+    "primaryLanguage": "Tamil, Urdu",
+    "category": "Religious",
+    "womenClothing": [
+      "Salwar Suit"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Earrings"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
+  },
+  {
+    "id": 192,
+    "state": "Puducherry",
+    "isUnionTerritory": true,
+    "festival": "Villianur Temple Car Festival",
+    "startDate": "2026-05-25",
+    "endDate": "2026-05-25",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 8,
+    "primaryLanguage": "Tamil",
+    "category": "Cultural",
+    "womenClothing": [
+      "Cotton Saree"
+    ],
+    "menClothing": [
+      "Veshti"
+    ],
+    "accessories": [
+      "Flowers in Hair"
+    ],
+    "footwear": [
+      "Barefoot"
+    ]
+  },
+  {
+    "id": 193,
+    "state": "Chandigarh",
+    "isUnionTerritory": true,
+    "festival": "Baisakhi",
+    "startDate": "2026-04-14",
+    "endDate": "2026-04-14",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 10,
+    "primaryLanguage": "Punjabi",
+    "category": "Harvest",
+    "womenClothing": [
+      "Phulkari Suit"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Phulkari Dupatta"
+    ],
+    "footwear": [
+      "Jutti"
+    ]
+  },
+  {
+    "id": 194,
+    "state": "Chandigarh",
+    "isUnionTerritory": true,
+    "festival": "Lohri",
+    "startDate": "2026-01-13",
+    "endDate": "2026-01-13",
+    "isRegional": true,
+    "isNational": false,
+    "priority": 9,
+    "primaryLanguage": "Punjabi",
+    "category": "Harvest",
+    "womenClothing": [
+      "Patiala Suit"
+    ],
+    "menClothing": [
+      "Kurta Pajama",
+      "Jacket"
+    ],
+    "accessories": [
+      "Bangles",
+      "Paranda"
+    ],
+    "footwear": [
+      "Jutti"
+    ]
+  },
+  {
+    "id": 195,
+    "state": "Chandigarh",
+    "isUnionTerritory": true,
+    "festival": "Gurpurab",
+    "startDate": "2026-11-24",
+    "endDate": "2026-11-24",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 9,
+    "primaryLanguage": "Punjabi",
+    "category": "Religious",
+    "womenClothing": [
+      "Salwar Kameez"
+    ],
+    "menClothing": [
+      "Kurta Pajama with Turban"
+    ],
+    "accessories": [
+      "Simple Gold Chain"
+    ],
+    "footwear": [
+      "Jutti"
+    ]
+  },
+  {
+    "id": 196,
+    "state": "Chandigarh",
+    "isUnionTerritory": true,
+    "festival": "Diwali",
+    "startDate": "2026-11-08",
+    "endDate": "2026-11-09",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 8,
+    "primaryLanguage": "Hindi, Punjabi",
+    "category": "Religious",
+    "womenClothing": [
+      "Designer Saree / Suit"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Gold Ornaments"
+    ],
+    "footwear": [
+      "Mojaris"
+    ]
+  },
+  {
+    "id": 197,
+    "state": "Chandigarh",
+    "isUnionTerritory": true,
+    "festival": "Holi",
+    "startDate": "2026-03-03",
+    "endDate": "2026-03-04",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 8,
+    "primaryLanguage": "Hindi, Punjabi",
+    "category": "Cultural",
+    "womenClothing": [
+      "White Suit"
+    ],
+    "menClothing": [
+      "White Kurta"
+    ],
+    "accessories": [
+      "Minimal"
+    ],
+    "footwear": [
+      "Chappals"
+    ]
+  },
+  {
+    "id": 198,
+    "state": "Chandigarh",
+    "isUnionTerritory": true,
+    "festival": "Eid-ul-Fitr",
+    "startDate": "2026-03-20",
+    "endDate": "2026-03-21",
+    "isRegional": false,
+    "isNational": true,
+    "priority": 6,
+    "primaryLanguage": "Hindi",
+    "category": "Religious",
+    "womenClothing": [
+      "Salwar Suit"
+    ],
+    "menClothing": [
+      "Kurta Pajama"
+    ],
+    "accessories": [
+      "Earrings"
+    ],
+    "footwear": [
+      "Sandals"
+    ]
   }
 ]

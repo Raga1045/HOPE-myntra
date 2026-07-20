@@ -177,11 +177,28 @@ if (useMongoose) {
   });
 
   const FestivalSchema = new mongoose.Schema({
-    _id: String,
+    
+    id: Number,
+
     festival: String,
-    date: String,
-    states: [String]
-  });
+    state: String,
+
+    startDate: Date,
+    endDate: Date,
+
+    isRegional: Boolean,
+    isNational: Boolean,
+
+    priority: Number,
+
+    primaryLanguage: String,
+    category: String,
+
+    womenClothing: [String],
+    menClothing: [String],
+    accessories: [String],
+    footwear: [String]
+});
 
   const ProductSchema = new mongoose.Schema({
     _id: String,

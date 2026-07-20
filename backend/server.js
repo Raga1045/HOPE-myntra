@@ -1,14 +1,21 @@
-import express from 'express';
-import cors from 'cors';
-import dotenv from 'dotenv';
-import axios from 'axios';
-import { connectDB, User, CultureProfile, Festival, Product, Purchase } from './db.js';
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+import axios from "axios";
+import {
+  connectDB,
+  User,
+  CultureProfile,
+  Festival,
+  Product,
+  Purchase,
+} from "./db.js";
 
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-const AI_SERVICE_URL = process.env.AI_SERVICE_URL || 'http://localhost:8000';
+const AI_SERVICE_URL = process.env.AI_SERVICE_URL || "http://localhost:8000";
 
 app.use(cors());
 app.use(express.json());
@@ -17,7 +24,7 @@ app.use(express.json());
 connectDB();
 
 // 1. LOGIN ROUTE
-app.post('/api/auth/login', async (req, res) => {
+app.post("/api/auth/login", async (req, res) => {
   const { email, password } = req.body;
   try {
     let user = await User.findOne({ email });
@@ -27,8 +34,8 @@ app.post('/api/auth/login', async (req, res) => {
       user = await User.create({
         _id: newUserId,
         id: newUserId,
-        name: email.split('@')[0],
-        email: email
+        name: email.split("@")[0],
+        email: email,
       });
     }
     res.json({ success: true, user });
@@ -39,15 +46,18 @@ app.post('/api/auth/login', async (req, res) => {
 });
 
 // 2. PROFILE SETUP ROUTE
-app.post('/api/profile', async (req, res) => {
+app.post("/api/profile", async (req, res) => {
   const { userId, state, festivals, language } = req.body;
   try {
     const updated = await CultureProfile.updateOne(
       { userId },
       { userId, state, festivals, language },
-      { upsert: true }
+      { upsert: true },
     );
-    res.json({ success: true, profile: { userId, state, festivals, language } });
+    res.json({
+      success: true,
+      profile: { userId, state, festivals, language },
+    });
   } catch (err) {
     console.error("Profile error:", err);
     res.status(500).json({ success: false, error: err.message });
@@ -55,7 +65,7 @@ app.post('/api/profile', async (req, res) => {
 });
 
 // GET PROFILE ROUTE
-app.get('/api/profile/:userId', async (req, res) => {
+app.get("/api/profile/:userId", async (req, res) => {
   try {
     const profile = await CultureProfile.findOne({ userId: req.params.userId });
     res.json({ success: true, profile });
@@ -64,30 +74,76 @@ app.get('/api/profile/:userId', async (req, res) => {
   }
 });
 
+// GET ALL STATES & FESTIVALS
+app.get("/api/festivals", async (req, res) => {
+  try {
+    const festivals = await Festival.find({});
+
+    const result = {};
+
+    festivals.forEach((item) => {
+      if (!result[item.state]) {
+        result[item.state] = [];
+      }
+
+      if (!result[item.state].includes(item.festival)) {
+        result[item.state].push(item.festival);
+      }
+    });
+
+    res.json(result);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({
+      success: false,
+      error: err.message,
+    });
+  }
+});
 // 3. HOMEPAGE FEED ROUTE
-app.get('/api/homepage', async (req, res) => {
+app.get("/api/homepage", async (req, res) => {
   const { userId, cultureMode } = req.query;
-  const isCultureMode = cultureMode !== 'false';
+  const isCultureMode = cultureMode !== "false";
 
   try {
     if (!isCultureMode) {
       // NORMAL MODE: Generic Trending, Recommended, and Top Brands
       const allProducts = await Product.find({});
-      
+
       // Shuffle products helper
-      const shuffle = arr => arr.sort(() => 0.5 - Math.random());
-      
-      const trending = shuffle([...allProducts]).slice(0, 8);
+      const shuffle = (arr) => arr.sort(() => 0.5 - Math.random());
+
+      let trendingFestival = allProducts
+    .filter(
+        p =>
+            p.festivalTags.includes(activeFestival) &&
+            p.regionTags.some(r =>
+                r.toLowerCase().includes(regionTag.toLowerCase())
+            )
+    )
+    .slice(0,8);
+
+if (trendingFestival.length === 0) {
+    trendingFestival = allProducts
+        .filter(p =>
+            p.regionTags.some(r =>
+                r.toLowerCase().includes(regionTag.toLowerCase())
+            )
+        )
+        .slice(0,8);
+}
       const recommended = shuffle([...allProducts]).slice(0, 8);
-      const topBrands = allProducts.filter(p => ["Roadster", "HRX", "Mast & Harbour"].includes(p.brand)).slice(0, 8);
+      const topBrands = allProducts
+        .filter((p) => ["Roadster", "HRX", "Mast & Harbour"].includes(p.brand))
+        .slice(0, 8);
 
       return res.json({
         cultureMode: false,
         feed: {
           trending,
           recommended,
-          topBrands
-        }
+          topBrands,
+        },
       });
     }
 
@@ -98,117 +154,189 @@ app.get('/api/homepage', async (req, res) => {
       profile = {
         state: "Andhra Pradesh",
         festivals: ["Ugadi", "Diwali"],
-        language: "English"
+        language: "English",
       };
     }
 
     const stateName = profile.state;
-    // Map State name to region tag prefix
-    const regionTag = stateName.split(' ')[0]; // Andhra Pradesh -> Andhra, Tamil Nadu -> Tamil, etc.
-    
-    // Find user's active festival
-    // Query upcoming festivals for this state
-    const regionFestivals = await Festival.find({ states: stateName });
-    let activeFestival = "Ugadi"; // Default fallback
-    
-    if (profile.festivals && profile.festivals.length > 0) {
-      // Pick first matching profile festival that is relevant for this state
-      const matchingFest = profile.festivals.find(f => regionFestivals.some(rf => rf.festival === f));
-      if (matchingFest) activeFestival = matchingFest;
+    const regionTag = stateName.split(" ")[0];
+
+    const regionFestivals = await Festival.find({
+      state: stateName,
+    });
+    if (regionFestivals.length === 0) {
+    return res.json({
+        cultureMode: true,
+        activeFestival: null,
+        heroBanner: null,
+        clothingRecommendations: {},
+        feed: {
+            trendingFestival: [],
+            popularState: [],
+            regionalBrands: [],
+            festivalOffers: [],
+            familyMatching: [],
+        },
+    });
+}
+    regionFestivals.sort(
+      (a, b) => new Date(a.startDate) - new Date(b.startDate),
+    );
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const upcomingFestivals = regionFestivals
+      .filter((f) => new Date(f.startDate) >= today)
+      .sort((a, b) => new Date(a.startDate) - new Date(b.startDate));
+
+    let activeFestDoc;
+
+    if (upcomingFestivals.length > 0) {
+      activeFestDoc = upcomingFestivals[0];
+    } else {
+      activeFestDoc = regionFestivals.sort(
+        (a, b) => a.priority - b.priority,
+      )[0];
     }
 
+    const activeFestival = activeFestDoc
+    ? activeFestDoc.festival
+    : "Diwali";
+    //date fetched baove
+
+    // if (profile.festivals && profile.festivals.length > 0) {
+    //   // Pick first matching profile festival that is relevant for this state
+    //   const matchingFest = profile.festivals.find((f) =>
+    //     regionFestivals.some((rf) => rf.festival === f),
+    //   );
+    //   if (matchingFest) activeFestival = matchingFest;
+    // }
+
     // Calculate days remaining dynamically
-    const activeFestDoc = regionFestivals.find(rf => rf.festival === activeFestival);
+
     let daysLeft = null;
     let showCountdown = false;
-    
-    if (activeFestDoc && activeFestDoc.date) {
+
+    if (activeFestDoc) {
       const today = new Date();
-      today.setHours(0, 0, 0, 0); // normalize time
-      const festDate = new Date(activeFestDoc.date);
-      festDate.setHours(0, 0, 0, 0);
-      const diffTime = festDate.getTime() - today.getTime();
-      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-      
-      // Countdown starts 15 days before the festival
-      if (diffDays >= 0 && diffDays <= 15) {
+
+      today.setHours(0, 0, 0, 0);
+
+      const startDate = new Date(activeFestDoc.startDate);
+
+      startDate.setHours(0, 0, 0, 0);
+
+      const diffDays = Math.ceil((startDate - today) / (1000 * 60 * 60 * 24));
+
+      if (diffDays >= 0 && diffDays <=100) {
         daysLeft = diffDays;
+
         showCountdown = true;
       }
     }
-
     // Call Python FastAPI service for AI Regional Recommendations
     let recommendedCategories = ["Kurta", "Saree", "Jewellery"]; // fallback
     try {
-      const aiResponse = await axios.post(`${AI_SERVICE_URL}/recommend`, {
-        region: regionTag,
-        festival: activeFestival
-      }, { timeout: 2000 });
+      const aiResponse = await axios.post(
+        `${AI_SERVICE_URL}/recommend`,
+        {
+          region: regionTag,
+          festival: activeFestival,
+        },
+        { timeout: 2000 },
+      );
       if (aiResponse.data && aiResponse.data.recommendedCategories) {
         recommendedCategories = aiResponse.data.recommendedCategories;
       }
     } catch (err) {
-      console.warn("AI Service offline, falling back to local categories ranking.");
+      console.warn(
+        "AI Service offline, falling back to local categories ranking.",
+      );
     }
 
     // Query products
     const allProducts = await Product.find({});
-    
+
     // Section 1: Trending For Festival (Tagged with Festival & Region)
-    const trendingFestival = allProducts.filter(p => 
-      p.festivalTags.includes(activeFestival) && 
-      p.regionTags.some(r => r.toLowerCase().includes(regionTag.toLowerCase()))
-    ).slice(0, 8);
+    const trendingFestival = allProducts
+      .filter(
+        (p) =>
+          p.festivalTags.includes(activeFestival) &&
+          p.regionTags.some((r) =>
+            r.toLowerCase().includes(regionTag.toLowerCase()),
+          ),
+      )
+      .slice(0, 8);
 
     // Section 2: Popular In State (Region matching products)
-    const popularState = allProducts.filter(p => 
-      p.regionTags.some(r => r.toLowerCase().includes(regionTag.toLowerCase()))
-    ).slice(0, 8);
+    const popularState = allProducts
+      .filter((p) =>
+        p.regionTags.some((r) =>
+          r.toLowerCase().includes(regionTag.toLowerCase()),
+        ),
+      )
+      .slice(0, 8);
 
     // Section 3: Regional Brands (W, Biba, Libas, Anouk, Manyavar)
-    const regionalBrands = allProducts.filter(p => 
-      ["W", "Biba", "Libas", "Anouk", "Manyavar"].includes(p.brand)
-    ).slice(0, 8);
+    const regionalBrands = allProducts
+      .filter((p) =>
+        ["W", "Biba", "Libas", "Anouk", "Manyavar"].includes(p.brand),
+      )
+      .slice(0, 8);
 
     // Section 4: Festival Offers (Simulate discount pricing)
-    const festivalOffers = allProducts.filter(p => 
-      p.festivalTags.includes(activeFestival) || p.regionTags.some(r => r.toLowerCase().includes(regionTag.toLowerCase()))
-    ).map(p => ({
-      ...p,
-      originalPrice: Math.floor(p.price * 1.4),
-      discountText: "30% OFF"
-    })).slice(0, 8);
+    const festivalOffers = allProducts
+      .filter(
+        (p) =>
+          p.festivalTags.includes(activeFestival) ||
+          p.regionTags.some((r) =>
+            r.toLowerCase().includes(regionTag.toLowerCase()),
+          ),
+      )
+      .map((p) => ({
+        ...p,
+        originalPrice: Math.floor(p.price * 1.4),
+        discountText: "30% OFF",
+      }))
+      .slice(0, 8);
 
     // Section 5: Family Matching Looks
-    const familyMatching = allProducts.filter(p => 
-      recommendedCategories.includes(p.category)
-    ).slice(0, 8);
+    const familyMatching = allProducts
+      .filter((p) => recommendedCategories.includes(p.category))
+      .slice(0, 8);
 
-    let heroBanner = null;
-    if (showCountdown && daysLeft !== null) {
-      heroBanner = {
-        festival: activeFestival,
-        daysLeft: daysLeft,
-        title: `🌸 ${activeFestival}`,
-        subtitle: "Celebrate in Style",
-        cta: "Explore Collection"
-      };
-    }
+    const heroBanner = {
+    festival: activeFestDoc.festival,
+    daysLeft: daysLeft ?? 0,
+    title: `🌸 ${activeFestDoc.festival}`,
+    subtitle: `Celebrate ${activeFestDoc.category} in Style`,
+    cta: "Explore Collection",
+    language: activeFestDoc.primaryLanguage,
+    showCountdown
+};
 
     return res.json({
       cultureMode: true,
       activeFestival,
       state: stateName,
       heroBanner,
+
+      clothingRecommendations: {
+        women: activeFestDoc?.womenClothing || [],
+        men: activeFestDoc?.menClothing || [],
+        accessories: activeFestDoc?.accessories || [],
+        footwear: activeFestDoc?.footwear || [],
+      },
+
       feed: {
         trendingFestival,
         popularState,
         regionalBrands,
         festivalOffers,
-        familyMatching
-      }
+        familyMatching,
+      },
     });
-
   } catch (err) {
     console.error("Homepage feed error:", err);
     res.status(500).json({ success: false, error: err.message });
@@ -216,27 +344,40 @@ app.get('/api/homepage', async (req, res) => {
 });
 
 // GET PRODUCT DETAILS ROUTE
-app.get('/api/product/:id', async (req, res) => {
+app.get("/api/product/:id", async (req, res) => {
   try {
     const product = await Product.findById(req.params.id);
+
     if (!product) {
-      return res.status(404).json({ success: false, message: "Product not found" });
+      return res.status(404).json({
+        success: false,
+        message: "Product not found",
+      });
     }
-    res.json({ success: true, product });
+
+    res.json({
+      success: true,
+      product,
+    });
   } catch (err) {
-    res.status(500).json({ success: false, error: err.message });
+    res.status(500).json({
+      success: false,
+      error: err.message,
+    });
   }
 });
 
 // 4. CONFIDENCE TWIN ROUTE
-app.get('/api/confidence/:productId', async (req, res) => {
+app.get("/api/confidence/:productId", async (req, res) => {
   const { userId } = req.query;
   const { productId } = req.params;
 
   try {
     const product = await Product.findById(productId);
     if (!product) {
-      return res.status(404).json({ success: false, message: "Product not found" });
+      return res
+        .status(404)
+        .json({ success: false, message: "Product not found" });
     }
 
     let profile = await CultureProfile.findOne({ userId });
@@ -244,7 +385,7 @@ app.get('/api/confidence/:productId', async (req, res) => {
       profile = {
         state: "Andhra Pradesh",
         festivals: ["Ugadi"],
-        language: "English"
+        language: "English",
       };
     }
 
@@ -256,23 +397,32 @@ app.get('/api/confidence/:productId', async (req, res) => {
     // Call Python FastAPI service for AI calculations
     let score = 92; // default fallback
     let trueToSize = 95; // default fallback
-    let festival = profile.festivals[0] || "Ugadi";
+    let festival = "Diwali";
+    const activeFestival = await Festival.findOne({
+      state: profile.state,
+    }).sort({ startDate: 1 });
+
+    festival = activeFestival?.festival || "Diwali";
 
     try {
-      const aiResponse = await axios.post(`${AI_SERVICE_URL}/confidence`, {
-        userId,
-        productId,
-        state: profile.state,
-        festivals: profile.festivals,
-        language: profile.language,
-        style: product.style || 'Minimal',
-        category: product.category,
-        brand: product.brand,
-        price: product.price,
-        color: product.color || 'Black',
-        age: user.age || 26,
-        gender: user.gender || 'Female'
-      }, { timeout: 2000 });
+      const aiResponse = await axios.post(
+        `${AI_SERVICE_URL}/confidence`,
+        {
+          userId,
+          productId,
+          state: profile.state,
+          festivals: profile.festivals,
+          language: profile.language,
+          style: product.style || "Minimal",
+          category: product.category,
+          brand: product.brand,
+          price: product.price,
+          color: product.color || "Black",
+          age: user.age || 26,
+          gender: user.gender || "Female",
+        },
+        { timeout: 2000 },
+      );
 
       if (aiResponse.data) {
         score = aiResponse.data.confidence;
@@ -284,11 +434,17 @@ app.get('/api/confidence/:productId', async (req, res) => {
       // Fallback calculation algorithm
       // Give higher confidence scores if state/festival tags align
       let scoreBonus = 0;
-      const statePrefix = profile.state.split(' ')[0];
-      if (product.regionTags && product.regionTags.some(r => r.includes(statePrefix))) {
+      const statePrefix = profile.state.split(" ")[0];
+      if (
+        product.regionTags &&
+        product.regionTags.some((r) => r.includes(statePrefix))
+      ) {
         scoreBonus += 10;
       }
-      if (product.festivalTags && product.festivalTags.some(f => profile.festivals.includes(f))) {
+      if (
+        product.festivalTags &&
+        product.festivalTags.some((f) => profile.festivals.includes(f))
+      ) {
         scoreBonus += 15;
       }
       score = Math.min(98, 70 + scoreBonus + Math.floor(Math.random() * 10));
@@ -300,15 +456,14 @@ app.get('/api/confidence/:productId', async (req, res) => {
       confidence: score,
       trueToSize,
       festival,
-      explanation: `Based on shoppers in ${profile.state} with similar style (${product.style || 'Ethnic'}), budget (₹${product.price}), and buying preferences.`,
+      explanation: `Based on shoppers in ${profile.state} with similar style (${product.style || "Ethnic"}), budget (₹${product.price}), and buying preferences.`,
       tags: [
         "95% kept this product",
         `${trueToSize}% found true-to-size`,
         `Popular for ${festival}`,
-        `Recommended for ${product.style || 'Minimal'} Style`
-      ]
+        `Recommended for ${product.style || "Minimal"} Style`,
+      ],
     });
-
   } catch (err) {
     console.error("Confidence score error:", err);
     res.status(500).json({ success: false, error: err.message });
@@ -316,12 +471,14 @@ app.get('/api/confidence/:productId', async (req, res) => {
 });
 
 // 5. PURCHASE SIMULATION / CHECKOUT ROUTE
-app.post('/api/checkout', async (req, res) => {
+app.post("/api/checkout", async (req, res) => {
   const { userId, productId, festival } = req.body;
   try {
     const product = await Product.findById(productId);
     if (!product) {
-      return res.status(404).json({ success: false, message: "Product not found" });
+      return res
+        .status(404)
+        .json({ success: false, message: "Product not found" });
     }
 
     const purchaseId = `p_${Date.now()}`;
@@ -334,7 +491,7 @@ app.post('/api/checkout', async (req, res) => {
       price: product.price,
       brand: product.brand,
       color: product.color || "Black",
-      date: new Date().toISOString().split('T')[0]
+      date: new Date().toISOString().split("T")[0],
     });
 
     res.json({ success: true, message: "Order Placed", purchase });
@@ -345,11 +502,11 @@ app.post('/api/checkout', async (req, res) => {
 });
 
 // 6. MYNTRA WRAPPED ENDPOINT
-app.get('/api/wrapped', async (req, res) => {
+app.get("/api/wrapped", async (req, res) => {
   const { userId } = req.query;
   try {
     const purchases = await Purchase.find({ userId });
-    
+
     if (purchases.length === 0) {
       // Default placeholder statistics if new user has no purchases
       return res.json({
@@ -365,10 +522,10 @@ app.get('/api/wrapped', async (req, res) => {
             breakdown: [
               { name: "Minimal", value: 40 },
               { name: "Ethnic", value: 30 },
-              { name: "Trendy", value: 30 }
-            ]
-          }
-        }
+              { name: "Trendy", value: 30 },
+            ],
+          },
+        },
       });
     }
 
@@ -380,14 +537,15 @@ app.get('/api/wrapped', async (req, res) => {
     const brandCounts = {};
     const colorCounts = {};
     const festivalCounts = {};
-    
-    purchases.forEach(p => {
+
+    purchases.forEach((p) => {
       if (p.brand) brandCounts[p.brand] = (brandCounts[p.brand] || 0) + 1;
       if (p.color) colorCounts[p.color] = (colorCounts[p.color] || 0) + 1;
-      if (p.festival) festivalCounts[p.festival] = (festivalCounts[p.festival] || 0) + 1;
+      if (p.festival)
+        festivalCounts[p.festival] = (festivalCounts[p.festival] || 0) + 1;
     });
 
-    const getTopKey = obj => {
+    const getTopKey = (obj) => {
       let topKey = "None";
       let maxVal = -1;
       for (let k in obj) {
@@ -400,16 +558,19 @@ app.get('/api/wrapped', async (req, res) => {
     };
 
     const favoriteBrand = getTopKey(brandCounts);
-    const favoriteFestival = getTopKey(festivalCounts) === "None" ? "Ugadi" : getTopKey(festivalCounts);
+    const favoriteFestival =
+      getTopKey(festivalCounts) === "None"
+        ? "Ugadi"
+        : getTopKey(festivalCounts);
     const topColor = getTopKey(colorCounts);
 
     // Calculate style analysis based on purchased product style profiles
     // Let's count matching styles of purchased products
-    const productIds = purchases.map(p => p.productId);
+    const productIds = purchases.map((p) => p.productId);
     const purchasedProducts = await Product.find({ _id: { $in: productIds } });
-    
+
     const styleCounts = { Minimal: 0, Ethnic: 0, Trendy: 0, Traditional: 0 };
-    purchasedProducts.forEach(p => {
+    purchasedProducts.forEach((p) => {
       if (p.style) {
         styleCounts[p.style] = (styleCounts[p.style] || 0) + 1;
       }
@@ -421,22 +582,28 @@ app.get('/api/wrapped', async (req, res) => {
     let archetype = "Minimal Traditionalist";
 
     if (totalStyles > 0) {
-      breakdown = Object.entries(styleCounts).map(([name, count]) => ({
-        name,
-        value: Math.round((count / totalStyles) * 100)
-      })).filter(b => b.value > 0);
-      
+      breakdown = Object.entries(styleCounts)
+        .map(([name, count]) => ({
+          name,
+          value: Math.round((count / totalStyles) * 100),
+        }))
+        .filter((b) => b.value > 0);
+
       // Determine archetype
-      const topStyleEntry = Object.entries(styleCounts).sort((a, b) => b[1] - a[1])[0];
-      if (topStyleEntry[0] === 'Minimal') archetype = "Minimal Traditionalist";
-      else if (topStyleEntry[0] === 'Ethnic') archetype = "Cultural Connoisseur";
-      else if (topStyleEntry[0] === 'Trendy') archetype = "Vanguard Trendsetter";
+      const topStyleEntry = Object.entries(styleCounts).sort(
+        (a, b) => b[1] - a[1],
+      )[0];
+      if (topStyleEntry[0] === "Minimal") archetype = "Minimal Traditionalist";
+      else if (topStyleEntry[0] === "Ethnic")
+        archetype = "Cultural Connoisseur";
+      else if (topStyleEntry[0] === "Trendy")
+        archetype = "Vanguard Trendsetter";
       else archetype = "Heritage Revivalist";
     } else {
       breakdown = [
         { name: "Minimal", value: 60 },
         { name: "Ethnic", value: 25 },
-        { name: "Trendy", value: 15 }
+        { name: "Trendy", value: 15 },
       ];
       archetype = "Minimal Traditionalist";
     }
@@ -451,11 +618,10 @@ app.get('/api/wrapped', async (req, res) => {
         topColor,
         styleAnalysis: {
           archetype,
-          breakdown
-        }
-      }
+          breakdown,
+        },
+      },
     });
-
   } catch (err) {
     console.error("Wrapped error:", err);
     res.status(500).json({ success: false, error: err.message });

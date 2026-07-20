@@ -6598,5 +6598,16 @@
     "color": "Blue",
     "date": "2025-12-27",
     "id": "p_rand_150"
+  },
+  {
+    "_id": "p_1784472767089",
+    "id": "p_1784472767089",
+    "userId": "1784472591052",
+    "productId": "61",
+    "festival": "Vishu",
+    "price": 1168,
+    "brand": "Manyavar",
+    "color": "White",
+    "date": "2026-07-19"
   }
 ]

@@ -6,18 +6,35 @@ import { useDispatch, useSelector } from 'react-redux';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MapPin, Calendar, Languages, Check, ArrowRight, UserCheck } from 'lucide-react';
 import { setProfile, RootState } from '@/store/store';
-const STATE_FESTIVALS: { [key: string]: string[] } = {
-  "Andhra Pradesh": ["Ugadi", "Sankranti", "Dasara", "Diwali", "Christmas"],
-  "Kerala": ["Vishu", "Onam", "Diwali", "Christmas"],
-  "Tamil Nadu": ["Pongal", "Puthandu", "Dasara", "Diwali", "Christmas"],
-  "Karnataka": ["Ugadi", "Dasara", "Diwali", "Christmas"],
-  "Telangana": ["Ugadi", "Dasara", "Diwali", "Christmas"],
-  "West Bengal": ["Durga Puja", "Poila Baisakh", "Diwali", "Christmas"],
-  "Punjab": ["Baisakhi", "Lohri", "Diwali", "Christmas"],
-  "Gujarat": ["Navratri", "Uttarayan", "Diwali", "Christmas"],
-  "Maharashtra": ["Ganesh Chaturthi", "Navratri", "Diwali", "Christmas"],
-  "Odisha": ["Raja Parba", "Durga Puja", "Diwali", "Christmas"]
-};
+// const STATE_FESTIVALS: { [key: string]: string[] } = {
+//   "Andhra Pradesh": ["Ugadi", "Sankranti", "Dasara", "Diwali", "Christmas"],
+//   "Kerala": ["Vishu", "Onam", "Diwali", "Christmas"],
+//   "Tamil Nadu": ["Pongal", "Puthandu", "Dasara", "Diwali", "Christmas"],
+//   "Karnataka": ["Ugadi", "Dasara", "Diwali", "Christmas"],
+//   "Telangana": ["Ugadi", "Dasara", "Diwali", "Christmas"],
+//   "West Bengal": ["Durga Puja", "Poila Baisakh", "Diwali", "Christmas"],
+//   "Punjab": ["Baisakhi", "Lohri", "Diwali", "Christmas"],
+//   "Gujarat": ["Navratri", "Uttarayan", "Diwali", "Christmas"],
+//   "Maharashtra": ["Ganesh Chaturthi", "Navratri", "Diwali", "Christmas"],
+//   "Assam": ["Bihu","Durga Puja","Diwali","Christmas"],
+// "Bihar": ["Chhath","Diwali","Holi","Christmas"],
+// "Chhattisgarh": ["Hareli","Diwali","Navratri"],
+// "Goa": ["Carnival","Christmas","Diwali"],
+// "Haryana": ["Lohri","Diwali","Holi"],
+// "Himachal Pradesh": ["Kullu Dussehra","Diwali"],
+// "Jharkhand": ["Sarhul","Karma","Diwali"],
+// "Madhya Pradesh": ["Navratri","Diwali"],
+// "Manipur": ["Yaoshang","Christmas"],
+// "Meghalaya": ["Wangala","Christmas"],
+// "Mizoram": ["Chapchar Kut","Christmas"],
+// "Nagaland": ["Hornbill Festival","Christmas"],
+// "Rajasthan": ["Gangaur","Teej","Diwali"],
+// "Sikkim": ["Losar","Saga Dawa"],
+// "Tripura": ["Kharchi Puja","Diwali"],
+// "Uttar Pradesh": ["Holi","Diwali","Janmashtami"],
+// "Uttarakhand": ["Harela","Diwali"],
+//   "Odisha": ["Raja Parba", "Durga Puja", "Diwali", "Christmas"]
+// };
 
 const LANGUAGES = ["English", "Telugu", "Hindi"];
 
@@ -30,6 +47,8 @@ export default function RegionalOnboarding() {
   const [selectedFestivals, setSelectedFestivals] = useState<string[]>(['Ugadi', 'Diwali']);
   const [selectedLanguage, setSelectedLanguage] = useState('English');
   const [isLoading, setIsLoading] = useState(false);
+  const [stateFestivals, setStateFestivals] = useState<Record<string, string[]>>({});
+const [loadingFestivals, setLoadingFestivals] = useState(true);
 
   useEffect(() => {
     // If user is not logged in, redirect back to login page
@@ -37,17 +56,40 @@ export default function RegionalOnboarding() {
       router.push('/');
     }
   }, [user, router]);
+  useEffect(() => {
+  const loadFestivals = async () => {
+    try {
+      const res = await fetch("http://localhost:5000/api/festivals");
+      const data = await res.json();
+
+      setStateFestivals(data);
+
+      const states = Object.keys(data);
+
+      if (states.length > 0) {
+        setSelectedState(states[0]);
+
+        if (data[states[0]].length > 0) {
+          setSelectedFestivals(data[states[0]].slice(0, 2));
+        }
+      }
+    } catch (err) {
+      console.error(err);
+    } finally {
+      setLoadingFestivals(false);
+    }
+  };
+
+  loadFestivals();
+}, []);
 
   // When selected state changes, update default checked festivals for that state
-  useEffect(() => {
-    const availableFests = STATE_FESTIVALS[selectedState] || [];
-    if (availableFests.length > 0) {
-      // Pick first two festivals as defaults
-      setSelectedFestivals(availableFests.slice(0, 2));
-    } else {
-      setSelectedFestivals([]);
-    }
-  }, [selectedState]);
+useEffect(() => {
+  const availableFests = stateFestivals[selectedState] || [];
+
+  setSelectedFestivals(availableFests.slice(0,2));
+
+}, [selectedState, stateFestivals]);
 
   const handleFestivalToggle = (fest: string) => {
     if (selectedFestivals.includes(fest)) {
@@ -91,6 +133,13 @@ export default function RegionalOnboarding() {
       setIsLoading(false);
     }
   };
+  if (loadingFestivals) {
+  return (
+    <div className="min-h-screen flex items-center justify-center">
+      Loading...
+    </div>
+  );
+}
 
   return (
     <div className="min-h-screen bg-[#FAFBFC] py-12 px-4 relative overflow-hidden flex flex-col justify-center items-center font-sans">
@@ -136,7 +185,7 @@ export default function RegionalOnboarding() {
                   onChange={(e) => setSelectedState(e.target.value)}
                   className="w-full px-4 py-3.5 bg-[#FAFBFC] border border-[#EAEAEC] focus:border-[#FF3F6C] rounded-xl text-[#282C3F] text-sm font-medium focus:outline-none transition-all appearance-none cursor-pointer"
                 >
-                  {Object.keys(STATE_FESTIVALS).map((st) => (
+                  {Object.keys(stateFestivals).map((st) => (
                     <option key={st} value={st}>{st}</option>
                   ))}
                 </select>
@@ -151,8 +200,8 @@ export default function RegionalOnboarding() {
                 Step 2: Select Festivals You Celebrate
               </label>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                <AnimatePresence mode="popLayout">
-                  {(STATE_FESTIVALS[selectedState] || []).map((fest) => {
+               <AnimatePresence mode="popLayout">
+  {(stateFestivals[selectedState] || []).map((fest) => {
                     const isSelected = selectedFestivals.includes(fest);
                     return (
                       <motion.div

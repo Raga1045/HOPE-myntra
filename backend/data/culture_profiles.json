@@ -4,9 +4,10 @@
     "userId": "1",
     "state": "Andhra Pradesh",
     "festivals": [
-      "Dasara"
+      "Ugadi",
+      "Sankranti"
     ],
-    "language": "English",
+    "language": "Hindi",
     "id": "prof_1"
   },
   {
@@ -84,5 +85,16 @@
     "language": "English",
     "_id": "1784386864023",
     "id": "1784386864023"
+  },
+  {
+    "userId": "1784472591052",
+    "state": "Telangana",
+    "festivals": [
+      "Bathukamma",
+      "Bonalu"
+    ],
+    "language": "English",
+    "_id": "1784472676201",
+    "id": "1784472676201"
   }
 ]
