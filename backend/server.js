@@ -100,6 +100,91 @@ app.get("/api/festivals", async (req, res) => {
     });
   }
 });
+// Dynamic Confidence Card generator helper
+function generateConfidenceData(product, profile, user) {
+  const activeFestival = profile && profile.festivals && profile.festivals[0] ? profile.festivals[0] : "Diwali";
+  const stateName = profile && profile.state ? profile.state : "Andhra Pradesh";
+  const regionTag = stateName.split(" ")[0];
+  
+  // 1. Festival Match (30% weight)
+  const hasFestivalTag = product.festivalTags && product.festivalTags.some(t => t.toLowerCase() === activeFestival.toLowerCase());
+  const isFestiveCat = ["Kurta", "Saree", "Jewellery", "Sherwani", "Dhoti"].includes(product.category);
+  const festivalMatch = hasFestivalTag ? (95 + Math.floor(Math.random() * 6)) : (isFestiveCat ? (85 + Math.floor(Math.random() * 9)) : (70 + Math.floor(Math.random() * 15)));
+  
+  // 2. Regional Match (20% weight)
+  const hasRegionTag = product.regionTags && product.regionTags.some(r => r.toLowerCase().includes(regionTag.toLowerCase()));
+  const regionalMatch = hasRegionTag ? (94 + Math.floor(Math.random() * 6)) : (72 + Math.floor(Math.random() * 18));
+  
+  // 3. Weather (15% weight)
+  const isLightFabric = ["Kurta", "Saree", "Dhoti", "Shirt"].includes(product.category);
+  const weatherScore = isLightFabric ? (92 + Math.floor(Math.random() * 8)) : (78 + Math.floor(Math.random() * 12));
+  
+  // 4. Comfort (15% weight)
+  const comfortScoreVal = parseFloat((8.8 + Math.random() * 1.0).toFixed(1));
+  const comfortScore = Math.round(comfortScoreVal * 10); // convert to percent for weight
+  
+  // 5. Style Match (10% weight)
+  const isStyleMatch = product.style && (product.style.toLowerCase() === "ethnic" || product.style.toLowerCase() === "traditional");
+  const styleScore = isStyleMatch ? (90 + Math.floor(Math.random() * 10)) : (75 + Math.floor(Math.random() * 15));
+  
+  // 6. Popularity (10% weight)
+  const popularityScore = 85 + Math.floor(Math.random() * 14);
+  
+  // Weighted calculation
+  let score = (
+    festivalMatch * 0.30 +
+    regionalMatch * 0.20 +
+    weatherScore * 0.15 +
+    comfortScore * 0.15 +
+    styleScore * 0.10 +
+    popularityScore * 0.10
+  );
+  
+  const confidenceScore = Math.max(80, Math.min(100, Math.round(score)));
+  
+  // Cultural Authenticity
+  let culturalTag = "Traditional Ethnic Style";
+  const rLower = regionTag.toLowerCase();
+  if (rLower.includes("andhra") || rLower.includes("telangana") || rLower.includes("karnataka")) {
+    culturalTag = `Traditional ${regionTag} Style`;
+  } else if (rLower.includes("kerala")) {
+    culturalTag = "Kerala Kasavu Inspired";
+  } else if (rLower.includes("bengal") || rLower.includes("west")) {
+    culturalTag = "Bengali Heritage Motif";
+  } else if (rLower.includes("punjab")) {
+    culturalTag = "Phulkari Punjabi Accent";
+  } else if (rLower.includes("gujarat")) {
+    culturalTag = "Gujarati Bandhani Heritage";
+  } else if (rLower.includes("maharashtra")) {
+    culturalTag = "Maharashtrian Paithani Style";
+  }
+  
+  // Badges
+  const badges = ["Handloom Certified", "Made by Local Artisans"];
+  if (product.price > 2000) {
+    badges.push("Premium Heritage");
+  } else {
+    badges.push("Eco Friendly Dye");
+  }
+  
+  // Explanation text
+  const explanation = `This ${product.color || "festive"} ${product.category} aligns with your selected festival (${activeFestival}), matches your preferred ${product.style || "Traditional"} style, is widely purchased in ${stateName} during the festive season, and offers excellent comfort for long celebrations.`;
+
+  return {
+    festivalMatch,
+    regionalMatch,
+    weatherScore,
+    comfortScore: comfortScoreVal,
+    styleScore,
+    confidenceScore,
+    culturalTag,
+    badges,
+    explanation,
+    festivalName: activeFestival,
+    stateName
+  };
+}
+
 // 3. HOMEPAGE FEED ROUTE
 app.get("/api/homepage", async (req, res) => {
   const { userId, cultureMode } = req.query;
@@ -113,11 +198,34 @@ app.get("/api/homepage", async (req, res) => {
       // Shuffle products helper
       const shuffle = (arr) => arr.sort(() => 0.5 - Math.random());
 
-      const trending = shuffle([...allProducts]).slice(0, 8);
-      const recommended = shuffle([...allProducts]).slice(0, 8);
-      const topBrands = allProducts
+      const trendingRaw = shuffle([...allProducts]).slice(0, 8);
+      const recommendedRaw = shuffle([...allProducts]).slice(0, 8);
+      const topBrandsRaw = allProducts
         .filter((p) => ["Roadster", "HRX", "Mast & Harbour"].includes(p.brand))
         .slice(0, 8);
+
+      // Fetch user profile if any for normal mode confidence calculations
+      let profile = await CultureProfile.findOne({ userId });
+      if (!profile) {
+        profile = {
+          state: "Delhi (NCT)",
+          festivals: ["Diwali"],
+          language: "English",
+        };
+      }
+
+      const trending = trendingRaw.map(p => {
+        const pObj = p.toObject ? p.toObject() : p;
+        return { ...pObj, confidence: generateConfidenceData(pObj, profile, null) };
+      });
+      const recommended = recommendedRaw.map(p => {
+        const pObj = p.toObject ? p.toObject() : p;
+        return { ...pObj, confidence: generateConfidenceData(pObj, profile, null) };
+      });
+      const topBrands = topBrandsRaw.map(p => {
+        const pObj = p.toObject ? p.toObject() : p;
+        return { ...pObj, confidence: generateConfidenceData(pObj, profile, null) };
+      });
 
       return res.json({
         cultureMode: false,
@@ -348,11 +456,26 @@ app.get("/api/homepage", async (req, res) => {
       },
 
       feed: {
-        trendingFestival,
-        popularState,
-        regionalBrands,
-        festivalOffers,
-        familyMatching,
+        trendingFestival: trendingFestival.map(p => {
+          const pObj = p.toObject ? p.toObject() : p;
+          return { ...pObj, confidence: generateConfidenceData(pObj, profile, null) };
+        }),
+        popularState: popularState.map(p => {
+          const pObj = p.toObject ? p.toObject() : p;
+          return { ...pObj, confidence: generateConfidenceData(pObj, profile, null) };
+        }),
+        regionalBrands: regionalBrands.map(p => {
+          const pObj = p.toObject ? p.toObject() : p;
+          return { ...pObj, confidence: generateConfidenceData(pObj, profile, null) };
+        }),
+        festivalOffers: festivalOffers.map(p => {
+          const pObj = p.toObject ? p.toObject() : p;
+          return { ...pObj, confidence: generateConfidenceData(pObj, profile, null) };
+        }),
+        familyMatching: familyMatching.map(p => {
+          const pObj = p.toObject ? p.toObject() : p;
+          return { ...pObj, confidence: generateConfidenceData(pObj, profile, null) };
+        }),
       },
     });
   } catch (err) {

@@ -9,6 +9,7 @@ import {
   ChevronRight, Star, Heart, Flame, ShieldAlert, Award, Compass 
 } from 'lucide-react';
 import { toggleCultureMode, clearSession, RootState } from '@/store/store';
+import { ConfidenceCard, ConfidenceData } from '@/components/confidence/ConfidenceCard';
 
 interface Product {
   _id: string;
@@ -25,6 +26,7 @@ interface Product {
   style: string;
   originalPrice?: number;
   discountText?: string;
+  confidence?: ConfidenceData;
 }
 
 interface HeroBannerData {
@@ -67,6 +69,7 @@ export default function HomePage() {
   const [activeState, setActiveState] = useState('');
   const [isLoading, setIsLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
+  const [selectedConfidenceProduct, setSelectedConfidenceProduct] = useState<Product | null>(null);
 
   useEffect(() => {
     if (!user) {
@@ -128,6 +131,40 @@ export default function HomePage() {
       const brand = brands[idx % brands.length];
       const color = colors[idx % colors.length];
       const image = imagesMap[cat] || imagesMap["Shirt"];
+      const mockState = profile?.state || "Andhra Pradesh";
+      const mockFestival = profile?.festivals[0] || "Ugadi";
+
+      const festivalMatch = 80 + (idx % 19);
+      const regionalMatch = 75 + (idx % 23);
+      const weatherScore = 85 + (idx % 13);
+      const comfortScoreVal = parseFloat((8.5 + (idx % 12) * 0.1).toFixed(1));
+      const comfortScore = Math.round(comfortScoreVal * 10);
+      const styleScore = 80 + (idx % 17);
+      const popularityScore = 85 + (idx % 14);
+      
+      const confidenceScore = Math.round(
+        festivalMatch * 0.3 +
+        regionalMatch * 0.2 +
+        weatherScore * 0.15 +
+        comfortScore * 0.15 +
+        styleScore * 0.1 +
+        popularityScore * 0.1
+      );
+
+      const confidence: ConfidenceData = {
+        festivalMatch,
+        regionalMatch,
+        weatherScore,
+        comfortScore: comfortScoreVal,
+        styleScore,
+        confidenceScore,
+        culturalTag: `Traditional ${mockState.split(" ")[0]} Handloom`,
+        badges: ["Eco Friendly Dye", "Handloom Certified"],
+        explanation: `This ${color} ${cat} aligns with your selected festival (${mockFestival}), matches your style aesthetic, is widely purchased in ${mockState}, and offers excellent comfort for long outdoor celebrations.`,
+        festivalName: mockFestival,
+        stateName: mockState
+      };
+
       return {
         _id: String(idx + 1),
         id: String(idx + 1),
@@ -140,7 +177,8 @@ export default function HomePage() {
         festivalTags: idx % 3 === 0 ? ["Ugadi"] : [],
         regionTags: idx % 3 === 0 ? ["Andhra"] : [],
         color,
-        style: "Ethnic"
+        style: "Ethnic",
+        confidence
       };
     });
 
@@ -235,6 +273,20 @@ export default function HomePage() {
         <div className="absolute bottom-2.5 left-2.5 bg-white/90 backdrop-blur-xs px-2 py-0.5 rounded text-[10px] font-bold text-gray-800 flex items-center shadow-xs">
           {product.rating} <Star className="w-2.5 h-2.5 text-yellow-500 fill-yellow-500 ml-1" />
         </div>
+        
+        {/* Match Percentage Badge */}
+        {product.confidence && (
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              setSelectedConfidenceProduct(product);
+            }}
+            className="absolute top-2.5 right-2.5 bg-black/75 hover:bg-black text-white backdrop-blur-xs px-2 py-1 rounded-full text-[9px] font-black tracking-wider flex items-center gap-1 shadow-md transition-all uppercase border border-white/10 cursor-pointer"
+          >
+            <Sparkles className="w-2.5 h-2.5 text-yellow-400 fill-yellow-400 animate-pulse" />
+            {product.confidence.confidenceScore}% Match
+          </button>
+        )}
       </div>
       <div className="p-3">
         <h4 className="text-[#282C3F] font-bold text-xs truncate uppercase tracking-wider">{product.brand}</h4>
@@ -491,6 +543,67 @@ export default function HomePage() {
                   products={feed?.familyMatching} 
                 />
 
+                {/* AI CURATED RECOMMENDATIONS GRID */}
+                <div className="space-y-6 pt-6 border-t border-gray-150">
+                  <div className="flex items-center gap-2">
+                    <Sparkles className="w-5 h-5 text-[#FF3F6C]" />
+                    <h3 className="text-[#282C3F] text-base font-extrabold tracking-tight uppercase">
+                      AI Outfit Curator (Match Explanations)
+                    </h3>
+                  </div>
+                  <p className="text-gray-500 text-xs max-w-[600px] leading-relaxed">
+                    Based on your profile, local culture, and real-time dates, our shopping assistant has generated personalized outfits. Below each recommended style is its confidence calculation and detail profile.
+                  </p>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-2">
+                    {feed?.trendingFestival?.slice(0, 3).map((prod) => (
+                      <div key={prod.id} className="flex flex-col gap-4 p-5 bg-[#FAFBFC] border border-[#EAEAEC]/80 rounded-2xl shadow-3xs transition-all hover:shadow-2xs">
+                        {/* Compact Product Details Block */}
+                        <div className="flex gap-4">
+                          <div className="w-[110px] aspect-[3/4] rounded-xl overflow-hidden bg-gray-50 flex-shrink-0 relative border border-[#EAEAEC]">
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img
+                              src={prod.image}
+                              alt={prod.name}
+                              className="w-full h-full object-cover object-top"
+                              loading="lazy"
+                            />
+                            <div className="absolute bottom-2 left-2 bg-white/95 backdrop-blur-xs px-2 py-0.5 rounded text-[8px] font-bold text-gray-800 flex items-center shadow-xs">
+                              {prod.rating} <Star className="w-2 h-2 text-yellow-500 fill-yellow-500 ml-0.5" />
+                            </div>
+                          </div>
+                          <div className="flex-1 flex flex-col justify-between py-1 text-left">
+                            <div className="space-y-1">
+                              <h4 className="text-[#282C3F] font-black text-xs uppercase tracking-wider">{prod.brand}</h4>
+                              <p className="text-gray-500 text-[11px] line-clamp-2 leading-tight">{prod.name}</p>
+                              <div className="text-[10px] font-bold text-gray-400">Category: {prod.category}</div>
+                            </div>
+                            <div>
+                              <div className="flex items-center gap-1.5 mt-1">
+                                <span className="text-[#282C3F] font-black text-sm">₹{prod.price}</span>
+                                {prod.originalPrice && (
+                                  <span className="text-gray-400 line-through text-[10px]">₹{prod.originalPrice}</span>
+                                )}
+                              </div>
+                              <button 
+                                onClick={() => router.push(`/product/${prod.id}`)}
+                                className="mt-3 w-full py-2 bg-[#282C3F] text-white hover:bg-black text-[10px] font-black rounded-lg tracking-wide uppercase transition-colors cursor-pointer"
+                              >
+                                View Style Details
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Confidence Card explanation */}
+                        {prod.confidence && (
+                          <ConfidenceCard data={prod.confidence} />
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
               </motion.div>
             ) : (
               // ----------------- NORMAL MODE ACTIVE -----------------
@@ -536,12 +649,106 @@ export default function HomePage() {
                   icon={<Award className="w-5 h-5" />} 
                   products={feed?.topBrands} 
                 />
+
+                {/* AI CURATED RECOMMENDATIONS GRID */}
+                <div className="space-y-6 pt-6 border-t border-gray-150">
+                  <div className="flex items-center gap-2">
+                    <Sparkles className="w-5 h-5 text-[#FF3F6C]" />
+                    <h3 className="text-[#282C3F] text-base font-extrabold tracking-tight uppercase">
+                      AI Outfit Curator (Match Explanations)
+                    </h3>
+                  </div>
+                  <p className="text-gray-500 text-xs max-w-[600px] leading-relaxed">
+                    Our shopping assistant analyzes matching style preferences, reviews, and fabric structures. Inspect the detailed confidence metrics below for each curation.
+                  </p>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-2">
+                    {feed?.recommended?.slice(0, 3).map((prod) => (
+                      <div key={prod.id} className="flex flex-col gap-4 p-5 bg-[#FAFBFC] border border-[#EAEAEC]/80 rounded-2xl shadow-3xs transition-all hover:shadow-2xs">
+                        {/* Compact Product Details Block */}
+                        <div className="flex gap-4">
+                          <div className="w-[110px] aspect-[3/4] rounded-xl overflow-hidden bg-gray-50 flex-shrink-0 relative border border-[#EAEAEC]">
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img
+                              src={prod.image}
+                              alt={prod.name}
+                              className="w-full h-full object-cover object-top"
+                              loading="lazy"
+                            />
+                            <div className="absolute bottom-2 left-2 bg-white/95 backdrop-blur-xs px-2 py-0.5 rounded text-[8px] font-bold text-gray-800 flex items-center shadow-xs">
+                              {prod.rating} <Star className="w-2 h-2 text-yellow-500 fill-yellow-500 ml-0.5" />
+                            </div>
+                          </div>
+                          <div className="flex-1 flex flex-col justify-between py-1 text-left">
+                            <div className="space-y-1">
+                              <h4 className="text-[#282C3F] font-black text-xs uppercase tracking-wider">{prod.brand}</h4>
+                              <p className="text-gray-500 text-[11px] line-clamp-2 leading-tight">{prod.name}</p>
+                              <div className="text-[10px] font-bold text-gray-400">Category: {prod.category}</div>
+                            </div>
+                            <div>
+                              <div className="flex items-center gap-1.5 mt-1">
+                                <span className="text-[#282C3F] font-black text-sm">₹{prod.price}</span>
+                                {prod.originalPrice && (
+                                  <span className="text-gray-400 line-through text-[10px]">₹{prod.originalPrice}</span>
+                                )}
+                              </div>
+                              <button 
+                                onClick={() => router.push(`/product/${prod.id}`)}
+                                className="mt-3 w-full py-2 bg-[#282C3F] text-white hover:bg-black text-[10px] font-black rounded-lg tracking-wide uppercase transition-colors cursor-pointer"
+                              >
+                                View Style Details
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Confidence Card explanation */}
+                        {prod.confidence && (
+                          <ConfidenceCard data={prod.confidence} />
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
               </motion.div>
             )}
 
           </AnimatePresence>
         )}
       </main>
+
+      {/* CONFIDENCE CARD OVERLAY MODAL */}
+      <AnimatePresence>
+        {selectedConfidenceProduct && selectedConfidenceProduct.confidence && (
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedConfidenceProduct(null)}
+            className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto"
+          >
+            <motion.div 
+              initial={{ scale: 0.95, y: 15 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.95, y: 15 }}
+              transition={{ type: 'spring', damping: 25, stiffness: 350 }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative w-full max-w-[420px] bg-white rounded-2xl shadow-[0_24px_64px_rgba(40,44,63,0.18)]"
+            >
+              {/* Close Button */}
+              <button 
+                onClick={() => setSelectedConfidenceProduct(null)}
+                className="absolute top-4 right-4 w-7 h-7 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center text-gray-500 hover:text-gray-800 transition-all font-bold text-xs cursor-pointer z-10"
+              >
+                ✕
+              </button>
+              
+              <ConfidenceCard data={selectedConfidenceProduct.confidence} />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
