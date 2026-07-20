@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { useSelector } from 'react-redux';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ChevronLeft, ChevronRight, Share2, Sparkles, Download, Heart, ShoppingBag } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, Share2, Sparkles, Download, Heart, ShoppingBag, CheckCircle2 } from 'lucide-react';
 import { RootState } from '@/store/store';
 
 interface StyleBreakdown {
@@ -441,10 +441,10 @@ export default function MyntraWrapped() {
           {/* User profile footer */}
           <div className="flex items-center gap-2 border-t border-gray-100 pt-3">
             <div className="w-7 h-7 bg-pink-100 rounded-full flex items-center justify-center text-[#FF3F6C] text-xs font-bold font-mono">
-              {user.name.slice(0,2).toUpperCase()}
+              {(user?.name || "Guest").slice(0,2).toUpperCase()}
             </div>
             <div className="text-[9px] leading-tight">
-              <p className="font-extrabold text-[#282C3F]">{user.name}</p>
+              <p className="font-extrabold text-[#282C3F]">{user?.name || "Guest"}</p>
               <p className="text-gray-400">@myntra_curate</p>
             </div>
           </div>

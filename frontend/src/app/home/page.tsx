@@ -33,6 +33,12 @@ interface HeroBannerData {
   title: string;
   subtitle: string;
   cta: string;
+  artwork?: string;
+  themeGradient?: string;
+  offerText?: string;
+  greeting?: string;
+  countdownText?: string;
+  status?: string;
 }
 
 interface FeedData {
@@ -65,8 +71,10 @@ export default function HomePage() {
   useEffect(() => {
     if (!user) {
       router.push('/');
+    } else if (!profile) {
+      router.push('/region-setup');
     }
-  }, [user, router]);
+  }, [user, profile, router]);
 
   // Load feed when cultureMode status changes
   useEffect(() => {
@@ -142,12 +150,55 @@ export default function HomePage() {
     if (cultureMode) {
       setActiveFestival(mockFestival);
       setActiveState(mockState);
+      
+      let themeGradient = 'linear-gradient(to right, #FF3F6C, #FF527B)';
+      let artwork = 'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop';
+      let offerText = 'UP TO 50% OFF | FESTIVE CURATIONS';
+      let greeting = `Celebrate ${mockFestival} in authentic style!`;
+      
+      const name = mockFestival.toLowerCase();
+      if (name.includes('diwali') || name.includes('deepavali') || name.includes('kali puja')) {
+        themeGradient = 'linear-gradient(to right, #F59E0B, #EF4444)';
+        artwork = 'https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=600&auto=format&fit=crop';
+        offerText = 'FLAT 30% OFF | DIWALI SPECIAL DÉCOR & ETHNIC';
+        greeting = 'Happy Diwali! Light up your wardrobe with glowing styles.';
+      } else if (name.includes('holi')) {
+        themeGradient = 'linear-gradient(to right, #EC4899, #8B5CF6, #3B82F6)';
+        artwork = 'https://images.unsplash.com/photo-1543731068-7e0f5beff43a?q=80&w=600&auto=format&fit=crop';
+        offerText = 'EXTRA 15% OFF | MULTICOLOR PRINTS & WHITES';
+        greeting = 'Happy Holi! Splash vibrant colors into your style.';
+      } else if (name.includes('durga puja') || name.includes('bonalu') || name.includes('bathukamma') || name.includes('navratri') || name.includes('shigmo') || name.includes('carnival') || name.includes('dasara') || name.includes('dussehra')) {
+        themeGradient = 'linear-gradient(to right, #D97706, #DC2626, #701A75)';
+        artwork = 'https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?q=80&w=600&auto=format&fit=crop';
+        offerText = 'FLAT 40% OFF | FESTIVE SPECIAL SILKS & SAREES';
+        if (name.includes('bathukamma')) greeting = 'Bathukamma Shubhakankshalu! Celebrate with beautiful floral patterns.';
+        else if (name.includes('bonalu')) greeting = 'Joyous Ashada Bonalu celebrations! Traditional silks curated for you.';
+        else if (name.includes('durga puja')) greeting = 'Subho Sharadiya Durga Puja! Splendid traditional designs await.';
+        else if (name.includes('navratri')) greeting = 'Happy Navratri! Get dance-ready in chaniya cholis and jewelry.';
+        else greeting = `Happy ${mockFestival}! Bring home the best of heritage silhouettes.`;
+      } else if (name.includes('ugadi') || name.includes('onam') || name.includes('vishu') || name.includes('pongal') || name.includes('puthandu') || name.includes('sankranti') || name.includes('bihu') || name.includes('baisakhi') || name.includes('lohri')) {
+        themeGradient = 'linear-gradient(to right, #059669, #10B981, #FBBF24)';
+        artwork = 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop';
+        offerText = 'UP TO 50% OFF | SOUTH HERITAGE & FESTIVE WEAR';
+        if (name.includes('ugadi')) greeting = 'Happy Ugadi & Gudi Padwa! Wishing you a sweet and prosperous year.';
+        else if (name.includes('onam')) greeting = 'Happy Onam! Celebrate the harvest with pristine white and gold ensembles.';
+        else if (name.includes('pongal')) greeting = 'Happy Pongal! May your life boil over with sweet prosperity.';
+        else if (name.includes('sankranti')) greeting = 'Happy Makar Sankranti! Festive handlooms and ethnic coordinates.';
+        else greeting = `Happy ${mockFestival}! Best wishes for the harvest and new beginnings.`;
+      }
+
       setHero({
         festival: mockFestival,
         daysLeft: 8,
         title: `🌸 ${mockFestival}`,
         subtitle: "Celebrate in Style",
-        cta: "Explore Collection"
+        cta: "Explore Collection",
+        artwork,
+        themeGradient,
+        offerText,
+        greeting,
+        countdownText: `Only 8 Days Left for ${mockFestival}`,
+        status: 'Upcoming'
       });
       setFeed({
         trendingFestival: dummyProducts.slice(0, 8),
@@ -297,6 +348,16 @@ export default function HomePage() {
               🎉 My Fashion Year
             </motion.button>
 
+            {/* EDIT PROFILE BUTTON */}
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => router.push('/region-setup')}
+              className="py-1.5 px-3 bg-white border border-[#EAEAEC] text-[#282C3F] text-[10px] font-bold rounded-lg tracking-wide hover:shadow-md transition-all cursor-pointer flex items-center gap-1"
+            >
+              ⚙️ Edit Profile
+            </motion.button>
+
             {/* Logout */}
             <div 
               onClick={() => {
@@ -352,26 +413,27 @@ export default function HomePage() {
                   <motion.div
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
-                    className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-[#FFF5F6] via-[#FFFDFB] to-[#F3FAF8] border border-[#FF3F6C]/10 shadow-sm p-6 sm:p-10 flex flex-col sm:flex-row justify-between items-center gap-6"
+                    style={{ background: hero.themeGradient || 'linear-gradient(to right, #FFF5F6, #FFFDFB)' }}
+                    className="relative rounded-2xl overflow-hidden border border-white/10 shadow-md p-6 sm:p-10 flex flex-col sm:flex-row justify-between items-center gap-6 text-white"
                   >
                     {/* Decorative Background Elements */}
-                    <div className="absolute right-[-10%] top-[-20%] w-[350px] h-[350px] rounded-full bg-pink-100/30 blur-[100px] pointer-events-none" />
-                    <div className="absolute left-[-10%] bottom-[-20%] w-[350px] h-[350px] rounded-full bg-teal-50/40 blur-[100px] pointer-events-none" />
-
+                    <div className="absolute right-[-10%] top-[-20%] w-[350px] h-[350px] rounded-full bg-white/5 blur-[100px] pointer-events-none" />
+                    <div className="absolute left-[-10%] bottom-[-20%] w-[350px] h-[350px] rounded-full bg-white/5 blur-[100px] pointer-events-none" />
+ 
                     <div className="space-y-4 text-center sm:text-left z-10 flex-1">
-                      <div className="flex items-center justify-center sm:justify-start gap-3">
-                        <span className="px-3.5 py-1 bg-[#FF3F6C]/10 text-[#FF3F6C] text-[10px] font-extrabold rounded-full uppercase tracking-wider">
+                      <div className="flex items-center justify-center sm:justify-start gap-3 flex-wrap">
+                        <span className="px-3.5 py-1 bg-white/20 text-white text-[10px] font-extrabold rounded-full uppercase tracking-wider backdrop-blur-xs">
                           Festive Spotlight
                         </span>
-                        <span className="px-3.5 py-1 bg-[#FFB400]/10 text-[#FFB400] text-[10px] font-extrabold rounded-full uppercase tracking-wider flex items-center gap-1">
-                          ⏰ {hero.daysLeft} Days Left
+                        <span className="px-3.5 py-1 bg-yellow-400 text-gray-900 text-[10px] font-extrabold rounded-full uppercase tracking-wider flex items-center gap-1 shadow-xs">
+                          ⏰ {hero.countdownText || (hero.daysLeft === 0 ? "Celebrate Today" : `${hero.daysLeft} Days Left`)}
                         </span>
                       </div>
-                      <h1 className="text-3xl sm:text-5xl font-black text-[#282C3F] tracking-tight leading-none">
-                        {hero.title}
+                      <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-none drop-shadow-xs">
+                        {hero.greeting || `Happy ${hero.festival}!`}
                       </h1>
-                      <p className="text-gray-500 text-sm max-w-[450px]">
-                        Celebrate in authentic style with matching family aesthetics, handcrafted fabrics, and festive coordinates for {activeState}.
+                      <p className="text-white/90 text-sm max-w-[450px] font-medium drop-shadow-xs">
+                        {hero.offerText || `Celebrate in authentic style with matching family aesthetics, handcrafted fabrics, and festive coordinates for ${activeState}.`}
                       </p>
                       <button 
                         onClick={() => {
@@ -379,27 +441,19 @@ export default function HomePage() {
                           const el = document.getElementById('fest-trending');
                           el?.scrollIntoView({ behavior: 'smooth' });
                         }}
-                        className="px-6 py-3 bg-gradient-to-r from-[#FF3F6C] to-[#FF527B] text-white text-xs font-extrabold rounded-lg hover:shadow-lg shadow-pink-100 transition-all cursor-pointer inline-flex items-center uppercase tracking-wider"
+                        className="px-6 py-3 bg-white text-gray-900 hover:bg-gray-100 text-xs font-extrabold rounded-lg hover:shadow-lg transition-all cursor-pointer inline-flex items-center uppercase tracking-wider"
                       >
                         {hero.cta} <ChevronRight className="w-4 h-4 ml-1" />
                       </button>
                     </div>
-
-                    <div className="relative flex justify-center items-center w-full sm:w-[280px] aspect-[4/3] bg-white rounded-2xl border border-[#EAEAEC] shadow-sm overflow-hidden p-2 z-10">
-                      {/* Show first product image in carousel */}
-                      {feed?.trendingFestival && feed.trendingFestival.length > 0 ? (
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img 
-                          src={feed.trendingFestival[0].image} 
-                          alt="Festive Spot" 
-                          className="w-full h-full object-cover object-top rounded-xl"
-                        />
-                      ) : (
-                        <div className="text-center p-4">
-                          <Sparkles className="w-8 h-8 text-[#FF3F6C] mx-auto mb-2 animate-bounce" />
-                          <span className="text-xs font-bold text-[#282C3F]">Traditional Collections</span>
-                        </div>
-                      )}
+ 
+                    <div className="relative flex justify-center items-center w-full sm:w-[280px] aspect-[4/3] bg-white/10 backdrop-blur-xs rounded-2xl border border-white/20 shadow-md overflow-hidden p-2 z-10">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img 
+                        src={hero.artwork || (feed?.trendingFestival && feed.trendingFestival.length > 0 ? feed.trendingFestival[0].image : '')} 
+                        alt="Festive Spot" 
+                        className="w-full h-full object-cover object-top rounded-xl"
+                      />
                     </div>
                   </motion.div>
                 )}

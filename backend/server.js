@@ -113,25 +113,7 @@ app.get("/api/homepage", async (req, res) => {
       // Shuffle products helper
       const shuffle = (arr) => arr.sort(() => 0.5 - Math.random());
 
-      let trendingFestival = allProducts
-    .filter(
-        p =>
-            p.festivalTags.includes(activeFestival) &&
-            p.regionTags.some(r =>
-                r.toLowerCase().includes(regionTag.toLowerCase())
-            )
-    )
-    .slice(0,8);
-
-if (trendingFestival.length === 0) {
-    trendingFestival = allProducts
-        .filter(p =>
-            p.regionTags.some(r =>
-                r.toLowerCase().includes(regionTag.toLowerCase())
-            )
-        )
-        .slice(0,8);
-}
+      const trending = shuffle([...allProducts]).slice(0, 8);
       const recommended = shuffle([...allProducts]).slice(0, 8);
       const topBrands = allProducts
         .filter((p) => ["Roadster", "HRX", "Mast & Harbour"].includes(p.brand))
@@ -179,62 +161,72 @@ if (trendingFestival.length === 0) {
         },
     });
 }
-    regionFestivals.sort(
-      (a, b) => new Date(a.startDate) - new Date(b.startDate),
-    );
-
     const today = new Date();
     today.setHours(0, 0, 0, 0);
 
-    const upcomingFestivals = regionFestivals
-      .filter((f) => new Date(f.startDate) >= today)
-      .sort((a, b) => new Date(a.startDate) - new Date(b.startDate));
+    // Calculate dynamic status and daysLeft for all state festivals
+    const processedFestivals = regionFestivals.map((f) => {
+      const start = new Date(f.startDate);
+      start.setHours(0, 0, 0, 0);
+      const end = new Date(f.endDate);
+      end.setHours(0, 0, 0, 0);
 
-    let activeFestDoc;
+      let status = "Upcoming";
+      let daysLeft = 0;
+      let showCountdown = false;
 
-    if (upcomingFestivals.length > 0) {
-      activeFestDoc = upcomingFestivals[0];
-    } else {
-      activeFestDoc = regionFestivals.sort(
-        (a, b) => a.priority - b.priority,
-      )[0];
-    }
-
-    const activeFestival = activeFestDoc
-    ? activeFestDoc.festival
-    : "Diwali";
-    //date fetched baove
-
-    // if (profile.festivals && profile.festivals.length > 0) {
-    //   // Pick first matching profile festival that is relevant for this state
-    //   const matchingFest = profile.festivals.find((f) =>
-    //     regionFestivals.some((rf) => rf.festival === f),
-    //   );
-    //   if (matchingFest) activeFestival = matchingFest;
-    // }
-
-    // Calculate days remaining dynamically
-
-    let daysLeft = null;
-    let showCountdown = false;
-
-    if (activeFestDoc) {
-      const today = new Date();
-
-      today.setHours(0, 0, 0, 0);
-
-      const startDate = new Date(activeFestDoc.startDate);
-
-      startDate.setHours(0, 0, 0, 0);
-
-      const diffDays = Math.ceil((startDate - today) / (1000 * 60 * 60 * 24));
-
-      if (diffDays >= 0 && diffDays <=100) {
-        daysLeft = diffDays;
-
+      if (today >= start && today <= end) {
+        status = "Today";
+        daysLeft = 0;
         showCountdown = true;
+      } else if (today > end) {
+        status = "Completed";
+        daysLeft = 0;
+        showCountdown = false;
+      } else {
+        status = "Upcoming";
+        const diffTime = start - today;
+        daysLeft = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        showCountdown = daysLeft <= 100;
       }
+
+      return {
+        doc: f,
+        status,
+        daysLeft,
+        showCountdown,
+      };
+    });
+
+    // 1. Prioritize ongoing (Today) festivals, sorted by priority descending
+    let activeItem = processedFestivals
+      .filter((f) => f.status === "Today")
+      .sort((a, b) => b.doc.priority - a.doc.priority)[0];
+
+    // 2. Fall back to nearest upcoming, sorted by startDate ascending
+    if (!activeItem) {
+      activeItem = processedFestivals
+        .filter((f) => f.status === "Upcoming")
+        .sort((a, b) => {
+          const diff = new Date(a.doc.startDate) - new Date(b.doc.startDate);
+          if (diff !== 0) return diff;
+          return b.doc.priority - a.doc.priority;
+        })[0];
     }
+
+    // 3. Fall back to recently completed, sorted by endDate descending
+    if (!activeItem) {
+      activeItem = processedFestivals
+        .filter((f) => f.status === "Completed")
+        .sort((a, b) => new Date(b.doc.endDate) - new Date(a.doc.endDate))[0];
+    }
+
+    const activeFestDoc = activeItem ? activeItem.doc : regionFestivals[0];
+    const activeFestival = activeFestDoc ? activeFestDoc.festival : "Diwali";
+    const festivalStatus = activeItem ? activeItem.status : "Completed";
+    const daysLeft = activeItem ? activeItem.daysLeft : 0;
+    const showCountdown = activeItem ? activeItem.showCountdown : false;
+
     // Call Python FastAPI service for AI Regional Recommendations
     let recommendedCategories = ["Kurta", "Saree", "Jewellery"]; // fallback
     try {
@@ -259,15 +251,23 @@ if (trendingFestival.length === 0) {
     const allProducts = await Product.find({});
 
     // Section 1: Trending For Festival (Tagged with Festival & Region)
-    const trendingFestival = allProducts
-      .filter(
-        (p) =>
-          p.festivalTags.includes(activeFestival) &&
-          p.regionTags.some((r) =>
-            r.toLowerCase().includes(regionTag.toLowerCase()),
-          ),
-      )
-      .slice(0, 8);
+    let trendingFestival = allProducts.filter(
+      (p) =>
+        p.festivalTags.some(tag => tag.toLowerCase() === activeFestival.toLowerCase()) &&
+        p.regionTags.some((r) => r.toLowerCase().includes(regionTag.toLowerCase()))
+    );
+
+    if (trendingFestival.length === 0) {
+      trendingFestival = allProducts.filter(
+        (p) => p.festivalTags.some(tag => tag.toLowerCase() === activeFestival.toLowerCase())
+      );
+    }
+    if (trendingFestival.length === 0) {
+      trendingFestival = allProducts.filter(
+        (p) => p.regionTags.some((r) => r.toLowerCase().includes(regionTag.toLowerCase()))
+      );
+    }
+    trendingFestival = trendingFestival.slice(0, 8);
 
     // Section 2: Popular In State (Region matching products)
     const popularState = allProducts
@@ -286,20 +286,28 @@ if (trendingFestival.length === 0) {
       .slice(0, 8);
 
     // Section 4: Festival Offers (Simulate discount pricing)
-    const festivalOffers = allProducts
-      .filter(
+    let festivalOffersRaw = allProducts.filter(
+      (p) =>
+        p.festivalTags.some(tag => tag.toLowerCase() === activeFestival.toLowerCase()) &&
+        p.regionTags.some((r) => r.toLowerCase().includes(regionTag.toLowerCase()))
+    );
+
+    if (festivalOffersRaw.length === 0) {
+      festivalOffersRaw = allProducts.filter(
         (p) =>
-          p.festivalTags.includes(activeFestival) ||
-          p.regionTags.some((r) =>
-            r.toLowerCase().includes(regionTag.toLowerCase()),
-          ),
-      )
-      .map((p) => ({
-        ...p,
-        originalPrice: Math.floor(p.price * 1.4),
+          p.festivalTags.some(tag => tag.toLowerCase() === activeFestival.toLowerCase()) ||
+          p.regionTags.some((r) => r.toLowerCase().includes(regionTag.toLowerCase()))
+      );
+    }
+
+    const festivalOffers = festivalOffersRaw.map((p) => {
+      const pObj = p.toObject ? p.toObject() : p;
+      return {
+        ...pObj,
+        originalPrice: Math.round(p.price * 1.4),
         discountText: "30% OFF",
-      }))
-      .slice(0, 8);
+      };
+    }).slice(0, 8);
 
     // Section 5: Family Matching Looks
     const familyMatching = allProducts
@@ -307,14 +315,24 @@ if (trendingFestival.length === 0) {
       .slice(0, 8);
 
     const heroBanner = {
-    festival: activeFestDoc.festival,
-    daysLeft: daysLeft ?? 0,
-    title: `🌸 ${activeFestDoc.festival}`,
-    subtitle: `Celebrate ${activeFestDoc.category} in Style`,
-    cta: "Explore Collection",
-    language: activeFestDoc.primaryLanguage,
-    showCountdown
-};
+      festival: activeFestDoc.festival,
+      daysLeft: daysLeft ?? 0,
+      title: `🌸 ${activeFestDoc.festival}`,
+      subtitle: `Celebrate ${activeFestDoc.category} in Style`,
+      cta: "Explore Collection",
+      language: activeFestDoc.primaryLanguage,
+      showCountdown,
+      artwork: activeFestDoc.artwork,
+      themeGradient: activeFestDoc.themeGradient,
+      offerText: activeFestDoc.offerText,
+      greeting: activeFestDoc.greeting,
+      countdownText: festivalStatus === "Today"
+        ? `Celebrate ${activeFestDoc.festival} Today`
+        : festivalStatus === "Upcoming"
+        ? `Only ${daysLeft} Days Left for ${activeFestDoc.festival}`
+        : `${activeFestDoc.festival} Celebrations Completed`,
+      status: festivalStatus
+    };
 
     return res.json({
       cultureMode: true,

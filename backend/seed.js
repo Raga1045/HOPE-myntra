@@ -1,4 +1,6 @@
-import festivals from "./data/festivals.json" assert { type: "json" };
+import fs from 'fs';
+import path from 'path';
+const festivals = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'data', 'festivals.json'), 'utf8'));
 
 import { connectDB, User, CultureProfile, Festival, Product, Purchase } from './db.js';
 

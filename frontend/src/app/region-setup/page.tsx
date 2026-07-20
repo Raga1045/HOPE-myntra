@@ -1,40 +1,11 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { useDispatch, useSelector } from 'react-redux';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MapPin, Calendar, Languages, Check, ArrowRight, UserCheck } from 'lucide-react';
 import { setProfile, RootState } from '@/store/store';
-// const STATE_FESTIVALS: { [key: string]: string[] } = {
-//   "Andhra Pradesh": ["Ugadi", "Sankranti", "Dasara", "Diwali", "Christmas"],
-//   "Kerala": ["Vishu", "Onam", "Diwali", "Christmas"],
-//   "Tamil Nadu": ["Pongal", "Puthandu", "Dasara", "Diwali", "Christmas"],
-//   "Karnataka": ["Ugadi", "Dasara", "Diwali", "Christmas"],
-//   "Telangana": ["Ugadi", "Dasara", "Diwali", "Christmas"],
-//   "West Bengal": ["Durga Puja", "Poila Baisakh", "Diwali", "Christmas"],
-//   "Punjab": ["Baisakhi", "Lohri", "Diwali", "Christmas"],
-//   "Gujarat": ["Navratri", "Uttarayan", "Diwali", "Christmas"],
-//   "Maharashtra": ["Ganesh Chaturthi", "Navratri", "Diwali", "Christmas"],
-//   "Assam": ["Bihu","Durga Puja","Diwali","Christmas"],
-// "Bihar": ["Chhath","Diwali","Holi","Christmas"],
-// "Chhattisgarh": ["Hareli","Diwali","Navratri"],
-// "Goa": ["Carnival","Christmas","Diwali"],
-// "Haryana": ["Lohri","Diwali","Holi"],
-// "Himachal Pradesh": ["Kullu Dussehra","Diwali"],
-// "Jharkhand": ["Sarhul","Karma","Diwali"],
-// "Madhya Pradesh": ["Navratri","Diwali"],
-// "Manipur": ["Yaoshang","Christmas"],
-// "Meghalaya": ["Wangala","Christmas"],
-// "Mizoram": ["Chapchar Kut","Christmas"],
-// "Nagaland": ["Hornbill Festival","Christmas"],
-// "Rajasthan": ["Gangaur","Teej","Diwali"],
-// "Sikkim": ["Losar","Saga Dawa"],
-// "Tripura": ["Kharchi Puja","Diwali"],
-// "Uttar Pradesh": ["Holi","Diwali","Janmashtami"],
-// "Uttarakhand": ["Harela","Diwali"],
-//   "Odisha": ["Raja Parba", "Durga Puja", "Diwali", "Christmas"]
-// };
 
 const LANGUAGES = ["English", "Telugu", "Hindi"];
 
@@ -42,13 +13,17 @@ export default function RegionalOnboarding() {
   const router = useRouter();
   const dispatch = useDispatch();
   const user = useSelector((state: RootState) => state.session.user);
+  const profile = useSelector((state: RootState) => state.session.profile);
 
-  const [selectedState, setSelectedState] = useState('Andhra Pradesh');
-  const [selectedFestivals, setSelectedFestivals] = useState<string[]>(['Ugadi', 'Diwali']);
-  const [selectedLanguage, setSelectedLanguage] = useState('English');
+  const [selectedState, setSelectedState] = useState(profile?.state || 'Andhra Pradesh');
+  const [selectedFestivals, setSelectedFestivals] = useState<string[]>(profile?.festivals || ['Ugadi', 'Diwali']);
+  const [selectedLanguage, setSelectedLanguage] = useState(profile?.language || 'English');
   const [isLoading, setIsLoading] = useState(false);
   const [stateFestivals, setStateFestivals] = useState<Record<string, string[]>>({});
-const [loadingFestivals, setLoadingFestivals] = useState(true);
+  const [loadingFestivals, setLoadingFestivals] = useState(true);
+  const [validationError, setValidationError] = useState('');
+
+  const isInitialMount = useRef(true);
 
   useEffect(() => {
     // If user is not logged in, redirect back to login page
@@ -56,40 +31,43 @@ const [loadingFestivals, setLoadingFestivals] = useState(true);
       router.push('/');
     }
   }, [user, router]);
+
   useEffect(() => {
-  const loadFestivals = async () => {
-    try {
-      const res = await fetch("http://localhost:5000/api/festivals");
-      const data = await res.json();
+    const loadFestivals = async () => {
+      try {
+        const res = await fetch("http://localhost:5000/api/festivals");
+        const data = await res.json();
+        setStateFestivals(data);
 
-      setStateFestivals(data);
-
-      const states = Object.keys(data);
-
-      if (states.length > 0) {
-        setSelectedState(states[0]);
-
-        if (data[states[0]].length > 0) {
-          setSelectedFestivals(data[states[0]].slice(0, 2));
+        // Only set defaults if the user has no existing profile
+        if (!profile) {
+          const states = Object.keys(data);
+          if (states.length > 0) {
+            setSelectedState(states[0]);
+            if (data[states[0]].length > 0) {
+              setSelectedFestivals(data[states[0]].slice(0, 2));
+            }
+          }
         }
+      } catch (err) {
+        console.error(err);
+      } finally {
+        setLoadingFestivals(false);
       }
-    } catch (err) {
-      console.error(err);
-    } finally {
-      setLoadingFestivals(false);
+    };
+
+    loadFestivals();
+  }, [profile]);
+
+  // When selected state changes, update default checked festivals for that state (on manual changes only)
+  useEffect(() => {
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
     }
-  };
-
-  loadFestivals();
-}, []);
-
-  // When selected state changes, update default checked festivals for that state
-useEffect(() => {
-  const availableFests = stateFestivals[selectedState] || [];
-
-  setSelectedFestivals(availableFests.slice(0,2));
-
-}, [selectedState, stateFestivals]);
+    const availableFests = stateFestivals[selectedState] || [];
+    setSelectedFestivals(availableFests.slice(0, 2));
+  }, [selectedState, stateFestivals]);
 
   const handleFestivalToggle = (fest: string) => {
     if (selectedFestivals.includes(fest)) {
@@ -103,6 +81,21 @@ useEffect(() => {
     e.preventDefault();
     if (!user) return;
     
+    // Explicit Validation
+    if (!selectedState) {
+      setValidationError('Please select your home state.');
+      return;
+    }
+    if (selectedFestivals.length === 0) {
+      setValidationError('Please select at least one festival.');
+      return;
+    }
+    if (!selectedLanguage) {
+      setValidationError('Please select your preferred language.');
+      return;
+    }
+
+    setValidationError('');
     setIsLoading(true);
 
     const profileData = {
@@ -123,6 +116,8 @@ useEffect(() => {
       if (data.success) {
         dispatch(setProfile(data.profile));
         router.push('/home');
+      } else {
+        setValidationError(data.error || 'Failed to save profile. Please try again.');
       }
     } catch (err) {
       console.error("Save profile error:", err);
@@ -172,6 +167,15 @@ useEffect(() => {
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-8">
+            {validationError && (
+              <motion.div
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                className="bg-red-50 text-red-500 text-xs px-3 py-2.5 rounded-lg border border-red-100 mb-4"
+              >
+                {validationError}
+              </motion.div>
+            )}
             
             {/* STEP 1: HOME STATE DROPDOWN */}
             <div className="space-y-3">

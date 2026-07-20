@@ -197,7 +197,11 @@ if (useMongoose) {
     womenClothing: [String],
     menClothing: [String],
     accessories: [String],
-    footwear: [String]
+    footwear: [String],
+    artwork: String,
+    themeGradient: String,
+    offerText: String,
+    greeting: String
 });
 
   const ProductSchema = new mongoose.Schema({

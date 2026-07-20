@@ -27,7 +27,12 @@
     ],
     "footwear": [
       "Kolhapuri Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #D97706, #DC2626, #701A75)",
+    "offerText": "FLAT 40% OFF | FESTIVE SPECIAL SILKS & SAREES",
+    "greeting": "Bathukamma Shubhakankshalu! Celebrate with beautiful floral patterns.",
+    "_id": "1784573846744"
   },
   {
     "id": 2,
@@ -52,7 +57,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #D97706, #DC2626, #701A75)",
+    "offerText": "FLAT 40% OFF | FESTIVE SPECIAL SILKS & SAREES",
+    "greeting": "Joyous Ashada Bonalu celebrations! Traditional silks curated for you.",
+    "_id": "1784573838071"
   },
   {
     "id": 3,
@@ -78,7 +88,12 @@
     ],
     "footwear": [
       "Barefoot/Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Sammakka Saralamma Jatara in authentic style!",
+    "_id": "1784573840988"
   },
   {
     "id": 4,
@@ -104,7 +119,12 @@
     ],
     "footwear": [
       "Leather Chappals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #059669, #10B981, #FBBF24)",
+    "offerText": "UP TO 50% OFF | SOUTH HERITAGE & FESTIVE WEAR",
+    "greeting": "Happy Makar Sankranti! Festive handlooms and ethnic coordinates.",
+    "_id": "1784573871357"
   },
   {
     "id": 5,
@@ -131,7 +151,12 @@
     ],
     "footwear": [
       "Mojaris"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #047857, #065F46)",
+    "offerText": "FLAT 35% OFF | EID SPECIAL SHARARAS & SHERWANIS",
+    "greeting": "Eid Mubarak! May peace and style grace your celebrations.",
+    "_id": "1784573852304"
   },
   {
     "id": 6,
@@ -157,7 +182,12 @@
     ],
     "footwear": [
       "Formal Shoes"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #DC2626, #16A34A)",
+    "offerText": "EXTRA 20% OFF | COZY SWEATERS & CHRISTMAS REDS",
+    "greeting": "Merry Christmas! Celebrate the season of joy and warmth.",
+    "_id": "1784573838613"
   },
   {
     "id": 7,
@@ -183,7 +213,12 @@
     ],
     "footwear": [
       "Punjabi Jutti"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #059669, #10B981, #FBBF24)",
+    "offerText": "UP TO 50% OFF | SOUTH HERITAGE & FESTIVE WEAR",
+    "greeting": "Happy Lohri! Best wishes for the harvest and new beginnings.",
+    "_id": "1784573814086"
   },
   {
     "id": 8,
@@ -209,7 +244,12 @@
     ],
     "footwear": [
       "Punjabi Jutti"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #059669, #10B981, #FBBF24)",
+    "offerText": "UP TO 50% OFF | SOUTH HERITAGE & FESTIVE WEAR",
+    "greeting": "Happy Baisakhi! Best wishes for the harvest and new beginnings.",
+    "_id": "1784573809530"
   },
   {
     "id": 9,
@@ -234,7 +274,12 @@
     ],
     "footwear": [
       "Jutti"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Gurpurab in authentic style!",
+    "_id": "1784573791107"
   },
   {
     "id": 10,
@@ -259,7 +304,12 @@
     ],
     "footwear": [
       "Mojaris"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #F59E0B, #EF4444)",
+    "offerText": "FLAT 30% OFF | DIWALI SPECIAL DÉCOR & ETHNIC",
+    "greeting": "Happy Diwali! Light up your wardrobe with golden styles.",
+    "_id": "1784573838122"
   },
   {
     "id": 11,
@@ -284,7 +334,12 @@
     ],
     "footwear": [
       "Jutti"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #047857, #065F46)",
+    "offerText": "FLAT 35% OFF | EID SPECIAL SHARARAS & SHERWANIS",
+    "greeting": "Eid Mubarak! May peace and style grace your celebrations.",
+    "_id": "1784573857556"
   },
   {
     "id": 12,
@@ -311,7 +366,12 @@
     ],
     "footwear": [
       "Formal Shoes"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #DC2626, #16A34A)",
+    "offerText": "EXTRA 20% OFF | COZY SWEATERS & CHRISTMAS REDS",
+    "greeting": "Merry Christmas! Celebrate the season of joy and warmth.",
+    "_id": "1784573877151"
   },
   {
     "id": 13,
@@ -337,7 +397,12 @@
     ],
     "footwear": [
       "Leather Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #059669, #10B981, #FBBF24)",
+    "offerText": "UP TO 50% OFF | SOUTH HERITAGE & FESTIVE WEAR",
+    "greeting": "Happy Onam! Celebrate the harvest with pristine white and gold ensembles.",
+    "_id": "1784573794762"
   },
   {
     "id": 14,
@@ -362,7 +427,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #059669, #10B981, #FBBF24)",
+    "offerText": "UP TO 50% OFF | SOUTH HERITAGE & FESTIVE WEAR",
+    "greeting": "Happy Vishu! Best wishes for the harvest and new beginnings.",
+    "_id": "1784573845161"
   },
   {
     "id": 15,
@@ -387,7 +457,12 @@
     ],
     "footwear": [
       "Barefoot/Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Thrissur Pooram in authentic style!",
+    "_id": "1784573868008"
   },
   {
     "id": 16,
@@ -413,7 +488,12 @@
     ],
     "footwear": [
       "Formal Footwear"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #DC2626, #16A34A)",
+    "offerText": "EXTRA 20% OFF | COZY SWEATERS & CHRISTMAS REDS",
+    "greeting": "Merry Christmas! Celebrate the season of joy and warmth.",
+    "_id": "1784573859959"
   },
   {
     "id": 17,
@@ -438,7 +518,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #047857, #065F46)",
+    "offerText": "FLAT 35% OFF | EID SPECIAL SHARARAS & SHERWANIS",
+    "greeting": "Eid Mubarak! May peace and style grace your celebrations.",
+    "_id": "1784573857864"
   },
   {
     "id": 18,
@@ -463,7 +548,12 @@
     ],
     "footwear": [
       "Formal Shoes"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Easter in authentic style!",
+    "_id": "1784573876904"
   },
   {
     "id": 19,
@@ -489,7 +579,12 @@
     ],
     "footwear": [
       "Leather Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #059669, #10B981, #FBBF24)",
+    "offerText": "UP TO 50% OFF | SOUTH HERITAGE & FESTIVE WEAR",
+    "greeting": "Happy Pongal! May your life boil over with sweet prosperity.",
+    "_id": "1784573850694"
   },
   {
     "id": 20,
@@ -514,7 +609,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #059669, #10B981, #FBBF24)",
+    "offerText": "UP TO 50% OFF | SOUTH HERITAGE & FESTIVE WEAR",
+    "greeting": "Happy Puthandu! Best wishes for the harvest and new beginnings.",
+    "_id": "1784573841920"
   },
   {
     "id": 21,
@@ -539,7 +639,12 @@
     ],
     "footwear": [
       "Barefoot"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Thaipusam in authentic style!",
+    "_id": "1784573798420"
   },
   {
     "id": 22,
@@ -564,7 +669,12 @@
     ],
     "footwear": [
       "Chappals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #F59E0B, #EF4444)",
+    "offerText": "FLAT 30% OFF | DIWALI SPECIAL DÉCOR & ETHNIC",
+    "greeting": "Happy Diwali! Light up your wardrobe with golden styles.",
+    "_id": "1784573866374"
   },
   {
     "id": 23,
@@ -590,7 +700,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #047857, #065F46)",
+    "offerText": "FLAT 35% OFF | EID SPECIAL SHARARAS & SHERWANIS",
+    "greeting": "Eid Mubarak! May peace and style grace your celebrations.",
+    "_id": "1784573879113"
   },
   {
     "id": 24,
@@ -616,7 +731,12 @@
     ],
     "footwear": [
       "Formal Shoes"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #DC2626, #16A34A)",
+    "offerText": "EXTRA 20% OFF | COZY SWEATERS & CHRISTMAS REDS",
+    "greeting": "Merry Christmas! Celebrate the season of joy and warmth.",
+    "_id": "1784573878936"
   },
   {
     "id": 25,
@@ -641,7 +761,12 @@
     ],
     "footwear": [
       "Leather Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #059669, #10B981, #FBBF24)",
+    "offerText": "UP TO 50% OFF | SOUTH HERITAGE & FESTIVE WEAR",
+    "greeting": "Happy Makar Sankranti! Festive handlooms and ethnic coordinates.",
+    "_id": "1784573813120"
   },
   {
     "id": 26,
@@ -666,7 +791,12 @@
     ],
     "footwear": [
       "Traditional Chappals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #059669, #10B981, #FBBF24)",
+    "offerText": "UP TO 50% OFF | SOUTH HERITAGE & FESTIVE WEAR",
+    "greeting": "Happy Ugadi & Gudi Padwa! Wishing you a sweet and prosperous year.",
+    "_id": "1784573855941"
   },
   {
     "id": 27,
@@ -691,7 +821,12 @@
     ],
     "footwear": [
       "Leather Chappals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #D97706, #DC2626, #701A75)",
+    "offerText": "FLAT 40% OFF | FESTIVE SPECIAL SILKS & SAREES",
+    "greeting": "Happy Dasara! Bring home the best of heritage silhouettes.",
+    "_id": "1784573832833"
   },
   {
     "id": 28,
@@ -716,7 +851,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #F59E0B, #EF4444)",
+    "offerText": "FLAT 30% OFF | DIWALI SPECIAL DÉCOR & ETHNIC",
+    "greeting": "Happy Diwali! Light up your wardrobe with golden styles.",
+    "_id": "1784573804211"
   },
   {
     "id": 29,
@@ -741,7 +881,12 @@
     ],
     "footwear": [
       "Mojaris"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #047857, #065F46)",
+    "offerText": "FLAT 35% OFF | EID SPECIAL SHARARAS & SHERWANIS",
+    "greeting": "Eid Mubarak! May peace and style grace your celebrations.",
+    "_id": "1784573846486"
   },
   {
     "id": 30,
@@ -766,7 +911,12 @@
     ],
     "footwear": [
       "Formal Shoes"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #DC2626, #16A34A)",
+    "offerText": "EXTRA 20% OFF | COZY SWEATERS & CHRISTMAS REDS",
+    "greeting": "Merry Christmas! Celebrate the season of joy and warmth.",
+    "_id": "1784573852482"
   },
   {
     "id": 31,
@@ -792,7 +942,12 @@
     ],
     "footwear": [
       "Traditional Boots"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Losar in authentic style!",
+    "_id": "1784573859927"
   },
   {
     "id": 32,
@@ -817,7 +972,12 @@
     ],
     "footwear": [
       "Barefoot/Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Nyokum Yullo in authentic style!",
+    "_id": "1784573880284"
   },
   {
     "id": 33,
@@ -843,7 +1003,12 @@
     ],
     "footwear": [
       "Traditional Footwear"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Dree Festival in authentic style!",
+    "_id": "1784573885402"
   },
   {
     "id": 34,
@@ -868,7 +1033,12 @@
     ],
     "footwear": [
       "Leather Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Solung in authentic style!",
+    "_id": "1784573834574"
   },
   {
     "id": 35,
@@ -893,7 +1063,12 @@
     ],
     "footwear": [
       "Barefoot"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Mopin in authentic style!",
+    "_id": "1784573848043"
   },
   {
     "id": 36,
@@ -920,7 +1095,12 @@
     ],
     "footwear": [
       "Boots"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #DC2626, #16A34A)",
+    "offerText": "EXTRA 20% OFF | COZY SWEATERS & CHRISTMAS REDS",
+    "greeting": "Merry Christmas! Celebrate the season of joy and warmth.",
+    "_id": "1784573831444"
   },
   {
     "id": 37,
@@ -946,7 +1126,12 @@
     ],
     "footwear": [
       "Barefoot/Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #059669, #10B981, #FBBF24)",
+    "offerText": "UP TO 50% OFF | SOUTH HERITAGE & FESTIVE WEAR",
+    "greeting": "Happy Rongali Bihu! Best wishes for the harvest and new beginnings.",
+    "_id": "1784573809283"
   },
   {
     "id": 38,
@@ -971,7 +1156,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #D97706, #DC2626, #701A75)",
+    "offerText": "FLAT 40% OFF | FESTIVE SPECIAL SILKS & SAREES",
+    "greeting": "Subho Sharadiya Durga Puja! Splendid traditional designs await.",
+    "_id": "1784573832729"
   },
   {
     "id": 39,
@@ -996,7 +1186,12 @@
     ],
     "footwear": [
       "Chappals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #059669, #10B981, #FBBF24)",
+    "offerText": "UP TO 50% OFF | SOUTH HERITAGE & FESTIVE WEAR",
+    "greeting": "Happy Magh Bihu! Best wishes for the harvest and new beginnings.",
+    "_id": "1784573793393"
   },
   {
     "id": 40,
@@ -1021,7 +1216,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #059669, #10B981, #FBBF24)",
+    "offerText": "UP TO 50% OFF | SOUTH HERITAGE & FESTIVE WEAR",
+    "greeting": "Happy Kati Bihu! Best wishes for the harvest and new beginnings.",
+    "_id": "1784573813933"
   },
   {
     "id": 41,
@@ -1047,7 +1247,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #047857, #065F46)",
+    "offerText": "FLAT 35% OFF | EID SPECIAL SHARARAS & SHERWANIS",
+    "greeting": "Eid Mubarak! May peace and style grace your celebrations.",
+    "_id": "1784573864388"
   },
   {
     "id": 42,
@@ -1072,7 +1277,12 @@
     ],
     "footwear": [
       "Boots/Shoes"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #DC2626, #16A34A)",
+    "offerText": "EXTRA 20% OFF | COZY SWEATERS & CHRISTMAS REDS",
+    "greeting": "Merry Christmas! Celebrate the season of joy and warmth.",
+    "_id": "1784573860697"
   },
   {
     "id": 43,
@@ -1098,7 +1308,12 @@
     ],
     "footwear": [
       "Barefoot"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Chhath Puja in authentic style!",
+    "_id": "1784573839397"
   },
   {
     "id": 44,
@@ -1123,7 +1338,12 @@
     ],
     "footwear": [
       "Chappals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1543731068-7e0f5beff43a?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #EC4899, #8B5CF6, #3B82F6)",
+    "offerText": "EXTRA 15% OFF | MULTICOLOR PRINTS & WHITES",
+    "greeting": "Happy Holi! Splash vibrant colors into your style.",
+    "_id": "1784573870656"
   },
   {
     "id": 45,
@@ -1149,7 +1369,12 @@
     ],
     "footwear": [
       "Mojaris"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #F59E0B, #EF4444)",
+    "offerText": "FLAT 30% OFF | DIWALI SPECIAL DÉCOR & ETHNIC",
+    "greeting": "Happy Diwali! Light up your wardrobe with golden styles.",
+    "_id": "1784573866686"
   },
   {
     "id": 46,
@@ -1174,7 +1399,12 @@
     ],
     "footwear": [
       "Leather Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #059669, #10B981, #FBBF24)",
+    "offerText": "UP TO 50% OFF | SOUTH HERITAGE & FESTIVE WEAR",
+    "greeting": "Happy Makar Sankranti! Festive handlooms and ethnic coordinates.",
+    "_id": "1784573863693"
   },
   {
     "id": 47,
@@ -1199,7 +1429,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #D97706, #DC2626, #701A75)",
+    "offerText": "FLAT 40% OFF | FESTIVE SPECIAL SILKS & SAREES",
+    "greeting": "Subho Sharadiya Durga Puja! Splendid traditional designs await.",
+    "_id": "1784573795537"
   },
   {
     "id": 48,
@@ -1224,7 +1459,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #047857, #065F46)",
+    "offerText": "FLAT 35% OFF | EID SPECIAL SHARARAS & SHERWANIS",
+    "greeting": "Eid Mubarak! May peace and style grace your celebrations.",
+    "_id": "1784573807794"
   },
   {
     "id": 49,
@@ -1249,7 +1489,12 @@
     ],
     "footwear": [
       "Barefoot/Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #D97706, #DC2626, #701A75)",
+    "offerText": "FLAT 40% OFF | FESTIVE SPECIAL SILKS & SAREES",
+    "greeting": "Happy Bastar Dussehra! Bring home the best of heritage silhouettes.",
+    "_id": "1784573851417"
   },
   {
     "id": 50,
@@ -1274,7 +1519,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Hareli in authentic style!",
+    "_id": "1784573871811"
   },
   {
     "id": 51,
@@ -1299,7 +1549,12 @@
     ],
     "footwear": [
       "Barefoot"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Madai Festival in authentic style!",
+    "_id": "1784573797463"
   },
   {
     "id": 52,
@@ -1324,7 +1579,12 @@
     ],
     "footwear": [
       "Chappals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Pola in authentic style!",
+    "_id": "1784573861137"
   },
   {
     "id": 53,
@@ -1349,7 +1609,12 @@
     ],
     "footwear": [
       "Mojaris"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #F59E0B, #EF4444)",
+    "offerText": "FLAT 30% OFF | DIWALI SPECIAL DÉCOR & ETHNIC",
+    "greeting": "Happy Diwali! Light up your wardrobe with golden styles.",
+    "_id": "1784573886082"
   },
   {
     "id": 54,
@@ -1375,7 +1640,12 @@
     ],
     "footwear": [
       "Barefoot"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Chhath Puja in authentic style!",
+    "_id": "1784573837892"
   },
   {
     "id": 55,
@@ -1401,7 +1671,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Ganesh Chaturthi in authentic style!",
+    "_id": "1784573799774"
   },
   {
     "id": 56,
@@ -1429,7 +1704,12 @@
     "footwear": [
       "Heels",
       "Formal Shoes"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #DC2626, #16A34A)",
+    "offerText": "EXTRA 20% OFF | COZY SWEATERS & CHRISTMAS REDS",
+    "greeting": "Merry Christmas! Celebrate the season of joy and warmth.",
+    "_id": "1784573830675"
   },
   {
     "id": 57,
@@ -1454,7 +1734,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #D97706, #DC2626, #701A75)",
+    "offerText": "FLAT 40% OFF | FESTIVE SPECIAL SILKS & SAREES",
+    "greeting": "Happy Shigmo! Bring home the best of heritage silhouettes.",
+    "_id": "1784573830662"
   },
   {
     "id": 58,
@@ -1481,7 +1766,12 @@
     ],
     "footwear": [
       "Comfortable Shoes"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #D97706, #DC2626, #701A75)",
+    "offerText": "FLAT 40% OFF | FESTIVE SPECIAL SILKS & SAREES",
+    "greeting": "Happy Goa Carnival! Bring home the best of heritage silhouettes.",
+    "_id": "1784573855025"
   },
   {
     "id": 59,
@@ -1507,7 +1797,12 @@
     ],
     "footwear": [
       "Formal Shoes"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Easter in authentic style!",
+    "_id": "1784573885647"
   },
   {
     "id": 60,
@@ -1532,7 +1827,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #F59E0B, #EF4444)",
+    "offerText": "FLAT 30% OFF | DIWALI SPECIAL DÉCOR & ETHNIC",
+    "greeting": "Happy Diwali! Light up your wardrobe with golden styles.",
+    "_id": "1784573794285"
   },
   {
     "id": 61,
@@ -1557,7 +1857,12 @@
     ],
     "footwear": [
       "Mojaris"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #D97706, #DC2626, #701A75)",
+    "offerText": "FLAT 40% OFF | FESTIVE SPECIAL SILKS & SAREES",
+    "greeting": "Happy Navratri! Get dance-ready in chaniya cholis and jewelry.",
+    "_id": "1784573829766"
   },
   {
     "id": 62,
@@ -1583,7 +1888,12 @@
     ],
     "footwear": [
       "Traditional Mojaris"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #F59E0B, #EF4444)",
+    "offerText": "FLAT 30% OFF | DIWALI SPECIAL DÉCOR & ETHNIC",
+    "greeting": "Happy Diwali! Light up your wardrobe with golden styles.",
+    "_id": "1784573871359"
   },
   {
     "id": 63,
@@ -1609,7 +1919,12 @@
     ],
     "footwear": [
       "Comfortable Sneakers/Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #059669, #10B981, #FBBF24)",
+    "offerText": "UP TO 50% OFF | SOUTH HERITAGE & FESTIVE WEAR",
+    "greeting": "Happy Makar Sankranti! Festive handlooms and ethnic coordinates.",
+    "_id": "1784573857254"
   },
   {
     "id": 64,
@@ -1634,7 +1949,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Janmashtami in authentic style!",
+    "_id": "1784573877142"
   },
   {
     "id": 65,
@@ -1659,7 +1979,12 @@
     ],
     "footwear": [
       "Chappals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1543731068-7e0f5beff43a?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #EC4899, #8B5CF6, #3B82F6)",
+    "offerText": "EXTRA 15% OFF | MULTICOLOR PRINTS & WHITES",
+    "greeting": "Happy Holi! Splash vibrant colors into your style.",
+    "_id": "1784573858444"
   },
   {
     "id": 66,
@@ -1684,7 +2009,12 @@
     ],
     "footwear": [
       "Mojaris"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #047857, #065F46)",
+    "offerText": "FLAT 35% OFF | EID SPECIAL SHARARAS & SHERWANIS",
+    "greeting": "Eid Mubarak! May peace and style grace your celebrations.",
+    "_id": "1784573798117"
   },
   {
     "id": 67,
@@ -1710,7 +2040,12 @@
     ],
     "footwear": [
       "Juttis"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #059669, #10B981, #FBBF24)",
+    "offerText": "UP TO 50% OFF | SOUTH HERITAGE & FESTIVE WEAR",
+    "greeting": "Happy Lohri! Best wishes for the harvest and new beginnings.",
+    "_id": "1784573821822"
   },
   {
     "id": 68,
@@ -1735,7 +2070,12 @@
     ],
     "footwear": [
       "Juttis"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #059669, #10B981, #FBBF24)",
+    "offerText": "UP TO 50% OFF | SOUTH HERITAGE & FESTIVE WEAR",
+    "greeting": "Happy Baisakhi! Best wishes for the harvest and new beginnings.",
+    "_id": "1784573794296"
   },
   {
     "id": 69,
@@ -1761,7 +2101,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #F59E0B, #EF4444)",
+    "offerText": "FLAT 30% OFF | DIWALI SPECIAL DÉCOR & ETHNIC",
+    "greeting": "Happy Diwali! Light up your wardrobe with golden styles.",
+    "_id": "1784573873268"
   },
   {
     "id": 70,
@@ -1786,7 +2131,12 @@
     ],
     "footwear": [
       "Chappals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1543731068-7e0f5beff43a?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #EC4899, #8B5CF6, #3B82F6)",
+    "offerText": "EXTRA 15% OFF | MULTICOLOR PRINTS & WHITES",
+    "greeting": "Happy Holi! Splash vibrant colors into your style.",
+    "_id": "1784573881419"
   },
   {
     "id": 71,
@@ -1812,7 +2162,12 @@
     ],
     "footwear": [
       "Juttis"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Teej in authentic style!",
+    "_id": "1784573822722"
   },
   {
     "id": 72,
@@ -1837,7 +2192,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #059669, #10B981, #FBBF24)",
+    "offerText": "UP TO 50% OFF | SOUTH HERITAGE & FESTIVE WEAR",
+    "greeting": "Happy Makar Sankranti! Festive handlooms and ethnic coordinates.",
+    "_id": "1784573864004"
   },
   {
     "id": 73,
@@ -1865,7 +2225,12 @@
     ],
     "footwear": [
       "Leather Shoes"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #D97706, #DC2626, #701A75)",
+    "offerText": "FLAT 40% OFF | FESTIVE SPECIAL SILKS & SAREES",
+    "greeting": "Happy Kullu Dussehra! Bring home the best of heritage silhouettes.",
+    "_id": "1784573803437"
   },
   {
     "id": 74,
@@ -1891,7 +2256,12 @@
     ],
     "footwear": [
       "Closed Shoes"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Maha Shivaratri (Mandi) in authentic style!",
+    "_id": "1784573831913"
   },
   {
     "id": 75,
@@ -1916,7 +2286,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Minjar Fair in authentic style!",
+    "_id": "1784573797530"
   },
   {
     "id": 76,
@@ -1941,7 +2316,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #F59E0B, #EF4444)",
+    "offerText": "FLAT 30% OFF | DIWALI SPECIAL DÉCOR & ETHNIC",
+    "greeting": "Happy Diwali! Light up your wardrobe with golden styles.",
+    "_id": "1784573819068"
   },
   {
     "id": 77,
@@ -1968,7 +2348,12 @@
     ],
     "footwear": [
       "Warm Boots"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #059669, #10B981, #FBBF24)",
+    "offerText": "UP TO 50% OFF | SOUTH HERITAGE & FESTIVE WEAR",
+    "greeting": "Happy Lohri! Best wishes for the harvest and new beginnings.",
+    "_id": "1784573810964"
   },
   {
     "id": 78,
@@ -1993,7 +2378,12 @@
     ],
     "footwear": [
       "Chappals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1543731068-7e0f5beff43a?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #EC4899, #8B5CF6, #3B82F6)",
+    "offerText": "EXTRA 15% OFF | MULTICOLOR PRINTS & WHITES",
+    "greeting": "Happy Holi! Splash vibrant colors into your style.",
+    "_id": "1784573887550"
   },
   {
     "id": 79,
@@ -2019,7 +2409,12 @@
     ],
     "footwear": [
       "Barefoot"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Sarhul in authentic style!",
+    "_id": "1784573844643"
   },
   {
     "id": 80,
@@ -2045,7 +2440,12 @@
     ],
     "footwear": [
       "Barefoot/Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Karam in authentic style!",
+    "_id": "1784573858509"
   },
   {
     "id": 81,
@@ -2070,7 +2470,12 @@
     ],
     "footwear": [
       "Barefoot"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Chhath Puja in authentic style!",
+    "_id": "1784573828713"
   },
   {
     "id": 82,
@@ -2095,7 +2500,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #F59E0B, #EF4444)",
+    "offerText": "FLAT 30% OFF | DIWALI SPECIAL DÉCOR & ETHNIC",
+    "greeting": "Happy Diwali! Light up your wardrobe with golden styles.",
+    "_id": "1784573796064"
   },
   {
     "id": 83,
@@ -2120,7 +2530,12 @@
     ],
     "footwear": [
       "Chappals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1543731068-7e0f5beff43a?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #EC4899, #8B5CF6, #3B82F6)",
+    "offerText": "EXTRA 15% OFF | MULTICOLOR PRINTS & WHITES",
+    "greeting": "Happy Holi! Splash vibrant colors into your style.",
+    "_id": "1784573882342"
   },
   {
     "id": 84,
@@ -2145,7 +2560,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #047857, #065F46)",
+    "offerText": "FLAT 35% OFF | EID SPECIAL SHARARAS & SHERWANIS",
+    "greeting": "Eid Mubarak! May peace and style grace your celebrations.",
+    "_id": "1784573806553"
   },
   {
     "id": 85,
@@ -2170,7 +2590,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #D97706, #DC2626, #701A75)",
+    "offerText": "FLAT 40% OFF | FESTIVE SPECIAL SILKS & SAREES",
+    "greeting": "Happy Mysuru Dasara! Bring home the best of heritage silhouettes.",
+    "_id": "1784573885579"
   },
   {
     "id": 86,
@@ -2196,7 +2621,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #059669, #10B981, #FBBF24)",
+    "offerText": "UP TO 50% OFF | SOUTH HERITAGE & FESTIVE WEAR",
+    "greeting": "Happy Ugadi & Gudi Padwa! Wishing you a sweet and prosperous year.",
+    "_id": "1784573794582"
   },
   {
     "id": 87,
@@ -2221,7 +2651,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Ganesh Chaturthi in authentic style!",
+    "_id": "1784573851244"
   },
   {
     "id": 88,
@@ -2246,7 +2681,12 @@
     ],
     "footwear": [
       "Chappals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #F59E0B, #EF4444)",
+    "offerText": "FLAT 30% OFF | DIWALI SPECIAL DÉCOR & ETHNIC",
+    "greeting": "Happy Diwali! Light up your wardrobe with golden styles.",
+    "_id": "1784573811641"
   },
   {
     "id": 89,
@@ -2271,7 +2711,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #059669, #10B981, #FBBF24)",
+    "offerText": "UP TO 50% OFF | SOUTH HERITAGE & FESTIVE WEAR",
+    "greeting": "Happy Makar Sankranti! Festive handlooms and ethnic coordinates.",
+    "_id": "1784573791261"
   },
   {
     "id": 90,
@@ -2296,7 +2741,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #047857, #065F46)",
+    "offerText": "FLAT 35% OFF | EID SPECIAL SHARARAS & SHERWANIS",
+    "greeting": "Eid Mubarak! May peace and style grace your celebrations.",
+    "_id": "1784573861145"
   },
   {
     "id": 91,
@@ -2321,7 +2771,12 @@
     ],
     "footwear": [
       "Mojaris"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #F59E0B, #EF4444)",
+    "offerText": "FLAT 30% OFF | DIWALI SPECIAL DÉCOR & ETHNIC",
+    "greeting": "Happy Diwali! Light up your wardrobe with golden styles.",
+    "_id": "1784573860225"
   },
   {
     "id": 92,
@@ -2346,7 +2801,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1543731068-7e0f5beff43a?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #EC4899, #8B5CF6, #3B82F6)",
+    "offerText": "EXTRA 15% OFF | MULTICOLOR PRINTS & WHITES",
+    "greeting": "Happy Holi! Splash vibrant colors into your style.",
+    "_id": "1784573795004"
   },
   {
     "id": 93,
@@ -2372,7 +2832,12 @@
     ],
     "footwear": [
       "Barefoot/Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Bhagoria Haat in authentic style!",
+    "_id": "1784573828843"
   },
   {
     "id": 94,
@@ -2397,7 +2862,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #D97706, #DC2626, #701A75)",
+    "offerText": "FLAT 40% OFF | FESTIVE SPECIAL SILKS & SAREES",
+    "greeting": "Happy Dussehra! Bring home the best of heritage silhouettes.",
+    "_id": "1784573828572"
   },
   {
     "id": 95,
@@ -2422,7 +2892,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Ganesh Chaturthi in authentic style!",
+    "_id": "1784573837148"
   },
   {
     "id": 96,
@@ -2447,7 +2922,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #047857, #065F46)",
+    "offerText": "FLAT 35% OFF | EID SPECIAL SHARARAS & SHERWANIS",
+    "greeting": "Eid Mubarak! May peace and style grace your celebrations.",
+    "_id": "1784573818053"
   },
   {
     "id": 97,
@@ -2475,7 +2955,12 @@
     ],
     "footwear": [
       "Kolhapuri Chappals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Ganesh Chaturthi in authentic style!",
+    "_id": "1784573856462"
   },
   {
     "id": 98,
@@ -2500,7 +2985,12 @@
     ],
     "footwear": [
       "Kolhapuri Chappals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Gudi Padwa in authentic style!",
+    "_id": "1784573849857"
   },
   {
     "id": 99,
@@ -2525,7 +3015,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #F59E0B, #EF4444)",
+    "offerText": "FLAT 30% OFF | DIWALI SPECIAL DÉCOR & ETHNIC",
+    "greeting": "Happy Diwali! Light up your wardrobe with golden styles.",
+    "_id": "1784573799314"
   },
   {
     "id": 100,
@@ -2550,7 +3045,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #059669, #10B981, #FBBF24)",
+    "offerText": "UP TO 50% OFF | SOUTH HERITAGE & FESTIVE WEAR",
+    "greeting": "Happy Makar Sankranti! Festive handlooms and ethnic coordinates.",
+    "_id": "1784573801185"
   },
   {
     "id": 101,
@@ -2575,7 +3075,12 @@
     ],
     "footwear": [
       "Chappals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1543731068-7e0f5beff43a?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #EC4899, #8B5CF6, #3B82F6)",
+    "offerText": "EXTRA 15% OFF | MULTICOLOR PRINTS & WHITES",
+    "greeting": "Happy Holi! Splash vibrant colors into your style.",
+    "_id": "1784573799606"
   },
   {
     "id": 102,
@@ -2600,7 +3105,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #047857, #065F46)",
+    "offerText": "FLAT 35% OFF | EID SPECIAL SHARARAS & SHERWANIS",
+    "greeting": "Eid Mubarak! May peace and style grace your celebrations.",
+    "_id": "1784573830809"
   },
   {
     "id": 103,
@@ -2625,7 +3135,12 @@
     ],
     "footwear": [
       "Barefoot/Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Yaoshang in authentic style!",
+    "_id": "1784573791098"
   },
   {
     "id": 104,
@@ -2650,7 +3165,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Ningol Chakouba in authentic style!",
+    "_id": "1784573798314"
   },
   {
     "id": 105,
@@ -2676,7 +3196,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Cheiraoba in authentic style!",
+    "_id": "1784573800701"
   },
   {
     "id": 106,
@@ -2702,7 +3227,12 @@
     ],
     "footwear": [
       "Barefoot"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Kang Festival (Rath Yatra) in authentic style!",
+    "_id": "1784573797128"
   },
   {
     "id": 107,
@@ -2727,7 +3257,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Kut in authentic style!",
+    "_id": "1784573810187"
   },
   {
     "id": 108,
@@ -2753,7 +3288,12 @@
     ],
     "footwear": [
       "Shoes"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #DC2626, #16A34A)",
+    "offerText": "EXTRA 20% OFF | COZY SWEATERS & CHRISTMAS REDS",
+    "greeting": "Merry Christmas! Celebrate the season of joy and warmth.",
+    "_id": "1784573863119"
   },
   {
     "id": 109,
@@ -2778,7 +3318,12 @@
     ],
     "footwear": [
       "Barefoot/Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Nongkrem Dance in authentic style!",
+    "_id": "1784573795273"
   },
   {
     "id": 110,
@@ -2803,7 +3348,12 @@
     ],
     "footwear": [
       "Barefoot"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Wangala in authentic style!",
+    "_id": "1784573813003"
   },
   {
     "id": 111,
@@ -2830,7 +3380,12 @@
     ],
     "footwear": [
       "Barefoot/Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Shad Suk Mynsiem in authentic style!",
+    "_id": "1784573884314"
   },
   {
     "id": 112,
@@ -2857,7 +3412,12 @@
     ],
     "footwear": [
       "Boots"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #DC2626, #16A34A)",
+    "offerText": "EXTRA 20% OFF | COZY SWEATERS & CHRISTMAS REDS",
+    "greeting": "Merry Christmas! Celebrate the season of joy and warmth.",
+    "_id": "1784573847006"
   },
   {
     "id": 113,
@@ -2882,7 +3442,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Behdienkhlam in authentic style!",
+    "_id": "1784573888292"
   },
   {
     "id": 114,
@@ -2908,7 +3473,12 @@
     ],
     "footwear": [
       "Formal Shoes"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Easter in authentic style!",
+    "_id": "1784573882512"
   },
   {
     "id": 115,
@@ -2934,7 +3504,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Chapchar Kut in authentic style!",
+    "_id": "1784573845198"
   },
   {
     "id": 116,
@@ -2959,7 +3534,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Mim Kut in authentic style!",
+    "_id": "1784573806352"
   },
   {
     "id": 117,
@@ -2984,7 +3564,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Pawl Kut in authentic style!",
+    "_id": "1784573882164"
   },
   {
     "id": 118,
@@ -3009,7 +3594,12 @@
     ],
     "footwear": [
       "Shoes/Boots"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #DC2626, #16A34A)",
+    "offerText": "EXTRA 20% OFF | COZY SWEATERS & CHRISTMAS REDS",
+    "greeting": "Merry Christmas! Celebrate the season of joy and warmth.",
+    "_id": "1784573861104"
   },
   {
     "id": 119,
@@ -3035,7 +3625,12 @@
     ],
     "footwear": [
       "Formal Shoes"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Easter in authentic style!",
+    "_id": "1784573793642"
   },
   {
     "id": 120,
@@ -3060,7 +3655,12 @@
     ],
     "footwear": [
       "Heels/Formal Shoes"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate New Year in authentic style!",
+    "_id": "1784573849247"
   },
   {
     "id": 121,
@@ -3089,7 +3689,12 @@
     ],
     "footwear": [
       "Barefoot/Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Hornbill Festival in authentic style!",
+    "_id": "1784573832134"
   },
   {
     "id": 122,
@@ -3115,7 +3720,12 @@
     ],
     "footwear": [
       "Barefoot"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Moatsu Mong in authentic style!",
+    "_id": "1784573835821"
   },
   {
     "id": 123,
@@ -3140,7 +3750,12 @@
     ],
     "footwear": [
       "Barefoot/Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Sekrenyi in authentic style!",
+    "_id": "1784573877455"
   },
   {
     "id": 124,
@@ -3167,7 +3782,12 @@
     ],
     "footwear": [
       "Barefoot"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Aoling in authentic style!",
+    "_id": "1784573814984"
   },
   {
     "id": 125,
@@ -3194,7 +3814,12 @@
     ],
     "footwear": [
       "Boots"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #DC2626, #16A34A)",
+    "offerText": "EXTRA 20% OFF | COZY SWEATERS & CHRISTMAS REDS",
+    "greeting": "Merry Christmas! Celebrate the season of joy and warmth.",
+    "_id": "1784573802819"
   },
   {
     "id": 126,
@@ -3219,7 +3844,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Tokhu Emong in authentic style!",
+    "_id": "1784573835972"
   },
   {
     "id": 127,
@@ -3244,7 +3874,12 @@
     ],
     "footwear": [
       "Barefoot/Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Rath Yatra in authentic style!",
+    "_id": "1784573879345"
   },
   {
     "id": 128,
@@ -3269,7 +3904,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #D97706, #DC2626, #701A75)",
+    "offerText": "FLAT 40% OFF | FESTIVE SPECIAL SILKS & SAREES",
+    "greeting": "Subho Sharadiya Durga Puja! Splendid traditional designs await.",
+    "_id": "1784573838706"
   },
   {
     "id": 129,
@@ -3295,7 +3935,12 @@
     ],
     "footwear": [
       "Barefoot/Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Raja Parba in authentic style!",
+    "_id": "1784573881598"
   },
   {
     "id": 130,
@@ -3320,7 +3965,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Nuakhai in authentic style!",
+    "_id": "1784573795221"
   },
   {
     "id": 131,
@@ -3345,7 +3995,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #F59E0B, #EF4444)",
+    "offerText": "FLAT 30% OFF | DIWALI SPECIAL DÉCOR & ETHNIC",
+    "greeting": "Happy Diwali! Light up your wardrobe with golden styles.",
+    "_id": "1784573831789"
   },
   {
     "id": 132,
@@ -3370,7 +4025,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #059669, #10B981, #FBBF24)",
+    "offerText": "UP TO 50% OFF | SOUTH HERITAGE & FESTIVE WEAR",
+    "greeting": "Happy Makar Sankranti! Festive handlooms and ethnic coordinates.",
+    "_id": "1784573877371"
   },
   {
     "id": 133,
@@ -3398,7 +4058,12 @@
     ],
     "footwear": [
       "Mojaris"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Teej in authentic style!",
+    "_id": "1784573856564"
   },
   {
     "id": 134,
@@ -3423,7 +4088,12 @@
     ],
     "footwear": [
       "Mojaris"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Gangaur in authentic style!",
+    "_id": "1784573846343"
   },
   {
     "id": 135,
@@ -3448,7 +4118,12 @@
     ],
     "footwear": [
       "Juttis"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #F59E0B, #EF4444)",
+    "offerText": "FLAT 30% OFF | DIWALI SPECIAL DÉCOR & ETHNIC",
+    "greeting": "Happy Diwali! Light up your wardrobe with golden styles.",
+    "_id": "1784573858726"
   },
   {
     "id": 136,
@@ -3473,7 +4148,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1543731068-7e0f5beff43a?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #EC4899, #8B5CF6, #3B82F6)",
+    "offerText": "EXTRA 15% OFF | MULTICOLOR PRINTS & WHITES",
+    "greeting": "Happy Holi! Splash vibrant colors into your style.",
+    "_id": "1784573871655"
   },
   {
     "id": 137,
@@ -3499,7 +4179,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #059669, #10B981, #FBBF24)",
+    "offerText": "UP TO 50% OFF | SOUTH HERITAGE & FESTIVE WEAR",
+    "greeting": "Happy Makar Sankranti! Festive handlooms and ethnic coordinates.",
+    "_id": "1784573863377"
   },
   {
     "id": 138,
@@ -3525,7 +4210,12 @@
     ],
     "footwear": [
       "Leather Mojaris"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Pushkar Fair in authentic style!",
+    "_id": "1784573855737"
   },
   {
     "id": 139,
@@ -3550,7 +4240,12 @@
     ],
     "footwear": [
       "Traditional Boots"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Losar in authentic style!",
+    "_id": "1784573810252"
   },
   {
     "id": 140,
@@ -3575,7 +4270,12 @@
     ],
     "footwear": [
       "Boots/Shoes"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Saga Dawa in authentic style!",
+    "_id": "1784573845113"
   },
   {
     "id": 141,
@@ -3600,7 +4300,12 @@
     ],
     "footwear": [
       "Sandals/Shoes"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Dashain in authentic style!",
+    "_id": "1784573850663"
   },
   {
     "id": 142,
@@ -3625,7 +4330,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Tihar in authentic style!",
+    "_id": "1784573823234"
   },
   {
     "id": 143,
@@ -3650,7 +4360,12 @@
     ],
     "footwear": [
       "Boots"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Losoong in authentic style!",
+    "_id": "1784573863493"
   },
   {
     "id": 144,
@@ -3675,7 +4390,12 @@
     ],
     "footwear": [
       "Comfortable Footwear"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Bumchu in authentic style!",
+    "_id": "1784573805278"
   },
   {
     "id": 145,
@@ -3700,7 +4420,12 @@
     ],
     "footwear": [
       "Sandals/Barefoot"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Kharchi Puja in authentic style!",
+    "_id": "1784573884575"
   },
   {
     "id": 146,
@@ -3725,7 +4450,12 @@
     ],
     "footwear": [
       "Barefoot"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Garia Puja in authentic style!",
+    "_id": "1784573861142"
   },
   {
     "id": 147,
@@ -3750,7 +4480,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #D97706, #DC2626, #701A75)",
+    "offerText": "FLAT 40% OFF | FESTIVE SPECIAL SILKS & SAREES",
+    "greeting": "Subho Sharadiya Durga Puja! Splendid traditional designs await.",
+    "_id": "1784573806155"
   },
   {
     "id": 148,
@@ -3775,7 +4510,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #F59E0B, #EF4444)",
+    "offerText": "FLAT 30% OFF | DIWALI SPECIAL DÉCOR & ETHNIC",
+    "greeting": "Happy Diwali! Light up your wardrobe with golden styles.",
+    "_id": "1784573867631"
   },
   {
     "id": 149,
@@ -3800,7 +4540,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #059669, #10B981, #FBBF24)",
+    "offerText": "UP TO 50% OFF | SOUTH HERITAGE & FESTIVE WEAR",
+    "greeting": "Happy Makar Sankranti! Festive handlooms and ethnic coordinates.",
+    "_id": "1784573869177"
   },
   {
     "id": 150,
@@ -3825,7 +4570,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #047857, #065F46)",
+    "offerText": "FLAT 35% OFF | EID SPECIAL SHARARAS & SHERWANIS",
+    "greeting": "Eid Mubarak! May peace and style grace your celebrations.",
+    "_id": "1784573835217"
   },
   {
     "id": 151,
@@ -3850,7 +4600,12 @@
     ],
     "footwear": [
       "Mojaris"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #F59E0B, #EF4444)",
+    "offerText": "FLAT 30% OFF | DIWALI SPECIAL DÉCOR & ETHNIC",
+    "greeting": "Happy Diwali! Light up your wardrobe with golden styles.",
+    "_id": "1784573852738"
   },
   {
     "id": 152,
@@ -3875,7 +4630,12 @@
     ],
     "footwear": [
       "Chappals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1543731068-7e0f5beff43a?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #EC4899, #8B5CF6, #3B82F6)",
+    "offerText": "EXTRA 15% OFF | MULTICOLOR PRINTS & WHITES",
+    "greeting": "Happy Holi! Splash vibrant colors into your style.",
+    "_id": "1784573801751"
   },
   {
     "id": 153,
@@ -3900,7 +4660,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #D97706, #DC2626, #701A75)",
+    "offerText": "FLAT 40% OFF | FESTIVE SPECIAL SILKS & SAREES",
+    "greeting": "Happy Dussehra! Bring home the best of heritage silhouettes.",
+    "_id": "1784573864287"
   },
   {
     "id": 154,
@@ -3925,7 +4690,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Janmashtami in authentic style!",
+    "_id": "1784573852838"
   },
   {
     "id": 155,
@@ -3952,7 +4722,12 @@
     ],
     "footwear": [
       "Mojaris"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #047857, #065F46)",
+    "offerText": "FLAT 35% OFF | EID SPECIAL SHARARAS & SHERWANIS",
+    "greeting": "Eid Mubarak! May peace and style grace your celebrations.",
+    "_id": "1784573799708"
   },
   {
     "id": 156,
@@ -3977,7 +4752,12 @@
     ],
     "footwear": [
       "Barefoot/Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Maha Shivaratri in authentic style!",
+    "_id": "1784573861105"
   },
   {
     "id": 157,
@@ -4003,7 +4783,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #059669, #10B981, #FBBF24)",
+    "offerText": "UP TO 50% OFF | SOUTH HERITAGE & FESTIVE WEAR",
+    "greeting": "Happy Makar Sankranti! Festive handlooms and ethnic coordinates.",
+    "_id": "1784573808323"
   },
   {
     "id": 158,
@@ -4028,7 +4813,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Harela in authentic style!",
+    "_id": "1784573864179"
   },
   {
     "id": 159,
@@ -4053,7 +4843,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Phool Dei in authentic style!",
+    "_id": "1784573884651"
   },
   {
     "id": 160,
@@ -4078,7 +4873,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #F59E0B, #EF4444)",
+    "offerText": "FLAT 30% OFF | DIWALI SPECIAL DÉCOR & ETHNIC",
+    "greeting": "Happy Diwali! Light up your wardrobe with golden styles.",
+    "_id": "1784573874257"
   },
   {
     "id": 161,
@@ -4103,7 +4903,12 @@
     ],
     "footwear": [
       "Chappals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1543731068-7e0f5beff43a?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #EC4899, #8B5CF6, #3B82F6)",
+    "offerText": "EXTRA 15% OFF | MULTICOLOR PRINTS & WHITES",
+    "greeting": "Happy Holi! Splash vibrant colors into your style.",
+    "_id": "1784573884395"
   },
   {
     "id": 162,
@@ -4128,7 +4933,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Basant Panchami in authentic style!",
+    "_id": "1784573874654"
   },
   {
     "id": 163,
@@ -4154,7 +4964,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #D97706, #DC2626, #701A75)",
+    "offerText": "FLAT 40% OFF | FESTIVE SPECIAL SILKS & SAREES",
+    "greeting": "Subho Sharadiya Durga Puja! Splendid traditional designs await.",
+    "_id": "1784573804456"
   },
   {
     "id": 164,
@@ -4179,7 +4994,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #F59E0B, #EF4444)",
+    "offerText": "FLAT 30% OFF | DIWALI SPECIAL DÉCOR & ETHNIC",
+    "greeting": "Happy Diwali! Light up your wardrobe with golden styles.",
+    "_id": "1784573879696"
   },
   {
     "id": 165,
@@ -4204,7 +5024,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Saraswati Puja in authentic style!",
+    "_id": "1784573798879"
   },
   {
     "id": 166,
@@ -4229,7 +5054,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Poila Baisakh in authentic style!",
+    "_id": "1784573839201"
   },
   {
     "id": 167,
@@ -4254,7 +5084,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #047857, #065F46)",
+    "offerText": "FLAT 35% OFF | EID SPECIAL SHARARAS & SHERWANIS",
+    "greeting": "Eid Mubarak! May peace and style grace your celebrations.",
+    "_id": "1784573870651"
   },
   {
     "id": 168,
@@ -4280,7 +5115,12 @@
     ],
     "footwear": [
       "Boots/Shoes"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #DC2626, #16A34A)",
+    "offerText": "EXTRA 20% OFF | COZY SWEATERS & CHRISTMAS REDS",
+    "greeting": "Merry Christmas! Celebrate the season of joy and warmth.",
+    "_id": "1784573835449"
   },
   {
     "id": 169,
@@ -4305,7 +5145,12 @@
     ],
     "footwear": [
       "Mojaris/Heels"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #F59E0B, #EF4444)",
+    "offerText": "FLAT 30% OFF | DIWALI SPECIAL DÉCOR & ETHNIC",
+    "greeting": "Happy Diwali! Light up your wardrobe with golden styles.",
+    "_id": "1784573834832"
   },
   {
     "id": 170,
@@ -4330,7 +5175,12 @@
     ],
     "footwear": [
       "Chappals/Sneakers"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1543731068-7e0f5beff43a?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #EC4899, #8B5CF6, #3B82F6)",
+    "offerText": "EXTRA 15% OFF | MULTICOLOR PRINTS & WHITES",
+    "greeting": "Happy Holi! Splash vibrant colors into your style.",
+    "_id": "1784573799346"
   },
   {
     "id": 171,
@@ -4356,7 +5206,12 @@
     ],
     "footwear": [
       "Juttis"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #047857, #065F46)",
+    "offerText": "FLAT 35% OFF | EID SPECIAL SHARARAS & SHERWANIS",
+    "greeting": "Eid Mubarak! May peace and style grace your celebrations.",
+    "_id": "1784573860981"
   },
   {
     "id": 172,
@@ -4381,7 +5236,12 @@
     ],
     "footwear": [
       "Juttis"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Gurpurab in authentic style!",
+    "_id": "1784573825174"
   },
   {
     "id": 173,
@@ -4407,7 +5267,12 @@
     ],
     "footwear": [
       "Boots/Formal Shoes"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #DC2626, #16A34A)",
+    "offerText": "EXTRA 20% OFF | COZY SWEATERS & CHRISTMAS REDS",
+    "greeting": "Merry Christmas! Celebrate the season of joy and warmth.",
+    "_id": "1784573874013"
   },
   {
     "id": 174,
@@ -4433,7 +5298,12 @@
     ],
     "footwear": [
       "Barefoot"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Chhath Puja in authentic style!",
+    "_id": "1784573857530"
   },
   {
     "id": 175,
@@ -4460,7 +5330,12 @@
     ],
     "footwear": [
       "Khrawe (Sandals)"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #047857, #065F46)",
+    "offerText": "FLAT 35% OFF | EID SPECIAL SHARARAS & SHERWANIS",
+    "greeting": "Eid Mubarak! May peace and style grace your celebrations.",
+    "_id": "1784573867085"
   },
   {
     "id": 176,
@@ -4485,7 +5360,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #047857, #065F46)",
+    "offerText": "FLAT 35% OFF | EID SPECIAL SHARARAS & SHERWANIS",
+    "greeting": "Eid Mubarak! May peace and style grace your celebrations.",
+    "_id": "1784573794264"
   },
   {
     "id": 177,
@@ -4510,7 +5390,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Navroz in authentic style!",
+    "_id": "1784573869301"
   },
   {
     "id": 178,
@@ -4535,7 +5420,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Maha Shivaratri (Herath) in authentic style!",
+    "_id": "1784573823627"
   },
   {
     "id": 179,
@@ -4560,7 +5450,12 @@
     ],
     "footwear": [
       "Juttis"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #059669, #10B981, #FBBF24)",
+    "offerText": "UP TO 50% OFF | SOUTH HERITAGE & FESTIVE WEAR",
+    "greeting": "Happy Baisakhi! Best wishes for the harvest and new beginnings.",
+    "_id": "1784573856281"
   },
   {
     "id": 180,
@@ -4586,7 +5481,12 @@
     ],
     "footwear": [
       "Juttis"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #059669, #10B981, #FBBF24)",
+    "offerText": "UP TO 50% OFF | SOUTH HERITAGE & FESTIVE WEAR",
+    "greeting": "Happy Lohri! Best wishes for the harvest and new beginnings.",
+    "_id": "1784573826954"
   },
   {
     "id": 181,
@@ -4611,7 +5511,12 @@
     ],
     "footwear": [
       "Pabu (Traditional Shoes)"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Losar in authentic style!",
+    "_id": "1784573874160"
   },
   {
     "id": 182,
@@ -4636,7 +5541,12 @@
     ],
     "footwear": [
       "Pabu"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Hemis Tsechu in authentic style!",
+    "_id": "1784573839497"
   },
   {
     "id": 183,
@@ -4661,7 +5571,12 @@
     ],
     "footwear": [
       "Comfortable Shoes"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Sindhu Darshan in authentic style!",
+    "_id": "1784573804237"
   },
   {
     "id": 184,
@@ -4686,7 +5601,12 @@
     ],
     "footwear": [
       "Boots"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Dosmoche in authentic style!",
+    "_id": "1784573887160"
   },
   {
     "id": 185,
@@ -4711,7 +5631,12 @@
     ],
     "footwear": [
       "Pabu"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Saka Dawa in authentic style!",
+    "_id": "1784573859709"
   },
   {
     "id": 186,
@@ -4737,7 +5662,12 @@
     ],
     "footwear": [
       "Traditional Boots"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Ladakh Festival in authentic style!",
+    "_id": "1784573844273"
   },
   {
     "id": 187,
@@ -4762,7 +5692,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #059669, #10B981, #FBBF24)",
+    "offerText": "UP TO 50% OFF | SOUTH HERITAGE & FESTIVE WEAR",
+    "greeting": "Happy Pongal! May your life boil over with sweet prosperity.",
+    "_id": "1784573797975"
   },
   {
     "id": 188,
@@ -4787,7 +5722,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #059669, #10B981, #FBBF24)",
+    "offerText": "UP TO 50% OFF | SOUTH HERITAGE & FESTIVE WEAR",
+    "greeting": "Happy Puthandu! Best wishes for the harvest and new beginnings.",
+    "_id": "1784573813387"
   },
   {
     "id": 189,
@@ -4812,7 +5752,12 @@
     ],
     "footwear": [
       "Chappals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #F59E0B, #EF4444)",
+    "offerText": "FLAT 30% OFF | DIWALI SPECIAL DÉCOR & ETHNIC",
+    "greeting": "Happy Diwali! Light up your wardrobe with golden styles.",
+    "_id": "1784573872131"
   },
   {
     "id": 190,
@@ -4839,7 +5784,12 @@
     ],
     "footwear": [
       "Formal Shoes"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #DC2626, #16A34A)",
+    "offerText": "EXTRA 20% OFF | COZY SWEATERS & CHRISTMAS REDS",
+    "greeting": "Merry Christmas! Celebrate the season of joy and warmth.",
+    "_id": "1784573803892"
   },
   {
     "id": 191,
@@ -4864,7 +5814,12 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #047857, #065F46)",
+    "offerText": "FLAT 35% OFF | EID SPECIAL SHARARAS & SHERWANIS",
+    "greeting": "Eid Mubarak! May peace and style grace your celebrations.",
+    "_id": "1784573795748"
   },
   {
     "id": 192,
@@ -4889,7 +5844,12 @@
     ],
     "footwear": [
       "Barefoot"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Villianur Temple Car Festival in authentic style!",
+    "_id": "1784573802305"
   },
   {
     "id": 193,
@@ -4914,7 +5874,12 @@
     ],
     "footwear": [
       "Jutti"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #059669, #10B981, #FBBF24)",
+    "offerText": "UP TO 50% OFF | SOUTH HERITAGE & FESTIVE WEAR",
+    "greeting": "Happy Baisakhi! Best wishes for the harvest and new beginnings.",
+    "_id": "1784573858630"
   },
   {
     "id": 194,
@@ -4941,7 +5906,12 @@
     ],
     "footwear": [
       "Jutti"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #059669, #10B981, #FBBF24)",
+    "offerText": "UP TO 50% OFF | SOUTH HERITAGE & FESTIVE WEAR",
+    "greeting": "Happy Lohri! Best wishes for the harvest and new beginnings.",
+    "_id": "1784573799527"
   },
   {
     "id": 195,
@@ -4966,7 +5936,12 @@
     ],
     "footwear": [
       "Jutti"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #FF3F6C, #FF527B)",
+    "offerText": "UP TO 50% OFF | FESTIVE CURATIONS",
+    "greeting": "Celebrate Gurpurab in authentic style!",
+    "_id": "1784573878207"
   },
   {
     "id": 196,
@@ -4991,7 +5966,12 @@
     ],
     "footwear": [
       "Mojaris"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #F59E0B, #EF4444)",
+    "offerText": "FLAT 30% OFF | DIWALI SPECIAL DÉCOR & ETHNIC",
+    "greeting": "Happy Diwali! Light up your wardrobe with golden styles.",
+    "_id": "1784573884657"
   },
   {
     "id": 197,
@@ -5016,7 +5996,12 @@
     ],
     "footwear": [
       "Chappals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1543731068-7e0f5beff43a?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #EC4899, #8B5CF6, #3B82F6)",
+    "offerText": "EXTRA 15% OFF | MULTICOLOR PRINTS & WHITES",
+    "greeting": "Happy Holi! Splash vibrant colors into your style.",
+    "_id": "1784573798458"
   },
   {
     "id": 198,
@@ -5041,6 +6026,11 @@
     ],
     "footwear": [
       "Sandals"
-    ]
+    ],
+    "artwork": "https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=600&auto=format&fit=crop",
+    "themeGradient": "linear-gradient(to right, #047857, #065F46)",
+    "offerText": "FLAT 35% OFF | EID SPECIAL SHARARAS & SHERWANIS",
+    "greeting": "Eid Mubarak! May peace and style grace your celebrations.",
+    "_id": "1784573804031"
   }
 ]

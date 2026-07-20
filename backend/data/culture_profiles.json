@@ -5,9 +5,9 @@
     "state": "Andhra Pradesh",
     "festivals": [
       "Ugadi",
-      "Sankranti"
+      "Diwali"
     ],
-    "language": "Hindi",
+    "language": "English",
     "id": "prof_1"
   },
   {
@@ -75,26 +75,5 @@
     ],
     "language": "English",
     "id": "prof_7"
-  },
-  {
-    "userId": "1784384212716",
-    "state": "Andhra Pradesh",
-    "festivals": [
-      "Diwali"
-    ],
-    "language": "English",
-    "_id": "1784386864023",
-    "id": "1784386864023"
-  },
-  {
-    "userId": "1784472591052",
-    "state": "Telangana",
-    "festivals": [
-      "Bathukamma",
-      "Bonalu"
-    ],
-    "language": "English",
-    "_id": "1784472676201",
-    "id": "1784472676201"
   }
 ]

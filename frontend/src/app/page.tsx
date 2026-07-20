@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useDispatch, useSelector } from 'react-redux';
 import { motion } from 'framer-motion';
 import { Mail, Lock, ShoppingBag, Eye, EyeOff } from 'lucide-react';
-import { setUser, RootState } from '@/store/store';
+import { setUser, setProfile, RootState } from '@/store/store';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('judge@myntra.com');
@@ -19,9 +19,9 @@ export default function LoginPage() {
   const user = useSelector((state: RootState) => state.session.user);
 
   useEffect(() => {
-    // If user already logged in, go directly to region setup
+    // If user already logged in, go directly to home (or region setup if profile missing)
     if (user) {
-      router.push('/region-setup');
+      router.push('/home');
     }
   }, [user, router]);
 
@@ -45,7 +45,21 @@ export default function LoginPage() {
       
       if (data.success) {
         dispatch(setUser(data.user));
-        router.push('/region-setup');
+        
+        // Fetch saved profile if any
+        try {
+          const profileRes = await fetch(`http://localhost:5000/api/profile/${data.user.id}`);
+          const profileData = await profileRes.json();
+          if (profileData.success && profileData.profile) {
+            dispatch(setProfile(profileData.profile));
+            router.push('/home');
+          } else {
+            router.push('/region-setup');
+          }
+        } catch (err) {
+          console.warn("Profile fetch error during login:", err);
+          router.push('/region-setup');
+        }
       } else {
         setError(data.error || 'Login failed. Please try again.');
       }
