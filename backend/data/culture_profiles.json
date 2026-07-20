@@ -2,10 +2,11 @@
   {
     "_id": "prof_1",
     "userId": "1",
-    "state": "Andhra Pradesh",
+    "state": "Jammu & Kashmir",
     "festivals": [
-      "Ugadi",
-      "Diwali"
+      "Eid-ul-Adha",
+      "Navroz",
+      "Eid-ul-Fitr"
     ],
     "language": "English",
     "id": "prof_1"
