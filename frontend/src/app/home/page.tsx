@@ -314,20 +314,20 @@ export default function HomePage() {
 
   const ProductCard = ({ product }: { product: Product }) => (
     <motion.div
-      whileHover={{ y: -6, transition: { duration: 0.2 } }}
+      whileHover={{ y: -7, scale: 1.01, transition: { duration: 0.2 } }}
       onClick={() => router.push(`/product/${product.id}`)}
-      className="bg-white rounded-xl overflow-hidden border border-[#EAEAEC] shadow-sm hover:shadow-[0_8px_24px_rgba(40,44,63,0.08)] transition-all duration-200 cursor-pointer flex-shrink-0 w-[180px] sm:w-[220px]"
+      className="bg-white rounded-2xl overflow-hidden border border-[#EAEAEC]/50 shadow-3xs hover:shadow-[0_8px_24px_rgba(40,44,63,0.06)] transition-all duration-300 cursor-pointer flex-shrink-0 w-[180px] sm:w-[220px]"
     >
       <div className="relative aspect-[3/4] w-full overflow-hidden bg-gray-50">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
+          className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-550"
           loading="lazy"
         />
         {/* Rating overlay badge */}
-        <div className="absolute bottom-2.5 left-2.5 bg-white/90 backdrop-blur-xs px-2 py-0.5 rounded text-[10px] font-bold text-gray-800 flex items-center shadow-xs">
+        <div className="absolute bottom-2.5 left-2.5 bg-white/95 backdrop-blur-xs px-2 py-0.5 rounded-lg text-[10px] font-extrabold text-gray-800 flex items-center shadow-3xs border border-gray-100/50">
           {product.rating} <Star className="w-2.5 h-2.5 text-yellow-500 fill-yellow-500 ml-1" />
         </div>
         
@@ -338,9 +338,9 @@ export default function HomePage() {
               e.stopPropagation();
               setSelectedConfidenceProduct(product);
             }}
-            className="absolute top-2.5 right-2.5 bg-black/75 hover:bg-black text-white backdrop-blur-xs px-2 py-1 rounded-full text-[9px] font-black tracking-wider flex items-center gap-1 shadow-md transition-all uppercase border border-white/10 cursor-pointer"
+            className="absolute top-2.5 right-2.5 bg-gradient-to-r from-[#FF3F6C] to-[#FF527B] text-white px-2.5 py-1 rounded-full text-[9px] font-black tracking-wider flex items-center gap-1 shadow-md hover:shadow-lg transition-all uppercase border border-white/15 cursor-pointer hover:scale-105"
           >
-            <Sparkles className="w-2.5 h-2.5 text-yellow-400 fill-yellow-400 animate-pulse" />
+            <Sparkles className="w-2.5 h-2.5 text-yellow-300 fill-yellow-300 animate-pulse" />
             {product.confidence.confidenceScore}% Match
           </button>
         )}
@@ -361,10 +361,16 @@ export default function HomePage() {
     </motion.div>
   );
 
-  const CarouselSection = ({ title, icon, products }: { title: string, icon: React.ReactNode, products?: Product[] }) => {
+  const CarouselSection = ({ title, icon, products, type = 'recommendation' }: { title: string, icon: React.ReactNode, products?: Product[], type?: 'trending' | 'festival' | 'recommendation' }) => {
     if (!products || products.length === 0) return null;
+
+    const wrapperClass = 
+      type === 'trending' ? 'bg-gradient-to-r from-[#FAF5FF]/70 via-[#FFFDFE]/40 to-white/40 border border-purple-500/5 p-5 rounded-3xl shadow-3xs' :
+      type === 'festival' ? 'bg-gradient-to-r from-[#FFFDF6]/60 via-[#FFFDFD]/30 to-white/30 border border-amber-500/5 p-5 rounded-3xl shadow-3xs' :
+      'bg-white border border-[#EAEAEC]/40 p-5 rounded-3xl shadow-3xs';
+
     return (
-      <div className="space-y-4">
+      <div className={`${wrapperClass} space-y-4 hover:shadow-[0_4px_20px_rgba(40,44,63,0.02)] transition-all duration-350`}>
         <div className="flex items-center justify-between">
           <h3 className="text-[#282C3F] text-sm sm:text-base font-extrabold flex items-center tracking-tight">
             <span className="mr-2 text-pink-500">{icon}</span>
@@ -384,19 +390,17 @@ export default function HomePage() {
   };
 
   return (
-    <div className={`min-h-screen flex flex-col transition-colors duration-500 font-sans ${
-      cultureMode ? 'bg-[#FCFBFA]' : 'bg-[#FFFFFF]'
-    }`}>
+    <div className="min-h-screen flex flex-col transition-all duration-500 font-sans bg-gradient-to-b from-[#FFFDFE] via-[#FCFBFB] to-[#FAF9FB]">
       {/* 1. TOP NAVBAR */}
-      <header className="sticky top-0 z-50 bg-white border-b border-[#EAEAEC] shadow-xs">
+      <header className="sticky top-0 z-50 bg-white border-b border-[#EAEAEC]/55 shadow-3xs">
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6 h-[80px] flex items-center justify-between gap-4">
           {/* Logo */}
           <div className="flex items-center gap-8">
             <div 
               onClick={() => router.push('/home')} 
-              className="font-black text-xl tracking-tighter text-[#282C3F] flex items-center gap-1 cursor-pointer select-none"
+              className="font-black text-xl tracking-tighter text-[#282C3F] flex items-center gap-1 cursor-pointer select-none animate-fade-in"
             >
-              <div className="w-8 h-8 bg-gradient-to-tr from-[#FF3F6C] to-[#FF527B] rounded-lg flex items-center justify-center shadow-md">
+              <div className="w-8 h-8 bg-gradient-to-tr from-[#FF3F6C] to-[#FF527B] rounded-lg flex items-center justify-center shadow-md hover:scale-105 transition-transform">
                 <span className="text-white text-base font-bold">M</span>
               </div>
               <span className="hidden sm:inline font-bold">myntra</span>
@@ -409,7 +413,7 @@ export default function HomePage() {
               <span className="cursor-pointer hover:border-b-2 hover:border-pink-500 pb-2">Kids</span>
               <span className="cursor-pointer hover:border-b-2 hover:border-pink-500 pb-2">Home & Living</span>
               <span className="cursor-pointer hover:border-b-2 hover:border-pink-500 pb-2 flex items-center text-pink-500">
-                Studio <span className="ml-1 bg-[#FF3F6C] text-white text-[8px] px-1 py-0.2 rounded">NEW</span>
+                Studio <span className="ml-1 bg-[#FF3F6C] text-white text-[8px] px-1 py-0.2 rounded animate-pulse">NEW</span>
               </span>
             </nav>
           </div>
@@ -430,7 +434,7 @@ export default function HomePage() {
           <div className="flex items-center gap-4 sm:gap-6">
             
             {/* NEW ELEMENT: CULTURE MODE TOGGLE */}
-            <div className="flex items-center gap-2 bg-[#FAFBFC] border border-[#EAEAEC] px-3 py-1.5 rounded-full shadow-2xs">
+            <div className="flex items-center gap-2 bg-gradient-to-r from-white to-[#FFF5F6] border border-[#FF3F6C]/10 px-3.5 py-1.5 rounded-full shadow-3xs">
               <Sparkles className={`w-3.5 h-3.5 transition-colors ${cultureMode ? 'text-[#FF3F6C] animate-pulse' : 'text-gray-400'}`} />
               <span className="text-[10px] font-black uppercase text-[#282C3F] tracking-wide select-none">
                 Culture
@@ -452,7 +456,7 @@ export default function HomePage() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => router.push('/wrapped')}
-              className="py-1.5 px-3 bg-[#282C3F] text-white text-[10px] font-bold rounded-lg tracking-wide hover:shadow-md transition-all cursor-pointer flex items-center gap-1"
+              className="py-2 px-4 bg-gradient-to-r from-[#FF3F8E] to-[#FF6AA2] text-white text-[10px] font-black rounded-full tracking-wider hover:shadow-md transition-all cursor-pointer flex items-center gap-1.5 uppercase shadow-3xs"
             >
               🎉 My Fashion Year
             </motion.button>
@@ -462,7 +466,7 @@ export default function HomePage() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => router.push('/region-setup')}
-              className="py-1.5 px-3 bg-white border border-[#EAEAEC] text-[#282C3F] text-[10px] font-bold rounded-lg tracking-wide hover:shadow-md transition-all cursor-pointer flex items-center gap-1"
+              className="py-2 px-4 bg-white border border-[#FF3F6C]/20 text-[#FF3F6C] hover:bg-[#FFF5F6] text-[10px] font-black rounded-full tracking-wider hover:shadow-md transition-all cursor-pointer flex items-center gap-1.5 uppercase shadow-3xs"
             >
               ⚙️ Edit Profile
             </motion.button>
@@ -519,52 +523,54 @@ export default function HomePage() {
               >
                 {/* HERO BANNER CARD */}
                 {hero && (
-                  <motion.div
-                    initial={{ y: 20, opacity: 0 }}
-                    animate={{ y: 0, opacity: 1 }}
-                    style={{ background: hero.themeGradient || 'linear-gradient(to right, #FFF5F6, #FFFDFB)' }}
-                    className="relative rounded-2xl overflow-hidden border border-white/10 shadow-md p-6 sm:p-10 flex flex-col sm:flex-row justify-between items-center gap-6 text-white"
-                  >
-                    {/* Decorative Background Elements */}
-                    <div className="absolute right-[-10%] top-[-20%] w-[350px] h-[350px] rounded-full bg-white/5 blur-[100px] pointer-events-none" />
-                    <div className="absolute left-[-10%] bottom-[-20%] w-[350px] h-[350px] rounded-full bg-white/5 blur-[100px] pointer-events-none" />
- 
-                    <div className="space-y-4 text-center sm:text-left z-10 flex-1">
-                      <div className="flex items-center justify-center sm:justify-start gap-3 flex-wrap">
-                        <span className="px-3.5 py-1 bg-white/20 text-white text-[10px] font-extrabold rounded-full uppercase tracking-wider backdrop-blur-xs">
-                          Festive Spotlight
-                        </span>
-                        <span className="px-3.5 py-1 bg-yellow-400 text-gray-900 text-[10px] font-extrabold rounded-full uppercase tracking-wider flex items-center gap-1 shadow-xs">
-                          ⏰ {hero.countdownText || (hero.daysLeft === 0 ? "Celebrate Today" : `${hero.daysLeft} Days Left`)}
-                        </span>
+                  <div className="bg-gradient-to-r from-[#FFF5F6] via-[#FFFBFB] to-white/40 border border-pink-500/5 p-4 rounded-3xl shadow-3xs">
+                    <motion.div
+                      initial={{ y: 20, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      style={{ background: hero.themeGradient || 'linear-gradient(to right, #FFF5F6, #FFFDFB)' }}
+                      className="relative rounded-2xl overflow-hidden border border-white/10 shadow-md p-6 sm:p-10 flex flex-col sm:flex-row justify-between items-center gap-6 text-white"
+                    >
+                      {/* Decorative Background Elements */}
+                      <div className="absolute right-[-10%] top-[-20%] w-[350px] h-[350px] rounded-full bg-white/5 blur-[100px] pointer-events-none" />
+                      <div className="absolute left-[-10%] bottom-[-20%] w-[350px] h-[350px] rounded-full bg-white/5 blur-[100px] pointer-events-none" />
+   
+                      <div className="space-y-4 text-center sm:text-left z-10 flex-1">
+                        <div className="flex items-center justify-center sm:justify-start gap-3 flex-wrap">
+                          <span className="px-3.5 py-1 bg-white/20 text-white text-[10px] font-extrabold rounded-full uppercase tracking-wider backdrop-blur-xs">
+                            Festive Spotlight
+                          </span>
+                          <span className="px-3.5 py-1 bg-yellow-400 text-gray-900 text-[10px] font-extrabold rounded-full uppercase tracking-wider flex items-center gap-1 shadow-xs">
+                            ⏰ {hero.countdownText || (hero.daysLeft === 0 ? "Celebrate Today" : `${hero.daysLeft} Days Left`)}
+                          </span>
+                        </div>
+                        <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-none drop-shadow-xs">
+                          {hero.greeting || `Happy ${hero.festival}!`}
+                        </h1>
+                        <p className="text-white/90 text-sm max-w-[450px] font-medium drop-shadow-xs">
+                          {hero.offerText || `Celebrate in authentic style with matching family aesthetics, handcrafted fabrics, and festive coordinates for ${activeState}.`}
+                        </p>
+                        <button 
+                          onClick={() => {
+                            // Scroll to Trending Festival section
+                            const el = document.getElementById('fest-trending');
+                            el?.scrollIntoView({ behavior: 'smooth' });
+                          }}
+                          className="px-6 py-3 bg-white text-gray-900 hover:bg-gray-100 text-xs font-extrabold rounded-lg hover:shadow-lg transition-all cursor-pointer inline-flex items-center uppercase tracking-wider"
+                        >
+                          {hero.cta} <ChevronRight className="w-4 h-4 ml-1" />
+                        </button>
                       </div>
-                      <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-none drop-shadow-xs">
-                        {hero.greeting || `Happy ${hero.festival}!`}
-                      </h1>
-                      <p className="text-white/90 text-sm max-w-[450px] font-medium drop-shadow-xs">
-                        {hero.offerText || `Celebrate in authentic style with matching family aesthetics, handcrafted fabrics, and festive coordinates for ${activeState}.`}
-                      </p>
-                      <button 
-                        onClick={() => {
-                          // Scroll to Trending Festival section
-                          const el = document.getElementById('fest-trending');
-                          el?.scrollIntoView({ behavior: 'smooth' });
-                        }}
-                        className="px-6 py-3 bg-white text-gray-900 hover:bg-gray-100 text-xs font-extrabold rounded-lg hover:shadow-lg transition-all cursor-pointer inline-flex items-center uppercase tracking-wider"
-                      >
-                        {hero.cta} <ChevronRight className="w-4 h-4 ml-1" />
-                      </button>
-                    </div>
- 
-                    <div className="relative flex justify-center items-center w-full sm:w-[280px] aspect-[4/3] bg-white/10 backdrop-blur-xs rounded-2xl border border-white/20 shadow-md overflow-hidden p-2 z-10">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img 
-                        src={hero.artwork || (feed?.trendingFestival && feed.trendingFestival.length > 0 ? feed.trendingFestival[0].image : '')} 
-                        alt="Festive Spot" 
-                        className="w-full h-full object-cover object-top rounded-xl"
-                      />
-                    </div>
-                  </motion.div>
+   
+                      <div className="relative flex justify-center items-center w-full sm:w-[280px] aspect-[4/3] bg-white/10 backdrop-blur-xs rounded-2xl border border-white/20 shadow-md overflow-hidden p-2 z-10">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img 
+                          src={hero.artwork || (feed?.trendingFestival && feed.trendingFestival.length > 0 ? feed.trendingFestival[0].image : '')} 
+                          alt="Festive Spot" 
+                          className="w-full h-full object-cover object-top rounded-xl"
+                        />
+                      </div>
+                    </motion.div>
+                  </div>
                 )}
 
                 {/* CAROUSEL SECTIONS */}
@@ -573,6 +579,7 @@ export default function HomePage() {
                     title={`Trending For ${activeFestival}`} 
                     icon={<Flame className="w-5 h-5" />} 
                     products={feed?.trendingFestival} 
+                    type="trending"
                   />
                 </div>
 
@@ -580,28 +587,32 @@ export default function HomePage() {
                   title={`Popular In ${activeState}`} 
                   icon={<Compass className="w-5 h-5" />} 
                   products={feed?.popularState} 
+                  type="festival"
                 />
 
                 <CarouselSection 
                   title="Regional Heritage Brands" 
                   icon={<Award className="w-5 h-5" />} 
                   products={feed?.regionalBrands} 
+                  type="festival"
                 />
 
                 <CarouselSection 
                   title={`${activeFestival} Celebration Offers`} 
                   icon={<Sparkles className="w-5 h-5" />} 
                   products={feed?.festivalOffers} 
+                  type="festival"
                 />
 
                 <CarouselSection 
                   title="Family Coordinating Ensembles" 
                   icon={<Compass className="w-5 h-5" />} 
                   products={feed?.familyMatching} 
+                  type="recommendation"
                 />
 
                 {/* AI CURATED RECOMMENDATIONS GRID */}
-                <div className="space-y-6 pt-6 border-t border-gray-150">
+                <div className="bg-white border border-[#EAEAEC]/50 p-6 rounded-3xl shadow-3xs space-y-6 pt-6">
                   <div className="flex items-center gap-2">
                     <Sparkles className="w-5 h-5 text-[#FF3F6C]" />
                     <h3 className="text-[#282C3F] text-base font-extrabold tracking-tight uppercase">
@@ -693,22 +704,25 @@ export default function HomePage() {
                   title="Trending Apparel" 
                   icon={<Flame className="w-5 h-5" />} 
                   products={feed?.trending} 
+                  type="trending"
                 />
 
                 <CarouselSection 
                   title="Recommended Styles For You" 
                   icon={<Sparkles className="w-5 h-5" />} 
                   products={feed?.recommended} 
+                  type="recommendation"
                 />
 
                 <CarouselSection 
                   title="Top Selected Brands" 
                   icon={<Award className="w-5 h-5" />} 
                   products={feed?.topBrands} 
+                  type="recommendation"
                 />
 
                 {/* AI CURATED RECOMMENDATIONS GRID */}
-                <div className="space-y-6 pt-6 border-t border-gray-150">
+                <div className="bg-white border border-[#EAEAEC]/50 p-6 rounded-3xl shadow-3xs space-y-6 pt-6">
                   <div className="flex items-center gap-2">
                     <Sparkles className="w-5 h-5 text-[#FF3F6C]" />
                     <h3 className="text-[#282C3F] text-base font-extrabold tracking-tight uppercase">

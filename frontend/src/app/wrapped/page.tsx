@@ -299,51 +299,82 @@ export default function MyntraWrapped() {
         </p>
       </div>
     ),
-    // Slide 3: Favorite Brand (Wardrobe Companion)
+    // Slide 3: Your Signature Brand (Award Layout)
     (
-      <div className="relative flex flex-col items-center justify-between h-full p-8 text-center text-white bg-gradient-to-b from-[#4C1A57] via-[#9C4DFF] to-[#FF3F8E] overflow-hidden select-none">
+      <div className="relative flex flex-col items-center justify-between h-full p-8 text-center text-white bg-gradient-to-b from-[#25102a] via-[#481f4f] to-[#120713] overflow-hidden select-none">
         {/* Background glow overlay */}
-        <div className="absolute top-[10%] left-[-20%] w-[350px] h-[350px] rounded-full bg-pink-500/10 blur-[85px] pointer-events-none" />
+        <div className="absolute top-[10%] left-[-20%] w-[350px] h-[350px] rounded-full bg-[#9C4DFF]/15 blur-[85px] pointer-events-none" />
+        <div className="absolute bottom-[10%] right-[-20%] w-[300px] h-[300px] rounded-full bg-[#FF3F8E]/10 blur-[85px] pointer-events-none" />
         
-        {/* Floating Icons */}
-        <div className="absolute top-[20%] right-[10%] text-white/30 text-2xl animate-pulse">👕</div>
-        <div className="absolute bottom-[30%] left-[10%] text-white/25 text-3xl animate-bounce">🔥</div>
+        {/* Floating elements */}
+        <div className="absolute top-[20%] right-[10%] text-white/30 text-2xl animate-pulse">✨</div>
+        <div className="absolute bottom-[30%] left-[10%] text-white/25 text-xl animate-bounce">✨</div>
 
         {/* Top */}
         <div className="pt-16 space-y-1 z-10">
-          <span className="px-3.5 py-1 bg-white/15 border border-white/20 text-white text-[10px] font-black uppercase tracking-widest rounded-full backdrop-blur-xs shadow-2xs">
-            Your Wardrobe Companion
+          <span className="px-3.5 py-1 bg-amber-400/20 border border-amber-400/30 text-amber-300 text-[10px] font-black uppercase tracking-widest rounded-full backdrop-blur-xs shadow-2xs">
+            Fashion Award 2025
           </span>
         </div>
 
         {/* Middle */}
         <div className="my-auto space-y-6 z-10 w-full relative">
-          <span className="text-[80px] leading-none select-none block animate-bounce">🔥</span>
-          
-          <div className="space-y-1 select-none">
-            <h2 className="text-[#FF6AA2] text-[10px] font-black uppercase tracking-wider">Favorite Brand</h2>
-          </div>
-
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            transition={{ type: 'spring', duration: 0.8 }}
-            className="px-8 py-6 bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl shadow-xl shadow-pink-500/5 mx-auto max-w-[280px]"
+            transition={{ type: 'spring', duration: 1.0 }}
+            className="relative p-6 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-[0_20px_50px_rgba(156,77,255,0.15)] mx-auto max-w-[280px] space-y-5"
           >
-            <h1 className="text-3xl sm:text-4xl font-black tracking-tight uppercase leading-none text-white">
-              {data.favoriteBrand}
-            </h1>
+            {/* Subtle glow circle in center */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-[#9C4DFF]/20 to-[#FF3F8E]/20 rounded-2xl opacity-50 blur-md -z-10" />
+
+            {/* Brand Emblem */}
+            <div className="w-16 h-16 rounded-full bg-gradient-to-tr from-amber-400 via-[#FF3F8E] to-[#9C4DFF] p-0.5 mx-auto flex items-center justify-center shadow-lg">
+              <div className="w-full h-full bg-[#120713] rounded-full flex items-center justify-center text-white text-xl font-black">
+                {data.favoriteBrand.slice(0, 1).toUpperCase()}
+              </div>
+            </div>
+
+            {/* Brand Name */}
+            <div className="space-y-1">
+              <h2 className="text-[#FF6AA2] text-[10px] font-black uppercase tracking-wider">Your Signature Brand</h2>
+              <h1 className="text-3xl font-black uppercase tracking-tight leading-none text-white drop-shadow-md">
+                {data.favoriteBrand}
+              </h1>
+            </div>
+
+            {/* Statistics details */}
+            <div className="border-t border-white/10 pt-4 text-left space-y-2 text-[10px] font-bold text-gray-300">
+              <div className="flex justify-between">
+                <span>Purchases:</span>
+                <span className="text-white font-extrabold">{data.totalOrders - 12} Items</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Most Bought Category:</span>
+                <span className="text-white font-extrabold">Kurta & Shirts</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Style Match:</span>
+                <span className="text-emerald-400 font-extrabold">98% Fit</span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span>Loyalty Status:</span>
+                <span className="px-2 py-0.5 bg-amber-400 text-gray-900 text-[8px] font-black uppercase rounded shadow-3xs">
+                  Elite Patron
+                </span>
+              </div>
+            </div>
           </motion.div>
           
           {/* Watermark text */}
-          <div className="text-[44px] font-black text-white/5 uppercase select-none absolute left-0 right-0 tracking-widest -bottom-8 pointer-events-none">
+          <div className="text-[52px] font-black text-white/5 uppercase select-none absolute left-0 right-0 tracking-widest -bottom-8 pointer-events-none">
             {data.favoriteBrand}
           </div>
         </div>
 
         {/* Bottom */}
-        <p className="text-purple-100/80 text-xs max-w-[250px] leading-relaxed pb-8 z-10 font-semibold">
-          From casual hangouts to statement profiles, {data.favoriteBrand} was your ultimate fallback.
+        <p className="text-purple-200/90 text-xs max-w-[250px] leading-relaxed pb-8 z-10 font-semibold">
+          {data.favoriteBrand} was your ultimate fashion ally, defining your signature look in 2025.
         </p>
       </div>
     ),
