@@ -188,197 +188,334 @@ export default function MyntraWrapped() {
 
   // Slide Render contents
   const slides = [
-    // Slide 1: Intro
+    // Slide 1: Intro (Welcome)
     (
-      <div className="flex flex-col items-center justify-center h-full text-center p-6 space-y-6 text-white bg-gradient-to-b from-[#282C3F] via-[#3C1D38] to-[#121420]">
-        <motion.div
-          initial={{ scale: 0.8, rotate: -10 }}
-          animate={{ scale: 1, rotate: 0 }}
-          transition={{ type: 'spring', duration: 0.8 }}
-          className="w-24 h-24 bg-gradient-to-tr from-[#FF3F6C] to-[#FF527B] rounded-3xl flex items-center justify-center shadow-2xl shadow-pink-500/25 mb-4"
-        >
-          <Sparkles className="w-12 h-12 text-white" />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="space-y-2"
-        >
-          <h2 className="text-[#FF3F6C] font-extrabold text-sm uppercase tracking-widest">Myntra Wrapped</h2>
-          <h1 className="text-4xl sm:text-5xl font-black tracking-tight leading-none">
-            YOUR FASHION<br/>YEAR
-          </h1>
-          <p className="text-gray-400 text-xs mt-4 max-w-[280px] mx-auto leading-relaxed">
-            Let's take a look at the trends, brands, and cultural style identities you lived in 2025.
-          </p>
-        </motion.div>
-      </div>
-    ),
-    // Slide 2: Orders & Spend
-    (
-      <div className="flex flex-col items-center justify-center h-full text-center p-6 space-y-8 text-white bg-[#FF3F6C]">
-        <motion.div
-          initial={{ scale: 0.5, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mb-2"
-        >
-          <ShoppingBag className="w-8 h-8 text-white" />
-        </motion.div>
+      <div className="relative flex flex-col items-center justify-between h-full p-8 text-center text-white bg-gradient-to-tr from-[#FF3F8E] via-[#FF6AA2] to-[#9C4DFF] overflow-hidden select-none">
+        {/* Animated Background Blobs */}
+        <div className="absolute top-[-20%] left-[-20%] w-[350px] h-[350px] rounded-full bg-white/10 blur-[80px] pointer-events-none animate-pulse" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[300px] h-[300px] rounded-full bg-purple-500/20 blur-[80px] pointer-events-none" />
         
-        <div className="space-y-4">
-          <p className="text-pink-100 text-xs font-black uppercase tracking-widest">Shopping Activity</p>
-          <div className="space-y-1">
-            <motion.h2 
-              initial={{ x: -20, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ delay: 0.2 }}
-              className="text-5xl sm:text-6xl font-black tracking-tight"
-            >
-              {data.totalOrders}
-            </motion.h2>
-            <p className="text-pink-100 text-sm font-semibold">Orders Completed</p>
-          </div>
-          <div className="h-0.5 w-12 bg-white/20 mx-auto my-4" />
-          <div className="space-y-1">
-            <motion.h2 
-              initial={{ x: 20, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ delay: 0.4 }}
-              className="text-4xl sm:text-5xl font-black text-white"
-            >
-              ₹{data.totalSpent.toLocaleString('en-IN')}
-            </motion.h2>
-            <p className="text-pink-100 text-xs font-semibold">Total Invested in Style</p>
-          </div>
+        {/* Floating Fashion Elements */}
+        <div className="absolute top-[15%] left-[10%] text-white/30 text-lg animate-bounce select-none">✨</div>
+        <div className="absolute top-[25%] right-[15%] text-white/25 text-2xl animate-pulse select-none">🛍️</div>
+        <div className="absolute bottom-[25%] left-[15%] text-white/25 text-xl animate-pulse select-none">🔥</div>
+        <div className="absolute bottom-[15%] right-[10%] text-white/30 text-lg animate-bounce select-none">✨</div>
+
+        {/* Top */}
+        <div className="pt-16 space-y-1 z-10">
+          <span className="px-3.5 py-1 bg-white/20 text-white text-[10px] font-black uppercase tracking-widest rounded-full backdrop-blur-xs shadow-2xs">
+            Myntra Wrapped 2025
+          </span>
         </div>
+
+        {/* Middle */}
+        <div className="my-auto flex flex-col items-center space-y-6 z-10">
+          <motion.div
+            initial={{ scale: 0.8, rotate: -10 }}
+            animate={{ scale: 1, rotate: 0 }}
+            transition={{ type: 'spring', duration: 1.0, bounce: 0.4 }}
+            className="w-24 h-24 bg-white/15 backdrop-blur-xs border border-white/25 rounded-3xl flex items-center justify-center shadow-xl shadow-pink-500/10 mb-2 hover:scale-105 transition-transform"
+          >
+            <Sparkles className="w-12 h-12 text-white drop-shadow-md" />
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="space-y-3"
+          >
+            <h1 className="text-4xl sm:text-5xl font-black tracking-tight leading-none drop-shadow-md uppercase">
+              YOUR FASHION<br/>YEAR
+            </h1>
+          </motion.div>
+        </div>
+
+        {/* Bottom */}
+        <motion.p 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className="text-white/80 text-xs max-w-[280px] leading-relaxed pb-8 z-10 font-semibold"
+        >
+          Let's take a look at the trends, brands, and cultural style identities you lived in 2025.
+        </motion.p>
       </div>
     ),
-    // Slide 3: Favorite Brand
+    // Slide 2: Orders & Spend (Statistics)
     (
-      <div className="flex flex-col items-center justify-center h-full text-center p-6 space-y-6 text-white bg-gradient-to-b from-[#282C3F] to-[#1a1c29]">
-        <span className="text-6xl">🔥</span>
-        <div className="space-y-2">
-          <p className="text-gray-400 text-xs font-black uppercase tracking-widest">Your Wardrobe Companion</p>
-          <h2 className="text-[#FF3F6C] text-sm font-bold uppercase tracking-wider">Favorite Brand</h2>
+      <div className="relative flex flex-col items-center justify-between h-full p-8 text-center text-white bg-gradient-to-br from-[#FF6AA2] via-[#FF3F8E] to-[#FF527B] overflow-hidden select-none">
+        {/* Animated Background Blobs */}
+        <div className="absolute top-[10%] right-[-20%] w-[320px] h-[320px] rounded-full bg-white/10 blur-[75px] pointer-events-none" />
+        <div className="absolute bottom-[20%] left-[-20%] w-[320px] h-[320px] rounded-full bg-purple-500/10 blur-[75px] pointer-events-none" />
+
+        {/* Floating Icons */}
+        <div className="absolute top-[20%] left-[12%] text-white/30 text-xl animate-pulse">👚</div>
+        <div className="absolute bottom-[35%] right-[12%] text-white/25 text-2xl animate-bounce">🛍️</div>
+
+        {/* Top */}
+        <div className="pt-16 space-y-1 z-10">
+          <span className="px-3.5 py-1 bg-white/10 border border-white/20 text-white text-[10px] font-black uppercase tracking-widest rounded-full backdrop-blur-xs shadow-2xs">
+            Shopping Activity
+          </span>
         </div>
-        <motion.div
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 0.2 }}
-          className="px-8 py-5 bg-[#FF3F6C] rounded-2xl shadow-xl shadow-pink-500/10 border border-pink-400/20"
-        >
-          <h1 className="text-3xl sm:text-4xl font-black tracking-tight uppercase leading-none">
+
+        {/* Middle */}
+        <div className="my-auto space-y-8 z-10 w-full">
+          <motion.div
+            initial={{ scale: 0.3, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ type: 'spring', duration: 1.0 }}
+            className="flex flex-col items-center"
+          >
+            <span className="text-[96px] sm:text-[110px] font-black tracking-tighter leading-none text-white drop-shadow-md select-none">
+              {data.totalOrders}
+            </span>
+            <span className="text-[11px] font-black uppercase tracking-widest text-pink-100/90 -mt-2">
+              Orders Completed
+            </span>
+          </motion.div>
+
+          <div className="h-px w-24 bg-gradient-to-r from-transparent via-white/40 to-transparent mx-auto" />
+
+          <motion.div
+            initial={{ scale: 0.3, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ type: 'spring', duration: 1.0, delay: 0.2 }}
+            className="flex flex-col items-center"
+          >
+            <span className="text-[40px] sm:text-[48px] font-black tracking-tight text-white drop-shadow-md select-none">
+              ₹{data.totalSpent.toLocaleString('en-IN')}
+            </span>
+            <span className="text-[11px] font-black uppercase tracking-widest text-pink-100/90">
+              Total Invested in Style
+            </span>
+          </motion.div>
+        </div>
+
+        {/* Bottom */}
+        <p className="text-pink-100/80 text-xs max-w-[260px] leading-relaxed pb-8 z-10 font-semibold">
+          You made every package count, defining your aesthetic with every purchase.
+        </p>
+      </div>
+    ),
+    // Slide 3: Favorite Brand (Wardrobe Companion)
+    (
+      <div className="relative flex flex-col items-center justify-between h-full p-8 text-center text-white bg-gradient-to-b from-[#4C1A57] via-[#9C4DFF] to-[#FF3F8E] overflow-hidden select-none">
+        {/* Background glow overlay */}
+        <div className="absolute top-[10%] left-[-20%] w-[350px] h-[350px] rounded-full bg-pink-500/10 blur-[85px] pointer-events-none" />
+        
+        {/* Floating Icons */}
+        <div className="absolute top-[20%] right-[10%] text-white/30 text-2xl animate-pulse">👕</div>
+        <div className="absolute bottom-[30%] left-[10%] text-white/25 text-3xl animate-bounce">🔥</div>
+
+        {/* Top */}
+        <div className="pt-16 space-y-1 z-10">
+          <span className="px-3.5 py-1 bg-white/15 border border-white/20 text-white text-[10px] font-black uppercase tracking-widest rounded-full backdrop-blur-xs shadow-2xs">
+            Your Wardrobe Companion
+          </span>
+        </div>
+
+        {/* Middle */}
+        <div className="my-auto space-y-6 z-10 w-full relative">
+          <span className="text-[80px] leading-none select-none block animate-bounce">🔥</span>
+          
+          <div className="space-y-1 select-none">
+            <h2 className="text-[#FF6AA2] text-[10px] font-black uppercase tracking-wider">Favorite Brand</h2>
+          </div>
+
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ type: 'spring', duration: 0.8 }}
+            className="px-8 py-6 bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl shadow-xl shadow-pink-500/5 mx-auto max-w-[280px]"
+          >
+            <h1 className="text-3xl sm:text-4xl font-black tracking-tight uppercase leading-none text-white">
+              {data.favoriteBrand}
+            </h1>
+          </motion.div>
+          
+          {/* Watermark text */}
+          <div className="text-[44px] font-black text-white/5 uppercase select-none absolute left-0 right-0 tracking-widest -bottom-8 pointer-events-none">
             {data.favoriteBrand}
-          </h1>
-        </motion.div>
-        <p className="text-gray-400 text-xs max-w-[240px] leading-relaxed">
+          </div>
+        </div>
+
+        {/* Bottom */}
+        <p className="text-purple-100/80 text-xs max-w-[250px] leading-relaxed pb-8 z-10 font-semibold">
           From casual hangouts to statement profiles, {data.favoriteBrand} was your ultimate fallback.
         </p>
       </div>
     ),
-    // Slide 4: Favorite Festival
+    // Slide 4: Favorite Festival (Culture & Occasions)
     (
-      <div className="flex flex-col items-center justify-center h-full text-center p-6 space-y-6 text-[#282C3F] bg-[#FFFBF0] border border-amber-100">
-        <span className="text-6xl">🌸</span>
-        <div className="space-y-2">
-          <p className="text-amber-600/80 text-xs font-black uppercase tracking-widest">Culture & Occasions</p>
-          <h2 className="text-amber-800 text-sm font-bold uppercase tracking-wider">Top Celebrated Festival</h2>
+      <div className="relative flex flex-col items-center justify-between h-full p-8 text-center text-white bg-gradient-to-tr from-[#FF9E00] via-[#FF3F8E] to-[#9C4DFF] overflow-hidden select-none">
+        {/* Background glow */}
+        <div className="absolute top-[10%] right-[-20%] w-[320px] h-[320px] rounded-full bg-amber-400/20 blur-[75px] pointer-events-none" />
+
+        {/* Floating Icons */}
+        <div className="absolute top-[20%] left-[10%] text-white/20 text-3xl animate-bounce">🏵️</div>
+        <div className="absolute bottom-[30%] right-[10%] text-white/30 text-2xl animate-pulse">🌸</div>
+
+        {/* Top */}
+        <div className="pt-16 space-y-1 z-10">
+          <span className="px-3.5 py-1 bg-white/15 border border-white/20 text-white text-[10px] font-black uppercase tracking-widest rounded-full backdrop-blur-xs shadow-2xs">
+            Culture & Occasions
+          </span>
         </div>
-        <motion.div
-          initial={{ rotate: -5, scale: 0.9 }}
-          animate={{ rotate: 1, scale: 1 }}
-          transition={{ type: 'spring', stiffness: 100 }}
-          className="px-8 py-5 bg-amber-400 rounded-2xl border-4 border-[#282C3F] shadow-[4px_4px_0px_#282C3F]"
-        >
-          <h1 className="text-3xl sm:text-4xl font-black uppercase tracking-tight leading-none text-[#282C3F]">
-            {data.favoriteFestival}
-          </h1>
-        </motion.div>
-        <p className="text-amber-700/80 text-xs max-w-[260px] leading-relaxed">
+
+        {/* Middle */}
+        <div className="my-auto space-y-6 z-10 w-full relative">
+          <span className="text-6xl animate-bounce block select-none">🌸</span>
+          <div className="space-y-1 select-none">
+            <h2 className="text-amber-200 text-[10px] font-black uppercase tracking-wider">Top Celebrated Festival</h2>
+          </div>
+          
+          <motion.div
+            initial={{ rotate: -5, scale: 0.9 }}
+            animate={{ rotate: 1, scale: 1 }}
+            transition={{ type: 'spring', stiffness: 120, damping: 15 }}
+            className="px-8 py-5 bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl shadow-xl shadow-amber-500/10 mx-auto max-w-[280px]"
+          >
+            <h1 className="text-3xl sm:text-4xl font-black uppercase tracking-tight leading-none text-white">
+              {data.favoriteFestival}
+            </h1>
+          </motion.div>
+        </div>
+
+        {/* Bottom */}
+        <p className="text-amber-100/90 text-xs max-w-[260px] leading-relaxed pb-8 z-10 font-semibold">
           You lit up the room in custom ethnic colors. Traditional wear clicked best during {data.favoriteFestival}.
         </p>
       </div>
     ),
-    // Slide 5: Top Color
+    // Slide 5: Top Color (Visual Aesthetics)
     (
-      <div className="flex flex-col items-center justify-center h-full text-center p-6 space-y-6 text-white bg-gradient-to-b from-[#1E202B] via-[#2F3446] to-[#12141E]">
-        <div className="relative">
-          {/* Color Wheel circle */}
-          <div className="w-24 h-24 rounded-full border-4 border-white/20 shadow-2xl flex items-center justify-center bg-black" />
-          <motion.div 
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            className="absolute top-1 right-1 w-6 h-6 bg-[#FF3F6C] rounded-full border-2 border-white"
-          />
-        </div>
-        
-        <div className="space-y-2">
-          <p className="text-gray-400 text-xs font-black uppercase tracking-widest">Visual Aesthetics</p>
-          <h2 className="text-gray-300 text-sm font-bold uppercase tracking-wider">Dominant Color</h2>
+      <div className="relative flex flex-col items-center justify-between h-full p-8 text-center text-white bg-gradient-to-br from-[#1F202B] via-[#4C1A57] to-[#12141E] overflow-hidden select-none">
+        {/* Background glow */}
+        <div className="absolute top-[20%] left-[-25%] w-[350px] h-[350px] rounded-full bg-pink-500/10 blur-[90px] pointer-events-none" />
+
+        {/* Floating Icons */}
+        <div className="absolute top-[18%] right-[12%] text-white/20 text-2xl animate-pulse">🎨</div>
+        <div className="absolute bottom-[32%] left-[12%] text-white/30 text-xl animate-bounce">✨</div>
+
+        {/* Top */}
+        <div className="pt-16 space-y-1 z-10">
+          <span className="px-3.5 py-1 bg-white/15 border border-white/20 text-white text-[10px] font-black uppercase tracking-widest rounded-full backdrop-blur-xs shadow-2xs">
+            Visual Aesthetics
+          </span>
         </div>
 
-        <motion.div
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          className="flex items-center gap-3 bg-white/5 border border-white/10 px-6 py-3 rounded-full"
-        >
-          <div className={`w-5 h-5 rounded-full border border-white/30 ${
-            data.topColor.toLowerCase() === 'black' ? 'bg-black' :
-            data.topColor.toLowerCase() === 'pink' ? 'bg-[#FF3F6C]' :
-            data.topColor.toLowerCase() === 'yellow' ? 'bg-[#FFB400]' : 'bg-[#03A685]'
-          }`} />
-          <span className="text-lg font-black uppercase tracking-wide">{data.topColor}</span>
-        </motion.div>
+        {/* Middle */}
+        <div className="my-auto space-y-8 z-10 w-full flex flex-col items-center">
+          <div className="relative select-none">
+            {/* Color Wheel Outer Ring */}
+            <div className="w-24 h-24 rounded-full border-4 border-white/10 shadow-2xl flex items-center justify-center bg-black/40 backdrop-blur-md relative overflow-hidden">
+              <div className={`w-16 h-16 rounded-full border-2 border-white/30 shadow-inner ${
+                data.topColor.toLowerCase() === 'black' ? 'bg-black' :
+                data.topColor.toLowerCase() === 'pink' ? 'bg-[#FF3F6C]' :
+                data.topColor.toLowerCase() === 'yellow' ? 'bg-[#FFB400]' : 'bg-[#03A685]'
+              }`} />
+            </div>
+            <motion.div 
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ delay: 0.4, type: 'spring' }}
+              className="absolute top-0 right-0 w-6 h-6 bg-[#FF3F6C] rounded-full border-2 border-white flex items-center justify-center text-[9px] font-black shadow-lg"
+            >
+              ★
+            </motion.div>
+          </div>
+          
+          <div className="space-y-1 select-none">
+            <h2 className="text-gray-400 text-[10px] font-black uppercase tracking-wider">Dominant Color</h2>
+          </div>
 
-        <p className="text-gray-400 text-xs max-w-[240px] leading-relaxed">
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="flex items-center gap-3 bg-white/10 backdrop-blur-md border border-white/15 px-6 py-3 rounded-full shadow-lg"
+          >
+            <div className={`w-4 h-4 rounded-full border border-white/30 ${
+              data.topColor.toLowerCase() === 'black' ? 'bg-black' :
+              data.topColor.toLowerCase() === 'pink' ? 'bg-[#FF3F6C]' :
+              data.topColor.toLowerCase() === 'yellow' ? 'bg-[#FFB400]' : 'bg-[#03A685]'
+            }`} />
+            <span className="text-md font-black uppercase tracking-wide text-white">{data.topColor}</span>
+          </motion.div>
+        </div>
+
+        {/* Bottom */}
+        <p className="text-gray-400 text-xs max-w-[240px] leading-relaxed pb-8 z-10 font-semibold">
           It represents power, minimalism, and timeless coordination. You couldn't resist shopping for {data.topColor} items.
         </p>
       </div>
     ),
-    // Slide 6: Style Analysis (Pie Chart)
+    // Slide 6: Style Analysis (Style Archetype)
     (
-      <div className="flex flex-col items-center justify-center h-full text-center p-6 space-y-6 text-[#282C3F] bg-white">
-        <div className="space-y-2">
-          <p className="text-gray-400 text-xs font-black uppercase tracking-widest">AI Fashion Identity</p>
-          <h2 className="text-gray-600 text-xs font-semibold uppercase tracking-wider">Style Archetype</h2>
-          <h1 className="text-2xl font-black text-[#FF3F6C] tracking-tight uppercase leading-none">
-            {data.styleAnalysis.archetype}
-          </h1>
+      <div className="relative flex flex-col items-center justify-between h-full p-8 text-center text-white bg-gradient-to-tr from-[#9C4DFF] via-[#FF3F8E] to-[#FF6AA2] overflow-hidden select-none">
+        {/* Background blobs */}
+        <div className="absolute top-[10%] left-[-20%] w-[320px] h-[320px] rounded-full bg-white/10 blur-[80px] pointer-events-none" />
+
+        {/* Floating Icons */}
+        <div className="absolute top-[15%] right-[10%] text-white/20 text-3xl animate-bounce">📐</div>
+        <div className="absolute bottom-[25%] left-[10%] text-white/30 text-2xl animate-pulse">✨</div>
+
+        {/* Top */}
+        <div className="pt-16 space-y-1 z-10">
+          <span className="px-3.5 py-1 bg-white/15 border border-white/20 text-white text-[10px] font-black uppercase tracking-widest rounded-full backdrop-blur-xs shadow-2xs">
+            AI Fashion Identity
+          </span>
         </div>
 
-        {/* Animated Pie Chart */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="relative py-2"
-        >
-          {renderPieChart(data.styleAnalysis.breakdown)}
-        </motion.div>
+        {/* Middle */}
+        <div className="my-auto space-y-5 z-10 w-full flex flex-col items-center">
+          <div className="space-y-1 select-none">
+            <h2 className="text-pink-100 text-[10px] font-black uppercase tracking-wider">Style Archetype</h2>
+            <h1 className="text-2.5xl sm:text-3xl font-black text-white tracking-tight uppercase leading-none drop-shadow-md">
+              {data.styleAnalysis.archetype}
+            </h1>
+          </div>
 
-        {/* Legend */}
-        <div className="flex justify-center gap-4 flex-wrap text-[10px] font-bold">
-          {data.styleAnalysis.breakdown.map((item, idx) => {
-            const colors = ["bg-[#FF3F6C]", "bg-[#03A685]", "bg-[#FFB400]", "bg-[#282C3F]"];
-            return (
-              <div key={item.name} className="flex items-center gap-1.5">
-                <span className={`w-2.5 h-2.5 rounded-full ${colors[idx % colors.length]}`} />
-                <span>{item.name}: {item.value}%</span>
-              </div>
-            );
-          })}
+          {/* Solid card for Pie Chart to ensure high readability */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="p-4 bg-white rounded-2xl shadow-xl border border-pink-100 relative flex items-center justify-center"
+          >
+            {renderPieChart(data.styleAnalysis.breakdown)}
+          </motion.div>
+
+          {/* Legend */}
+          <div className="flex justify-center gap-3 flex-wrap text-[9.5px] font-extrabold max-w-[280px]">
+            {data.styleAnalysis.breakdown.map((item, idx) => {
+              const colors = ["bg-[#FF3F6C]", "bg-[#03A685]", "bg-[#FFB400]", "bg-[#282C3F]"];
+              return (
+                <div key={item.name} className="flex items-center gap-1.5 bg-white/10 backdrop-blur-xs px-2.5 py-1.5 rounded-lg border border-white/5 shadow-3xs">
+                  <span className={`w-2.5 h-2.5 rounded-full ${colors[idx % colors.length]}`} />
+                  <span>{item.name}: {item.value}%</span>
+                </div>
+              );
+            })}
+          </div>
         </div>
+
+        {/* Bottom */}
+        <p className="text-pink-100/90 text-xs max-w-[260px] leading-relaxed pb-8 z-10 font-semibold">
+          Your style analysis shows a powerful blend of archetypes, making your visual aesthetics unique.
+        </p>
       </div>
     ),
-    // Slide 7: Share Card (Instagram story view)
+    // Slide 7: Share Card (Instagram Story View)
     (
-      <div className="flex flex-col items-center justify-between h-full p-8 text-white bg-gradient-to-b from-[#2B1028] via-[#120411] to-[#0A0209] relative overflow-hidden">
+      <div className="flex flex-col items-center justify-between h-full p-8 text-white bg-gradient-to-b from-[#2B1028] via-[#120411] to-[#0A0209] relative overflow-hidden select-none">
         {/* Sparkles accents */}
         <div className="absolute top-10 left-10 text-pink-400/20 text-xl">✨</div>
         <div className="absolute bottom-16 right-10 text-pink-400/20 text-xl">✨</div>
 
-        <div className="text-center w-full pt-4">
+        <div className="text-center w-full pt-4 z-10">
           <p className="text-pink-500 text-xs font-black uppercase tracking-widest">My Fashion Identity</p>
           <h2 className="text-white text-base font-bold mt-1">Ready to share!</h2>
         </div>
@@ -391,7 +528,7 @@ export default function MyntraWrapped() {
           className="w-full max-w-[280px] aspect-[9/16] bg-[#FFFFFF] text-[#282C3F] rounded-2xl p-6 shadow-2xl relative overflow-hidden flex flex-col justify-between"
         >
           {/* Card Border pink gradient accent */}
-          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#FF3F6C] to-[#FF527B]" />
+          <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#FF3F6C] to-[#FF527B]" />
 
           {/* Logo header */}
           <div className="flex justify-between items-center border-b border-gray-100 pb-3">
@@ -451,12 +588,12 @@ export default function MyntraWrapped() {
         </motion.div>
 
         {/* Share buttons */}
-        <div className="space-y-3 w-full pb-4">
+        <div className="space-y-3 w-full pb-4 z-10">
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             onClick={handleShare}
-            className="w-full py-3 bg-[#FF3F6C] hover:bg-pink-600 text-white text-xs font-extrabold rounded-xl transition-colors flex items-center justify-center gap-2 cursor-pointer"
+            className="w-full py-3 bg-gradient-to-r from-[#FF3F6C] to-[#FF527B] text-white text-xs font-extrabold rounded-xl transition-all flex items-center justify-center gap-2 cursor-pointer shadow-lg shadow-pink-500/10 uppercase tracking-wider"
           >
             <Share2 className="w-4 h-4" /> SHARE TO INSTAGRAM STORY
           </motion.button>
@@ -476,7 +613,7 @@ export default function MyntraWrapped() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
-              className="absolute bottom-24 bg-white text-[#282C3F] text-xs font-bold px-4 py-3 rounded-full border border-gray-100 shadow-2xl flex items-center gap-2"
+              className="absolute bottom-24 bg-white text-[#282C3F] text-xs font-bold px-4 py-3 rounded-full border border-gray-100 shadow-2xl flex items-center gap-2 z-55"
             >
               <CheckCircle2 className="w-4.5 h-4.5 text-[#03A685]" /> Shared to Instagram Story!
             </motion.div>
