@@ -33,6 +33,17 @@ interface ConfidenceData {
   tags: string[];
 }
 
+interface SizeRecommendation {
+  recommendedSize: string;
+  confidenceLevel: string;
+  confidenceScore: number;
+  similarShoppers: number;
+  keepRate: number;
+  reasoning: string[];
+  regionalInsight: string;
+  pipelineLevel: string;
+}
+
 export default function ProductPage() {
   const params = useParams();
   const router = useRouter();
@@ -43,7 +54,9 @@ export default function ProductPage() {
 
   const [product, setProduct] = useState<Product | null>(null);
   const [confidence, setConfidence] = useState<ConfidenceData | null>(null);
+  const [sizeRec, setSizeRec] = useState<SizeRecommendation | null>(null);
   const [selectedSize, setSelectedSize] = useState('M');
+  const [isSizeExpanded, setIsSizeExpanded] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [isOrdering, setIsOrdering] = useState(false);
   const [orderSuccess, setOrderSuccess] = useState(false);
@@ -71,6 +84,14 @@ export default function ProductPage() {
           const confData = await confRes.json();
           if (confData.success) {
             setConfidence(confData);
+          }
+
+          // 3. Fetch AI Size Recommendation
+          const sizeRes = await fetch(`http://localhost:5000/api/size-confidence?userId=${user.id}&productId=${productId}`);
+          const sizeData = await sizeRes.json();
+          if (sizeData.success) {
+            setSizeRec(sizeData);
+            setSelectedSize(sizeData.recommendedSize); // Auto-select recommended size!
           }
         }
       } catch (err) {
@@ -117,8 +138,26 @@ export default function ProductPage() {
       ]
     };
 
+    const dummySizeRec: SizeRecommendation = {
+      recommendedSize: "M",
+      confidenceLevel: "High Confidence",
+      confidenceScore: 88,
+      similarShoppers: 42,
+      keepRate: 88,
+      reasoning: [
+        "Based on similar body profiles",
+        "Brand sizing is highly consistent",
+        "Matches your preferred fit"
+      ],
+      regionalInsight: `Popular in ${profile?.state || 'Andhra Pradesh'} during ${mockFestival}`,
+      pipelineLevel: "Same Brand"
+    };
+
+    setProduct(dummyProduct);
     setProduct(dummyProduct);
     setConfidence(dummyConfidence);
+    setSizeRec(dummySizeRec);
+    setSelectedSize("M");
   };
 
   const handleBuyNow = async () => {
@@ -230,6 +269,80 @@ export default function ProductPage() {
               </div>
               <p className="text-[#03A685] text-xs font-bold">inclusive of all taxes</p>
             </div>
+
+            {/* NEW SECTION: AI SIZE RECOMMENDATION CARD */}
+            {sizeRec && (
+              <motion.div
+                initial={{ scale: 0.95, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.4, delay: 0.15 }}
+                className="bg-gradient-to-br from-[#FFF5F6] via-white to-[#FFF9FA] border border-[#FF3F6C]/15 rounded-2xl p-4 shadow-3xs hover:shadow-2xs transition-all duration-300 relative overflow-hidden"
+              >
+                <div 
+                  className="flex justify-between items-center cursor-pointer select-none" 
+                  onClick={() => setIsSizeExpanded(!isSizeExpanded)}
+                >
+                  <div className="space-y-1">
+                    <div className="flex items-center gap-1.5">
+                      <Sparkles className="w-3.5 h-3.5 text-[#FF3F6C] animate-pulse" />
+                      <span className="text-[10px] font-black tracking-widest uppercase text-gray-500">✨ Recommended Size</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-2xl font-black text-[#282C3F]">{sizeRec.recommendedSize}</span>
+                      <span className={`text-[9px] px-2 py-0.5 rounded-full font-black uppercase tracking-wider flex items-center gap-1 ${
+                        sizeRec.confidenceLevel.includes('Very High') ? 'bg-emerald-50 text-emerald-500' :
+                        sizeRec.confidenceLevel.includes('High') ? 'bg-emerald-50/50 text-[#03A685]' :
+                        sizeRec.confidenceLevel.includes('Good') ? 'bg-amber-50 text-amber-500' :
+                        sizeRec.confidenceLevel.includes('New') ? 'bg-blue-50 text-blue-500' :
+                        'bg-gray-150 text-gray-500'
+                      }`}>
+                        <span className={`w-1.5 h-1.5 rounded-full ${
+                          sizeRec.confidenceLevel.includes('Very High') || sizeRec.confidenceLevel.includes('High') ? 'bg-emerald-400' :
+                          sizeRec.confidenceLevel.includes('Good') ? 'bg-amber-400' :
+                          sizeRec.confidenceLevel.includes('New') ? 'bg-blue-400' : 'bg-gray-400'
+                        }`} />
+                        {sizeRec.confidenceLevel}
+                      </span>
+                    </div>
+                  </div>
+                  
+                  <button className="text-[11px] font-black text-[#FF3F6C] hover:underline flex items-center gap-0.5 uppercase tracking-wide">
+                    Why this size {isSizeExpanded ? '▲' : '▶'}
+                  </button>
+                </div>
+
+                <AnimatePresence initial={false}>
+                  {isSizeExpanded && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: 'auto', opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3, ease: 'easeInOut' }}
+                      className="overflow-hidden"
+                    >
+                      <div className="pt-4 mt-3 border-t border-dashed border-[#FF3F6C]/10 space-y-3 text-[11px] font-bold text-gray-600 text-left">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                          {sizeRec.reasoning.map((item, idx) => (
+                            <div key={idx} className="flex items-center gap-1.5 bg-white/70 backdrop-blur-xs border border-[#EAEAEC]/50 p-2.5 rounded-xl shadow-3xs">
+                              <CheckCircle2 className="w-3.5 h-3.5 text-[#03A685] flex-shrink-0" />
+                              <span>{item}</span>
+                            </div>
+                          ))}
+                        </div>
+                        
+                        {/* Regional contextual insight */}
+                        {sizeRec.regionalInsight && (
+                          <div className="flex items-center gap-2 bg-[#FFF5F6] border border-[#FF3F6C]/10 px-3.5 py-2 rounded-xl text-[10px] text-[#FF3F6C]">
+                            <span>📍</span>
+                            <span>{sizeRec.regionalInsight}</span>
+                          </div>
+                        )}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            )}
 
             {/* Size Selectors */}
             <div className="space-y-3">

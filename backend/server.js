@@ -9,7 +9,9 @@ import {
   Festival,
   Product,
   Purchase,
+  ReturnOutcome,
 } from "./db.js";
+import { getRecommendedSizeForUser } from "./services/recommendationService.js";
 
 dotenv.config();
 
@@ -713,6 +715,67 @@ app.get("/api/confidence/:productId", async (req, res) => {
     });
   } catch (err) {
     console.error("Confidence score error:", err);
+    res.status(500).json({ success: false, error: err.message });
+  }
+});
+
+// 4.5. AI SIZE RECOMMENDATION ROUTE
+app.get("/api/size-confidence", async (req, res) => {
+  const { userId, productId } = req.query;
+
+  if (!userId || !productId) {
+    return res.status(400).json({ success: false, message: "Missing userId or productId" });
+  }
+
+  try {
+    const product = await Product.findById(productId);
+    if (!product) {
+      return res.status(404).json({ success: false, message: "Product not found" });
+    }
+
+    let profile = await CultureProfile.findOne({ userId });
+    if (!profile) {
+      profile = {
+        userId,
+        state: "Andhra Pradesh",
+        festivals: ["Ugadi"],
+        language: "English",
+        gender: "Male",
+        heightBand: "170-180 cm",
+        weightBand: "70-80 kg",
+        bodyType: "Average",
+        preferredFit: "Regular"
+      };
+    } else {
+      if (!profile.gender) profile.gender = "Male";
+      if (!profile.heightBand) profile.heightBand = "170-180 cm";
+      if (!profile.weightBand) profile.weightBand = "70-80 kg";
+      if (!profile.bodyType) profile.bodyType = "Average";
+      if (!profile.preferredFit) profile.preferredFit = "Regular";
+    }
+
+    const recommendation = await getRecommendedSizeForUser(profile, product);
+
+    const state = profile.state || "Andhra Pradesh";
+    const festival = product.festivalTags && product.festivalTags.length > 0 ? product.festivalTags[0] : "Festive Season";
+    let regionalInsight = `Frequently purchased this festive season in ${state}`;
+    if (product.festivalTags && product.festivalTags.length > 0) {
+      regionalInsight = `Popular in ${state} during ${festival}`;
+    }
+
+    res.json({
+      success: true,
+      recommendedSize: recommendation.recommendedSize,
+      confidenceLevel: recommendation.confidenceLevel,
+      confidenceScore: recommendation.confidenceScore,
+      similarShoppers: recommendation.similarShoppers,
+      keepRate: recommendation.keepRate,
+      reasoning: recommendation.reasoning,
+      regionalInsight,
+      pipelineLevel: recommendation.pipelineLevel
+    });
+  } catch (err) {
+    console.error("AI Size Recommendation error:", err);
     res.status(500).json({ success: false, error: err.message });
   }
 });
