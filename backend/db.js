@@ -156,7 +156,7 @@ class MockModel {
 }
 
 // Schemas & Models Definition
-let User, CultureProfile, Festival, Product, Purchase;
+let User, CultureProfile, Festival, Product, Purchase, ReturnOutcome;
 
 if (useMongoose) {
   console.log('MongoDB Mode: Using Mongoose.');
@@ -173,27 +173,25 @@ if (useMongoose) {
     userId: String,
     state: String,
     festivals: [String],
-    language: String
+    language: String,
+    gender: String,
+    heightBand: String,
+    weightBand: String,
+    bodyType: String,
+    preferredFit: String
   });
 
   const FestivalSchema = new mongoose.Schema({
-    
     id: Number,
-
     festival: String,
     state: String,
-
     startDate: Date,
     endDate: Date,
-
     isRegional: Boolean,
     isNational: Boolean,
-
     priority: Number,
-
     primaryLanguage: String,
     category: String,
-
     womenClothing: [String],
     menClothing: [String],
     accessories: [String],
@@ -202,7 +200,7 @@ if (useMongoose) {
     themeGradient: String,
     offerText: String,
     greeting: String
-});
+  });
 
   const ProductSchema = new mongoose.Schema({
     _id: String,
@@ -229,11 +227,30 @@ if (useMongoose) {
     date: String
   });
 
+  const ReturnOutcomeSchema = new mongoose.Schema({
+    _id: String,
+    userId: String,
+    productId: String,
+    brand: String,
+    category: String,
+    gender: String,
+    heightBand: String,
+    weightBand: String,
+    bodyType: String,
+    preferredFit: String,
+    state: String,
+    sizePurchased: String,
+    kept: Boolean,
+    returned: Boolean,
+    timestamp: Date
+  });
+
   User = mongoose.models.User || mongoose.model('User', UserSchema);
   CultureProfile = mongoose.models.CultureProfile || mongoose.model('CultureProfile', CultureProfileSchema);
   Festival = mongoose.models.Festival || mongoose.model('Festival', FestivalSchema);
   Product = mongoose.models.Product || mongoose.model('Product', ProductSchema);
   Purchase = mongoose.models.Purchase || mongoose.model('Purchase', PurchaseSchema);
+  ReturnOutcome = mongoose.models.ReturnOutcome || mongoose.model('ReturnOutcome', ReturnOutcomeSchema);
 } else {
   console.log('Fallback Mode: Using Local JSON database.');
   User = new MockModel('users.json');
@@ -241,6 +258,7 @@ if (useMongoose) {
   Festival = new MockModel('festivals.json');
   Product = new MockModel('products.json');
   Purchase = new MockModel('purchases.json');
+  ReturnOutcome = new MockModel('returns_outcomes.json');
 }
 
 export async function connectDB() {
@@ -256,10 +274,11 @@ export async function connectDB() {
       Festival = new MockModel('festivals.json');
       Product = new MockModel('products.json');
       Purchase = new MockModel('purchases.json');
+      ReturnOutcome = new MockModel('returns_outcomes.json');
     }
   } else {
     console.log('Local JSON database initialized.');
   }
 }
 
-export { User, CultureProfile, Festival, Product, Purchase };
+export { User, CultureProfile, Festival, Product, Purchase, ReturnOutcome };

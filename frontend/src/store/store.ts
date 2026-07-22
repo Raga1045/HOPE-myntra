@@ -10,6 +10,11 @@ interface Profile {
   state: string;
   festivals: string[];
   language: string;
+  gender?: string;
+  heightBand?: string;
+  weightBand?: string;
+  bodyType?: string;
+  preferredFit?: string;
 }
 
 interface SessionState {

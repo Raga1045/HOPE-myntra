@@ -1,52 +1,17 @@
 import fs from 'fs';
 import path from 'path';
+import { connectDB, User, CultureProfile, Festival, Product, Purchase, ReturnOutcome } from './db.js';
+
 const festivals = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'data', 'festivals.json'), 'utf8'));
-
-import { connectDB, User, CultureProfile, Festival, Product, Purchase } from './db.js';
-
-// const states = [
-//   "Andhra Pradesh",
-//   "Kerala",
-//   "Tamil Nadu",
-//   "Karnataka",
-//   "Telangana",
-//   "West Bengal",
-//   "Punjab",
-//   "Gujarat",
-//   "Maharashtra",
-//   "Odisha"
-// ];
-// const getFutureDate = (days) => {
-//   const d = new Date();
-//   d.setDate(d.getDate() + days);
-//   return d.toISOString().split('T')[0];
-// };
-
-// const festivals = [
-//   { festival: "Ugadi", date: getFutureDate(8), states: ["Andhra Pradesh", "Telangana", "Karnataka"] },
-//   { festival: "Sankranti", date: getFutureDate(8), states: ["Andhra Pradesh", "Telangana", "Karnataka", "Tamil Nadu"] },
-//   { festival: "Dasara", date: getFutureDate(8), states: ["Andhra Pradesh", "Telangana", "Karnataka", "West Bengal"] },
-//   { festival: "Diwali", date: getFutureDate(8), states: ["Andhra Pradesh", "Kerala", "Tamil Nadu", "Karnataka", "Telangana", "West Bengal", "Punjab", "Gujarat", "Maharashtra", "Odisha"] },
-//   { festival: "Christmas", date: getFutureDate(8), states: ["Andhra Pradesh", "Kerala", "Tamil Nadu", "Karnataka", "Telangana", "West Bengal", "Punjab", "Gujarat", "Maharashtra", "Odisha"] },
-//   { festival: "Vishu", date: getFutureDate(8), states: ["Kerala"] },
-//   { festival: "Onam", date: getFutureDate(8), states: ["Kerala"] },
-//   { festival: "Pongal", date: getFutureDate(8), states: ["Tamil Nadu"] },
-//   { festival: "Puthandu", date: getFutureDate(8), states: ["Tamil Nadu"] },
-//   { festival: "Baisakhi", date: getFutureDate(8), states: ["Punjab"] },
-//   { festival: "Lohri", date: getFutureDate(8), states: ["Punjab"] },
-//   { festival: "Durga Puja", date: getFutureDate(8), states: ["West Bengal", "Odisha"] },
-//   { festival: "Poila Baisakh", date: getFutureDate(8), states: ["West Bengal"] },
-//   { festival: "Navratri", date: getFutureDate(8), states: ["Gujarat", "Maharashtra", "Punjab"] },
-//   { festival: "Uttarayan", date: getFutureDate(8), states: ["Gujarat"] },
-//   { festival: "Ganesh Chaturthi", date: getFutureDate(8), states: ["Maharashtra"] },
-//   { festival: "Raja Parba", date: getFutureDate(8), states: ["Odisha"] }
-// ];
-
 
 const categories = ["Kurta", "Saree", "Jewellery", "Sherwani", "Dhoti", "Dress", "Shirt", "Jeans"];
 const brands = ["Roadster", "W", "Biba", "Libas", "Anouk", "Manyavar", "HRX", "Mast & Harbour"];
 const colors = ["Black", "Pink", "Yellow", "Green", "Red", "White", "Blue", "Gold"];
 const styles = ["Minimal", "Ethnic", "Trendy", "Traditional"];
+const states = [
+  "Andhra Pradesh", "Kerala", "Tamil Nadu", "Karnataka", "Telangana",
+  "West Bengal", "Punjab", "Gujarat", "Maharashtra", "Odisha"
+];
 
 const imagesMap = {
   "Kurta": [
@@ -88,41 +53,129 @@ async function seed() {
   console.log('Clearing existing database entries...');
   await User.deleteMany({});
   await CultureProfile.deleteMany({});
-  await Festival.deleteMany({}); //
+  await Festival.deleteMany({});
   await Product.deleteMany({});
   await Purchase.deleteMany({});
+  await ReturnOutcome.deleteMany({});
 
   console.log('Seeding Festivals...');
-  await Festival.insertMany(festivals); //
+  await Festival.insertMany(festivals);
 
-  console.log('Seeding 50 Users...');
-  const userDocs = [
-    { _id: "1", id: "1", name: "Judge User", email: "judge@myntra.com" },
-    { _id: "2", id: "2", name: "Aarav Sharma", email: "aarav@myntra.com" },
-    { _id: "3", id: "3", name: "Diya Patel", email: "diya@myntra.com" },
-    { _id: "4", id: "4", name: "Ananya Iyer", email: "ananya@myntra.com" },
-    { _id: "5", id: "5", name: "Kabir Mehta", email: "kabir@myntra.com" },
-    { _id: "6", id: "6", name: "Riya Sen", email: "riya@myntra.com" },
-    { _id: "7", id: "7", name: "Arjun Nair", email: "arjun@myntra.com" }
-  ];
+  console.log('Seeding 150 Users & hidden Fit Profiles...');
+  const userDocs = [];
+  const profileDocs = [];
 
-  // Pre-seed profiles for the 7 demo users
-  const profileDocs = [
-    { _id: "prof_1", userId: "1", state: "Andhra Pradesh", festivals: ["Ugadi", "Diwali"], language: "English" },
-    { _id: "prof_2", userId: "2", state: "Punjab", festivals: ["Lohri", "Diwali"], language: "Hindi" },
-    { _id: "prof_3", userId: "3", state: "Gujarat", festivals: ["Navratri", "Uttarayan"], language: "English" },
-    { _id: "prof_4", userId: "4", state: "Tamil Nadu", festivals: ["Pongal", "Diwali"], language: "English" },
-    { _id: "prof_5", userId: "5", state: "Maharashtra", festivals: ["Ganesh Chaturthi", "Navratri"], language: "English" },
-    { _id: "prof_6", userId: "6", state: "West Bengal", festivals: ["Durga Puja", "Poila Baisakh"], language: "English" },
-    { _id: "prof_7", userId: "7", state: "Kerala", festivals: ["Onam", "Vishu"], language: "English" }
-  ];
+  const namesMale = ["Judge User", "Aarav Sharma", "Kabir Mehta", "Arjun Nair", "Ishaan Dubey", "Vihaan Rao", "Reyansh Goel", "Sai Krishna", "Kartik Reddy", "Aditya Joshi"];
+  const namesFemale = ["Diya Patel", "Ananya Iyer", "Riya Sen", "Prisha Nair", "Myra Saxena", "Kavya Murthy", "Shruti Hegde", "Zara Sheikh", "Meera Pillai", "Anya Sen"];
 
-  for (let i = 8; i <= 50; i++) {
+  for (let i = 1; i <= 150; i++) {
+    let name = '';
+    let gender = '';
+    if (i === 1) {
+      name = "Judge User";
+      gender = "Male";
+    } else if (i === 2) {
+      name = "Aarav Sharma";
+      gender = "Male";
+    } else if (i === 3) {
+      name = "Diya Patel";
+      gender = "Female";
+    } else if (i === 4) {
+      name = "Ananya Iyer";
+      gender = "Female";
+    } else if (i === 5) {
+      name = "Kabir Mehta";
+      gender = "Male";
+    } else if (i === 6) {
+      name = "Riya Sen";
+      gender = "Female";
+    } else if (i === 7) {
+      name = "Arjun Nair";
+      gender = "Male";
+    } else {
+      gender = i % 2 === 0 ? "Female" : "Male";
+      const namesList = gender === "Male" ? namesMale : namesFemale;
+      const baseName = namesList[i % namesList.length];
+      name = `${baseName} ${i}`;
+    }
+
     userDocs.push({
       _id: String(i),
       id: String(i),
-      name: `Demo User ${i}`,
+      name,
       email: `user${i}@myntra.com`
+    });
+
+    // Create fit profile parameters
+    let heightBand = '';
+    let weightBand = '';
+    let bodyType = '';
+    let preferredFit = '';
+
+    if (i === 1) {
+      heightBand = "170-180 cm";
+      weightBand = "70-80 kg";
+      bodyType = "Average";
+      preferredFit = "Regular";
+    } else if (i === 2) {
+      heightBand = "170-180 cm";
+      weightBand = "70-80 kg";
+      bodyType = "Average";
+      preferredFit = "Regular";
+    } else if (i === 3) {
+      heightBand = "160-170 cm";
+      weightBand = "50-60 kg";
+      bodyType = "Curvy";
+      preferredFit = "Regular";
+    } else if (i === 4) {
+      heightBand = "160-170 cm";
+      weightBand = "50-60 kg";
+      bodyType = "Slim";
+      preferredFit = "Slim";
+    } else if (i === 5) {
+      heightBand = "170-180 cm";
+      weightBand = "70-80 kg";
+      bodyType = "Athletic";
+      preferredFit = "Slim";
+    } else if (i === 6) {
+      heightBand = "160-170 cm";
+      weightBand = "60-70 kg";
+      bodyType = "Average";
+      preferredFit = "Regular";
+    } else if (i === 7) {
+      heightBand = "180-190 cm";
+      weightBand = "80-90 kg";
+      bodyType = "Large";
+      preferredFit = "Loose";
+    } else {
+      // General user fits
+      if (gender === "Male") {
+        heightBand = i % 3 === 0 ? "180-190 cm" : "170-180 cm";
+        weightBand = i % 4 === 0 ? "80-90 kg" : (i % 3 === 0 ? "70-80 kg" : "60-70 kg");
+        bodyType = ["Slim", "Average", "Athletic", "Large"][i % 4];
+      } else {
+        heightBand = i % 3 === 0 ? "160-170 cm" : "150-160 cm";
+        weightBand = i % 4 === 0 ? "60-70 kg" : (i % 3 === 0 ? "50-60 kg" : "50-60 kg");
+        bodyType = ["Slim", "Average", "Curvy", "Slim"][i % 4];
+      }
+      preferredFit = ["Slim", "Regular", "Loose"][i % 3];
+    }
+
+    const state = states[i % states.length];
+    const availableFests = festivals.filter(f => f.state === state || f.isNational).map(f => f.festival);
+    const userFests = availableFests.slice(0, 2);
+
+    profileDocs.push({
+      _id: `prof_${i}`,
+      userId: String(i),
+      state,
+      festivals: userFests.length > 0 ? userFests : ["Diwali"],
+      language: i % 3 === 0 ? "Hindi" : (i % 3 === 1 ? "Telugu" : "English"),
+      gender,
+      heightBand,
+      weightBand,
+      bodyType,
+      preferredFit
     });
   }
 
@@ -141,7 +194,7 @@ async function seed() {
     const catImages = imagesMap[category] || imagesMap["Shirt"];
     const image = catImages[i % catImages.length];
 
-    const price = Math.floor(Math.random() * 3000) + 999; // 999 to 3999
+    const price = Math.floor(Math.random() * 3000) + 999;
     const rating = parseFloat((Math.random() * 1.5 + 3.5).toFixed(1));
 
     let festivalTags = [];
@@ -207,15 +260,11 @@ async function seed() {
   }
   await Product.insertMany(productDocs);
 
-  console.log('Seeding Purchase History...');
+  console.log('Seeding Purchase History (Year Wrapped metrics)...');
   const purchaseDocs = [];
 
-  // Helper function to seed exact Year Wrapped metrics for a user
   const seedUserPurchases = (userId, totalOrders, targetSpent, favBrand, favFestival, favColor, styleBreakdown) => {
     let userSpent = 0;
-    
-    // Convert style breakdown object array to mapped targets
-    // E.g., [{ name: 'Minimal', val: 60 }, { name: 'Ethnic', val: 25 }, { name: 'Trendy', val: 15 }]
     const styleTargets = {};
     styleBreakdown.forEach(item => {
       styleTargets[item.name] = Math.round(totalOrders * (item.value / 100));
@@ -225,16 +274,10 @@ async function seed() {
     let styleAssigned = { Minimal: 0, Ethnic: 0, Trendy: 0, Traditional: 0 };
 
     for (let o = 1; o <= totalOrders; o++) {
-      // 1. Assign Brand (e.g. Roadster - 35%)
       const matchBrand = o <= Math.round(totalOrders * 0.35);
-      
-      // 2. Assign Color (e.g. Black - 40%)
       const matchColor = o > 10 && o <= Math.round(totalOrders * 0.50);
-      
-      // 3. Assign Festival (e.g. Ugadi - 30%)
       const matchFestival = o > 20 && o <= Math.round(totalOrders * 0.50);
 
-      // Find appropriate style key to satisfy breakdown
       let targetStyle = "Minimal";
       for (let key of styleKeys) {
         if (styleAssigned[key] < styleTargets[key]) {
@@ -244,7 +287,6 @@ async function seed() {
       }
       styleAssigned[targetStyle]++;
 
-      // Query mock product matching brand/color/festival
       let prod = null;
       if (matchBrand) {
         prod = productDocs.find(p => p.brand === favBrand && p.style === targetStyle && (matchColor ? p.color === favColor : true));
@@ -263,7 +305,6 @@ async function seed() {
       if (o === totalOrders) {
         price = Math.max(999, targetSpent - userSpent);
       } else {
-        // Average price hover
         const avgPrice = Math.floor(targetSpent / totalOrders);
         price = Math.floor(Math.random() * (avgPrice * 0.5)) + Math.floor(avgPrice * 0.7);
       }
@@ -286,79 +327,171 @@ async function seed() {
     }
   };
 
-  // Seeding the 7 specific users
-  console.log('Seeding User 1 (Judge User: 80 orders, ₹54,000, favorite brand Roadster, favorite festival Ugadi, top color Black)');
   seedUserPurchases("1", 80, 54000, "Roadster", "Ugadi", "Black", [
-    { name: "Minimal", value: 60 },
-    { name: "Ethnic", value: 25 },
-    { name: "Trendy", value: 15 }
+    { name: "Minimal", value: 60 }, { name: "Ethnic", value: 25 }, { name: "Trendy", value: 15 }
   ]);
-
-  console.log('Seeding User 2 (Aarav Sharma: 65 orders, ₹48,000, favorite brand Manyavar, favorite festival Lohri, top color Yellow)');
   seedUserPurchases("2", 65, 48000, "Manyavar", "Lohri", "Yellow", [
-    { name: "Traditional", value: 50 },
-    { name: "Ethnic", value: 30 },
-    { name: "Minimal", value: 20 }
+    { name: "Traditional", value: 50 }, { name: "Ethnic", value: 30 }, { name: "Minimal", value: 20 }
   ]);
-
-  console.log('Seeding User 3 (Diya Patel: 72 orders, ₹60,000, favorite brand Anouk, favorite festival Navratri, top color Pink)');
   seedUserPurchases("3", 72, 60000, "Anouk", "Navratri", "Pink", [
-    { name: "Ethnic", value: 65 },
-    { name: "Trendy", value: 20 },
-    { name: "Traditional", value: 15 }
+    { name: "Ethnic", value: 65 }, { name: "Trendy", value: 20 }, { name: "Traditional", value: 15 }
   ]);
-
-  console.log('Seeding User 4 (Ananya Iyer: 55 orders, ₹42,000, favorite brand Biba, favorite festival Pongal, top color Gold)');
   seedUserPurchases("4", 55, 42000, "Biba", "Pongal", "Gold", [
-    { name: "Traditional", value: 60 },
-    { name: "Minimal", value: 30 },
-    { name: "Trendy", value: 10 }
+    { name: "Traditional", value: 60 }, { name: "Minimal", value: 30 }, { name: "Trendy", value: 10 }
   ]);
-
-  console.log('Seeding User 5 (Kabir Mehta: 40 orders, ₹35,000, favorite brand HRX, favorite festival Ganesh Chaturthi, top color White)');
   seedUserPurchases("5", 40, 35000, "HRX", "Ganesh Chaturthi", "White", [
-    { name: "Trendy", value: 50 },
-    { name: "Minimal", value: 40 },
-    { name: "Ethnic", value: 10 }
+    { name: "Trendy", value: 50 }, { name: "Minimal", value: 40 }, { name: "Ethnic", value: 10 }
   ]);
-
-  console.log('Seeding User 6 (Riya Sen: 90 orders, ₹75,000, favorite brand W, favorite festival Durga Puja, top color Red)');
   seedUserPurchases("6", 90, 75000, "W", "Durga Puja", "Red", [
-    { name: "Traditional", value: 70 },
-    { name: "Ethnic", value: 20 },
-    { name: "Trendy", value: 10 }
+    { name: "Traditional", value: 70 }, { name: "Ethnic", value: 20 }, { name: "Trendy", value: 10 }
   ]);
-
-  console.log('Seeding User 7 (Arjun Nair: 48 orders, ₹38,000, favorite brand Mast & Harbour, favorite festival Onam, top color Green)');
   seedUserPurchases("7", 48, 38000, "Mast & Harbour", "Onam", "Green", [
-    { name: "Minimal", value: 50 },
-    { name: "Traditional", value: 30 },
-    { name: "Ethnic", value: 20 }
+    { name: "Minimal", value: 50 }, { name: "Traditional", value: 30 }, { name: "Ethnic", value: 20 }
   ]);
 
-  // Seed random purchases for remaining users (8 to 50)
+  // Seeding additional random purchases
   for (let p = 1; p <= 150; p++) {
-    const userId = String(Math.floor(Math.random() * 43) + 8); // Users 8 to 50
+    const userId = String(Math.floor(Math.random() * 143) + 8);
     const prodIdx = Math.floor(Math.random() * productDocs.length);
     const prod = productDocs[prodIdx];
     const month = String(Math.floor(Math.random() * 12) + 1).padStart(2, '0');
     const day = String(Math.floor(Math.random() * 28) + 1).padStart(2, '0');
     const purchaseDate = `2025-${month}-${day}`;
-    let purchaseFest = prod.festivalTags && prod.festivalTags.length > 0 ? prod.festivalTags[0] : "";
 
     purchaseDocs.push({
       _id: `p_rand_${p}`,
       userId,
       productId: prod.id,
-      festival: purchaseFest,
+      festival: prod.festivalTags && prod.festivalTags.length > 0 ? prod.festivalTags[0] : "",
       price: prod.price,
       brand: prod.brand,
       color: prod.color,
       date: purchaseDate
     });
   }
-
   await Purchase.insertMany(purchaseDocs);
+
+  console.log('Seeding ~950 Return Outcomes (Size Recommendations Cohort)...');
+  const returnOutcomeDocs = [];
+
+  // Sizing matrix generator
+  const getCorrectSize = (profile, category) => {
+    let base = 'M';
+
+    if (profile.heightBand === '150-160 cm') base = 'S';
+    else if (profile.heightBand === '160-170 cm') base = 'M';
+    else if (profile.heightBand === '170-180 cm') base = 'L';
+    else if (profile.heightBand === '180-190 cm') base = 'XL';
+
+    // Adjust based on weight
+    if (profile.weightBand === '80-90 kg') {
+      if (base === 'S') base = 'M';
+      else if (base === 'M') base = 'L';
+      else if (base === 'L') base = 'XL';
+      else if (base === 'XL') base = 'XXL';
+    } else if (profile.weightBand === '50-60 kg') {
+      if (base === 'XXL') base = 'XL';
+      else if (base === 'XL') base = 'L';
+      else if (base === 'L') base = 'M';
+      else if (base === 'M') base = 'S';
+    }
+
+    // Body type adjustment
+    if (profile.bodyType === 'Large' || profile.bodyType === 'Curvy') {
+      if (base === 'S') base = 'M';
+      else if (base === 'M') base = 'L';
+      else if (base === 'L') base = 'XL';
+      else if (base === 'XL') base = 'XXL';
+    } else if (profile.bodyType === 'Slim') {
+      if (base === 'XXL') base = 'XL';
+      else if (base === 'XL') base = 'L';
+      else if (base === 'L') base = 'M';
+      else if (base === 'M') base = 'S';
+    }
+
+    // Preferred fit
+    if (profile.preferredFit === 'Loose') {
+      if (base === 'S') base = 'M';
+      else if (base === 'M') base = 'L';
+      else if (base === 'L') base = 'XL';
+      else if (base === 'XL') base = 'XXL';
+    }
+
+    return base;
+  };
+
+  const sizes = ['S', 'M', 'L', 'XL', 'XXL'];
+
+  // Seed 950 events
+  for (let event = 1; event <= 950; event++) {
+    const userProf = profileDocs[Math.floor(Math.random() * profileDocs.length)];
+    const product = productDocs[Math.floor(Math.random() * productDocs.length)];
+
+    const correctSize = getCorrectSize(userProf, product.category);
+    let sizePurchased = correctSize;
+    
+    if (Math.random() < 0.3) {
+      const currentIdx = sizes.indexOf(correctSize);
+      if (Math.random() < 0.5 && currentIdx > 0) {
+        sizePurchased = sizes[currentIdx - 1];
+      } else if (currentIdx < sizes.length - 1) {
+        sizePurchased = sizes[currentIdx + 1];
+      }
+    }
+
+    let kept = true;
+
+    if (product.brand === 'Libas') {
+      const correctIdx = sizes.indexOf(correctSize);
+      const targetSize = correctIdx < sizes.length - 1 ? sizes[correctIdx + 1] : 'XXL';
+      if (sizePurchased === targetSize) {
+        kept = Math.random() < 0.90;
+      } else {
+        kept = Math.random() < 0.15;
+      }
+    } else if (product.category === 'Shirt' && (product.brand === 'Roadster' || product.brand === 'HRX')) {
+      if (sizes.indexOf(sizePurchased) <= sizes.indexOf(correctSize)) {
+        kept = Math.random() < 0.50;
+      } else {
+        kept = Math.random() < 0.88;
+      }
+    } else if (product.category === 'Jeans' && sizePurchased === correctSize) {
+      kept = Math.random() < 0.92;
+    } else {
+      if (sizePurchased === correctSize) {
+        kept = Math.random() < 0.94;
+      } else {
+        kept = Math.random() < 0.20;
+      }
+    }
+
+    const returned = !kept;
+    const month = String(Math.floor(Math.random() * 12) + 1).padStart(2, '0');
+    const day = String(Math.floor(Math.random() * 28) + 1).padStart(2, '0');
+    const eventDate = new Date(`2025-${month}-${day}`);
+
+    returnOutcomeDocs.push({
+      _id: `ro_${event}`,
+      userId: userProf.userId,
+      productId: product.id,
+      brand: product.brand,
+      category: product.category,
+      gender: userProf.gender,
+      heightBand: userProf.heightBand,
+      weightBand: userProf.weightBand,
+      bodyType: userProf.bodyType,
+      preferredFit: userProf.preferredFit,
+      state: userProf.state,
+      sizePurchased,
+      kept,
+      returned,
+      timestamp: eventDate
+    });
+  }
+
+  await ReturnOutcome.insertMany(returnOutcomeDocs);
+  console.log(`Seeded ${returnOutcomeDocs.length} ReturnOutcome events successfully.`);
+
   console.log('Seeding complete! Database is successfully populated.');
   process.exit(0);
 }
