@@ -2,15 +2,12 @@
   {
     "_id": "prof_1",
     "userId": "1",
-    "state": "Andhra Pradesh",
+    "state": "Kerala",
     "festivals": [
-      "Ugadi",
-      "Diwali"],
-    "state": "Telangana",
-    "festivals": [
-      "Sammakka Saralamma Jatara"
+      "Ramzan (Eid-ul-Fitr)",
+      "Christmas"
     ],
-    "language": "English",
+    "language": "Telugu",
     "gender": "Male",
     "heightBand": "170-180 cm",
     "weightBand": "70-80 kg",
@@ -115,14 +112,6 @@
     "id": "prof_7"
   },
   {
-    "userId": "44",
-    "state": "Telangana",
-    "festivals": [
-      "Bathukamma"
-    ],
-    "language": "English",
-    "_id": "1784719135219",
-    "id": "1784719135219",
     "_id": "prof_8",
     "userId": "8",
     "state": "Maharashtra",
@@ -703,8 +692,7 @@
     "userId": "44",
     "state": "Telangana",
     "festivals": [
-      "Bathukamma",
-      "Bonalu"
+      "Bathukamma"
     ],
     "language": "English",
     "gender": "Female",
@@ -2409,15 +2397,5 @@
     "bodyType": "Curvy",
     "preferredFit": "Slim",
     "id": "prof_150"
-  },
-  {
-    "userId": "1784717802698",
-    "state": "Telangana",
-    "festivals": [
-      "Sammakka Saralamma Jatara"
-    ],
-    "language": "English",
-    "_id": "1784717880573",
-    "id": "1784717880573"
   }
 ]
