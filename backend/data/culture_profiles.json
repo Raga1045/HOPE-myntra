@@ -2,11 +2,10 @@
   {
     "_id": "prof_1",
     "userId": "1",
-    "state": "Jammu & Kashmir",
+    "state": "Andhra Pradesh",
     "festivals": [
-      "Eid-ul-Adha",
-      "Navroz",
-      "Eid-ul-Fitr"
+      "Ugadi",
+      "Diwali"
     ],
     "language": "English",
     "id": "prof_1"
@@ -78,85 +77,13 @@
     "id": "prof_7"
   },
   {
-    "userId": "1784574538332",
-    "state": "Madhya Pradesh",
-    "festivals": [
-      "Diwali",
-      "Holi",
-      "Bhagoria Haat",
-      "Ganesh Chaturthi",
-      "Dussehra"
-    ],
-    "language": "Hindi",
-    "_id": "1784574612578",
-    "id": "1784574612578"
-  },
-  {
     "userId": "44",
     "state": "Telangana",
     "festivals": [
       "Bathukamma"
     ],
     "language": "English",
-    "_id": "1784711598497",
-    "id": "1784711598497"
-  },
-  {
-    "userId": "test_telangana",
-    "state": "Telangana",
-    "festivals": [
-      "Bonalu"
-    ],
-    "language": "English",
-    "_id": "1784714457449",
-    "id": "1784714457449"
-  },
-  {
-    "userId": "test_rajasthan",
-    "state": "Rajasthan",
-    "festivals": [
-      "Teej"
-    ],
-    "language": "English",
-    "_id": "1784714524151",
-    "id": "1784714524151"
-  },
-  {
-    "userId": "test_maharashtra",
-    "state": "Maharashtra",
-    "festivals": [
-      "Ganesh Chaturthi"
-    ],
-    "language": "English",
-    "_id": "1784714489562",
-    "id": "1784714489562"
-  },
-  {
-    "userId": "test_no_festivals",
-    "state": "Andhra Pradesh",
-    "festivals": [],
-    "language": "English",
-    "_id": "1784715186271",
-    "id": "1784715186271"
-  },
-  {
-    "userId": "test_teej",
-    "state": "Rajasthan",
-    "festivals": [
-      "Teej"
-    ],
-    "language": "English",
-    "_id": "1784715237014",
-    "id": "1784715237014"
-  },
-  {
-    "userId": "test_far_away",
-    "state": "Maharashtra",
-    "festivals": [
-      "Ganesh Chaturthi"
-    ],
-    "language": "English",
-    "_id": "1784715203499",
-    "id": "1784715203499"
+    "_id": "1784719135219",
+    "id": "1784719135219"
   }
 ]

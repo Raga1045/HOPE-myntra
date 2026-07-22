@@ -50,35 +50,74 @@ const styles = ["Minimal", "Ethnic", "Trendy", "Traditional"];
 
 const imagesMap = {
   "Kurta": [
-    "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1618244972963-dbee1a7edc95?q=80&w=600&auto=format&fit=crop"
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQbaojXCX-N_2TE2oY-GUPS2DfMIOxxuJm0d-Qwl6e7w&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAxyXHmlDsM5sVW4vPtBeqdpXk2gsi0YjLJ9Djhiio0A&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT47VRK1aBEZPwbxZPbHw4OwyueGwG8bvsjbP8jYyXlCg&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsbJ3K6w_-6dT2Ba1TSmZ7PNyd6SFoG5v9n3cxoVGj5w&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg4B9xt1qfIdp9FVV2ej4a_pMW8yqpyCAIfGCdnmI6BQ&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6-iQ5-iOhrdRtNVVyR3f4UasXv1TGQkGIuBRsK-0Rng&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC8qilW4xeHKXNzvFQYnBsHFELBoYDXWDxI3cxizhuoQ&s=10"
   ],
   "Saree": [
-    "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?q=80&w=600&auto=format&fit=crop"
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbDhJQSMYjTUyBUdrdDGUKHOpwxGCikQ6hdfnUJUvqig&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIQ35rFms8fyC1h5SL1F7BK-y05rAHgyxSylxrvz7Czg&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlXWo_kEfII6_pkloXXWE-8Gm8A2Pg6I10HidiO7H5MQ&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0LngBrX1hnJbDKrMkkJAGhrs9F-OPypAEGH5nmgXxDw&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSimmeRdUs9j7b3LctM1TurTWfofwrpEDU8CYrOGQPKvA&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxn6bj8y5BYeg4e6yXiyz5-o8YrDZOTGkKA19pbiB4Qw&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR56fnkzc4rX82yM3m8JDZVh0huwko1zUJhTYWBdXua1g&s=10"
   ],
   "Jewellery": [
-    "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?q=80&w=600&auto=format&fit=crop"
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU09N8cOC0Y6ui3ln8_LKKMqrSPKBW8Z9p8JzaSnpF3A&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgviifvcUJ9SGDCOR8vqvu8IorJUHLdASKwnf0F_-K4Q&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7VDZZ4n5_NHDroUHHDqbthXL0nZEbhKtwWTHfC-CF0w&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfXHWfTn9JfZ8WaeodXJ-pkuQIA-KLbh2ZQ1u6PaRujQ&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl__WcP8x0XN9J56aKCttADowZHrCzPE5Lq4Lzic-LAA&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBKudWPnMplfbbdoeEP9Pd1RG11Qf74yt7Q95lfKG_Nw&s=10"
   ],
   "Sherwani": [
-    "https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?q=80&w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1597983073492-bc24058b37be?q=80&w=600&auto=format&fit=crop"
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNNOwmDlP393qZ8Ms3KEUOrtGVw0HRqu2lRreiJ-kb3w&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-TRjT6jQci_ls3zQAZYIf4slj1ljTYH6vP4iWz-rykA&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdfSWOqp5UPWOdE9atEG4r1dCIZtEgBmq8n-LZVA4Wkw&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi6oq1VcK5vAVPPhG9okvJuVNTP9jrSq5Ml5iMCSr8Uw&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf7j9de0zfZG1a_7vdcXHik663BpvwoAAPBJ9am8cahA&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9UHeVA2I38yNwMyVnAZshzNLDxa695A3SwsGi-U-TOA&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStvDUrZ7rilITizJ6A_7wYYmooC4pCLDFcFleQrLL5Cw&s=10"
   ],
   "Dhoti": [
-    "https://images.unsplash.com/photo-1560243563-062bfc001d68?q=80&w=600&auto=format&fit=crop"
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWOZKefh3aeETdmFoG6J6ah1Lx91ZCKzHUFtRHb_-6og&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCyWG0B1ViHEc8KK9VEpJHcMrC9fjfmnZLi-MYAIEHhg&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-cdyo6Kly1aZJSmYpAFjlk_ff0cbfKNSzUOzTmnaLew&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8ELIYeic6TgWGDwqrqFulV3eryapMTs1N2TEf4l9O8g&s",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmbViYqEh41M99CeFIrQXzfwR4-28gOOR708WK1Ya2Vw&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTyVu4JP0tXNEkf3yuRclRftUVklnbo2Tq0la3OGTBig&s=10"
   ],
   "Dress": [
-    "https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=600&auto=format&fit=crop"
-  ],
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReJGUkIdpIsPLmAqH_Jhnxemz1Baee3EFUTUjY_lJzCA&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShBCufpgErz0kNy_Lo3DJuG8nAc15Oy6rlEpiKzlfcUw&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9Ir737R2MG48OhW7yNdWtw2parYTAg7_3itzkByZATQ&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-17T_6A-SlKhJbR8uN3SskQMy6NSMsW4OgYktAbZ3JQ&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2TvErlo9g1u312BQua7g-EoIruuW4_63aVwM1qoqwmQ&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX2W_JmnWdnk7stKwhfVLjVjLOpCz1ASOy5XHVQ2KALw&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2byMo-_eLOy1gPKCXRlJGYGGlczTbywwVYcpqJMkHwQ&s=10"
+      ],
   "Shirt": [
-    "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1581655353564-df123a1eb820?q=80&w=600&auto=format&fit=crop"
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7GFqcyV6NKzmXwFJJF0VKRu-8ZlgpcssvrRXOVet3lw&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZrGo7kqvIXFaJvEhKTM_5ZrcLkp3Kq14rNfqrp2NW6Q&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR19w2BVt_0CpmZJsE0m31kOfL0Pz_DsAg59fpNfy4yhA&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5L1UZcY4H9ITNULK1QCA-MKuj4qSXY8dlnVF-4AsLXg&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyegVlLMuYPF5abR4Ha59AlacC0Iqzw7yu2Zug-b9TYg&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2H2KcX1lWsrKYMkBvQa_Xf7cOgAQeVXwwmtP9iCLP_g&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjbcNpFoglwPfrYT0_JsoTvzTdKOYWczqPw1-Q9UXGlg&s=10"
   ],
   "Jeans": [
-    "https://images.unsplash.com/photo-1542272604-787c3835535d?q=80&w=600&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=600&auto=format&fit=crop"
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB5gmkFFTst_bsCAxMI8JFhEEPt4l7ND6EkeL3BiAq1w&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7OaCVbcYffMh3KBjs56-XODMsjoy8a2XzyVM0UwzHeg&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYfz3S1TrAeLG9tqjCzLXVSBoPMnwy8R9yyKbX2Kn-ug&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQE1xoQ-HDekgRf4sWgMRkD6ogp9J4rSChPumAaWN7cw&s",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYKxWDVd5VDP2yW_aRTsn1vbTTkGNjdPGhjmhqdvOtYw&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGVr6sH0zb8BEnpPtAzFBnKkd_2Ombd0K0UmNaqpKThw&s=10",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl-EmdLRVA5VOnesdEeJAOalnmKJ-WP4qcJinweweo3g&s=10"
   ]
 };
 
