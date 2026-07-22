@@ -182,6 +182,7 @@ if (useMongoose) {
   });
 
   const FestivalSchema = new mongoose.Schema({
+    _id: String,
     id: Number,
     festival: String,
     state: String,
