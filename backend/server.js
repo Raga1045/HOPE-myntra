@@ -274,17 +274,141 @@ function generateConfidenceData(product, profile, user) {
   };
 }
 
+// Reusable Backend Helper: Dynamic Feed Context Determination
+function getFeedContext(profile, allFestivals) {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  // RULE: Culture Feed activates ONLY based on festivals explicitly selected by the user.
+  // If the user selects no festivals (or profile is missing/empty), do NOT assume default festivals.
+  if (!profile || !profile.festivals || !Array.isArray(profile.festivals) || profile.festivals.length === 0) {
+    return {
+      mode: "normal",
+      activeFestivalDoc: null,
+      activeFestival: null,
+      daysUntilFestival: null,
+      contextualIndicator: "✨ Curated for your everyday style",
+      reason: "No festivals explicitly selected by the user"
+    };
+  }
+
+  const userSelectedFestivals = profile.festivals.map((f) => f.toLowerCase().trim());
+
+  // ONLY evaluate festivals explicitly selected by the user
+  const candidateFestivals = allFestivals.filter((f) => {
+    return f.festival && userSelectedFestivals.includes(f.festival.toLowerCase().trim());
+  });
+
+  if (candidateFestivals.length === 0) {
+    return {
+      mode: "normal",
+      activeFestivalDoc: null,
+      activeFestival: null,
+      daysUntilFestival: null,
+      contextualIndicator: "✨ Curated for your everyday style",
+      reason: "No matching festival records found for explicitly selected festivals"
+    };
+  }
+
+  // Calculate day difference & status for explicitly selected festivals
+  const processed = candidateFestivals.map((f) => {
+    const start = new Date(f.startDate || f.date);
+    start.setHours(0, 0, 0, 0);
+    const end = new Date(f.endDate || f.startDate || f.date);
+    end.setHours(0, 0, 0, 0);
+
+    let status = "Upcoming";
+    let diffDays = 0;
+
+    if (today >= start && today <= end) {
+      status = "Today";
+      diffDays = 0;
+    } else if (today > end) {
+      status = "Completed";
+      diffDays = -1;
+    } else {
+      status = "Upcoming";
+      const diffTime = start - today;
+      diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    }
+
+    // A festival qualifies ONLY if it occurs Today OR Upcoming within 30 days
+    const isEligible = (status === "Today") || (status === "Upcoming" && diffDays >= 0 && diffDays <= 30);
+
+    return {
+      doc: f,
+      status,
+      diffDays,
+      isEligible
+    };
+  });
+
+  // Filter ONLY eligible selected festivals (Happening Today or Upcoming within 30 days)
+  const eligible = processed.filter((p) => p.isEligible);
+
+  if (eligible.length === 0) {
+    return {
+      mode: "normal",
+      activeFestivalDoc: null,
+      activeFestival: null,
+      daysUntilFestival: null,
+      contextualIndicator: "✨ Curated for your everyday style",
+      reason: "None of the explicitly selected festivals occur today or within 30 days"
+    };
+  }
+
+  // Priority Selection among explicitly selected eligible festivals:
+  // 1. Festival happening today (status === "Today")
+  // 2. Nearest upcoming festival within 30 days (smallest diffDays)
+  let chosen = eligible.find((p) => p.status === "Today");
+  if (!chosen) {
+    eligible.sort((a, b) => {
+      if (a.diffDays !== b.diffDays) return a.diffDays - b.diffDays;
+      return (b.doc.priority || 0) - (a.doc.priority || 0);
+    });
+    chosen = eligible[0];
+  }
+
+  const activeDoc = chosen.doc;
+  const festName = activeDoc.festival;
+  const daysUntil = chosen.diffDays;
+  let indicator = "";
+
+  if (chosen.status === "Today") {
+    indicator = `🌸 ${festName} is today!`;
+  } else {
+    indicator = `✨ ${daysUntil} ${daysUntil === 1 ? 'day' : 'days'} to ${festName}`;
+  }
+
+  return {
+    mode: "culture",
+    activeFestivalDoc: activeDoc,
+    activeFestival: festName,
+    daysUntilFestival: daysUntil,
+    contextualIndicator: indicator,
+    reason: chosen.status === "Today" ? `${festName} is today` : `${festName} is in ${daysUntil} days`
+  };
+}
+
 // 3. HOMEPAGE FEED ROUTE
 app.get("/api/homepage", async (req, res) => {
-  const { userId, cultureMode } = req.query;
-  const isCultureMode = cultureMode !== "false";
+  const { userId } = req.query;
 
   try {
-    if (!isCultureMode) {
-      // NORMAL MODE: Generic Trending, Recommended, and Top Brands
-      const allProducts = await Product.find({});
+    let profile = await CultureProfile.findOne({ userId });
+    if (!profile) {
+      profile = {
+        state: "Andhra Pradesh",
+        festivals: [],
+        language: "English",
+      };
+    }
 
-      // Shuffle products helper
+    const allFestivals = await Festival.find({});
+    const feedContext = getFeedContext(profile, allFestivals);
+
+    if (feedContext.mode === "normal") {
+      const allProducts = await Product.find({});
       const shuffle = (arr) => arr.sort(() => 0.5 - Math.random());
 
       const trendingRaw = shuffle([...allProducts]).slice(0, 8);
@@ -293,31 +417,25 @@ app.get("/api/homepage", async (req, res) => {
         .filter((p) => ["Roadster", "HRX", "Mast & Harbour"].includes(p.brand))
         .slice(0, 8);
 
-      // Fetch user profile if any for normal mode confidence calculations
-      let profile = await CultureProfile.findOne({ userId });
-      if (!profile) {
-        profile = {
-          state: "Delhi (NCT)",
-          festivals: ["Diwali"],
-          language: "English",
-        };
-      }
-
-      const trending = trendingRaw.map(p => {
+      const trending = trendingRaw.map((p) => {
         const pObj = p.toObject ? p.toObject() : p;
         return { ...pObj, confidence: generateConfidenceData(pObj, profile, null) };
       });
-      const recommended = recommendedRaw.map(p => {
+      const recommended = recommendedRaw.map((p) => {
         const pObj = p.toObject ? p.toObject() : p;
         return { ...pObj, confidence: generateConfidenceData(pObj, profile, null) };
       });
-      const topBrands = topBrandsRaw.map(p => {
+      const topBrands = topBrandsRaw.map((p) => {
         const pObj = p.toObject ? p.toObject() : p;
         return { ...pObj, confidence: generateConfidenceData(pObj, profile, null) };
       });
 
       return res.json({
+        mode: "normal",
         cultureMode: false,
+        contextualIndicator: feedContext.contextualIndicator,
+        activeFestival: null,
+        heroBanner: null,
         feed: {
           trending,
           recommended,
@@ -326,106 +444,15 @@ app.get("/api/homepage", async (req, res) => {
       });
     }
 
-    // CULTURE MODE: Entire Homepage changes based on regional preferences
-    // Find user's culture profile, default to Andhra/Ugadi if not set
-    let profile = await CultureProfile.findOne({ userId });
-    if (!profile) {
-      profile = {
-        state: "Andhra Pradesh",
-        festivals: ["Ugadi", "Diwali"],
-        language: "English",
-      };
-    }
-
+    // CULTURE MODE
+    const activeFestDoc = feedContext.activeFestivalDoc;
+    const activeFestival = feedContext.activeFestival;
+    const daysLeft = feedContext.daysUntilFestival;
     const stateName = profile.state;
     const regionTag = stateName.split(" ")[0];
 
-    const regionFestivals = await Festival.find({
-      state: stateName,
-    });
-    if (regionFestivals.length === 0) {
-    return res.json({
-        cultureMode: true,
-        activeFestival: null,
-        heroBanner: null,
-        clothingRecommendations: {},
-        feed: {
-            trendingFestival: [],
-            popularState: [],
-            regionalBrands: [],
-            festivalOffers: [],
-            familyMatching: [],
-        },
-    });
-}
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-
-    // Calculate dynamic status and daysLeft for all state festivals
-    const processedFestivals = regionFestivals.map((f) => {
-      const start = new Date(f.startDate);
-      start.setHours(0, 0, 0, 0);
-      const end = new Date(f.endDate);
-      end.setHours(0, 0, 0, 0);
-
-      let status = "Upcoming";
-      let daysLeft = 0;
-      let showCountdown = false;
-
-      if (today >= start && today <= end) {
-        status = "Today";
-        daysLeft = 0;
-        showCountdown = true;
-      } else if (today > end) {
-        status = "Completed";
-        daysLeft = 0;
-        showCountdown = false;
-      } else {
-        status = "Upcoming";
-        const diffTime = start - today;
-        daysLeft = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-        showCountdown = daysLeft <= 100;
-      }
-
-      return {
-        doc: f,
-        status,
-        daysLeft,
-        showCountdown,
-      };
-    });
-
-    // 1. Prioritize ongoing (Today) festivals, sorted by priority descending
-    let activeItem = processedFestivals
-      .filter((f) => f.status === "Today")
-      .sort((a, b) => b.doc.priority - a.doc.priority)[0];
-
-    // 2. Fall back to nearest upcoming, sorted by startDate ascending
-    if (!activeItem) {
-      activeItem = processedFestivals
-        .filter((f) => f.status === "Upcoming")
-        .sort((a, b) => {
-          const diff = new Date(a.doc.startDate) - new Date(b.doc.startDate);
-          if (diff !== 0) return diff;
-          return b.doc.priority - a.doc.priority;
-        })[0];
-    }
-
-    // 3. Fall back to recently completed, sorted by endDate descending
-    if (!activeItem) {
-      activeItem = processedFestivals
-        .filter((f) => f.status === "Completed")
-        .sort((a, b) => new Date(b.doc.endDate) - new Date(a.doc.endDate))[0];
-    }
-
-    const activeFestDoc = activeItem ? activeItem.doc : regionFestivals[0];
-    const activeFestival = activeFestDoc ? activeFestDoc.festival : "Diwali";
-    const festivalStatus = activeItem ? activeItem.status : "Completed";
-    const daysLeft = activeItem ? activeItem.daysLeft : 0;
-    const showCountdown = activeItem ? activeItem.showCountdown : false;
-
     // Call Python FastAPI service for AI Regional Recommendations
-    let recommendedCategories = ["Kurta", "Saree", "Jewellery"]; // fallback
+    let recommendedCategories = ["Kurta", "Saree", "Jewellery"];
     try {
       const aiResponse = await axios.post(
         `${AI_SERVICE_URL}/recommend`,
@@ -439,60 +466,49 @@ app.get("/api/homepage", async (req, res) => {
         recommendedCategories = aiResponse.data.recommendedCategories;
       }
     } catch (err) {
-      console.warn(
-        "AI Service offline, falling back to local categories ranking.",
-      );
+      console.warn("AI Service offline, falling back to local categories ranking.");
     }
 
-    // Query products
     const allProducts = await Product.find({});
 
-    // Section 1: Trending For Festival (Tagged with Festival & Region)
     let trendingFestival = allProducts.filter(
       (p) =>
-        p.festivalTags.some(tag => tag.toLowerCase() === activeFestival.toLowerCase()) &&
+        p.festivalTags.some((tag) => tag.toLowerCase() === activeFestival.toLowerCase()) &&
         p.regionTags.some((r) => r.toLowerCase().includes(regionTag.toLowerCase()))
     );
 
     if (trendingFestival.length === 0) {
-      trendingFestival = allProducts.filter(
-        (p) => p.festivalTags.some(tag => tag.toLowerCase() === activeFestival.toLowerCase())
+      trendingFestival = allProducts.filter((p) =>
+        p.festivalTags.some((tag) => tag.toLowerCase() === activeFestival.toLowerCase())
       );
     }
     if (trendingFestival.length === 0) {
-      trendingFestival = allProducts.filter(
-        (p) => p.regionTags.some((r) => r.toLowerCase().includes(regionTag.toLowerCase()))
+      trendingFestival = allProducts.filter((p) =>
+        p.regionTags.some((r) => r.toLowerCase().includes(regionTag.toLowerCase()))
       );
     }
     trendingFestival = trendingFestival.slice(0, 8);
 
-    // Section 2: Popular In State (Region matching products)
     const popularState = allProducts
       .filter((p) =>
-        p.regionTags.some((r) =>
-          r.toLowerCase().includes(regionTag.toLowerCase()),
-        ),
+        p.regionTags.some((r) => r.toLowerCase().includes(regionTag.toLowerCase()))
       )
       .slice(0, 8);
 
-    // Section 3: Regional Brands (W, Biba, Libas, Anouk, Manyavar)
     const regionalBrands = allProducts
-      .filter((p) =>
-        ["W", "Biba", "Libas", "Anouk", "Manyavar"].includes(p.brand),
-      )
+      .filter((p) => ["W", "Biba", "Libas", "Anouk", "Manyavar"].includes(p.brand))
       .slice(0, 8);
 
-    // Section 4: Festival Offers (Simulate discount pricing)
     let festivalOffersRaw = allProducts.filter(
       (p) =>
-        p.festivalTags.some(tag => tag.toLowerCase() === activeFestival.toLowerCase()) &&
+        p.festivalTags.some((tag) => tag.toLowerCase() === activeFestival.toLowerCase()) &&
         p.regionTags.some((r) => r.toLowerCase().includes(regionTag.toLowerCase()))
     );
 
     if (festivalOffersRaw.length === 0) {
       festivalOffersRaw = allProducts.filter(
         (p) =>
-          p.festivalTags.some(tag => tag.toLowerCase() === activeFestival.toLowerCase()) ||
+          p.festivalTags.some((tag) => tag.toLowerCase() === activeFestival.toLowerCase()) ||
           p.regionTags.some((r) => r.toLowerCase().includes(regionTag.toLowerCase()))
       );
     }
@@ -506,33 +522,34 @@ app.get("/api/homepage", async (req, res) => {
       };
     }).slice(0, 8);
 
-    // Section 5: Family Matching Looks
     const familyMatching = allProducts
       .filter((p) => recommendedCategories.includes(p.category))
       .slice(0, 8);
 
+    const isToday = daysLeft === 0;
+
     const heroBanner = {
-      festival: activeFestDoc.festival,
+      festival: activeFestival,
       daysLeft: daysLeft ?? 0,
-      title: `🌸 ${activeFestDoc.festival}`,
-      subtitle: `Celebrate ${activeFestDoc.category} in Style`,
+      title: `🌸 ${activeFestival}`,
+      subtitle: `Celebrate ${activeFestDoc.category || 'Festivities'} in Style`,
       cta: "Explore Collection",
-      language: activeFestDoc.primaryLanguage,
-      showCountdown,
+      language: activeFestDoc.primaryLanguage || "English",
+      showCountdown: true,
       artwork: activeFestDoc.artwork,
       themeGradient: activeFestDoc.themeGradient,
       offerText: activeFestDoc.offerText,
       greeting: activeFestDoc.greeting,
-      countdownText: festivalStatus === "Today"
-        ? `Celebrate ${activeFestDoc.festival} Today`
-        : festivalStatus === "Upcoming"
-        ? `Only ${daysLeft} Days Left for ${activeFestDoc.festival}`
-        : `${activeFestDoc.festival} Celebrations Completed`,
-      status: festivalStatus
+      countdownText: isToday
+        ? `Celebrate ${activeFestival} Today`
+        : `Only ${daysLeft} ${daysLeft === 1 ? 'Day' : 'Days'} Left for ${activeFestival}`,
+      status: isToday ? "Today" : "Upcoming",
     };
 
     return res.json({
+      mode: "culture",
       cultureMode: true,
+      contextualIndicator: feedContext.contextualIndicator,
       activeFestival,
       state: stateName,
       heroBanner,
@@ -545,23 +562,23 @@ app.get("/api/homepage", async (req, res) => {
       },
 
       feed: {
-        trendingFestival: trendingFestival.map(p => {
+        trendingFestival: trendingFestival.map((p) => {
           const pObj = p.toObject ? p.toObject() : p;
           return { ...pObj, confidence: generateConfidenceData(pObj, profile, null) };
         }),
-        popularState: popularState.map(p => {
+        popularState: popularState.map((p) => {
           const pObj = p.toObject ? p.toObject() : p;
           return { ...pObj, confidence: generateConfidenceData(pObj, profile, null) };
         }),
-        regionalBrands: regionalBrands.map(p => {
+        regionalBrands: regionalBrands.map((p) => {
           const pObj = p.toObject ? p.toObject() : p;
           return { ...pObj, confidence: generateConfidenceData(pObj, profile, null) };
         }),
-        festivalOffers: festivalOffers.map(p => {
+        festivalOffers: festivalOffers.map((p) => {
           const pObj = p.toObject ? p.toObject() : p;
           return { ...pObj, confidence: generateConfidenceData(pObj, profile, null) };
         }),
-        familyMatching: familyMatching.map(p => {
+        familyMatching: familyMatching.map((p) => {
           const pObj = p.toObject ? p.toObject() : p;
           return { ...pObj, confidence: generateConfidenceData(pObj, profile, null) };
         }),
@@ -614,7 +631,7 @@ app.get("/api/confidence/:productId", async (req, res) => {
     if (!profile) {
       profile = {
         state: "Andhra Pradesh",
-        festivals: ["Ugadi"],
+        festivals: [],
         language: "English",
       };
     }

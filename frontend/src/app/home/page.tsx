@@ -5,10 +5,10 @@ import { useRouter } from 'next/navigation';
 import { useDispatch, useSelector } from 'react-redux';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Search, User, ShoppingBag, ToggleLeft, ToggleRight, Sparkles, 
+  Search, User, ShoppingBag, Sparkles, 
   ChevronRight, Star, Heart, Flame, ShieldAlert, Award, Compass 
 } from 'lucide-react';
-import { toggleCultureMode, clearSession, RootState } from '@/store/store';
+import { clearSession, RootState } from '@/store/store';
 import { ConfidenceCard, ConfidenceData } from '@/components/confidence/ConfidenceCard';
 
 interface Product {
@@ -67,6 +67,8 @@ export default function HomePage() {
   const [hero, setHero] = useState<HeroBannerData | null>(null);
   const [activeFestival, setActiveFestival] = useState('');
   const [activeState, setActiveState] = useState('');
+  const [contextualIndicator, setContextualIndicator] = useState('');
+  const [isCultureMode, setIsCultureMode] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedConfidenceProduct, setSelectedConfidenceProduct] = useState<Product | null>(null);
@@ -79,29 +81,34 @@ export default function HomePage() {
     }
   }, [user, profile, router]);
 
-  // Load feed when cultureMode status changes
+  // Automatic feed retrieval based on backend calendar logic
   useEffect(() => {
     if (!user) return;
     
     const fetchFeed = async () => {
       setIsLoading(true);
       try {
-        const url = `http://localhost:5000/api/homepage?userId=${user.id}&cultureMode=${cultureMode}`;
+        const url = `http://localhost:5000/api/homepage?userId=${user.id}`;
         const res = await fetch(url);
         const data = await res.json();
         
-        if (data.cultureMode) {
+        if (data.mode === 'culture' || data.cultureMode) {
+          setIsCultureMode(true);
           setFeed(data.feed);
           setHero(data.heroBanner);
           setActiveFestival(data.activeFestival);
           setActiveState(data.state);
         } else {
+          setIsCultureMode(false);
           setFeed(data.feed);
           setHero(null);
         }
+
+        if (data.contextualIndicator) {
+          setContextualIndicator(data.contextualIndicator);
+        }
       } catch (err) {
         console.error("Fetch homepage feed error:", err);
-        // Clean mock data if server offline
         generateLocalFallbackFeed();
       } finally {
         setIsLoading(false);
@@ -109,7 +116,7 @@ export default function HomePage() {
     };
 
     fetchFeed();
-  }, [user, cultureMode]);
+  }, [user, profile]);
 
   const generateLocalFallbackFeed = () => {
     // Basic mock product generator for offline fallbacks
@@ -433,22 +440,12 @@ export default function HomePage() {
           {/* Action elements */}
           <div className="flex items-center gap-4 sm:gap-6">
             
-            {/* NEW ELEMENT: CULTURE MODE TOGGLE */}
-            <div className="flex items-center gap-2 bg-gradient-to-r from-white to-[#FFF5F6] border border-[#FF3F6C]/10 px-3.5 py-1.5 rounded-full shadow-3xs">
-              <Sparkles className={`w-3.5 h-3.5 transition-colors ${cultureMode ? 'text-[#FF3F6C] animate-pulse' : 'text-gray-400'}`} />
-              <span className="text-[10px] font-black uppercase text-[#282C3F] tracking-wide select-none">
-                Culture
+            {/* CONTEXTUAL INDICATOR BADGE (AUTOMATIC MODE) */}
+            <div className="flex items-center gap-2 bg-gradient-to-r from-white via-[#FFF8F9] to-[#FFF0F3] border border-[#FF3F6C]/15 px-3.5 py-1.5 rounded-full shadow-3xs">
+              <Sparkles className="w-3.5 h-3.5 text-[#FF3F6C] animate-pulse" />
+              <span className="text-[11px] font-extrabold text-[#282C3F] tracking-wide select-none">
+                {contextualIndicator || (isCultureMode ? `✨ Your ${activeFestival || 'festive'} edit` : '✨ Curated for your everyday style')}
               </span>
-              <button 
-                onClick={() => dispatch(toggleCultureMode())}
-                className="focus:outline-none flex items-center justify-center cursor-pointer"
-              >
-                {cultureMode ? (
-                  <ToggleRight className="w-8 h-8 text-[#FF3F6C]" />
-                ) : (
-                  <ToggleLeft className="w-8 h-8 text-gray-300" />
-                )}
-              </button>
             </div>
 
             {/* MYNTRA WRAPPED BUTTON */}
@@ -511,7 +508,7 @@ export default function HomePage() {
         ) : (
           <AnimatePresence mode="wait">
             
-            {cultureMode ? (
+            {isCultureMode ? (
               // ----------------- CULTURE MODE ACTIVE -----------------
               <motion.div
                 key="culture-feed"
