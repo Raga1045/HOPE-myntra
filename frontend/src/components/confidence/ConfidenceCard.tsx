@@ -29,6 +29,13 @@ export interface ConfidenceData {
   styleInsights?: string[];
   stylingTips?: string[];
   trustSignals?: string[];
+  similarShoppersCount?: number;
+  similarPurchasedCount?: number;
+  similarKeptCount?: number;
+  retentionRate?: number;
+  sizeSuccessRate?: number;
+  fallbackLevel?: string;
+  reasons?: string[];
 }
 
 export function ConfidenceCard({ data }: { data: ConfidenceData }) {

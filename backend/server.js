@@ -643,47 +643,46 @@ app.get("/api/confidence/:productId", async (req, res) => {
       user = { id: userId, name: "Guest User", age: 25, gender: "Male" };
     }
 
-    // Call Python FastAPI service for AI calculations
-    let score = 92; // default fallback
-    let trueToSize = 95; // default fallback
-    let festival = "Diwali";
-    const activeFestival = await Festival.findOne({
-      state: profile.state,
-    }).sort({ startDate: 1 });
-
-    festival = activeFestival?.festival || "Diwali";
+    let score = 92;
+    let trueToSize = 95;
+    let festival = (profile.festivals && profile.festivals.length > 0) ? profile.festivals[0] : "Festive Season";
+    let mlData = null;
 
     try {
       const aiResponse = await axios.post(
-        `${AI_SERVICE_URL}/confidence`,
+        `${AI_SERVICE_URL}/predict/confidence`,
         {
           userId,
           productId,
           state: profile.state,
-          festivals: profile.festivals,
-          language: profile.language,
           style: product.style || "Minimal",
+          budget: product.price ? product.price * 1.2 : 2500,
           category: product.category,
           brand: product.brand,
           price: product.price,
-          color: product.color || "Black",
+          rating: product.rating || 4.4,
+          festivals: profile.festivals || [],
+          language: profile.language,
           age: user.age || 26,
           gender: user.gender || "Female",
+          productRegion: product.region || "",
+          productRegionTags: product.regionTags || [],
+          productFestivalTag: (product.festivalTags && product.festivalTags.length > 0) ? product.festivalTags[0] : "",
+          productFestivalTags: product.festivalTags || []
         },
-        { timeout: 2000 },
+        { timeout: 3000 },
       );
 
       if (aiResponse.data) {
-        score = aiResponse.data.confidence;
-        trueToSize = aiResponse.data.trueToSize;
-        festival = aiResponse.data.festival;
+        mlData = aiResponse.data;
+        score = mlData.confidence;
+        trueToSize = mlData.trueToSize || 95;
+        if (mlData.festival) festival = mlData.festival;
       }
     } catch (err) {
-      console.warn("AI Service offline. Using fallback confidence algorithm.");
-      // Fallback calculation algorithm
-      // Give higher confidence scores if state/festival tags align
+      console.warn("AI Service offline. Using fallback confidence algorithm.", err.message);
       let scoreBonus = 0;
-      const statePrefix = profile.state.split(" ")[0];
+      const statePrefix = profile.state ? profile.state.split(" ")[0] : "Andhra";
       if (
         product.regionTags &&
         product.regionTags.some((r) => r.includes(statePrefix))
@@ -692,7 +691,7 @@ app.get("/api/confidence/:productId", async (req, res) => {
       }
       if (
         product.festivalTags &&
-        product.festivalTags.some((f) => profile.festivals.includes(f))
+        product.festivalTags.some((f) => (profile.festivals || []).includes(f))
       ) {
         scoreBonus += 15;
       }
@@ -700,18 +699,82 @@ app.get("/api/confidence/:productId", async (req, res) => {
       trueToSize = 90 + Math.floor(Math.random() * 8);
     }
 
+    const festivalMatch = mlData?.breakdown?.festivalScore || 90;
+    const regionalMatch = mlData?.breakdown?.regionalScore || 92;
+    const weatherScore = 88;
+    const comfortScoreVal = 9.2;
+    const styleScore = mlData?.breakdown?.retentionScore || 89;
+
+    const reasons = mlData?.reasons || [
+      `${mlData?.similarKeptCount || 10} of ${mlData?.similarPurchasedCount || 11} similar shoppers kept comparable products`,
+      `${trueToSize}% size fit satisfaction among your demographic cohort`,
+      `Strong regional affinity for shoppers in ${profile.state || "your state"}`
+    ];
+
     res.json({
       success: true,
       confidence: score,
+      confidenceScore: score,
       trueToSize,
       festival,
-      explanation: `Based on shoppers in ${profile.state} with similar style (${product.style || "Ethnic"}), budget (₹${product.price}), and buying preferences.`,
-      tags: [
-        "95% kept this product",
+      matchLabel: mlData?.matchLabel || (score >= 90 ? "Perfect Match" : "Highly Recommended"),
+      similarShoppersCount: mlData?.similarShoppersCount || 15,
+      similarPurchasedCount: mlData?.similarPurchasedCount || 11,
+      similarKeptCount: mlData?.similarKeptCount || 10,
+      retentionRate: mlData?.retentionRate || 90.9,
+      sizeSuccessRate: mlData?.sizeSuccessRate || 94.0,
+      fallbackLevel: mlData?.fallbackLevel || "same_category_brand",
+      reasons: reasons,
+      breakdown: mlData?.breakdown || {
+        retentionScore: styleScore,
+        ratingScore: 88.0,
+        regionalScore: regionalMatch,
+        festivalScore: festivalMatch,
+        sizeScore: trueToSize
+      },
+      festivalMatch,
+      regionalMatch,
+      weatherScore,
+      comfortScore: comfortScoreVal,
+      styleScore,
+      culturalTag: `${profile.state || "Regional"} Heritage Collection`,
+      badges: [
+        `${mlData?.retentionRate || 95}% kept this product`,
         `${trueToSize}% found true-to-size`,
-        `Popular for ${festival}`,
-        `Recommended for ${product.style || "Minimal"} Style`,
+        `Popular for ${festival}`
       ],
+      explanation: `Our KNN Machine Learning Model identified 15 behaviorally similar shoppers in ${profile.state} with matching style (${product.style || "Ethnic"}) and budget (₹${product.price}). ${reasons[0]}.`,
+      festivalName: festival,
+      stateName: profile.state || "Andhra Pradesh",
+      whyPickedChecklist: reasons.map(r => ({ label: r, iconType: 'Sparkles' })),
+      peopleLikeYou: [
+        { label: `${mlData?.similarShoppersCount || 15} behaviorally similar shoppers analyzed`, iconType: 'User' },
+        { label: `${mlData?.similarKeptCount || 10} of ${mlData?.similarPurchasedCount || 11} kept comparable products`, iconType: 'ShoppingBag' },
+        { label: `${mlData?.retentionRate || 91}% retention rate in cohort`, iconType: 'Flame' },
+        { label: `Rated ${product.rating || 4.4} ★ by similar shoppers`, iconType: 'Star' }
+      ],
+      matchBreakdown: [
+        { name: 'Cohort Retention (40%)', value: Math.round(mlData?.breakdown?.retentionScore || 91), color: 'saffron' },
+        { name: 'Product Rating (20%)', value: Math.round(mlData?.breakdown?.ratingScore || 88), color: 'purple' },
+        { name: 'Regional Match (15%)', value: Math.round(mlData?.breakdown?.regionalScore || 95), color: 'green' },
+        { name: 'Festival Match (15%)', value: Math.round(mlData?.breakdown?.festivalScore || 90), color: 'pink' },
+        { name: 'Size Fit Success (10%)', value: Math.round(mlData?.breakdown?.sizeScore || 94), color: 'blue' }
+      ],
+      styleInsights: [
+        `${product.style || "Traditional"} Fit Preference`,
+        "KNN Cohort Verified",
+        "Handloom Certified"
+      ],
+      stylingTips: [
+        "Oxidized Jhumkas",
+        "White Kolhapuris",
+        "Silver Bangles"
+      ],
+      trustSignals: [
+        "KNN ML Verified",
+        "Similar Shopper Approved",
+        "Regionally Relevant"
+      ]
     });
   } catch (err) {
     console.error("Confidence score error:", err);

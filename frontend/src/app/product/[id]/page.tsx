@@ -322,7 +322,7 @@ export default function ProductPage() {
                     >
                       <div className="pt-4 mt-3 border-t border-dashed border-[#FF3F6C]/10 space-y-3 text-[11px] font-bold text-gray-600 text-left">
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                          {sizeRec.reasoning.map((item, idx) => (
+                          {(sizeRec.reasoning || []).map((item, idx) => (
                             <div key={idx} className="flex items-center gap-1.5 bg-white/70 backdrop-blur-xs border border-[#EAEAEC]/50 p-2.5 rounded-xl shadow-3xs">
                               <CheckCircle2 className="w-3.5 h-3.5 text-[#03A685] flex-shrink-0" />
                               <span>{item}</span>
@@ -395,7 +395,7 @@ export default function ProductPage() {
                   {/* Bullet points */}
                   <div className="space-y-3 flex-1">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px] font-bold text-gray-600">
-                      {confidence.tags.map((tag, i) => (
+                      {(confidence.tags || confidence.badges || confidence.reasons || []).map((tag, i) => (
                         <div key={i} className="flex items-center gap-1.5 bg-[#FAFBFC] border border-[#EAEAEC] px-2.5 py-1.5 rounded-lg">
                           <CheckCircle2 className="w-3.5 h-3.5 text-[#03A685] flex-shrink-0" />
                           <span>{tag}</span>
