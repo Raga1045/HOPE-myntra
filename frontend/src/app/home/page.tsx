@@ -95,7 +95,14 @@ export default function HomePage() {
         if (data.mode === 'culture' || data.cultureMode) {
           setIsCultureMode(true);
           setFeed(data.feed);
-          setHero(data.heroBanner);
+          
+          // Intercept and correct the Bonalu banner image to avoid rendering the jeans URL served by the backend
+          const heroData = data.heroBanner;
+          if (heroData && heroData.festival && heroData.festival.toLowerCase() === 'bonalu') {
+            heroData.artwork = 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop';
+          }
+          setHero(heroData);
+          
           setActiveFestival(data.activeFestival);
           setActiveState(data.state);
         } else {
@@ -254,24 +261,24 @@ export default function HomePage() {
       setActiveState(mockState);
       
       let themeGradient = 'linear-gradient(to right, #FF3F6C, #FF527B)';
-      let artwork = 'https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?q=80&w=600&auto=format&fit=crop';
+      let artwork = 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop';
       let offerText = 'UP TO 50% OFF | FESTIVE CURATIONS';
       let greeting = `Celebrate ${mockFestival} in authentic style!`;
       
       const name = mockFestival.toLowerCase();
       if (name.includes('diwali') || name.includes('deepavali') || name.includes('kali puja')) {
         themeGradient = 'linear-gradient(to right, #F59E0B, #EF4444)';
-        artwork = 'https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=600&auto=format&fit=crop';
+        artwork = 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop';
         offerText = 'FLAT 30% OFF | DIWALI SPECIAL DÉCOR & ETHNIC';
         greeting = 'Happy Diwali! Light up your wardrobe with glowing styles.';
       } else if (name.includes('holi')) {
         themeGradient = 'linear-gradient(to right, #EC4899, #8B5CF6, #3B82F6)';
-        artwork = 'https://images.unsplash.com/photo-1543731068-7e0f5beff43a?q=80&w=600&auto=format&fit=crop';
+        artwork = 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop';
         offerText = 'EXTRA 15% OFF | MULTICOLOR PRINTS & WHITES';
         greeting = 'Happy Holi! Splash vibrant colors into your style.';
       } else if (name.includes('durga puja') || name.includes('bonalu') || name.includes('bathukamma') || name.includes('navratri') || name.includes('shigmo') || name.includes('carnival') || name.includes('dasara') || name.includes('dussehra')) {
         themeGradient = 'linear-gradient(to right, #D97706, #DC2626, #701A75)';
-        artwork = 'https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?q=80&w=600&auto=format&fit=crop';
+        artwork = 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=600&auto=format&fit=crop';
         offerText = 'FLAT 40% OFF | FESTIVE SPECIAL SILKS & SAREES';
         if (name.includes('bathukamma')) greeting = 'Bathukamma Shubhakankshalu! Celebrate with beautiful floral patterns.';
         else if (name.includes('bonalu')) greeting = 'Joyous Ashada Bonalu celebrations! Traditional silks curated for you.';

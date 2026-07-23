@@ -395,7 +395,7 @@ export default function ProductPage() {
                   {/* Bullet points */}
                   <div className="space-y-3 flex-1">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px] font-bold text-gray-600">
-                      {(confidence.tags || confidence.badges || confidence.reasons || []).map((tag, i) => (
+                      {(confidence.tags || []).map((tag, i) => (
                         <div key={i} className="flex items-center gap-1.5 bg-[#FAFBFC] border border-[#EAEAEC] px-2.5 py-1.5 rounded-lg">
                           <CheckCircle2 className="w-3.5 h-3.5 text-[#03A685] flex-shrink-0" />
                           <span>{tag}</span>
